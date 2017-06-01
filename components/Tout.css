@@ -1,0 +1,35 @@
+.tout {
+  display: inline-flex;
+}
+
+.tout a {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.tout .tout-copy {
+  position: absolute;
+  padding: 10px;
+  margin: 0;
+  width: 100%;
+  min-height: 50px;
+  bottom: -25px;
+  background: rgba(0,0,0,0.5);
+  -webkit-transition: bottom 0.3s ease-in-out;
+  -moz-transition: bottom 0.3s ease-in-out;
+  -o-transition: bottom 0.3s ease-in-out;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.tout:hover .tout-copy {
+  bottom: 0;
+}
+
+.tout .tout-copy h3 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+}
