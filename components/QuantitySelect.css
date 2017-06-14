@@ -1,0 +1,15 @@
+.quantity-input input {
+    border-radius: 3px;
+    border: 1px solid  #ccc;
+    width: 50px;
+    padding: 3px 0px;
+    text-align: center;
+}
+
+.quantity-input span.dec, .quantity-input span.inc {
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    line-height: 0px;
+    vertical-align: inherit;
+}
