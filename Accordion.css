@@ -1,0 +1,35 @@
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    color: #333;
+    margin-top: 5px;
+
+}
+
+.accordion-content {
+    display: none;
+}
+
+
+
+.accordion-group input[type='radio']:checked ~ .accordion-content {
+  display: block;
+  height: auto;
+  transition: height 2s ease;
+  border-top:1px solid #ddd;
+}
+
+
+.accordion-group input[type='radio']{
+
+  display:none;
+}
+
+
+.accordion label {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    background: #f5f5f5;
+    display: block;
+}
