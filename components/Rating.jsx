@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // import skeleton from './skeleton'
 import './Rating.css';
 
@@ -78,9 +79,9 @@ const Rating = ({ value, onClick }) => {
 
 Rating.propTypes = {
   /** Number of star rating from 1 to 5 */
-  value: React.PropTypes.number,
+  value: PropTypes.number,
   /** Click handler - returns index of star clicked */
-  onClick: React.PropTypes.func
+  onClick: PropTypes.func
 };
 
 export default Rating;
