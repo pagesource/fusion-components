@@ -9,3 +9,5 @@ export { default as Grid } from './components/Grid';
 export { default as Hero } from './components/Hero';
 export { default as Navigation } from './components/Navigation';
 export { default as Tout } from './components/Tout';
+export { default as RadioButton } from './components/RadioButton';
+export { default as Switch } from './components/Switch';
