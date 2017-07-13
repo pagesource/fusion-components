@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './Button.css';
 
 
@@ -9,6 +10,7 @@ const Button = (props) => {
       type="button"
       onClick={props.onClick}
       className="primary"
+      disabled={props.disabled}
     >
       {props.children}
     </button>
@@ -24,6 +26,14 @@ Button.propTypes = {
   /**
    * Children
   */
-  children: PropTypes.string
+  children: PropTypes.string,
+  /**
+   * disabled
+   */
+  disabled: PropTypes.bool
 };
+
+Button.defaultProps = {
+  disabled: false
+}
 export default Button;

@@ -12,3 +12,6 @@ export { default as Tout } from './components/Tout';
 export { default as HeadingWithContent } from './components/HeadingWithContent';
 export { default as Heading } from './components/Heading';
 export { default as Input } from './components/Input';
+export { default as RadioButton } from './components/RadioButton';
+export { default as Switch } from './components/Switch';
+
