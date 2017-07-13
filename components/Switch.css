@@ -46,3 +46,9 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
+input:disabled + .slider {
+  background-color: #2196F3;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
