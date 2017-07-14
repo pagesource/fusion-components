@@ -5,3 +5,7 @@
     border: none;
     cursor: pointer;
 }
+.primary:disabled {
+    cursor: not-allowed;
+    
+}

@@ -6,7 +6,7 @@ import './Switch.css';
 const Switch = (props) => {
     return (
         <label className="switch">
-        <input type="checkbox" onChange={props.onChange} defaultChecked={props.checked} disabled={props.disabled}/>
+        <input type="checkbox" onChange={props.onChange} defaultChecked={props.defaultChecked} disabled={props.disabled}/>
         <span className="slider"></span>
         </label>
 
