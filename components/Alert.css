@@ -1,0 +1,100 @@
+.alert-btn {
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    outline: none;
+}
+
+.alert-btn label {
+
+    padding: 8px 30px;
+    font-size: 14px;
+    color:#fff;
+    display: block;
+
+}
+
+.warning {
+    background: #f1c40f;
+}
+
+.error {
+	background:#e74c3c;
+}
+
+.info {
+
+	background:#00a2d3;
+}
+
+.success {
+	background:#27ae60;
+}
+
+.alert-content {
+    font-size: 14px;
+    display: inline;
+    padding: 15px 40px;
+}
+
+
+.alert-content {
+   display:none;
+   opacity:0;
+}
+
+
+.alert-buttons input[type='checkbox']:checked ~ .alert-content {
+
+  animation-name: showup;
+  animation-duration: 5s;
+  opacity: 1;
+  display: inline-block;
+
+}
+
+
+.alert-buttons input[type='checkbox']{
+	display: none;
+}
+.alert-content {
+    position: fixed;
+    color:#fff;
+    z-index:100;
+}
+
+.alert-content.top-left {
+    top: 24px;
+    left: 20px;
+}
+
+.alert-content.top-right {
+    top: 24px;
+    right: 20px;
+}
+
+.alert-content.bottom-left {
+    bottom: 24px;
+    left: 20px;
+}
+
+.alert-content.bottom-right {
+    bottom: 24px;
+    right: 20px;
+}
+
+label.close {
+    position: absolute;
+    top: 0;
+    right: 7px;
+    font-size: 18px;
+}
+
+label.close i {
+    font-size: 16px;
+}
+
+.alert-buttons {
+    display: inline;
+}
