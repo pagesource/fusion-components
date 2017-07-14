@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const RadioButton = (props) => {
-    console.log
     return (
         <label>
             <input type="radio"
