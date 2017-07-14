@@ -1,0 +1,19 @@
+.primary-slider {
+    -webkit-appearance: none;
+    background-color: #cccccc;;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.primary-slider::-webkit-slider-thumb {
+     -webkit-appearance: none;
+    background-color: #fff;
+    width: 1rem;
+    height: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.primary-slider:disabled {
+     cursor: not-allowed;
+}

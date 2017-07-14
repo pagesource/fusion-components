@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import './Switch.css';
 
 const Switch = (props) => {
-    console.log(props)
     return (
         <label className="switch">
         <input type="checkbox" onChange={props.onChange} defaultChecked={props.defaultChecked} disabled={props.disabled}/>
