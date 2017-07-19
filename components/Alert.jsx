@@ -6,12 +6,12 @@ import './Alert.css';
 
 const Alert = (props) => {
 
-  const { postition, type , id , msg ,title  } = props;
+  const { position, type , id , msg ,title  } = props;
 
   return (
-            <div className={ classnames('alert-buttons')} ><button className={ classnames('alert-btn', type, postition )} ><label htmlFor={'alert-' + id }>{title}</label></button>
+            <div className={ classnames('alert-buttons')} ><button className={ classnames('alert-btn', type, position )} ><label htmlFor={'alert-' + id }>{title}</label></button>
             <input type="checkbox" id={'alert-'+ id } />
-            <div className={classnames('alert-content', type,postition )} ><label htmlFor={'alert-' + id } className={"close"}>x</label>{ msg }</div></div>
+            <div className={classnames('alert-content', type, position )} ><label htmlFor={'alert-' + id } className={"close"}>x</label>{ msg }</div></div>
   );
 
 };
