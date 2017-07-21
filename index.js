@@ -20,3 +20,6 @@ export { default as Switch } from './components/Switch';
 export { default as Loader } from './components/Loader';
 export { default as LoaderOverlay } from './components/LoaderOverlay';
 export { default as Slider } from './components/Slider';
+
+// Slyled components
+export { default as AvatarSC } from './components/AvatarSC';
