@@ -12,7 +12,7 @@ const Heading = styled(
 
 Heading.propTypes = {
   /**
-   * href
+   * tag
   */
   tag: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
   /**

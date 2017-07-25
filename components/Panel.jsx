@@ -12,7 +12,7 @@ const Panel = styled.div`
 /* Props Check */
 Panel.propTypes = {
   /**
-   * Text Align
+   * Text Color
   */
   color: PropTypes.string
 };

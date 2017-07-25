@@ -14,7 +14,7 @@ const Card = styled.div.attrs({
 /* Props Check */
 Card.propTypes = {
   /**
-   * Text Align
+   * Card Width
   */
   width: PropTypes.string
 };

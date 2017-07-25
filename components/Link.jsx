@@ -11,7 +11,7 @@ const Link = styled.a.attrs({
 /* Props Check */
 Link.propTypes = {
   /**
-   * Text Align
+   * URL 
   */
   href: PropTypes.string
 };

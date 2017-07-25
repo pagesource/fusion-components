@@ -10,4 +10,22 @@ const PanelHeader = styled.header`
   border-bottom-style: solid;
 `;
 
+/* Props Check */
+PanelHeader.propTypes = {
+  /**
+   * Text Color
+  */
+  color: PropTypes.string,
+  /**
+   * Background Color
+  */
+  bg: PropTypes.string
+};
+
+/* Deafult Props */
+PanelHeader.defaultProps = {
+  color: "green"
+};
+
+
 export default PanelHeader;

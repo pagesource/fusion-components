@@ -9,4 +9,18 @@ const PanelFooter = styled.header`
   border-bottom-style: solid;
 `;
 
+/* Props Check */
+PanelFooter.propTypes = {
+  /**
+   * Text Color
+  */
+  color: PropTypes.string
+};
+
+/* Deafult Props */
+PanelFooter.defaultProps = {
+  color: "#000"
+};
+
+
 export default PanelFooter;
