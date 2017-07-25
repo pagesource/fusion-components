@@ -10,3 +10,4 @@ export { default as Badge } from './components/Badge';
 export { default as Banner } from './components/Banner';
 export { default as Link } from './components/Link';
 export { default as Blockquote } from './components/Blockquote';
+export { default as Card } from './components/Card';
