@@ -14,3 +14,6 @@ export { default as Card } from './components/Card';
 export { default as Code } from './components/Code';
 export { default as Row } from './components/Row';
 export { default as Column } from './components/Column';
+export { default as Panel } from './components/Panel';
+export { default as PanelHeader } from './components/PanelHeader';
+export { default as PanelFooter } from './components/PanelFooter';
