@@ -6,6 +6,7 @@ const Column = styled.div`
   padding-left: 16px;
   padding-right: 16px;
   color: #fff;
+  position: relative;
 `;
 
 export default Column;

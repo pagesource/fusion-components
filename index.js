@@ -19,3 +19,4 @@ export { default as PanelHeader } from './components/PanelHeader';
 export { default as PanelFooter } from './components/PanelFooter';
 export { default as Progress } from './components/Progress';
 export { default as Text } from './components/Text';
+export { default as Tooltip } from './components/Tooltip';
