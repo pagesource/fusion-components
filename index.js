@@ -8,3 +8,4 @@ export { default as Slider } from './components/Slider';
 export { default as BackgroundImage } from './components/BackgroundImage';
 export { default as Badge } from './components/Badge';
 export { default as Banner } from './components/Banner';
+export { default as Link } from './components/Link';
