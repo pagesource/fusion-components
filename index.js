@@ -20,3 +20,4 @@ export { default as PanelFooter } from './components/PanelFooter';
 export { default as Progress } from './components/Progress';
 export { default as Text } from './components/Text';
 export { default as Tooltip } from './components/Tooltip';
+export { default as Truncate } from './components/Truncate';
