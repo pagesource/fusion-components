@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const AlertSC = styled.div.attrs({
+const Alert = styled.div.attrs({
   	background: props => {
       if(props.type === 'success') {
         return 'green'
@@ -39,16 +39,16 @@ const AlertSC = styled.div.attrs({
 `;
 
 /* Props Check */
-AlertSC.propTypes = {
+Alert.propTypes = {
   /**
-  * Type of AlertSC
+  * Type of Alert
   */
   type: PropTypes.oneOf(['warning', 'info', 'error', 'success']),
 };
 
 /* Deafult Props */
-AlertSC.defaultProps = {
+Alert.defaultProps = {
   type: "success",
 };
 
-export default AlertSC;
+export default Alert;
