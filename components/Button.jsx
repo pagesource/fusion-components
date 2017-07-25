@@ -1,39 +1,39 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import './Button.css';
+import styled from 'styled-components';
 
+const ButtonSC = styled.button.attrs({
 
-const Button = (props) => {
-  return (
+	// Attributes
+	disabled: props => props.disabled,
+	onClick: props => props.onClick
 
-    <button
-      type="button"
-      onClick={props.onClick}
-      className="primary"
-      disabled={props.disabled}
-    >
-      {props.children}
-    </button>
+})`
+	color: ${props => props.theme.fg};
+	border: 2px solid ${props => props.theme.fg};
+	background: ${props => props.theme.bg};
 
-  );
-};
+	cursor: pointer;
+	font-size: 1em;
+	margin: 1em;
+	padding: 0.25em 1em;
+	border-radius: 3px;
+`;
 
-Button.propTypes = {
+/* Props Check */
+ButtonSC.propTypes = {
   /**
-   * onClick Function
+  * onClick Event
   */
   onClick: PropTypes.func,
-  /**
-   * Children
+	/**
+  * Disabled
   */
-  children: PropTypes.string,
-  /**
-   * disabled
-   */
   disabled: PropTypes.bool
 };
 
-Button.defaultProps = {
-  disabled: false
-}
-export default Button;
+/* Deafult Props */
+ButtonSC.defaultProps = {
+  disabled: false,
+};
+
+export default ButtonSC;

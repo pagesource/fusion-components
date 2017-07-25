@@ -1,45 +1,54 @@
-import React  from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+import styled from 'styled-components';
 
-import './Alert.css';
+const AlertSC = styled.div.attrs({
+  	background: props => {
+      if(props.type === 'success') {
+        return 'green'
+      }
+      if(props.type === 'info') {
+        return 'blue'
+      }
+      if(props.type === 'warning') {
+        return 'yellow'
+      }
+      if(props.type === 'error') {
+        return 'red'
+      }
+    },
+    color: props => {
+      if(props.type === 'success') {
+        return 'white'
+      }
+      if(props.type === 'info') {
+        return 'white'
+      }
+      if(props.type === 'warning') {
+        return 'black'
+      }
+      if(props.type === 'error') {
+        return 'white'
+      }
+    },
 
-const Alert = (props) => {
-
-  const { position, type , id , msg ,title  } = props;
-
-  return (
-            <div className={ classnames('alert-buttons')} ><button className={ classnames('alert-btn', type, position )} ><label htmlFor={'alert-' + id }>{title}</label></button>
-            <input type="checkbox" id={'alert-'+ id } />
-            <div className={classnames('alert-content', type, position )} ><label htmlFor={'alert-' + id } className={"close"}>x</label>{ msg }</div></div>
-  );
-
-};
+})`
+    background: ${props => props.background};
+    padding: 5px;
+    margin: 5px;
+    color: ${props => props.color};
+`;
 
 /* Props Check */
-Alert.propTypes = {
+AlertSC.propTypes = {
   /**
-  * Position of Alert
-  */
-  position: PropTypes.oneOf(['top-left', 'top-right', 'bottom-left', 'bottom-right']),
-  /**
-  * Message to Display
-  */
-  msg: PropTypes.string,
-  /**
-  * Title of Alert
-  */
-  title: PropTypes.string,
-  /**
-  * Type of Alert
+  * Type of AlertSC
   */
   type: PropTypes.oneOf(['warning', 'info', 'error', 'success']),
 };
 
-Alert.defaultProps = {
-  position: "top-right",
-  msg: "Custom Message",
-  title:" Title of Alert",
+/* Deafult Props */
+AlertSC.defaultProps = {
+  type: "success",
 };
 
-export default Alert;
+export default AlertSC;

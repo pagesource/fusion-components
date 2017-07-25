@@ -1,47 +1,34 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './Logo.css';
+const LogoSC = styled.img.attrs({
+  src: props => props.src,
+  alt: props => props.alt
+})`
+  width: ${props => props.width};
+  padding: 15px;
+  cursor: pointer;
+`;
 
-const Logo = (props) => {
-  const { src, alt, url, imgWidth } = props;
-
-  return (
-    <a href={url}>
-      <img
-        src={src}
-        alt={alt}
-        width={imgWidth}
-        className="brand-logo"
-      />
-    </a>
-  );
-};
-
-Logo.propTypes = {
+LogoSC.propTypes = {
   /**
-  * Brand Logo
+  * Brand LogoSC
   */
   src: PropTypes.string,
   /**
-  * Logo Alternative Text
+  * LogoSC Alternative Text
   */
   alt: PropTypes.string,
-  /**
-  * Logo URL
-  */
-  url: PropTypes.string,
   /**
   * Image width
   */
   imgWidth: PropTypes.number
 };
 
-Logo.defaultProps = {
+LogoSC.defaultProps = {
   src: "https://facebook.github.io/react/img/logo.svg",
   alt: "Fusion",
-  url: '/',
   imgWidth: 100
 };
 
-export default Logo;
+export default LogoSC;

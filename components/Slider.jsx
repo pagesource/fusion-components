@@ -1,22 +1,33 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './Slider.css';
+const SliderSC = styled.input.attrs({
+  type: "range",
+  name: props => props.name,
+  min: props => props.min,
+  max: props => props.max,
+  defaultValue: props => props.defaultValue,
+  disabled: props => props.disabled,
+  onChange: props => props.onChange,
+})`
+  -webkit-appearance: none;
+  background-color: #cccccc;;
+  height: 5px;
+  border-radius: 5px;
+  &::-webkit-slider-thumb {
+       -webkit-appearance: none;
+      background-color: #fff;
+      width: 1rem;
+      height: 1.5rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+  }
+  :disabled {
+       cursor: not-allowed;
+  }
+`;
 
-const Slider = (props) => {
-    return (
-        <input className="primary-slider" type="range" 
-            name={props.name} 
-            min={props.minValue} 
-            max={props.maxValue} 
-            defaultValue={props.defaultValue} 
-            onChange={props.onChange}
-            disabled={props.disabled}
-        />
-    ); 
-}
-
-Slider.propTypes = {
+SliderSC.propTypes = {
     /**
      * name
      */
@@ -44,4 +55,4 @@ Slider.propTypes = {
 
 }
 
-export default Slider;
+export default SliderSC;

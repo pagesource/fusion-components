@@ -1,31 +1,28 @@
-import React  from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
-import './Heading.css';
+import styled from 'styled-components';
 
-const Heading=(props)=>{
-    const { href, title } = props;
-    return(
-      <div className={ classnames('product-title')}>
-        <h3>{ href ? <a href={href}>{title}</a> : title }</h3>
-      </div>
-    );
-};
+const el = React.createElement
 
-Heading.propTypes = {
+const HeadingSC = styled(
+  ({ tag, children, ...props }) => el(tag, props, children)
+)`
+  color: black;
+`;
+
+HeadingSC.propTypes = {
   /**
    * href
   */
-  href: PropTypes.string,
+  tag: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
   /**
    * title
   */
   title: PropTypes.string,
 };
 
-Heading.defaultProps = {
-  href: '',
-  title: ''
+HeadingSC.defaultProps = {
+  tag: 'h2',
 };
 
-export default Heading;
+export default HeadingSC;

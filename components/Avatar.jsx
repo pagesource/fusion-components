@@ -1,21 +1,17 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import './Avatar.css';
+const AvatarSC = styled.img.attrs({
+  // Defining Static Props
+	src: props => props.picUrl || 'https://images.unsplash.com/photo-1422065649003-cf6684a31468',
+	alt: props => props.alt || 'JESUS Saves',
 
-const Avatar = ({ ...props }) => {
-  return (
-    <img
-      className="avatar"
-      src={props.picUrl}
-      alt={props.altTag}
-      width={props.width}
-      height={props.height}
-    />
-  );
-};
+})`
+  width: ${props => props.width}%;
+  height: ${props => props.height}px;
+`;
 
-Avatar.propTypes = {
+AvatarSC.propTypes = {
   /**
    * Picture URL
   */
@@ -25,9 +21,13 @@ Avatar.propTypes = {
   */
   altTag: PropTypes.string,
   /**
-   * Image Size
+   * Image Width
   */
-  size: PropTypes.number
+  width: PropTypes.number,
+  /**
+   * Image Height
+  */
+  height: PropTypes.number
 };
 
-export default Avatar;
+export default AvatarSC;
