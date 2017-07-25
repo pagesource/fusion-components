@@ -18,3 +18,4 @@ export { default as Panel } from './components/Panel';
 export { default as PanelHeader } from './components/PanelHeader';
 export { default as PanelFooter } from './components/PanelFooter';
 export { default as Progress } from './components/Progress';
+export { default as Text } from './components/Text';
