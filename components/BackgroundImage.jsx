@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const BackgroundImage = styled.div.attrs({
   // Defining Static Props
-	src: props => props.picUrl || 'https://images.unsplash.com/photo-1422065649003-cf6684a31468',
+	src: props => props.picUrl ,
 
 })`
   background-image: url('${props => props.src}');
@@ -13,6 +13,7 @@ const BackgroundImage = styled.div.attrs({
   padding-bottom: 50%;
 `;
 
+/* Props Check */
 BackgroundImage.propTypes = {
   /**
    * Picture URL
@@ -22,6 +23,11 @@ BackgroundImage.propTypes = {
    * Image Width
   */
   width: PropTypes.number
+};
+
+/* Deafult Props */
+BackgroundImage.defaultProps = {
+  picUrl: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20"
 };
 
 export default BackgroundImage;
