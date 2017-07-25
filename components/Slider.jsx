@@ -27,32 +27,41 @@ const Slider = styled.input.attrs({
   }
 `;
 
+/* Props Check */
 Slider.propTypes = {
-    /**
-     * name
-     */
-    name: PropTypes.string,
-    /**
-     * min value
-     */
-    min: PropTypes.number,
-    /**
-     * max value
-     */
-    max: PropTypes.number,
-    /**
-     * defaultValue
-     */
-    defaultValue: PropTypes.number,
-    /**
-     * onChange
-     */
-    onChange: PropTypes.func,
-    /**
-     * Disabled
-     */
-    disabled: PropTypes.bool
-
+  /**
+   * name
+   */
+  name: PropTypes.string,
+  /**
+   * min value
+   */
+  min: PropTypes.number,
+  /**
+   * max value
+   */
+  max: PropTypes.number,
+  /**
+   * defaultValue
+   */
+  defaultValue: PropTypes.number,
+  /**
+   * onChange
+   */
+  onChange: PropTypes.func,
+  /**
+   * Disabled
+   */
+  disabled: PropTypes.bool
 }
+
+/* Deafult Props */
+Slider.defaultProps = {
+  name: "slider",
+  min: {1},
+  max: {10},
+  defaultValue: {1},
+  disabled: false
+};
 
 export default Slider;
