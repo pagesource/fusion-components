@@ -17,3 +17,4 @@ export { default as Column } from './components/Column';
 export { default as Panel } from './components/Panel';
 export { default as PanelHeader } from './components/PanelHeader';
 export { default as PanelFooter } from './components/PanelFooter';
+export { default as Progress } from './components/Progress';
