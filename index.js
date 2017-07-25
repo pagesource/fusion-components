@@ -12,3 +12,5 @@ export { default as Link } from './components/Link';
 export { default as Blockquote } from './components/Blockquote';
 export { default as Card } from './components/Card';
 export { default as Code } from './components/Code';
+export { default as Row } from './components/Row';
+export { default as Column } from './components/Column';
