@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Panel = styled.div`
@@ -7,5 +8,18 @@ const Panel = styled.div`
   border-style: solid;
   color: ${props => props.color};
 `;
+
+/* Props Check */
+Panel.propTypes = {
+  /**
+   * Text Align
+  */
+  color: PropTypes.string
+};
+
+/* Deafult Props */
+Panel.defaultProps = {
+  color: "#000"
+};
 
 export default Panel;
