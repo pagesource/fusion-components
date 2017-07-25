@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Card = styled.div.attrs({
@@ -9,5 +10,18 @@ const Card = styled.div.attrs({
   width: ${props => props.width}%;
   background-color: #fff;
 `;
+
+/* Props Check */
+Card.propTypes = {
+  /**
+   * Text Align
+  */
+  width: PropTypes.string
+};
+
+/* Deafult Props */
+Card.defaultProps = {
+  width: "33"
+};
 
 export default Card;
