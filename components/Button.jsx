@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const ButtonSC = styled.button.attrs({
+const Button = styled.button.attrs({
 
 	// Attributes
 	disabled: props => props.disabled,
@@ -20,7 +20,7 @@ const ButtonSC = styled.button.attrs({
 `;
 
 /* Props Check */
-ButtonSC.propTypes = {
+Button.propTypes = {
   /**
   * onClick Event
   */
@@ -32,8 +32,8 @@ ButtonSC.propTypes = {
 };
 
 /* Deafult Props */
-ButtonSC.defaultProps = {
+Button.defaultProps = {
   disabled: false,
 };
 
-export default ButtonSC;
+export default Button;

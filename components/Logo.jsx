@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const LogoSC = styled.img.attrs({
+const Logo = styled.img.attrs({
   src: props => props.src,
   alt: props => props.alt
 })`
@@ -10,13 +10,13 @@ const LogoSC = styled.img.attrs({
   cursor: pointer;
 `;
 
-LogoSC.propTypes = {
+Logo.propTypes = {
   /**
-  * Brand LogoSC
+  * Brand Logo
   */
   src: PropTypes.string,
   /**
-  * LogoSC Alternative Text
+  * Logo Alternative Text
   */
   alt: PropTypes.string,
   /**
@@ -25,10 +25,10 @@ LogoSC.propTypes = {
   imgWidth: PropTypes.number
 };
 
-LogoSC.defaultProps = {
+Logo.defaultProps = {
   src: "https://facebook.github.io/react/img/logo.svg",
   alt: "Fusion",
   imgWidth: 100
 };
 
-export default LogoSC;
+export default Logo;

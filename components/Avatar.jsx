@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const AvatarSC = styled.img.attrs({
+const Avatar = styled.img.attrs({
   // Defining Static Props
 	src: props => props.picUrl || 'https://images.unsplash.com/photo-1422065649003-cf6684a31468',
 	alt: props => props.alt || 'JESUS Saves',
@@ -11,7 +11,7 @@ const AvatarSC = styled.img.attrs({
   height: ${props => props.height}px;
 `;
 
-AvatarSC.propTypes = {
+Avatar.propTypes = {
   /**
    * Picture URL
   */
@@ -30,4 +30,4 @@ AvatarSC.propTypes = {
   height: PropTypes.number
 };
 
-export default AvatarSC;
+export default Avatar;

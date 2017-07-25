@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const SliderSC = styled.input.attrs({
+const Slider = styled.input.attrs({
   type: "range",
   name: props => props.name,
   min: props => props.min,
@@ -27,7 +27,7 @@ const SliderSC = styled.input.attrs({
   }
 `;
 
-SliderSC.propTypes = {
+Slider.propTypes = {
     /**
      * name
      */
@@ -55,4 +55,4 @@ SliderSC.propTypes = {
 
 }
 
-export default SliderSC;
+export default Slider;

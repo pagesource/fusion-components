@@ -4,13 +4,13 @@ import styled from 'styled-components';
 
 const el = React.createElement
 
-const HeadingSC = styled(
+const Heading = styled(
   ({ tag, children, ...props }) => el(tag, props, children)
 )`
   color: black;
 `;
 
-HeadingSC.propTypes = {
+Heading.propTypes = {
   /**
    * href
   */
@@ -21,8 +21,8 @@ HeadingSC.propTypes = {
   title: PropTypes.string,
 };
 
-HeadingSC.defaultProps = {
+Heading.defaultProps = {
   tag: 'h2',
 };
 
-export default HeadingSC;
+export default Heading;
