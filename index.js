@@ -7,3 +7,4 @@ export { default as Logo } from './components/Logo';
 export { default as Slider } from './components/Slider';
 export { default as BackgroundImage } from './components/BackgroundImage';
 export { default as Badge } from './components/Badge';
+export { default as Banner } from './components/Banner';
