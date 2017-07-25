@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Tooltip = styled.div.attrs({
@@ -43,5 +44,32 @@ const Tooltip = styled.div.attrs({
     border-color: rgb(0, 0, 0) transparent transparent;
   }
 `;
+
+/* Props Check */
+Tooltip.propTypes = {
+  /**
+   * Alignment
+  */
+  align: PropTypes.string,
+  /**
+   * Font Weight
+  */
+  weight: PropTypes.string,
+  /**
+   * Font Size
+  */
+  size: PropTypes.number,
+  /**
+   * Font Size
+  */
+  onHover: PropTypes.func
+};
+
+/* Deafult Props */
+Tooltip.defaultProps = {
+  align: "left",
+  weight: "bold",
+  size: 18
+};
 
 export default Tooltip;
