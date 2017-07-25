@@ -58,9 +58,9 @@ Slider.propTypes = {
 /* Deafult Props */
 Slider.defaultProps = {
   name: "slider",
-  min: {1},
-  max: {10},
-  defaultValue: {1},
+  min: 1,
+  max: 10,
+  defaultValue: 1,
   disabled: false
 };
 

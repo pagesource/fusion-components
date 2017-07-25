@@ -23,7 +23,7 @@ Progress.propTypes = {
 
 /* Deafult Props */
 Progress.defaultProps = {
-  value: {1/2}
+  value: 1/2
 };
 
 export default Progress;
