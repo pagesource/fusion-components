@@ -1,18 +1,34 @@
-
-import React, { PropTypes } from 'react';
-import classnames from 'classnames';
+import {css} from 'emotion';
+import { withTheme } from 'theming'
+import PropTypes from 'prop-types';
 
 import Button from './Button';
 import Rating from './Rating';
 import './Card.css';
 
+const cardContainer=css`
+
+  display: flex;
+  width:100%;
+`
+
+const card=csss`
+  text-align: center;
+  flex:1;
+  background: #fff;
+  padding:1rem;
+  margin: 1rem;
+
+`
+
+
 const Card = (props) => {
-  const { cardData, theme } = props;
+  const { cardData} = props;
   const cardDetails = (cardData !== null) ? cardData : null;
   return (
-    <div className="cardContainer">
+    <div className={cardContainer}>
       {cardDetails && cardDetails.map((card, index) =>
-        <div className={classnames('card', `acss-theme-${theme}`, 'acss-background-secondary')} key={`key-${index}`}>
+        <div className={card} key={`key-${index}`}>
           <img src={card.image} alt={card.heading}/>
           <h2 children={card.heading} />
           <Rating value={4} />
@@ -29,14 +45,9 @@ Card.propTypes = {
    * Card Data
   */
   cardData: PropTypes.arrayOf(PropTypes.shape({})),
-  /**
-  * Theme
-  */
-  theme: PropTypes.oneOf(['light', 'dark'])
+
+
 };
 
-Card.defaultProps = {
-  theme: 'light'
-};
 
-export default Card;
+export default withTheme(Card);

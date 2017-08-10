@@ -1,0 +1,35 @@
+{
+  "name": "fusion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+   
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "^2.4.9",
+    "react": "^15.6.1",
+    "react-doc-generator": "^1.2.5",
+    "react-dom": "^15.6.1"
+
+  },
+  "devDependencies": {
+     "emotion": "^7.0.11",
+    "theming": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/areai51/fusion.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/areai51/fusion/issues"
+  },
+  "homepage": "https://github.com/areai51/fusion#readme"
+}
