@@ -1,31 +1,36 @@
 import Layout from './components/Layout'
 import Link from 'next/link'
-import fetch from'isomorphic-unfetch'
+import Button from '../fusion/Button';
+import Avatar from '../fusion/Avatar';
+import Alert from '../fusion/Alert';
+import Banner from '../fusion/Banner';
 
-const Index = (props) => (
+import { ThemeProvider, withTheme } from 'theming'
+import theme from '../fusion/themes'
+
+
+
+const KitchenSink = (props) => (
   <Layout>
-    <h1>Batman TV Shows</h1>
-    <ul>
-      {props.shows.map(({show}) => (
-        <li key={show.id}>
-          <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
-            <a>{show.name}</a>
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <ThemeProvider theme={theme}>
+     <div>
+     <h2>Button </h2>
+     <Button>I'm a button</Button> 
+     <hr/>
+     <h3>Avatar</h3>
+     <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" ></Avatar>
+     
+       <h2>Alert </h2>
+     <Alert>There was a problem rendering this box</Alert> 
+     <hr/>
+
+
+            <h2>Banner </h2>
+     <Banner src ="http://lorempixel.com/560/150/sports" />
+     <hr/>
+     </div>
+     </ThemeProvider>
   </Layout>
 )
 
-Index.getInitialProps = async function() {
-  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman')
-  const data = await res.json()
-
-  console.log(`Show data fetched. Count: ${data.length}`)
-
-  return {
-    shows: data
-  }
-}
-
-export default Index
+export default KitchenSink
