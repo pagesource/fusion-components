@@ -1,13 +1,14 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 import './Navigation.css';
 
 const Navigation = (props) => {
-  const { theme, links, align } = props;
+  const { theme, links, align, type } = props;
 
   return (
-    <div className={classnames('navigation', `acss-theme-${theme}`, `align-${align}`, 'acss-background-secondary')}>
+    <div className={classnames('navigation', `${type}-navigation`, `acss-theme-${theme}`, `align-${align}`, 'acss-background-secondary')}>
       <ul>
         {links && links.map((link) =>
           <li key={`key-${link.index}`}>
