@@ -13,12 +13,18 @@ import Heading from '../fusion/Heading';
 import Row from '../fusion/Row';
 import Logo from '../fusion/Logo';
 import BackgroundImage from '../fusion/BackgroundImage';
+import Progress from '../fusion/Progress';
 
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
+
+      <h2>Circular Progress</h2>
+        <Progress />
+     <Row />
+     <hr />
      <h2>Background Image</h2>
         <BackgroundImage />
      <Row />

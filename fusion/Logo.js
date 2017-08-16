@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import {css} from 'emotion';
-import styled from 'emotion/react'
 
 const LogoStyle = css`
   padding: 15px;
