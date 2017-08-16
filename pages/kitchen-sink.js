@@ -14,6 +14,8 @@ import Row from '../fusion/Row';
 import Logo from '../fusion/Logo';
 import BackgroundImage from '../fusion/BackgroundImage';
 import Progress from '../fusion/Progress';
+import Loader from '../fusion/Loader';
+import ProgressBar from '../fusion/ProgressBar';
 
 
 const KitchenSink = (props) => (
@@ -21,9 +23,21 @@ const KitchenSink = (props) => (
     <ThemeProvider theme={theme}>
      <div>
 
-      <h2>Circular Progress</h2>
+     <h2>Progress Bar</h2>
+        <ProgressBar />
+     <Row />
+     <hr />
+
+      <h2>Circular Loader</h2>
+        <Loader />
+     <Row />
+     <hr />
+
+     <h2>Circular Progress</h2>
         <Progress />
      <Row />
+     <hr />
+
      <hr />
      <h2>Background Image</h2>
         <BackgroundImage />

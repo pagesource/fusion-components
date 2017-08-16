@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import {keyframes, css} from 'emotion';
 
-const rotation = keyframes`  
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }  
+const valueStyle =css`
+  font-weight: bold;
+  fontsize: 24px;
+  display: block;
+    position: relative;
+    top: 54px;
 `
 
 const ProgressStyle = css`
@@ -12,12 +15,12 @@ const ProgressStyle = css`
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    animation: ${rotation} 1s ease infinite;
   `
 
 const Progress = (props) => {
   return ( 
-    <div  css={`composes: ${ProgressStyle}`} value={props.value}>
+    <div css={`composes: ${ProgressStyle}`} value={props.value}>
+      <div className="valueStyle">{props.value}% </div>
     </div>
   );
 };
@@ -32,7 +35,7 @@ Progress.propTypes = {
 
 /* Deafult Props */
 Progress.defaultProps = {
-  value: 1/3
+  value: (1/3)*100
 };
 
 export default Progress;
