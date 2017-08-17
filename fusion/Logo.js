@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {css} from 'emotion';
+import { withTheme } from 'theming';
 
 const LogoStyle = css`
   padding: 15px;
@@ -36,4 +37,4 @@ Logo.defaultProps = {
   imgWidth: 100
 };
 
-export default Logo;
+export default withTheme(Logo);

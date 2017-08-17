@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import {css} from 'emotion';
-import Link from 'next/link'
+import Link from 'next/link';
+import { withTheme } from 'theming'
 
 const LinkStyle = css`
   color: violet;
@@ -36,4 +37,4 @@ customLink.defaultProps = {
   alt: "google"
 };
 
-export default customLink;
+export default withTheme(customLink);

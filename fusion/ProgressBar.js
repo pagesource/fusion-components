@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import {keyframes, css} from 'emotion';
 import styled from 'emotion/react';
+import { withTheme } from 'theming';
 
 const ProgressBlock = styled('div')`
   margin: 10 auto;
@@ -66,4 +67,4 @@ Progress.defaultProps = {
   value: (1/3)*100
 };
 
-export default Progress;
+export default withTheme(Progress);

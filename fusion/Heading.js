@@ -65,15 +65,15 @@ const Heading = (props) => {
   return (
     <div>
       <H1 className={headerStyle}>
-       H1 header content
+       {props.title}
     </H1>
 
     <H2>
-       H2 header content
+       {props.title}
     </H2>
 
      <H3>
-       H2 header content
+      {props.title}
     </H3>
     </div>
   );
@@ -92,6 +92,7 @@ Heading.propTypes = {
 
 Heading.defaultProps = {
   tag: 'h2',
+  title: "Header content"
 };
 
 export default withTheme(Heading);

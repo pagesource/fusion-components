@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {keyframes, css} from 'emotion';
+import { withTheme } from 'theming';
 
 const valueStyle =css`
   font-weight: bold;
@@ -38,4 +39,4 @@ Progress.defaultProps = {
   value: (1/3)*100
 };
 
-export default Progress;
+export default withTheme(Progress);

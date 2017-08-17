@@ -12,16 +12,22 @@ import theme from '../fusion/themes'
 import Heading from '../fusion/Heading';
 import Row from '../fusion/Row';
 import Logo from '../fusion/Logo';
-import BackgroundImage from '../fusion/BackgroundImage';
 import Progress from '../fusion/Progress';
 import Loader from '../fusion/Loader';
 import ProgressBar from '../fusion/ProgressBar';
-
+import PanelFooter from '../fusion/PanelFooter';
+import PanelHeader from '../fusion/PanelHeader';
+import Tooltip from '../fusion/Tooltip';
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
+
+    <h2>Tooltip </h2>
+        <Tooltip />
+     <Row />
+     <hr />
 
      <h2>Progress Bar</h2>
         <ProgressBar />
@@ -35,12 +41,6 @@ const KitchenSink = (props) => (
 
      <h2>Circular Progress</h2>
         <Progress />
-     <Row />
-     <hr />
-
-     <hr />
-     <h2>Background Image</h2>
-        <BackgroundImage />
      <Row />
      <hr />
 

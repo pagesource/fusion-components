@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {keyframes, css} from 'emotion';
+import { withTheme } from 'theming';
 
 const rotation = keyframes`  
     0% { transform: rotate(0deg); }
@@ -35,4 +36,4 @@ Loader.defaultProps = {
   value: 1/3
 };
 
-export default Loader;
+export default withTheme(Loader);
