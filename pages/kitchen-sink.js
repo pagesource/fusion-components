@@ -20,13 +20,30 @@ import Tooltip from '../fusion/Tooltip';
 import Bounce from '../fusion/Bounce';
 import Truncate from '../fusion/Truncate';
 import Ripples from '../fusion/Ripples';
+import Blockquote from '../fusion/Blockquote';
+import BackgroundImage from '../fusion/BackgroundImage';
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
 
-    <h2>Ripples Animation</h2>
+
+    <h2>BackgroundImage</h2>
+     <div>
+        <BackgroundImage picUrl="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png" width="400px"></BackgroundImage>
+     </div> 
+     <Row />
+     <hr />  
+
+    <h2>Blockquote</h2>
+     <div>
+        <Blockquote>Blockquote tag specifies a section that is quoted from another source.</Blockquote>
+     </div>
+     <Row />
+     <hr />  
+
+     <h2>Ripples Animation</h2>  
      <div>
         <Ripples></Ripples>
      </div>

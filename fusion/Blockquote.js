@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {css} from 'emotion';
+import styled from 'emotion/react';
 
 const Blockquote = styled.blockquote`
   color: indigo;

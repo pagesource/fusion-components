@@ -10,7 +10,6 @@ const columnStyle = css`
 `;
 
 
-
 const Column = (props) => {
   return (
 		<Column className={columnStyle}> </Column>

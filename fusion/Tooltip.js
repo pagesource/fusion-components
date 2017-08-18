@@ -3,52 +3,76 @@ import {css} from 'emotion';
 import styled from 'emotion/react';
 import { withTheme } from 'theming';
 
-const tooltipStyle = css`
-  display: none;
-  text-align: ${props => props.align};
-  font-weight: ${props => props.weight};
-  font-size: ${props => props.size}px;
-  &:hover::before {
-    display: block;
-  }
-  &:hover::after {
-    display: block;
-  }
+const display={
+  invisible: "none",
+  visible: "block"
+}
+
+const Wrapper= styled('div')`
+  background: #ececec;
+  color: #555;
+  cursor: help;
+  margin: 100px 75px 10px 75px;
+  padding: 10px 15px;
+  position: relative;
+  text-align: center;
+  width: 200px;
+  -webkit-transform: translateZ(0); 
+  -webkit-font-smoothing: antialiased;
+   &:hover {
+        &textShow{
+          display: ${props => props.display.visible}
+        }
+   }
+
+`
+const ToolTip=styled('div')`
+  background: #1496bb;
+  bottom: 100%;
+  color: #fff;
+  display: block;
+  left: -25px;
+  margin-bottom: 15px;
+  opacity: 0;
+  padding: 20px;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+    transform: translateY(10px);
+    transition: all .25s ease-out;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+
   &::before {
-    display: none;
-    content: "Hello";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translate(-50%, -4px);
-    white-space: nowrap;
-    font-size: 12px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    border-radius: 4px;
-  }
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  }    
+
   &::after {
-    display: none;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translate(-50%, 8px);
-    content: " ";
-    border-width: 6px;
-    border-style: solid;
-    border-color: rgb(0, 0, 0) transparent transparent;
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #1496bb 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
   }
+
 `
 
 const Tooltip = (props) => {
   return ( 
-    <div className="tooltipStyle">
-      {props.onHover}
-    </div>
+   <wrapper>
+    I have a tooltip.
+    <ToolTip className="textShow">{props.onHover}</ToolTip>
+  </wrapper>
   );
 };
 

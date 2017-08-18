@@ -4,7 +4,6 @@ import styled from 'emotion/react';
 import { withTheme } from 'theming';
 import {theme} from './themes';
 
-
 const RippleDiv = styled('div')`
   position: relative;
   width: 300px;
@@ -12,25 +11,6 @@ const RippleDiv = styled('div')`
   top: 100px;
   left: 100px
 `
-const ripple=css`
-  border: 7px solid #2F7DE1;
-  width: 100px;
-  height: 100px;
-  border-radius: 500px;
-  position: absolute;
-`
-
-const ripple1 = css`
-  animation: ${rippleStyle} 3s linear infinite;
-`
-
-const ripple2= css` 
-  animation: ${rippleStyle} 3s linear infinite 0.75s;
-`
-const ripple3 =css`
-  animation: ${rippleStyle} 3s linear infinite 1.5s;
-`
-
 const rippleStyle = keyframes`
   from {
     transform: scale(0);
@@ -41,7 +21,23 @@ const rippleStyle = keyframes`
     opacity: 0;
   }
 `
+const ripple=css`
+  border: 7px solid #2F7DE1;
+  width: 100px;
+  height: 100px;
+  border-radius: 500px;
+  position: absolute;
+`
+const ripple1 = css`
+  animation: ${rippleStyle} 3s linear infinite;
+`
 
+const ripple2= css` 
+  animation: ${rippleStyle} 3s linear infinite 0.75s;
+`
+const ripple3 =css`
+  animation: ${rippleStyle} 3s linear infinite 1.5s;
+`
 const Ripples = (props) => {
   return ( 
       <RippleDiv>
@@ -51,6 +47,5 @@ const Ripples = (props) => {
       </RippleDiv>
   );
 };
-
 
 export default withTheme(Ripples);
