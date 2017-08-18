@@ -19,11 +19,17 @@ import PanelFooter from '../fusion/PanelFooter';
 import PanelHeader from '../fusion/PanelHeader';
 import Tooltip from '../fusion/Tooltip';
 import Bounce from '../fusion/Bounce';
+import Truncate from '../fusion/Truncate';
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
+
+    <h2>Truncate</h2>
+        <Truncate>SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata</Truncate>
+     <Row />
+     <hr />
 
     <h2>Bounce Text Animation</h2>
         <Bounce src="" text="hello bounce"/>
