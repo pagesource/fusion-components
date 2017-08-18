@@ -25,8 +25,13 @@ const KitchenSink = (props) => (
     <ThemeProvider theme={theme}>
      <div>
 
-    <h2>Bounce Animation</h2>
-        <Bounce src="http://www.ipuntotv.com/IMAGES/Pelota.png" width="60px"/>
+    <h2>Bounce Text Animation</h2>
+        <Bounce src="" text="hello bounce"/>
+     <Row />
+     <hr />
+
+     <h2>Bounce Image Animation</h2>
+        <Bounce src="http://www.ipuntotv.com/IMAGES/Pelota.png" text="" width="60px"/>
      <Row />
      <hr />
 

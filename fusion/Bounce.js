@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import {keyframes, css} from 'emotion';
 import styled from 'emotion/react';
 import { withTheme } from 'theming';
+import {theme} from './themes';
 
 const bounce = keyframes`
   from, 20%, 53%, 80%, to {
@@ -22,16 +23,22 @@ const bounce = keyframes`
 `
 
 const BounceIt = styled('div')`
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  animation: ${bounce} 1s ease infinite;
-  transform-origin: center bottom;
+    width: 96px;
+    position: relative;
+    color: #;
+    top: 29px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 96px;
+    border-radius: 50%;
+    animation: ${bounce} 1s ease infinite;
+    transform-origin: center bottom;
 `
 
 const Bounce = (props) => {
   return ( 
     <BounceIt>
+    <span css={`color: blue; font-size: ${props.fontSize}px`}>{props.text}</span>
       <img src={props.src} width={props.width}px/>
     </BounceIt>
   );
@@ -46,14 +53,29 @@ Bounce.propTypes = {
     /**
    * Image width
   */
-  width: PropTypes.number
+  width: PropTypes.number,
+  /**
+  * Bounce text
+  */
+  text: PropTypes.number,
+  /**
+  *text color
+  */
+  color: PropTypes.string,
+  /**
+  *text font-size
+  */
+  fontSize: PropTypes.number,
 
 };
 
 /* Deafult Props */
 Bounce.defaultProps = {
   src: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Basketball_ball.svg",
-  width: 40
+  width: 40,
+  text: "Boucing text",
+  color: "#ASD",
+  fontSize: 20,
 };
 
 export default withTheme(Bounce);
