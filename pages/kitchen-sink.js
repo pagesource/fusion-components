@@ -5,7 +5,6 @@ import Avatar from '../fusion/Avatar';
 import Alert from '../fusion/Alert';
 import Banner from '../fusion/Banner';
 
-
 import { ThemeProvider, withTheme } from 'theming'
 import theme from '../fusion/themes'
 
@@ -20,24 +19,32 @@ import PanelHeader from '../fusion/PanelHeader';
 import Tooltip from '../fusion/Tooltip';
 import Bounce from '../fusion/Bounce';
 import Truncate from '../fusion/Truncate';
+import Ripples from '../fusion/Ripples';
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
 
-    <h2>Truncate</h2>
+    <h2>Ripples Animation</h2>
+     <div>
+        <Ripples></Ripples>
+     </div>
+     <Row />
+     <hr />
+
+     <h2>Truncate</h2>
         <Truncate>SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata</Truncate>
      <Row />
      <hr />
 
-    <h2>Bounce Text Animation</h2>
-        <Bounce src="" text="hello bounce"/>
+     <h2>Bounce Text Animation</h2>
+        <Bounce src="" text="Sapient razorfish" width="60px"/>
      <Row />
      <hr />
 
      <h2>Bounce Image Animation</h2>
-        <Bounce src="http://www.ipuntotv.com/IMAGES/Pelota.png" text="" width="60px"/>
+        <Bounce src="http://www.ipuntotv.com/IMAGES/Pelota.png" text=" " width="60px"/>
      <Row />
      <hr />
 
