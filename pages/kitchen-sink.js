@@ -18,11 +18,17 @@ import ProgressBar from '../fusion/ProgressBar';
 import PanelFooter from '../fusion/PanelFooter';
 import PanelHeader from '../fusion/PanelHeader';
 import Tooltip from '../fusion/Tooltip';
+import Bounce from '../fusion/Bounce';
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
+
+    <h2>Bounce Animation</h2>
+        <Bounce src="http://www.ipuntotv.com/IMAGES/Pelota.png" width="60px"/>
+     <Row />
+     <hr />
 
     <h2>Tooltip </h2>
         <Tooltip />
