@@ -22,19 +22,19 @@ import Truncate from '../fusion/Truncate';
 import Ripples from '../fusion/Ripples';
 import Blockquote from '../fusion/Blockquote';
 import BackgroundImage from '../fusion/BackgroundImage';
+import Typing from '../fusion/Typing';
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
 
-
-    <h2>BackgroundImage</h2>
+    <h2>Typing</h2>
      <div>
-        <BackgroundImage picUrl="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png" width="400px"></BackgroundImage>
-     </div> 
+        <Typing color="blue" text="The text to be displayed in typing style...!!"></Typing>
+     </div>
      <Row />
-     <hr />  
+     <hr />       
 
     <h2>Blockquote</h2>
      <div>
@@ -90,7 +90,7 @@ const KitchenSink = (props) => (
      <Row />
      <hr />
 
-      <h2>Heading</h2>
+    <h2>Heading</h2>
       <Heading></Heading>
      <Row />
      <hr />
@@ -104,10 +104,17 @@ const KitchenSink = (props) => (
      <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" ></Avatar>
        <hr /> 
         
-       <h2>Alert </h2>
+     <h2>Alert </h2>
      <Alert>There was a problem rendering this box</Alert> 
      <Row />
      <hr />
+
+    <h2>BackgroundImage</h2>
+     <div>
+        <BackgroundImage picUrl="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png" width="400px"></BackgroundImage>
+     </div> 
+     <Row />
+     <hr />  
 
      <h2>Banner </h2>
      <Banner src ="http://lorempixel.com/560/150/sports" />
