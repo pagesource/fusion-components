@@ -53,4 +53,8 @@ class CountdownTimer extends Component {
   }
 }
 
+CountdownTimer.propTypes = {
+  startTime : PropTypes.string.isRequired
+}
+
 export default CountdownTimer;
