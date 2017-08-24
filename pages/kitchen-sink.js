@@ -24,35 +24,40 @@ import Blockquote from '../fusion/Blockquote';
 import BackgroundImage from '../fusion/BackgroundImage';
 import Typing from '../fusion/Typing';
 import Rating from '../fusion/Rating';
+import CountdownTimer from '../fusion/CountdownTimer';
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
 
+     <h2>Celebrate New Year In</h2>
+     <div>
+        <CountdownTimer startTime="Jan 1, 2018 15:37:25"/>
+     </div>
 
-    <h2>Rating</h2>
+     <h2>Rating</h2>
      <div>
         <Rating value='3' onClick=""></Rating>
      </div>
      <Row />
-     <hr /> 
+     <hr />
 
     <h2>Typing</h2>
      <div>
         <Typing color="blue" text="The text to be displayed in typing style...!!"></Typing>
      </div>
      <Row />
-     <hr />       
+     <hr />
 
     <h2>Blockquote</h2>
      <div>
         <Blockquote>Blockquote tag specifies a section that is quoted from another source.</Blockquote>
      </div>
      <Row />
-     <hr />  
+     <hr />
 
-     <h2>Ripples Animation</h2>  
+     <h2>Ripples Animation</h2>
      <div>
         <Ripples></Ripples>
      </div>
@@ -105,25 +110,25 @@ const KitchenSink = (props) => (
      <hr />
 
      <h2>Button </h2>
-     <Button>I'm a button</Button> 
+     <Button>Button</Button>
      <Row />
      <hr />
 
      <h3>Avatar</h3>
      <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" ></Avatar>
-       <hr /> 
-        
+       <hr />
+
      <h2>Alert </h2>
-     <Alert>There was a problem rendering this box</Alert> 
+     <Alert>There was a problem rendering this box</Alert>
      <Row />
      <hr />
 
     <h2>BackgroundImage</h2>
      <div>
         <BackgroundImage picUrl="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png" width="400px"></BackgroundImage>
-     </div> 
+     </div>
      <Row />
-     <hr />  
+     <hr />
 
      <h2>Banner </h2>
      <Banner src ="http://lorempixel.com/560/150/sports" />
