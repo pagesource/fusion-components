@@ -23,11 +23,20 @@ import Ripples from '../fusion/Ripples';
 import Blockquote from '../fusion/Blockquote';
 import BackgroundImage from '../fusion/BackgroundImage';
 import Typing from '../fusion/Typing';
+import Rating from '../fusion/Rating';
 
 const KitchenSink = (props) => (
   <Layout>
     <ThemeProvider theme={theme}>
      <div>
+
+
+    <h2>Rating</h2>
+     <div>
+        <Rating value='3' onClick=""></Rating>
+     </div>
+     <Row />
+     <hr /> 
 
     <h2>Typing</h2>
      <div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import skeleton from './skeleton'
-import './Rating.css';
+//import './Rating.css';
 
 /**
  * Star rating Molecule with clickable buttons
