@@ -32,7 +32,7 @@ Typing.propTypes = {
   /**
   * Typing text
   */
-  text: PropTypes.number,
+  text: PropTypes.string,
   /**
   *text color
   */
