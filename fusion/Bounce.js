@@ -57,7 +57,7 @@ Bounce.propTypes = {
   /**
   * Bounce text
   */
-  text: PropTypes.number,
+  text: PropTypes.string,
   /**
   *text color
   */

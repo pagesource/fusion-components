@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "classnames": "^2.2.5",
     "isomorphic-unfetch": "^2.0.0",
     "next": "^2.4.9",
     "react": "^15.6.1",

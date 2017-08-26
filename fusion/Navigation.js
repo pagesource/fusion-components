@@ -2,11 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import './Navigation.css';
-
 const Navigation = (props) => {
   const { theme, links, align, type } = props;
-
   return (
     <div className={classnames('navigation', `${type}-navigation`, `acss-theme-${theme}`, `align-${align}`, 'acss-background-secondary')}>
       <ul>

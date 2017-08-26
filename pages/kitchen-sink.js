@@ -26,11 +26,35 @@ import BackgroundImage from "../fusion/BackgroundImage";
 import Typing from "../fusion/Typing";
 import Rating from "../fusion/Rating";
 import CountdownTimer from "../fusion/CountdownTimer";
+import Dialog from "../fusion/Dialog";
+import Dropdown from "../fusion/Dropdown";
+import Navbar from "../fusion/Navbar";
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
+        <h2>Header Navbar</h2>
+        <div>
+          <Navbar> </Navbar>
+        </div>
+        <Row />
+        <hr />
+
+        <h2>Dropdown</h2>
+        <div>
+          <Dropdown> </Dropdown>
+        </div>
+        <Row />
+        <hr />
+
+        <h2>Fusion dialog box</h2>
+        <div>
+          <Dialog> </Dialog>
+        </div>
+        <Row />
+        <hr />
+
         <h2>Celebrate New Year In</h2>
         <div>
           <CountdownTimer endTime="Jan 1, 2018 15:37:25" />
