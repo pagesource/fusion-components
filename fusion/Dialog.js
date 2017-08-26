@@ -20,6 +20,12 @@ const container = css`
   width: 85%;
   margin: 40px;
 `
+const close = css`
+  font-size: 18px;
+  float: right;
+  cursor:pointer
+`
+
 const cancelBtn = css`
   float: left;
   margin: 10%;
@@ -50,6 +56,7 @@ class Dialog extends React.Component {
             ? 
             <DialogDiv title="Dialog With Actions" onRequestClose={this.handleClose}> 
             <div className={container}>
+              <span className={close} onClick={() => this.handleClose()}>X</span>
               <h1>{this.props.header}</h1>
               <content>{this.props.content}</content>
               <div className={footerStyle}>

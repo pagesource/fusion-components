@@ -34,14 +34,36 @@ const dropdownList = css`
  list-style-type: none !important;
  margin: 0;
  padding-left: 0;
+ cursor: pointer;
 `
-const listItems = css`
+const lists = css`
   width: ${props =>  props.width}px;
   padding: 3px;
   border-radius: 3px;
   &:hover{
     background: silver
   }
+`
+const links = css`
+  text-decoration: none;
+  font-size: 18px;
+`
+const dropIcon = css`
+&:before{
+  content: &#9650;
+}
+  &:after {
+    content: "▼";
+    font-size: 16px;
+    padding: 12px 8px;
+    right: 10px;
+    top: 0;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;    
+}
 `
 
 class Dropdown extends React.Component {
@@ -53,10 +75,12 @@ class Dropdown extends React.Component {
     }
 
   render() {
+
+    const listItems = this.props.ListItems;
   
     return (
       <div>
-        <div className={dropdownMenu} onClick={() => this.onClick()}>Dropdown List</div>
+        <div className={dropdownMenu} onClick={() => this.onClick()}><span className={dropIcon}>Dropdown List</span></div>
       {
           this.state.open
             ? 
@@ -65,7 +89,9 @@ class Dropdown extends React.Component {
                   <ul className={dropdownList}>
                       {Array.apply(null, Array(3)).map(function(item, j){                                        
                          return (
-                            <li className={listItems}>List Item {j}</li>
+                            <li className={lists}>
+                            <a className= {links} href="#">{listItems[j]}</a>
+                            </li>
                           );                
                         }, this)} 
                   </ul>
@@ -102,7 +128,7 @@ Dropdown.propTypes = {
     /**
     *Dropdown list items
     */
-    ListItam: PropTypes.array
+    ListItems: PropTypes.array,
 };
 
 /* Deafult Props */
@@ -111,6 +137,7 @@ Dropdown.defaultProps = {
   bg:"white",
   title: "Dropdown Name",
   header: "Header",
+  ListItems: ["Option 1", "Option 2", "Option 3"]
 };
 
 export default Dropdown;

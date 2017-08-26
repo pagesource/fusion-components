@@ -27,11 +27,19 @@ import Rating from "../fusion/Rating";
 import CountdownTimer from "../fusion/CountdownTimer";
 import Dialog from "../fusion/Dialog";
 import Dropdown from "../fusion/Dropdown";
+import Navbar from "../fusion/Navbar";
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
+        <h2>Header Navbar</h2>
+        <div>
+          <Navbar> </Navbar>
+        </div>
+        <Row />
+        <hr />
+
         <h2>Dropdown</h2>
         <div>
           <Dropdown> </Dropdown>
