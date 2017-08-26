@@ -4,14 +4,25 @@ import PropTypes from "prop-types";
 
 import Button from "./Button";
 import Rating from "./Rating";
+import Panel from "./Panel";
+// import "./Card.css";
 
 const card = css`
   text-align: center;
   flex:1;
   background: #fff;
   padding:1rem;
-  margin: 1rem;
+  margin: auto;
+  width:250px;
+  height:350px;
 
+`;
+
+const cardContainer = css`
+
+  display: flex;
+  flex-direction:row;
+  width:100%;
 `;
 
 const Card = props => {
@@ -21,15 +32,15 @@ const Card = props => {
     <div className={cardContainer}>
       {cardDetails &&
         cardDetails.map((card, index) =>
-          <div className={card} key={`key-${index}`}>
+          <Panel className={card} key={`key-${index}`}>
             <img src={card.image} alt={card.heading} />
-            <h2 children={card.heading} />
-            <Rating value={4} />
+            <h2 children={card.title} />
+            <Rating value={card.rating} />
             <p>
-              {card.text}
+              {card.description}
             </p>
             <Button>Add to Cart</Button>
-          </div>
+          </Panel>
         )}
     </div>
   );

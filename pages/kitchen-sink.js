@@ -29,6 +29,7 @@ import CountdownTimer from "../fusion/CountdownTimer";
 import Dialog from "../fusion/Dialog";
 import Dropdown from "../fusion/Dropdown";
 import Navbar from "../fusion/Navbar";
+import CardGrid from "../fusion/CardGrid";
 
 const KitchenSink = props =>
   <Layout>
@@ -51,6 +52,13 @@ const KitchenSink = props =>
         <h2>Fusion dialog box</h2>
         <div>
           <Dialog> </Dialog>
+        </div>
+        <Row />
+        <hr />
+
+        <h2>Card</h2>
+        <div>
+          <CardGrid />
         </div>
         <Row />
         <hr />
