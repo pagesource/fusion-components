@@ -1,14 +1,14 @@
-import PropTypes from 'prop-types';
-import {css} from 'emotion';
-import styled from 'emotion/react';
-import { withTheme } from 'theming';
+import PropTypes from "prop-types";
+import { css } from "emotion";
+import styled from "emotion/react";
+import { withTheme } from "theming";
 
-const display={
+const display = {
   invisible: "none",
   visible: "block"
-}
+};
 
-const Wrapper= styled('div')`
+const Wrapper = styled("div")`
   background: #ececec;
   color: #555;
   cursor: help;
@@ -25,8 +25,8 @@ const Wrapper= styled('div')`
         }
    }
 
-`
-const ToolTip=styled('div')`
+`;
+const ToolTip = styled("div")`
   background: #1496bb;
   bottom: 100%;
   color: #fff;
@@ -65,14 +65,14 @@ const ToolTip=styled('div')`
   width: 0;
   }
 
-`
+`;
 
-const Tooltip = (props) => {
-  return ( 
-   <wrapper>
-    I have a tooltip.
-    <ToolTip className="textShow">{props.onHover}</ToolTip>
-  </wrapper>
+const Tooltip = props => {
+  return (
+    <wrapper>
+      I have a tooltip.
+      <ToolTip className="textShow">{props.onHover}</ToolTip>
+    </wrapper>
   );
 };
 
@@ -96,7 +96,7 @@ Tooltip.propTypes = {
   onHover: PropTypes.string
 };
 
-/* Deafult Props */
+/* Default Props */
 Tooltip.defaultProps = {
   align: "left",
   weight: "bold",

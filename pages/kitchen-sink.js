@@ -4,6 +4,7 @@ import Button from "../fusion/Button";
 import Avatar from "../fusion/Avatar";
 import Alert from "../fusion/Alert";
 import Banner from "../fusion/Banner";
+import Panel from "../fusion/Panel";
 
 import { ThemeProvider, withTheme } from "theming";
 import theme from "../fusion/themes";
@@ -38,6 +39,13 @@ const KitchenSink = props =>
         <h2>Rating</h2>
         <div>
           <Rating value="3" onClick="" />
+        </div>
+        <Row />
+        <hr />
+
+        <h2>Panel</h2>
+        <div>
+          <Panel>this is text inside panel</Panel>
         </div>
         <Row />
         <hr />
@@ -149,7 +157,7 @@ const KitchenSink = props =>
         <Row />
         <hr />
       </div>
-    </ThemeProvider>
+    </ThemeProvider>;
   </Layout>;
 
 export default KitchenSink;
