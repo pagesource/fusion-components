@@ -12,8 +12,8 @@ const layoutContainer = css`
 
 const content = css`
 width:95%;
-margin-left:25%;
-padding:1rem;
+margin-left:200px;
+padding:3rem;
 background:#f9f9f9;
 font-family: Arial, Helvetica, sans-serif;
 color#red;

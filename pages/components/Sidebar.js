@@ -5,7 +5,7 @@ const linkStyle = {
 };
 
 const navStyle = css`
-width:25%;
+width:250px;
 position:fixed;
 left:0;
 top:75px;
@@ -18,9 +18,15 @@ text-decoration:none;
 & a{
   color:#f9f9f9;
   text-decoration:none;
+  
 }
 & a:hover{
   color:#f60;
+}
+
+& ul li{
+  list-style:none;
+  padding:10px 0;
 }
 `;
 
