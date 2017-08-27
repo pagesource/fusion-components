@@ -12,13 +12,15 @@ top:75px;
 height:100%;
 background-color:#333;
 color:#f9f9f9;
+font-family: Arial, Helvetica, sans-serif;
+text-decoration:none;
 
 & a{
   color:#f9f9f9;
-  text-transform:none;
+  text-decoration:none;
 }
 & a:hover{
-  color:sea-blue
+  color:#f60;
 }
 `;
 

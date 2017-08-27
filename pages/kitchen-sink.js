@@ -1,4 +1,5 @@
 import Layout from "./components/Layout";
+
 import Link from "next/link";
 import Button from "../fusion/Button";
 import Avatar from "../fusion/Avatar";
@@ -31,15 +32,35 @@ import Dropdown from "../fusion/Dropdown";
 import Navbar from "../fusion/Navbar";
 import CardGrid from "../fusion/CardGrid";
 import Stepper from "../fusion/Stepper";
-import "./styles.css";
+import ControlStepper from "../fusion/StepperControl";
+import Pagination from "../fusion/Pagination";
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
+        <h2>Pagination</h2>
+        <div>
+          <Pagination />
+        </div>
+        <Row />
+        <hr />
+        <h2>Controlled Stepper</h2>
+        <div>
+          <ControlStepper />
+        </div>
+        <Row />
+        <hr />
         <h2>Stepper component</h2>
         <div>
           <Stepper />
+        </div>
+        <Row />
+        <hr />
+
+        <h2>Navbar</h2>
+        <div>
+          <Navbar />
         </div>
         <Row />
         <hr />

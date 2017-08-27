@@ -17,7 +17,6 @@ display: inline-block;
     background: aliceblue;
 `
 const StepContent = styled.div`
-
 `
 const StepTitle = styled.span`
   font-size: 16px;
@@ -38,7 +37,6 @@ const rightArrow = css`
   top: -5px;
   left: 15px;
 `
-
 const Steps = props => {
     const {steps} = props;
     const stepsDetails = steps !== null ? steps : null;

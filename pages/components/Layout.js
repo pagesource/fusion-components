@@ -1,6 +1,7 @@
 import { css } from "emotion";
 import styled from "emotion/react";
 import Header from "./Header";
+
 import SideBar from "./Sidebar";
 
 const layoutContainer = css`
@@ -9,21 +10,18 @@ const layoutContainer = css`
   border: '1px solid #DDD'
 `;
 
-const FixedHeader = styled(Header)`
-position:fixed;
-`;
-
 const content = css`
 width:95%;
 margin-left:25%;
 padding:1rem;
 background:#f9f9f9;
-font-family:'arial sans-serif';
+font-family: Arial, Helvetica, sans-serif;
+color#red;
 `;
 
 const Layout = props =>
   <div className={layoutContainer}>
-    <FixedHeader />
+    <Header />
     <SideBar />
     <div className={content}>
       {props.children}
