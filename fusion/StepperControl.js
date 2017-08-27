@@ -33,14 +33,32 @@ const Stepper = styled.div`
 
 `
 const StepButton = styled.div`
-  width: 180px;
-  height: 50px;
-  background: skyblue;
-  opacity: 0.8;
+    width: 160px;
+    border-radius: 7px;
+    height: 50px;
+    text-align: center;
+    background: skyblue;
   &:hover{
     background: Aquamarine;
   }
 `
+const rightArrow = css`
+    font-size: 24px;
+    position: relative;
+    padding: 0px 5px;
+    top: 17px;
+    left: -4px;
+`
+const stepName = css`
+    position: relative;
+    top: 15px;
+`
+const container = css`
+    width: 100%;
+    background: aliceblue;
+    height: auto;
+`
+
 class ControlStepper extends React.Component {
 
   state = {
@@ -77,11 +95,11 @@ class ControlStepper extends React.Component {
   getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return 'Select campaign settings...';
+        return 'First step content......';
       case 1:
-        return 'What is an ad group anyways?';
+        return 'Second step content......';
       case 2:
-        return 'This is the bit I really care about!';
+        return 'Third step content......';
       default:
         return 'Click a step to get started.';
     }
@@ -107,26 +125,28 @@ class ControlStepper extends React.Component {
         <Stepper linear={false}>
           <Step completed={visited.indexOf(0) !== -1} active={stepIndex === 0}>
             <StepButton onClick={() => this.setState({stepIndex: 0})}>
-              Select campaign settings
+              <span className={stepName}>STEP 1</span>
             </StepButton>
           </Step>
+          <span className={rightArrow}>&#10145;</span>
           <Step completed={visited.indexOf(1) !== -1} active={stepIndex === 1}>
             <StepButton onClick={() => this.setState({stepIndex: 1})}>
-              Create an ad group
+              <span className={stepName}>STEP 2 </span>
             </StepButton>
           </Step>
+          <span className={rightArrow}>&#10145;</span>
           <Step completed={visited.indexOf(2) !== -1} active={stepIndex === 2}>
             <StepButton onClick={() => this.setState({stepIndex: 2})}>
-              Create an ad
+              <span className={stepName}>STEP 3</span>
             </StepButton>
           </Step>
         </Stepper>
         <div style={styles.content}>
-          <p>{this.getStepContent(stepIndex)}</p>
+          <p className={container}>{this.getStepContent(stepIndex)}</p>
           {stepIndex !== null && (
             <div style={styles.actions}>
               <Button disabled={stepIndex === 0}  onClick={this.handlePrev}  style={styles.backButton}>Prev</Button>
-              <Button onClick={this.handleNext}>Next</Button>
+              <Button style="margin-left: 30px" onClick={this.handleNext}>Next</Button>
             </div>
           )}
         </div>
