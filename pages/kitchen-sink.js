@@ -30,28 +30,29 @@ import Dialog from "../fusion/Dialog";
 import Dropdown from "../fusion/Dropdown";
 import Navbar from "../fusion/Navbar";
 import CardGrid from "../fusion/CardGrid";
+import Stepper from "../fusion/Stepper";
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
-        <h2>Header Navbar</h2>
+        <h2>Stepper component</h2>
         <div>
-          <Navbar> </Navbar>
+          <Stepper /> 
         </div>
         <Row />
         <hr />
 
         <h2>Dropdown</h2>
         <div>
-          <Dropdown> </Dropdown>
+          <Dropdown />
         </div>
         <Row />
         <hr />
 
         <h2>Fusion dialog box</h2>
         <div>
-          <Dialog> </Dialog>
+          <Dialog />
         </div>
         <Row />
         <hr />
