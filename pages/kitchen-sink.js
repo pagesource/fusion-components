@@ -31,6 +31,7 @@ import Dropdown from "../fusion/Dropdown";
 import Navbar from "../fusion/Navbar";
 import CardGrid from "../fusion/CardGrid";
 import Stepper from "../fusion/Stepper";
+import "./styles.css";
 
 const KitchenSink = props =>
   <Layout>
@@ -38,7 +39,7 @@ const KitchenSink = props =>
       <div>
         <h2>Stepper component</h2>
         <div>
-          <Stepper /> 
+          <Stepper />
         </div>
         <Row />
         <hr />

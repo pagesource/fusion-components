@@ -18,6 +18,7 @@ width:95%;
 margin-left:25%;
 padding:1rem;
 background:#f9f9f9;
+font-family:'arial sans-serif';
 `;
 
 const Layout = props =>
