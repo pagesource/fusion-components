@@ -32,12 +32,18 @@ import Navbar from "../fusion/Navbar";
 import CardGrid from "../fusion/CardGrid";
 import Stepper from "../fusion/Stepper";
 import ControlStepper from "../fusion/StepperControl";
-
+import Pagination from "../fusion/Pagination";
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
+        <h2>Pagination</h2>
+        <div>
+          <Pagination /> 
+        </div>
+        <Row />
+        <hr />
         <h2>Controlled Stepper</h2>
         <div>
           <ControlStepper /> 
