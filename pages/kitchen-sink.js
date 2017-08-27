@@ -31,14 +31,29 @@ import Dropdown from "../fusion/Dropdown";
 import Navbar from "../fusion/Navbar";
 import CardGrid from "../fusion/CardGrid";
 import Stepper from "../fusion/Stepper";
+import ControlStepper from "../fusion/StepperControl";
+
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
+        <h2>Controlled Stepper</h2>
+        <div>
+          <ControlStepper /> 
+        </div>
+        <Row />
+        <hr />      
         <h2>Stepper component</h2>
         <div>
           <Stepper /> 
+        </div>
+        <Row />
+        <hr />
+
+        <h2>Navbar</h2>
+        <div>
+          <Navbar />
         </div>
         <Row />
         <hr />
