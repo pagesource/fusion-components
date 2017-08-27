@@ -40,13 +40,13 @@ const SideBar = () =>
         </Link>
       </li>
       <li>
-        <Link href="/">
-          <a style={linkStyle}>Avatar</a>
+        <Link href="/content-component">
+          <a style={linkStyle}>Content Components</a>
         </Link>
       </li>
       <li>
-        <Link href="/avatar">
-          <a style={linkStyle}>About</a>
+        <Link href="/loaders">
+          <a style={linkStyle}>Progress & Activity</a>
         </Link>
       </li>
     </ul>

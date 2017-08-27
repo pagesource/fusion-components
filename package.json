@@ -14,6 +14,7 @@
   },
   "devDependencies": {
     "emotion": "^7.2.0",
+    "react-live": "^1.7.0",
     "theming": "^1.1.0"
   },
   "scripts": {

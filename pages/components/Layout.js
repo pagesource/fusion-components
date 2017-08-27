@@ -11,12 +11,23 @@ const layoutContainer = css`
 `;
 
 const content = css`
-width:95%;
+width:79%;
 margin-left:200px;
 padding:3rem;
-background:#f9f9f9;
+background:#eaeaea;
 font-family: Arial, Helvetica, sans-serif;
 color#red;
+
+& h3{
+  margin-top:45px;
+  border-bottom:thick solid #aaa;
+}
+& pre{
+  background:#333;
+  color:#f9f9f9;
+  margin:10px;
+  padding:10px;
+}
 `;
 
 const Layout = props =>

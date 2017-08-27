@@ -17,9 +17,10 @@ const PanelStyle = css`
 border:thin solid #aaa;
 padding: 10px;
 margin:10px;
-box-shadow: 0.25rem 0.25rem 0.5rem #ccc;
+background:#fff;
+box-shadow: 0.25rem 0.25rem 0.5rem #aaa;
 // padding:${props => props.theme.panelPadding};
-// box-shadow:${props => props.theme.panelShadow};
+
 // Until we figure out to get theming working;
 
 `;
