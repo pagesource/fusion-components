@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "chart.js": "^2.6.0",
     "classnames": "^2.2.5",
     "isomorphic-unfetch": "^2.0.0",
     "next": "^2.4.9",
     "react": "^15.6.1",
+    "react-chartjs-2": "^2.6.1",
     "react-doc-generator": "^1.2.5",
     "react-dom": "^15.6.1",
     "theming": "^1.1.0"
