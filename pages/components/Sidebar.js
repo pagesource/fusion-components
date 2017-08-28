@@ -49,6 +49,14 @@ const SideBar = () => <nav className={navStyle}>
 		<a style={linkStyle}>Progress & Activity</a>
 	  </Link>
 	</li>
+	<li>
+	  <Link href="/coming-soon" style={linkStyle}>Form Elements
+	  </Link>
+	</li>
+	<li>
+	  <Link href="/coming-soon" style={linkStyle}>Charting Components
+	  </Link>
+	</li>
   </ul>
 </nav>;
 

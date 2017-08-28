@@ -1,6 +1,5 @@
 import React from 'react';
 import { ThemeProvider } from 'theming';
-
 import {
   Alert,
   Avatar,
