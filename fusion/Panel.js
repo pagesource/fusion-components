@@ -1,19 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { css } from "emotion";
-import styled from "emotion/react";
-import { withTheme } from "theming";
-import { theme } from "./themes";
-
-// const Panel = withTheme(styled("div")`
-// width:450px;
-// height:250px;
-// padding:${props => props.theme.panelPadding};
-// box-shadow:${props => props.theme.panelShadow};
-// `);
+import { css } from 'emotion';
+import React from 'react';
+import { withTheme } from 'theming';
+import { theme } from '../theme/index';
 
 const PanelStyle = css`
-
 border:thin solid #aaa;
 padding: 10px;
 margin:10px;
@@ -25,13 +15,6 @@ box-shadow: 0.25rem 0.25rem 0.5rem #aaa;
 
 `;
 
-const Panel = props => {
-  console.log(props.theme);
-  return (
-    <div className={PanelStyle}>
-      {props.children}
-    </div>
-  );
-};
+const Panel = ({ children }) => (<div className={PanelStyle}>{children}</div>);
 
 export default withTheme(Panel);

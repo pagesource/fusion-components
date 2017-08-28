@@ -1,6 +1,6 @@
+import { css } from 'emotion';
 import PropTypes from 'prop-types';
-import {css} from 'emotion';
-import { withTheme } from 'theming'
+import { withTheme } from 'theming';
 
 const bannerStyle = css`
   display: flex;
@@ -13,29 +13,19 @@ const bannerStyle = css`
   background-image: url(${ props => props.picUrl });
 `;
 
-
-const Banner = (props) => {
-  return (
-
-   <img src={props.src}
-   className={bannerStyle}
-   />
-
-  );
-};
-
+const Banner = (props) => (<img src={props.src} className={bannerStyle}/>);
 
 /* Props Check */
 Banner.propTypes = {
   /**
    * Image URL
-  */
+   */
   picUrl: PropTypes.string
 };
 
 /* Default Props */
 Banner.defaultProps = {
-  picUrl: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20"
+  picUrl: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20'
 };
 
 export default withTheme(Banner);

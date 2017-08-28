@@ -1,10 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Button from "./Button";
-import { css } from "emotion";
-import styled from "emotion/react";
-import Link from "next/link";
-import theme from "./themes";
+import { css } from 'emotion';
+import styled from 'emotion/react';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const NavbarDiv = styled.div`
   display: flex;
@@ -35,72 +33,63 @@ const anchor = css`
 `;
 
 class Navbar extends React.PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      open: true
-    };
+  constructor(){
+	super();
+	this.state = {
+	  open: true
+	};
   }
 
-  render() {
-    const NavItems = this.props.NavList;
-    const navLinks = this.props.links;
-    const title = this.props.title;
+  render(){
+	const { NavList: NavItems, links: navLinks } = this.props;
 
-    return (
-      <div>
-        <NavbarDiv>
-          <div className={lists}>
-            {Array.apply(null, Array(3)).map(function(item, i) {
-              return (
-                <div className={links}>
-                  <Link key={i} href={navLinks[i]}>
-                    <a className={anchor}>
-                      {NavItems[i]}
-                    </a>
-                  </Link>
-                </div>
-              );
-            }, this)}
-          </div>
-        </NavbarDiv>
-      </div>
-    );
+	return (<NavbarDiv>
+	  <div className={lists}>
+		{Array.apply(null, Array(3)).map((item, i) => (<div className={links}>
+			<Link key={i} href={navLinks[i]}>
+			  <a className={anchor}>
+				{NavItems[i]}
+			  </a>
+			</Link>
+		  </div>)
+		  , this)}
+	  </div>
+	</NavbarDiv>);
   }
 }
 
 /* Props Check */
 Navbar.propTypes = {
   /**
-    *NavbarNavbar width
-    */
+   *NavbarNavbar width
+   */
   width: PropTypes.number,
   /**
-    *Navbar background
-    */
+   *Navbar background
+   */
   bg: PropTypes.string,
   /**
-    *Navbar title
-    */
+   *Navbar title
+   */
   title: PropTypes.string,
   /**
-    *Navbar names
-    */
+   *Navbar names
+   */
   NavList: PropTypes.array,
   /**
-    *Navbar links
-    */
+   *Navbar links
+   */
   links: PropTypes.array
 };
 
 /* Deafult Props */
 Navbar.defaultProps = {
   width: 200,
-  bg: "white",
-  title: "Home",
-  header: "Header",
-  NavList: ["Home", "About us", "Contact"],
-  links: ["www.google.com", "wwww.facebook.com", "www.twitter.com"]
+  bg: 'white',
+  title: 'Home',
+  header: 'Header',
+  NavList: ['Home', 'About us', 'Contact'],
+  links: ['www.google.com', 'wwww.facebook.com', 'www.twitter.com']
 };
 
 export default Navbar;

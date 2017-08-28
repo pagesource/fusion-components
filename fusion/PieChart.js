@@ -1,35 +1,27 @@
 import React from 'react';
-import {Pie} from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 
 const data = {
-	labels: [
-		'Red',
-		'Green',
-		'Yellow'
+  labels: [
+	'Red',
+	'Green',
+	'Yellow'
+  ],
+  datasets: [{
+	data: [300, 50, 100],
+	backgroundColor: [
+	  '#FF6384',
+	  '#36A2EB',
+	  '#FFCE56'
 	],
-	datasets: [{
-		data: [300, 50, 100],
-		backgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
-		],
-		hoverBackgroundColor: [
-		'#FF6384',
-		'#36A2EB',
-		'#FFCE56'
-		]
-	}]
+	hoverBackgroundColor: [
+	  '#FF6384',
+	  '#36A2EB',
+	  '#FFCE56'
+	]
+  }]
 };
 
-export default React.createClass({
-  displayName: 'PieChart',
+const PieChart = () => (<Pie data={data}/>);
 
-  render() {
-    return (
-      <div>
-        <Pie data={data} />
-      </div>
-    );
-  }
-});
+export default PieChart;

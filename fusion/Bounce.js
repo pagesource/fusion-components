@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import {keyframes, css} from 'emotion';
+import { keyframes } from 'emotion';
 import styled from 'emotion/react';
+import PropTypes from 'prop-types';
 import { withTheme } from 'theming';
-import {theme} from './themes';
+import { theme } from '../theme/index';
 
 const bounce = keyframes`
   from, 20%, 53%, 80%, to {
@@ -20,7 +20,7 @@ const bounce = keyframes`
   90% {
     transform: translate3d(0,-5px,0);
   }
-`
+`;
 
 const BounceIt = styled('div')`
     width: 96px;
@@ -33,48 +33,44 @@ const BounceIt = styled('div')`
     border-radius: 50%;
     animation: ${bounce} 1s ease infinite;
     transform-origin: center bottom;
-`
+`;
 
-const Bounce = (props) => {
-  return ( 
-    <BounceIt>
-    <span css={`color: blue; font-size: ${props.fontSize}px`}>{props.text}</span>
-      <img src={props.src} width={props.width}px/>
-    </BounceIt>
-  );
-};
+const Bounce = ({ fontSize, text, src, width, color }) => (<BounceIt>
+  <span style={{ color: `${color}`, fontSize: `${fontSize}px` }}>{text}</span>
+  <img src={src} width={width}/>
+</BounceIt>);
 
 /* Props Check */
 Bounce.propTypes = {
   /**
    * Image src link
-  */
+   */
   src: PropTypes.string,
-    /**
+  /**
    * Image width
-  */
+   */
   width: PropTypes.number,
   /**
-  * Bounce text
-  */
+   * Bounce text
+   */
   text: PropTypes.string,
   /**
-  *text color
-  */
+   *text color
+   */
   color: PropTypes.string,
   /**
-  *text font-size
-  */
+   *text font-size
+   */
   fontSize: PropTypes.number,
 
 };
 
 /* Deafult Props */
 Bounce.defaultProps = {
-  src: "https://upload.wikimedia.org/wikipedia/commons/5/5a/Basketball_ball.svg",
+  src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Basketball_ball.svg',
   width: 40,
-  text: "Boucing text",
-  color: "#ASD",
+  text: 'Boucing text',
+  color: '#ASD',
   fontSize: 20,
 };
 

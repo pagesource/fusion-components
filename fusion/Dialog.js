@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Button from "./Button";
-import { css } from "emotion";
-import styled from "emotion/react";
+import { css } from 'emotion';
+import styled from 'emotion/react';
+import PropTypes from 'prop-types';
+import React from 'react';
+import Button from './Button';
 
 const DialogDiv = styled.div`
   width: ${props => props.width};
@@ -39,88 +39,89 @@ const footerStyle = css`
 `;
 
 class Dialog extends React.PureComponent {
-  constructor() {
-    super();
-    this.state = {
-      open: false
-    };
+  constructor(){
+	super();
+	this.state = {
+	  open: false
+	};
   }
 
-  render() {
-    return (
-      <div>
-        <Button label="Dialog" onClick={() => this.onClick()}>
-          Open Dialog
-        </Button>
-        {this.state.open
-          ? <DialogDiv
-              title="Dialog With Actions"
-              onRequestClose={this.handleClose}
-            >
-              <div className={container}>
+  onClick(){
+	this.setState({ open: !this.state.open });
+  }
+
+  handleClose(){
+	this.setState({ open: !this.state.open });
+  }
+
+  handleSubmit(){
+	this.setState({ open: !this.state.open });
+  }
+
+  render(){
+	return (<div>
+	  <Button label="Dialog" onClick={() => this.onClick()}>
+		Open Dialog
+	  </Button>
+	  {this.state.open
+		? <DialogDiv
+		  title="Dialog With Actions"
+		  onRequestClose={this.handleClose}
+		>
+		  <div className={container}>
                 <span className={close} onClick={() => this.handleClose()}>
                   X
                 </span>
-                <h1>
-                  {this.props.header}
-                </h1>
-                <content>
-                  {this.props.content}
-                </content>
-                <div className={footerStyle}>
-                  <div className={cancelBtn}>
-                    <Button onClick={() => this.handleClose()}>Cancel</Button>
-                  </div>
-                  <div className={submitBtn}>
-                    <Button onClick={() => this.handleSubmit()}>Submit</Button>
-                  </div>
-                </div>
-              </div>
-            </DialogDiv>
-          : null}
-      </div>
-    );
-  }
-  onClick() {
-    this.setState({ open: !this.state.open });
-  }
-  handleClose() {
-    this.setState({ open: !this.state.open });
-  }
-  handleSubmit() {
-    this.setState({ open: !this.state.open });
+			<h1>
+			  {this.props.header}
+			</h1>
+			<content>
+			  {this.props.content}
+			</content>
+			<div className={footerStyle}>
+			  <div className={cancelBtn}>
+				<Button onClick={() => this.handleClose()}>Cancel</Button>
+			  </div>
+			  <div className={submitBtn}>
+				<Button onClick={() => this.handleSubmit()}>Submit</Button>
+			  </div>
+			</div>
+		  </div>
+		</DialogDiv>
+		: null}
+	</div>);
   }
 }
 
 /* Props Check */
 Dialog.propTypes = {
   /**
-    *Dialog width
-    */
+   *Dialog width
+   */
   width: PropTypes.number,
   /**
-    *Dialog height
-    */
+   *Dialog height
+   */
   height: PropTypes.number,
   /**
-    *Dialog background
-    */
+   *Dialog background
+   */
   bg: PropTypes.string,
   /**
-    *Dialog title
-    */
+   *Dialog title
+   */
   title: PropTypes.string,
   /**
-    *Dialog header
-    */
+   *Dialog header
+   */
   header: PropTypes.string,
   /**
-    *Dialog display status
-    */
+   *Dialog display status
+   */
   open: PropTypes.string,
   /**
-    *Dialog body content
-    */
+   *Dialog body content
+   */
   content: PropTypes.string
 };
 
@@ -128,10 +129,10 @@ Dialog.propTypes = {
 Dialog.defaultProps = {
   width: 800,
   height: 300,
-  bg: "white",
-  title: "Title content",
-  header: "Header",
-  content: "Your content for the Dialog box can be passed as props value"
+  bg: 'white',
+  title: 'Title content',
+  header: 'Header',
+  content: 'Your content for the Dialog box can be passed as props value'
 };
 
 export default Dialog;

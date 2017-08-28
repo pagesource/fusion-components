@@ -1,4 +1,4 @@
-import {css} from 'emotion';
+import styled from 'emotion/react';
 
 const Row = styled.div`
   display: flex;

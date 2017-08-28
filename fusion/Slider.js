@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types';
-import {css} from 'emotion';
 import styled from 'emotion/react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const Slider = styled.input.attrs({
-  type: "range",
+const Slider = styled.input({
+  type: 'range',
   name: props => props.name,
   min: props => props.min,
   max: props => props.max,
@@ -28,41 +28,41 @@ const Slider = styled.input.attrs({
   }
 `;
 
-/* Props Check */
-Slider.propTypes = {
-  /**
-   * name
-   */
-  name: PropTypes.string,
-  /**
-   * min value
-   */
-  min: PropTypes.number,
-  /**
-   * max value
-   */
-  max: PropTypes.number,
-  /**
-   * defaultValue
-   */
-  defaultValue: PropTypes.number,
-  /**
-   * onChange
-   */
-  onChange: PropTypes.func,
-  /**
-   * Disabled
-   */
-  disabled: PropTypes.bool
-}
-
-/* Deafult Props */
-Slider.defaultProps = {
-  name: "slider",
-  min: 1,
-  max: 10,
-  defaultValue: 1,
-  disabled: false
-};
+///* Props Check */
+//Slider.propTypes = {
+//  /**
+//   * name
+//   */
+//  name: PropTypes.string,
+//  /**
+//   * min value
+//   */
+//  min: PropTypes.number,
+//  /**
+//   * max value
+//   */
+//  max: PropTypes.number,
+//  /**
+//   * defaultValue
+//   */
+//  defaultValue: PropTypes.number,
+//  /**
+//   * onChange
+//   */
+//  onChange: PropTypes.func,
+//  /**
+//   * Disabled
+//   */
+//  disabled: PropTypes.bool
+//};
+//
+///* Default Props */
+//Slider.defaultProps = {
+//  name: 'slider',
+//  min: 1,
+//  max: 10,
+//  defaultValue: 1,
+//  disabled: false
+//};
 
 export default Slider;
