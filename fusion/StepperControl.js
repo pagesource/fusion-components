@@ -38,12 +38,13 @@ const StepButton = styled.div`
     border-radius: 50%;
     text-align: center;
     background: skyblue;
-  &:hover{
+    cursor: pointer;
+    &:hover{
     background: Aquamarine;
   }
 `
 const rightArrow = css`
-display: inline-block;
+   display: inline-block;
     position: relative;
     width: 130px;
     border-bottom: 2px solid black;
