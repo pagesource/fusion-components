@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { css } from "emotion";
+import { css } from 'emotion';
+
 const headerStyles = css`
 position:fixed;
 height:75px;
@@ -12,9 +12,8 @@ box-shadow:0 3px 5px #aaa;
 z-index:1000;
 `;
 
-const Header = () =>
-  <header className={headerStyles}>
-    <h1>Fusion Component Library</h1>
-  </header>;
+const Header = () => <header className={headerStyles}>
+  <h1>Fusion Component Library</h1>
+</header>;
 
 export default Header;
