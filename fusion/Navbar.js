@@ -7,8 +7,8 @@ import React from 'react';
 const NavbarDiv = styled.div`
   display: flex;
   height: 50px;
-  background: grey; 
-  z-index: 1; 
+  background: grey;
+  z-index: 1;
   font-size: 24px;
 `;
 const lists = css`
@@ -32,25 +32,27 @@ const anchor = css`
   color: {props.theme.primaryColor}
 `;
 
-class Navbar extends React.Component {
+class Navbar extends React.PureComponent {
   constructor(){
 	super();
 	this.state = {
-	  open: true,
+	  open: true
 	};
   }
 
   render(){
-
-	const { NavList: navItems, title, links: navLinks } = this.props;
+	const { NavList: NavItems, links: navLinks } = this.props;
 
 	return (<NavbarDiv>
 	  <div className={lists}>
 		{Array.apply(null, Array(3)).map((item, i) => (<div className={links}>
-		  <Link key={i} href={navLinks[i]}>
-			<a className={anchor}>{navItems[i]}</a>
-		  </Link>
-		</div>), this)}
+			<Link key={i} href={navLinks[i]}>
+			  <a className={anchor}>
+				{NavItems[i]}
+			  </a>
+			</Link>
+		  </div>)
+		  , this)}
 	  </div>
 	</NavbarDiv>);
   }
@@ -77,7 +79,7 @@ Navbar.propTypes = {
   /**
    *Navbar links
    */
-  links: PropTypes.array,
+  links: PropTypes.array
 };
 
 /* Deafult Props */

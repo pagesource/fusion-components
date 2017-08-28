@@ -47,7 +47,7 @@ Clone the repo and do the usual
 
 ` npm install`
 
- `npm run dev`
+ `npm start`
 
 The Demo Kitchen Sink page is built using next.js
 

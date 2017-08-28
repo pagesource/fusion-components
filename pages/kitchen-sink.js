@@ -5,12 +5,14 @@ import {
   Avatar,
   BackgroundImage,
   Banner,
+  BarChart,
   BlockQuote,
   Bounce,
   Button,
   CardGrid,
   CountDownTimer,
   Dialog,
+  Doughnut,
   Dropdown,
   Heading,
   Loader,
@@ -18,6 +20,7 @@ import {
   Navbar,
   Pagination,
   Panel,
+  PieChart,
   ProgressBar,
   ProgressCircle,
   Rating,
@@ -32,183 +35,202 @@ import {
 } from '../index';
 import Layout from './components/Layout';
 
-const KitchenSink = props => (<Layout>
-  <ThemeProvider theme={theme}>
-	<section>
-	  <h2>Pagination</h2>
+const KitchenSink = props =>
+  <Layout>
+	<ThemeProvider theme={theme}>
 	  <div>
-		<Pagination/>
-	  </div>
-	  <Row/>
-	  <hr/>
-	  <h2>Controlled Stepper</h2>
-	  <div>
-		<StepperControl/>
-	  </div>
-	  <Row/>
-	  <hr/>
-	  <h2>Stepper component</h2>
-	  <div>
-		<Stepper/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Horizontal bar Chart</h2>
+		<div>
+		  <BarChart/>
+		</div>
+		<Row/>
+		<hr/>
+		<h2>Pie Chart</h2>
+		<div>
+		  <PieChart/>
+		</div>
+		<Row/>
+		<hr/>
+		<h2>Doughnut</h2>
+		<div>
+		  <Doughnut/>
+		</div>
+		<Row/>
+		<hr/>
+		<h2>Pagination</h2>
+		<div>
+		  <Pagination/>
+		</div>
+		<Row/>
+		<hr/>
+		<h2>Controlled Stepper</h2>
+		<div>
+		  <StepperControl/>
+		</div>
+		<Row/>
+		<hr/>
+		<h2>Stepper component</h2>
+		<div>
+		  <Stepper/>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Navbar</h2>
-	  <div>
-		<Navbar/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Navbar</h2>
+		<div>
+		  <Navbar/>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Dropdown</h2>
-	  <div>
-		<Dropdown/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Dropdown</h2>
+		<div>
+		  <Dropdown/>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Fusion dialog box</h2>
-	  <div>
-		<Dialog/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Fusion dialog box</h2>
+		<div>
+		  <Dialog/>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Card</h2>
-	  <div>
-		<CardGrid/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Card</h2>
+		<div>
+		  <CardGrid/>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Celebrate New Year In</h2>
-	  <div>
-		<CountDownTimer endTime="Jan 1, 2018 15:37:25"/>
-	  </div>
+		<h2>Celebrate New Year In</h2>
+		<div>
+		  <CountDownTimer endTime="Jan 1, 2018 15:37:25"/>
+		</div>
 
-	  <h2>Rating</h2>
-	  <div>
-		<Rating value="3" onClick=""/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Rating</h2>
+		<div>
+		  <Rating value="3" onClick=""/>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Panel</h2>
-	  <div>
-		<Panel>this is text inside panel</Panel>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Panel</h2>
+		<div>
+		  <Panel>this is text inside panel</Panel>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Typing</h2>
-	  <div>
-		<Typing text="The text to be displayed in typing style...!!"/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Typing</h2>
+		<div>
+		  <Typing text="The text to be displayed in typing style...!!"/>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>BlockQuote</h2>
-	  <div>
-		<BlockQuote>
-		  BlockQuote tag specifies a section that is quoted from another
-		  source.
-		</BlockQuote>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Blockquote</h2>
+		<div>
+		  <BlockQuote>
+			Blockquote tag specifies a section that is quoted from another
+			source.
+		  </BlockQuote>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Ripples Animation</h2>
-	  <div>
-		<Ripples/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<h2>Ripples Animation</h2>
+		<div>
+		  <Ripples/>
+		</div>
+		<Row/>
+		<hr/>
 
-	  <h2>Truncate</h2>
-	  <Truncate>
-		SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
-	  </Truncate>
-	  <Row/>
-	  <hr/>
+		<h2>Truncate</h2>
+		<Truncate>
+		  SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
+		</Truncate>
+		<Row/>
+		<hr/>
 
-	  <h2>Bounce Text Animation</h2>
-	  <Bounce src="" text="Sapient razorfish" width="60px"/>
-	  <Row/>
-	  <hr/>
+		<h2>Bounce Text Animation</h2>
+		<Bounce src="" text="Sapient razorfish" width="60px"/>
+		<Row/>
+		<hr/>
 
-	  <h2>Bounce Image Animation</h2>
-	  <Bounce
-		src="http://www.ipuntotv.com/IMAGES/Pelota.png"
-		text=" "
-		width="60px"
-	  />
-	  <Row/>
-	  <hr/>
-
-	  <h2>Tooltip </h2>
-	  <Tooltip/>
-	  <Row/>
-	  <hr/>
-
-	  <h2>Progress Bar</h2>
-	  <ProgressBar/>
-	  <Row/>
-	  <hr/>
-
-	  <h2>Circular Loader</h2>
-	  <Loader/>
-	  <Row/>
-	  <hr/>
-
-	  <h2>Circular Progress</h2>
-	  <ProgressCircle/>
-	  <Row/>
-	  <hr/>
-
-	  <h2>Logo</h2>
-	  <Logo
-		src="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png"
-		alt="fusion logo"
-	  />
-	  <Row/>
-	  <hr/>
-
-	  <h2>Heading</h2>
-	  <Heading/>
-	  <Row/>
-	  <hr/>
-
-	  <h2>Button </h2>
-	  <Button>Button</Button>
-	  <Row/>
-	  <hr/>
-
-	  <h3>Avatar</h3>
-	  <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg"/>
-	  <hr/>
-
-	  <h2>Alert </h2>
-	  <Alert>There was a problem rendering this box</Alert>
-	  <Row/>
-	  <hr/>
-
-	  <h2>BackgroundImage</h2>
-	  <div>
-		<BackgroundImage
-		  picUrl="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png"
-		  width="400px"
+		<h2>Bounce Image Animation</h2>
+		<Bounce
+		  src="http://www.ipuntotv.com/IMAGES/Pelota.png"
+		  text=" "
+		  width="60px"
 		/>
-	  </div>
-	  <Row/>
-	  <hr/>
+		<Row/>
+		<hr/>
 
-	  <h2>Banner </h2>
-	  <Banner src="http://lorempixel.com/560/150/sports"/>
-	  <Row/>
-	  <hr/>
-	</section>
-  </ThemeProvider>;
-</Layout>);
+		<h2>Tooltip </h2>
+		<Tooltip/>
+		<Row/>
+		<hr/>
+
+		<h2>Progress Bar</h2>
+		<ProgressBar value={40}/>
+		<Row/>
+		<hr/>
+
+		<h2>Circular Loader</h2>
+		<Loader/>
+		<Row/>
+		<hr/>
+
+		<h2> Progress Circle</h2>
+		<ProgressCircle value={25}/>
+		<Row/>
+		<hr/>
+
+		<h2>Logo</h2>
+		<Logo
+		  src="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png"
+		  alt="fusion logo"
+		/>
+		<Row/>
+		<hr/>
+
+		<h2>Heading</h2>
+		<Heading/>
+		<Row/>
+		<hr/>
+
+		<h2>Button </h2>
+		<Button>Button</Button>
+		<Row/>
+		<hr/>
+
+		<h3>Avatar</h3>
+		<Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg"/>
+		<hr/>
+
+		<h2>Alert </h2>
+		<Alert>There was a problem rendering this box</Alert>
+		<Row/>
+		<hr/>
+
+		<h2>BackgroundImage</h2>
+		<div>
+		  <BackgroundImage
+			picUrl="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png"
+			width="400px"
+		  />
+		</div>
+		<Row/>
+		<hr/>
+
+		<h2>Banner </h2>
+		<Banner src="http://lorempixel.com/560/150/sports"/>
+		<Row/>
+		<hr/>
+	  </div>
+	</ThemeProvider>;
+  </Layout>;
 
 export default KitchenSink;

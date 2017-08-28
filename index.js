@@ -30,3 +30,6 @@ export { default as Ripples } from './fusion/Ripples';
 export { default as Tooltip } from './fusion/Tooltip';
 export { default as Row } from './fusion/Row';
 export { default as theme } from './theme/';
+export {default as Doughnut} from "./fusion/Doughnut";
+export {default as PieChart} from "./fusion/PieChart";
+export {default as BarChart} from "./fusion/HorizontalBarChart";
