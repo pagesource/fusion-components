@@ -33,9 +33,9 @@ const Stepper = styled.div`
 
 `
 const StepButton = styled.div`
-    width: 160px;
-    border-radius: 7px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
     text-align: center;
     background: skyblue;
   &:hover{
@@ -43,15 +43,17 @@ const StepButton = styled.div`
   }
 `
 const rightArrow = css`
-    font-size: 24px;
+display: inline-block;
     position: relative;
+    width: 130px;
+    border-bottom: 2px solid black;
     padding: 0px 5px;
-    top: 17px;
-    left: -4px;
+    top: 5px;
+   
 `
 const stepName = css`
     position: relative;
-    top: 15px;
+    top: 5px;
 `
 const container = css`
     width: 100%;
@@ -125,19 +127,19 @@ class ControlStepper extends React.Component {
         <Stepper linear={false}>
           <Step completed={visited.indexOf(0) !== -1} active={stepIndex === 0}>
             <StepButton onClick={() => this.setState({stepIndex: 0})}>
-              <span className={stepName}>STEP 1</span>
+              <span className={stepName}>1</span>
             </StepButton>
           </Step>
-          <span className={rightArrow}>&#10145;</span>
+          <div className={rightArrow}></div>
           <Step completed={visited.indexOf(1) !== -1} active={stepIndex === 1}>
             <StepButton onClick={() => this.setState({stepIndex: 1})}>
-              <span className={stepName}>STEP 2 </span>
+              <span className={stepName}>2 </span>
             </StepButton>
           </Step>
-          <span className={rightArrow}>&#10145;</span>
+          <div className={rightArrow}></div>
           <Step completed={visited.indexOf(2) !== -1} active={stepIndex === 2}>
             <StepButton onClick={() => this.setState({stepIndex: 2})}>
-              <span className={stepName}>STEP 3</span>
+              <span className={stepName}>3</span>
             </StepButton>
           </Step>
         </Stepper>
