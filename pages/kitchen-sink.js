@@ -34,14 +34,20 @@ import CardGrid from "../fusion/CardGrid";
 import Stepper from "../fusion/Stepper";
 import ControlStepper from "../fusion/StepperControl";
 import Pagination from "../fusion/Pagination";
-import DynamicDoughnut from "../fusion/dynamicDoughnut";
 import Doughnut from "../fusion/Doughnut";
 import PieChart from "../fusion/PieChart";
+import BarChart from "../fusion/HorizontalBarChart";
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
+      <h2>Horizontal bar Chart</h2>
+        <div>
+          <BarChart />
+        </div>
+        <Row />
+        <hr />
       <h2>Pie Chart</h2>
         <div>
           <PieChart />
@@ -54,13 +60,6 @@ const KitchenSink = props =>
         </div>
         <Row />
         <hr />
-      <h2>DynamicDoughnut</h2>
-        <div>
-          <DynamicDoughnut />
-        </div>
-        <Row />
-        <hr />
-        
         <h2>Pagination</h2>
         <div>
           <Pagination />
