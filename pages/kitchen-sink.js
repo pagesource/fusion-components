@@ -13,7 +13,7 @@ import theme from "../fusion/themes";
 import Heading from "../fusion/Heading";
 import Row from "../fusion/Row";
 import Logo from "../fusion/Logo";
-import Progress from "../fusion/Progress";
+import ProgressCircle from "../fusion/ProgressCircle";
 import Loader from "../fusion/Loader";
 import ProgressBar from "../fusion/ProgressBar";
 import PanelFooter from "../fusion/PanelFooter";
@@ -156,7 +156,7 @@ const KitchenSink = props =>
         <hr />
 
         <h2>Progress Bar</h2>
-        <ProgressBar />
+        <ProgressBar value={40} />
         <Row />
         <hr />
 
@@ -165,8 +165,8 @@ const KitchenSink = props =>
         <Row />
         <hr />
 
-        <h2>Circular Progress</h2>
-        <Progress />
+        <h2> Progress Circle</h2>
+        <ProgressCircle value={25} />
         <Row />
         <hr />
 

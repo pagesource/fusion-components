@@ -32,7 +32,6 @@ text-decoration:none;
 
 const SideBar = () =>
   <nav className={navStyle}>
-    <h3>Components</h3>
     <ul>
       <li>
         <Link href="/kitchen-sink">
@@ -47,6 +46,16 @@ const SideBar = () =>
       <li>
         <Link href="/loaders">
           <a style={linkStyle}>Progress & Activity</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/coming-soon">
+          <a style={linkStyle}>Form Elements</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/coming-soon">
+          <a style={linkStyle}>Charting Components</a>
         </Link>
       </li>
     </ul>

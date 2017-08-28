@@ -24,7 +24,7 @@ You may choose to build out an NPM module from the modified components so as to 
 
 ## What does Fusion Offer out of the Box?
 
-* Every component is a Single File Component. You can simply copy and paste a component file into a project and import it in.
+* Every component is a Single File Component. You can simply copy and paste a component file into a project and start using it (*just make sure you have emotion.js installed as a dependency*).
 
 * Fusion Components use Emotion.js. If you are not into CSS in JS, you can simply copy out the styles into a separate css file and import it in.
 
