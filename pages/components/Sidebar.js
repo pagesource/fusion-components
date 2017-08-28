@@ -1,5 +1,6 @@
-import Link from "next/link";
-import { css } from "emotion";
+import { css } from 'emotion';
+import Link from 'next/link';
+
 const linkStyle = {
   marginRight: 15
 };
@@ -30,26 +31,25 @@ text-decoration:none;
 }
 `;
 
-const SideBar = () =>
-  <nav className={navStyle}>
-    <h3>Components</h3>
-    <ul>
-      <li>
-        <Link href="/kitchen-sink">
-          <a style={linkStyle}>Kitchen Sink</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/content-component">
-          <a style={linkStyle}>Content Components</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/loaders">
-          <a style={linkStyle}>Progress & Activity</a>
-        </Link>
-      </li>
-    </ul>
-  </nav>;
+const SideBar = () => <nav className={navStyle}>
+  <h3>Components</h3>
+  <ul>
+	<li>
+	  <Link href="/kitchen-sink">
+		<a style={linkStyle}>Kitchen Sink</a>
+	  </Link>
+	</li>
+	<li>
+	  <Link href="/content-component">
+		<a style={linkStyle}>Content Components</a>
+	  </Link>
+	</li>
+	<li>
+	  <Link href="/loaders">
+		<a style={linkStyle}>Progress & Activity</a>
+	  </Link>
+	</li>
+  </ul>
+</nav>;
 
 export default SideBar;
