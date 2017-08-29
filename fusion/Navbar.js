@@ -43,8 +43,7 @@ class Navbar extends React.PureComponent {
   }
 
   render() {
-    const NavItems = this.props.NavList;
-    const navLinks = this.props.links;
+    const NavList = this.props.NavList;
     const title = this.props.title;
 
     return (
@@ -54,9 +53,9 @@ class Navbar extends React.PureComponent {
             {Array.apply(null, Array(3)).map(function(item, i) {
               return (
                 <div className={links}>
-                  <Link key={i} href={navLinks[i]}>
+                  <Link key={i} href={NavList[i].link}>
                     <a className={anchor}>
-                      {NavItems[i]}
+                      {NavList[i].navName}
                     </a>
                   </Link>
                 </div>
@@ -86,12 +85,8 @@ Navbar.propTypes = {
   /**
     *Navbar names
     */
-  NavList: PropTypes.array,
-  /**
-    *Navbar links
-    */
-  links: PropTypes.array
-};
+  NavList: PropTypes.object,
+ };
 
 /* Deafult Props */
 Navbar.defaultProps = {
@@ -99,8 +94,24 @@ Navbar.defaultProps = {
   bg: "white",
   title: "Home",
   header: "Header",
-  NavList: ["Home", "About us", "Contact"],
-  links: ["www.google.com", "wwww.facebook.com", "www.twitter.com"]
+  NavList: [
+            {
+              "navName": "Home",
+              "link":"/home"
+            },
+            {
+              "navName":"Recent",
+             "link":"/recent"
+           },
+            {
+              "navName": "About Us",
+              "link":"/about"
+            },
+            {
+              "navName": "Contact Us",
+              "link":"/Contact"}
+          ],
+
 };
 
 export default Navbar;

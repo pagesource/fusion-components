@@ -7,8 +7,8 @@ const data = {
   datasets: [
     {
       label: 'My First dataset',
-      backgroundColor: 'grey',
-      borderColor: 'black',
+      backgroundColor: '{props.theme.primaryColor}',
+      borderColor: '{props.theme.buttonColor}',
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(131, 145, 146  ,0.4)',
       hoverBorderColor: 'rgba(52, 73, 94,1)',
