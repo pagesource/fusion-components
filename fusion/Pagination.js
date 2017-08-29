@@ -59,7 +59,7 @@ const getStyles = () => {
   };
 };
 
-class Pagination extends React.Component {
+class Pagination extends React.PureComponent {
 
   state = {
     stepIndex: null,

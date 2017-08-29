@@ -66,7 +66,7 @@ const dropIcon = css`
 }
 `
 
-class Dropdown extends React.Component {
+class Dropdown extends React.PureComponent {
     constructor() {
     super();
       this.state = {

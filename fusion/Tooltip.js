@@ -29,7 +29,7 @@ const HiddenDiv = styled.span`
     height: 19px;
 `
 
-class Tooltip extends React.Component {
+class Tooltip extends React.PureComponent {
     constructor() {
     super();
       this.state = {
