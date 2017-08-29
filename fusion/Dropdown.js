@@ -66,7 +66,7 @@ const dropIcon = css`
 }
 `
 
-class Dropdown extends React.Component {
+class Dropdown extends React.PureComponent {
     constructor() {
     super();
       this.state = {
@@ -90,7 +90,7 @@ class Dropdown extends React.Component {
                       {Array.apply(null, Array(3)).map(function(item, j){                                        
                          return (
                             <li className={lists}>
-                            <a className= {links} href="#">{listItems[j]}</a>
+                            <a className= {links} href={listItems[j].link}>{listItems[j].option}</a>
                             </li>
                           );                
                         }, this)} 
@@ -128,7 +128,7 @@ Dropdown.propTypes = {
     /**
     *Dropdown list items
     */
-    ListItems: PropTypes.array,
+    ListItems: PropTypes.object
 };
 
 /* Deafult Props */
@@ -137,7 +137,20 @@ Dropdown.defaultProps = {
   bg:"white",
   title: "Dropdown Name",
   header: "Header",
-  ListItems: ["Option 1", "Option 2", "Option 3"]
+  ListItems: [
+              {
+                "option": "Option 1",
+                "link": "www.google.com",
+              },
+              {
+                "option": "Option 2",
+                "link": "www.facebook.com",
+              },
+              {
+                "option": "Option 3",
+                "link": "www.twitter.com",
+              }
+            ]
 };
 
 export default Dropdown;

@@ -62,7 +62,7 @@ const container = css`
     height: auto;
 `
 
-class ControlStepper extends React.Component {
+class ControlStepper extends React.PureComponent {
 
   state = {
     stepIndex: null,
