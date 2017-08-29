@@ -8,30 +8,34 @@ import theme from "./themes";
 
 const NavbarDiv = styled.div`
   display: flex;
-  height: 50px;
-  background: grey;
+  height: 40px;
+  background: skyblue;
   z-index: 1;
-  font-size: 24px;
+  font-size: 16px;
+  color:#774003;
+  text-align:vertical;
+  box-shadow;0 2px 3px #ccc;
 `;
-const lists = css`
-  display: inline-block;
-
-`;
+const lists = css`display: inline-block;`;
 const links = css`
   display: inline-block;
   width: 120px;
   text-align: center;
   vertical-align: sub;
   padding: 10px 20px;
-  &:hover{
-    border-bottom: 2px solid black;
-    background: silver
+  transition: 0.5s, height 4s;
+  &:hover {
+    border-bottom: 2px solid DarkCyan;
+    background: PaleTurquoise;
+    color: #fff;
   }
 `;
 const anchor = css`
   text-decoration: none;
-  font-size: 24px;
-  color: {props.theme.primaryColor}
+  font-size: 16px;
+  color: {props.theme.primaryColor};
+  color:midnightblue;
+  text-transform:
 `;
 
 class Navbar extends React.PureComponent {
@@ -43,6 +47,7 @@ class Navbar extends React.PureComponent {
   }
 
   render() {
+    const navLinks = this.props.links;
     const NavList = this.props.NavList;
     const title = this.props.title;
 
@@ -54,9 +59,7 @@ class Navbar extends React.PureComponent {
               return (
                 <div className={links}>
                   <Link key={i} href={NavList[i].link}>
-                    <a className={anchor}>
-                      {NavList[i].navName}
-                    </a>
+                    <a className={anchor}>{NavList[i].navName}</a>
                   </Link>
                 </div>
               );
@@ -85,8 +88,8 @@ Navbar.propTypes = {
   /**
     *Navbar names
     */
-  NavList: PropTypes.object,
- };
+  NavList: PropTypes.object
+};
 
 /* Deafult Props */
 Navbar.defaultProps = {
@@ -95,23 +98,23 @@ Navbar.defaultProps = {
   title: "Home",
   header: "Header",
   NavList: [
-            {
-              "navName": "Home",
-              "link":"/home"
-            },
-            {
-              "navName":"Recent",
-             "link":"/recent"
-           },
-            {
-              "navName": "About Us",
-              "link":"/about"
-            },
-            {
-              "navName": "Contact Us",
-              "link":"/Contact"}
-          ],
-
+    {
+      navName: "Home",
+      link: "/home"
+    },
+    {
+      navName: "Recent",
+      link: "/recent"
+    },
+    {
+      navName: "About Us",
+      link: "/about"
+    },
+    {
+      navName: "Contact Us",
+      link: "/Contact"
+    }
+  ]
 };
 
 export default Navbar;

@@ -10,15 +10,14 @@ const data = {
 	datasets: [{
 		data: [300, 50, 100],
 		backgroundColor: [
-		'#D7DBDD',
-		'#34495E',
-		'#5F6A6A'
+		'#FF6384',
+		'#36A2EB',
+		'#FFCE56'
 		],
 		hoverBackgroundColor: [
-		'#626567',
-		'#4D5656',
-		'#1B2631'
-
+		'#FF6384',
+		'#36A2EB',
+		'#FFCE56'
 		]
 	}]
 };

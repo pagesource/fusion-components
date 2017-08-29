@@ -40,6 +40,7 @@ const Rating = ({ value, onClick }) => {
   };
 
   const gray = "#9a9a9a";
+  const active = "#f4ce42";
   const getEmptyStyle = i => {
     const active = i < value;
     const color = active ? null : gray;
@@ -70,12 +71,12 @@ const Rating = ({ value, onClick }) => {
 
   return (
     <a className="rating" href="" onClick={handleClick()}>
-      {stars.map(s =>
+      {stars.map(s => (
         <span key={s} style={sx.star}>
           <span style={getEmptyStyle(s)}>☆ </span>
           <span style={getActiveStyle(s)}>★</span>
         </span>
-      )}
+      ))}
     </a>
   );
 };

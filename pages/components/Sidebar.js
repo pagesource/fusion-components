@@ -5,32 +5,31 @@ const linkStyle = {
 };
 
 const navStyle = css`
-width:250px;
-position:fixed;
-left:0;
-top:75px;
-height:100%;
-background-color:#333;
-color:#f9f9f9;
-font-family: Arial, Helvetica, sans-serif;
-text-decoration:none;
+  width: 250px;
+  position: fixed;
+  left: 0;
+  top: 75px;
+  height: 100%;
+  background-color: #333;
+  color: #f9f9f9;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
 
-& a{
-  color:#f9f9f9;
-  text-decoration:none;
-  
-}
-& a:hover{
-  color:#f60;
-}
+  & a {
+    color: #f9f9f9;
+    text-decoration: none;
+  }
+  & a:hover {
+    color: #f60;
+  }
 
-& ul li{
-  list-style:none;
-  padding:10px 0;
-}
+  & ul li {
+    list-style: none;
+    padding: 10px 0;
+  }
 `;
 
-const SideBar = () =>
+const SideBar = () => (
   <nav className={navStyle}>
     <ul>
       <li>
@@ -39,13 +38,28 @@ const SideBar = () =>
         </Link>
       </li>
       <li>
-        <Link href="/content-component">
-          <a style={linkStyle}>Content Components</a>
+        <Link href="/atomic-components">
+          <a style={linkStyle}>Atomic</a>
         </Link>
       </li>
       <li>
-        <Link href="/loaders">
+        <Link href="/content-components">
+          <a style={linkStyle}>Content</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/loader-components">
           <a style={linkStyle}>Progress & Activity</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/navigation-components">
+          <a style={linkStyle}>Navigation</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/chart-components">
+          <a style={linkStyle}>Charting</a>
         </Link>
       </li>
       <li>
@@ -53,12 +67,8 @@ const SideBar = () =>
           <a style={linkStyle}>Form Elements</a>
         </Link>
       </li>
-      <li>
-        <Link href="/coming-soon">
-          <a style={linkStyle}>Charting Components</a>
-        </Link>
-      </li>
     </ul>
-  </nav>;
+  </nav>
+);
 
 export default SideBar;
