@@ -27,9 +27,11 @@ import {
   Rating,
   Ripples,
   Row,
+  StatusMessage,
   Stepper,
   StepperControl,
   theme,
+  ToggleButton,
   Tooltip,
   Truncate,
   Typing,
@@ -40,6 +42,14 @@ const KitchenSink = () =>
   (<Layout>
     <ThemeProvider theme={theme}>
       <div>
+        <h2>Toggle Button</h2>
+        <ToggleButton />
+        <Row />
+        <hr />
+        <h2>Status Message</h2>
+        <StatusMessage />
+        <Row />
+        <hr />
         <h2>Horizontal bar Chart</h2>
         <div>
           <BarChart />
