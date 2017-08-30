@@ -8,7 +8,8 @@ const theme = {
   panelPadding: "3rem",
   PrimaryChartColor: "#FF6384",
   SecondaryChartColor: "#FF6384",
-  TertiaryChartColor: "#FF6384"
+  TertiaryChartColor: "#FF6384",
+  panelBackground: "#fff"
 };
 
 export default theme;
