@@ -7,7 +7,7 @@ import Rating from "./Rating";
 import Panel from "./Panel";
 // import "./Card.css";
 
-const card = css`
+const cardStyles = css`
   text-align: center;
   flex:1;
   background: #fff;
@@ -32,7 +32,7 @@ const Card = props => {
     <div className={cardContainer}>
       {cardDetails &&
         cardDetails.map((card, index) =>
-          <Panel className={card} key={`key-${index}`}>
+          <Panel className={cardStyles} key={`key-${index}`}>
             <img src={card.image} alt={card.heading} />
             <h2 children={card.title} />
             <Rating value={card.rating} />
