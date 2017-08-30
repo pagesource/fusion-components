@@ -38,11 +38,15 @@ import Pagination from "../fusion/Pagination";
 import Doughnut from "../fusion/Doughnut";
 import PieChart from "../fusion/PieChart";
 import BarChart from "../fusion/HorizontalBarChart";
+import ToggleButton from "../fusion/ToggleButton";
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
+      <h2>Toggle Button</h2>
+      <ToggleButton />
+
       <h2>Horizontal bar Chart</h2>
         <div>
           <BarChart />
