@@ -2,7 +2,7 @@ import { ThemeProvider } from 'theming';
 import { Alert, Avatar, Banner, Button, theme } from '../index';
 import Layout from './components/Layout.js';
 
-const KitchenSink = (props) => (<Layout>
+export default props => (<Layout>
   <ThemeProvider theme={theme}>
 	<div>
 	  <h2>Button </h2>
@@ -21,5 +21,3 @@ const KitchenSink = (props) => (<Layout>
 	</div>
   </ThemeProvider>
 </Layout>);
-
-export default KitchenSink;

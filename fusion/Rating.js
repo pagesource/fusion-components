@@ -1,14 +1,13 @@
 /* //------- To Do ------------
 - change the star color to yellow
 - set a local state and clicking on a star updates the state and the star color.
-
-
-
 //--------------------------- 
  */
 
 import PropTypes from 'prop-types';
 import React from 'react';
+// import skeleton from './skeleton'
+//import './Rating.css';
 
 /**
  * Star rating Molecule with click-able buttons
@@ -38,6 +37,7 @@ const Rating = ({ value, onClick }) =>{
   };
 
   const gray = '#9a9a9a';
+  const active = '#f4ce42';
   const getEmptyStyle = i =>{
 	const active = i < value;
 	const color = active ? null : gray;
@@ -58,22 +58,22 @@ const Rating = ({ value, onClick }) =>{
 	};
   };
 
-  const handleClick = i => () =>{
-	if (onClick) {
-	  onClick(i + 1);
-	}
+  const handleClick = i =>{
+	return () =>{
+	  if (onClick) {
+		onClick(i + 1);
+	  }
+	};
   };
 
-  return (
-	<a className="rating" href="" onClick={handleClick()}>
-	  {stars.map(s =>
-		<span key={s} style={sx.star}>
+  return (<a className="rating" href="" onClick={handleClick()}>
+	{stars.map(s => (
+	  <span key={s} style={sx.star}>
           <span style={getEmptyStyle(s)}>☆ </span>
           <span style={getActiveStyle(s)}>★</span>
         </span>
-	  )}
-	</a>
-  );
+	))}
+  </a>);
 };
 
 Rating.propTypes = {

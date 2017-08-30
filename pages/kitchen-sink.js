@@ -32,7 +32,7 @@ import {
   Tooltip,
   Truncate,
   Typing
-} from '../index';
+} from '../';
 import Layout from './components/Layout';
 
 const KitchenSink = props =>
@@ -119,6 +119,13 @@ const KitchenSink = props =>
 		<h2>Panel</h2>
 		<div>
 		  <Panel>this is text inside panel</Panel>
+		</div>
+		<Row/>
+		<hr/>
+
+		<h2>Panel 2</h2>
+		<div>
+		  <Panel2>this is text inside panel 2</Panel2>
 		</div>
 		<Row/>
 		<hr/>
@@ -230,7 +237,7 @@ const KitchenSink = props =>
 		<Row/>
 		<hr/>
 	  </div>
-	</ThemeProvider>;
+	</ThemeProvider>
   </Layout>;
 
 export default KitchenSink;

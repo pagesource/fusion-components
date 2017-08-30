@@ -1,8 +1,8 @@
 import { css } from 'emotion';
 import styled from 'emotion/react';
 import React from 'react';
+import { theme } from '../theme';
 import Button from './Button';
-import { theme } from '../theme/index';
 
 const styles = {
   root: {
@@ -55,7 +55,7 @@ const container = css`
     height: auto;
 `;
 
-class ControlStepper extends React.Component {
+class ControlStepper extends React.PureComponent {
 
   state = {
 	stepIndex: null,

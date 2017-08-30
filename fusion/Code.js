@@ -1,4 +1,4 @@
-import {css} from 'emotion';
+import styled from 'emotion/react';
 
 const Code = styled.code`
   color: green;

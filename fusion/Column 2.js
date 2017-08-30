@@ -1,6 +1,6 @@
-import {css} from 'emotion';
+import styled from 'emotion/react';
 
-const Column = styled.div`
+export default styled.div`
   flex: 1 1 auto;
   margin-bottom: 32px;
   padding-left: 16px;
@@ -8,5 +8,3 @@ const Column = styled.div`
   color: #fff;
   position: relative;
 `;
-
-export default Column;

@@ -22,5 +22,4 @@ const data = {
   }]
 };
 
-const Doughnut = () => (<Doughnut data={data}/>);
-export default Doughnut;
+export default () => (<Doughnut data={data}/>);
