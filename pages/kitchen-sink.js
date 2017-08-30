@@ -100,13 +100,6 @@ const KitchenSink = props =>
         <Row />
         <hr />
 
-        <h2>Card</h2>
-        <div>
-          <CardGrid />
-        </div>
-        <Row />
-        <hr />
-
         <h2>Celebrate New Year In</h2>
         <div>
           <CountdownTimer endTime="Jan 1, 2018 15:37:25" />
