@@ -39,14 +39,20 @@ import Doughnut from "../fusion/Doughnut";
 import PieChart from "../fusion/PieChart";
 import BarChart from "../fusion/HorizontalBarChart";
 import ToggleButton from "../fusion/ToggleButton";
+import StatusMessage from "../fusion/StatusMessage";
 
 const KitchenSink = props =>
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
-      <h2>Toggle Button</h2>
-      <ToggleButton />
+      <div>
+        <StatusMessage time={5000} message={"This is a <StatusMessage/> component. This will fade out in 5 secs"}/>
+      </div>
 
+      <h2>Toggle Button</h2>
+      <div>
+      <ToggleButton />
+      </div>
       <h2>Horizontal bar Chart</h2>
         <div>
           <BarChart />
