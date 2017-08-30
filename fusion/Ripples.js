@@ -1,3 +1,4 @@
+import React from 'react';
 import { css, keyframes } from 'emotion';
 import styled from 'emotion/react';
 import { withTheme } from 'theming';
@@ -39,9 +40,9 @@ const Ripple3 = css`
 `;
 
 const Ripples = () => (<RippleDiv>
-  <ripple css={`composes: ${Ripple1} ${ripple} ;`}/>
-  <ripple css={`composes: ${Ripple2} ${ripple} ;`}/>
-  <ripple css={`composes: ${Ripple3} ${ripple} ;`}/>
+  <ripple css={`composes: ${Ripple1} ${ripple} ;`} />
+  <ripple css={`composes: ${Ripple2} ${ripple} ;`} />
+  <ripple css={`composes: ${Ripple3} ${ripple} ;`} />
 </RippleDiv>);
 
 export default withTheme(Ripples);

@@ -7,7 +7,7 @@ const LogoStyle = css`
   cursor: pointer;
 `;
 
-const Logo = ({ src, alt, imgWidth }) => (<img className={LogoStyle} src={src} alt={alt} width={imgWidth}/>);
+const Logo = ({ src, alt, imgWidth }) => (<img className={LogoStyle} src={src} alt={alt} width={imgWidth} />);
 
 Logo.propTypes = {
   /**
@@ -21,13 +21,13 @@ Logo.propTypes = {
   /**
    * Image width
    */
-  imgWidth: PropTypes.number
+  imgWidth: PropTypes.number,
 };
 
 Logo.defaultProps = {
   src: 'https://facebook.github.io/react/img/logo.svg',
   alt: 'Fusion',
-  imgWidth: 100
+  imgWidth: 100,
 };
 
 export default withTheme(Logo);

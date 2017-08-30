@@ -1,3 +1,4 @@
+import React from 'react';
 import { css } from 'emotion';
 
 const headerStyles = css`
@@ -12,8 +13,8 @@ box-shadow:0 3px 5px #aaa;
 z-index:1000;
 `;
 
-const Header = () => <header className={headerStyles}>
+const Header = () => (<header className={headerStyles}>
   <h1>Fusion Component Library</h1>
-</header>;
+</header>);
 
 export default Header;

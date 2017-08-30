@@ -1,5 +1,6 @@
 import { css } from 'emotion';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withTheme } from 'theming';
 
 const valueStyle = css`
@@ -18,9 +19,9 @@ const ProgressStyle = css`
   display:flex
 `;
 
-const ProgressCircle = props => (<div css={`composes: ${ProgressStyle}`} value={props.value}>
+const ProgressCircle = ({ value }) => (<div css={`composes: ${ProgressStyle}`} value={value}>
   <div className={valueStyle}>
-	{props.value}%
+    {value}%
   </div>
 </div>);
 
@@ -29,12 +30,12 @@ ProgressCircle.propTypes = {
   /**
    * Progress Length
    */
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 /* Deafult Props */
 ProgressCircle.defaultProps = {
-  value: 1 / 3 * 100
+  value: 1 / 3 * 100,
 };
 
 export default withTheme(ProgressCircle);

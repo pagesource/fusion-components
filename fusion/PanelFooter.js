@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
-import {css} from 'emotion';
 import styled from 'emotion/react';
-import { withTheme } from 'theming'
+import PropTypes from 'prop-types';
+import { withTheme } from 'theming';
 
 const PanelFooter = styled.header`
   padding: 8px;
@@ -16,14 +15,13 @@ const PanelFooter = styled.header`
 PanelFooter.propTypes = {
   /**
    * Text Color
-  */
-  color: PropTypes.string
+   */
+  color: PropTypes.string,
 };
 
 /* Deafult Props */
 PanelFooter.defaultProps = {
-  color: "#000"
+  color: '#000',
 };
-
 
 export default withTheme(PanelFooter);

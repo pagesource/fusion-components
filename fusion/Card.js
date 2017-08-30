@@ -1,5 +1,6 @@
 import { css } from 'emotion';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withTheme } from 'theming';
 
 import Button from './Button';
@@ -25,15 +26,15 @@ const cardContainer = css`
 const Card = ({ cardData }) => (<div className={cardContainer}>
   {!!cardData &&
   cardData.map(({ image, heading, title, rating, description }, index) =>
-	<Panel className={cardStyles} key={`key-${index}`}>
-	  <img src={image} alt={heading}/>
-	  <h2 children={title}/>
-	  <Rating value={rating}/>
-	  <p>
-		{description}
-	  </p>
-	  <Button>Add to Cart</Button>
-	</Panel>
+    (<Panel className={cardStyles} key={`key-${index}`}>
+      <img src={image} alt={heading} />
+      <h2 children={title} />
+      <Rating value={rating} />
+      <p>
+        {description}
+      </p>
+      <Button>Add to Cart</Button>
+    </Panel>),
   )}
 </div>);
 
@@ -41,7 +42,7 @@ Card.propTypes = {
   /**
    * Card Data
    */
-  cardData: PropTypes.arrayOf(PropTypes.shape({}))
+  cardData: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 export default withTheme(Card);

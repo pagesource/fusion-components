@@ -39,18 +39,18 @@ const rightArrow = css`
 const Steps = ({ steps }) => (<StepDiv>
   {!!steps &&
   steps.map((step, index) =>
-	<Step key={index}>
-	  <StepContent>
-		<div><img src={step.icon} alt={step.heading} width="30px"/>
-		  <StepTitle>{step.title}</StepTitle>
-		  <span className={rightArrow}>&#10145;</span>
-		</div>
+    (<Step key={index}>
+      <StepContent>
+        <div><img src={step.icon} alt={step.heading} width="30px" />
+          <StepTitle>{step.title}</StepTitle>
+          <span className={rightArrow}>&#10145;</span>
+        </div>
 
-		<div className={secDiv}>
-		  <StepDescr>{step.description}</StepDescr>
-		</div>
-	  </StepContent>
-	</Step>
+        <div className={secDiv}>
+          <StepDescr>{step.description}</StepDescr>
+        </div>
+      </StepContent>
+    </Step>),
   )}
 </StepDiv>);
 
@@ -59,7 +59,7 @@ Steps.propTypes = {
   /**
    *Steps array
    */
-  steps: PropTypes.arrayOf(PropTypes.shape({}))
+  steps: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 export default Steps;

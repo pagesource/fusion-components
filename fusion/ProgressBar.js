@@ -1,5 +1,6 @@
 import styled from 'emotion/react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withTheme } from 'theming';
 
 const ProgressBlock = styled('div')`
@@ -25,7 +26,7 @@ const ProgressBar = styled('div')`
 const Progress = ({ value }) => (<Container>
   {value}%
   <ProgressBlock>
-	<ProgressBar value={value}/>
+    <ProgressBar value={value} />
   </ProgressBlock>
 </Container>);
 
@@ -34,12 +35,12 @@ Progress.propTypes = {
   /**
    * Progress Length
    */
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 /* Deafult Props */
 Progress.defaultProps = {
-  value: 1 / 3 * 100
+  value: 1 / 3 * 100,
 };
 
 export default withTheme(Progress);

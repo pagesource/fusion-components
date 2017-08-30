@@ -7,15 +7,15 @@ const timerStyle = css`
 `;
 
 class CountdownTimer extends PureComponent {
-  constructor(props){
-	super(props);
-	this.countDownDate = new Date(this.props.endTime).getTime();
-  }
-
   state = {
 	timer: '',
 	interval: null
   };
+
+  constructor(props){
+	super(props);
+	this.countDownDate = new Date(this.props.endTime).getTime();
+  }
 
   timer(){
 	const now = new Date().getTime(),

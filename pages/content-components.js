@@ -1,23 +1,23 @@
+import React from 'react';
 import { ThemeProvider } from 'theming';
 import { CardGrid, Panel, theme } from '../';
 import Layout from './components/Layout';
 
 const ContentComponent = () => (<Layout>
   <ThemeProvider theme={theme}>
-	<div>
-	  <h2>Content Components</h2>
-	  <p>
+    <div>
+      <h2>Content Components</h2>
+      <p>
 		This section contains components that can be used to display content.
 	  </p>
-	  <h3>Panel </h3>
-	  <Panel>this is a panel</Panel>
-	  <pre>{`<Panel>this is a panel</Panel>
+      <h3>Panel </h3>
+      <Panel>this is a panel</Panel>
+      <pre>{`<Panel>this is a panel</Panel>
           `}</pre>
-	  <h3>Cards</h3>
-	  <CardGrid/>
-	  <pre>{`
-        const cardData = [{
-		  index: "1",
+      <h3>Cards</h3>
+      <CardGrid />
+      <pre>{`const cardData = [{
+		index: "1",
 		  title: "Tasty Food",
 		  description: " lorem lipsum do re me",
 		  rating: 4,
@@ -40,7 +40,7 @@ const ContentComponent = () => (<Layout>
 		}];
         <Card cardData={cardData} />
           `}</pre>
-	</div>
+    </div>
   </ThemeProvider>
 </Layout>);
 

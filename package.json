@@ -6,8 +6,11 @@
   "dependencies": {
     "chart.js": "^2.6.0",
     "classnames": "^2.2.5",
+    "emotion": "^7.2.0",
+    "husky": "^0.14.3",
     "isomorphic-unfetch": "^2.0.0",
     "next": "^3.0.6",
+    "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-chartjs-2": "^2.6.1",
     "react-doc-generator": "^1.2.5",
@@ -16,7 +19,11 @@
     "theming": "^1.1.0"
   },
   "devDependencies": {
-    "emotion": "^7.2.0",
+    "eslint": "^4.5.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "^7.1.0",
     "react-live": "^1.7.0",
     "theming": "^1.1.0"
   },
@@ -25,7 +32,9 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "clean": "rimraf .next "
+    "clean": "rimraf .next",
+    "lint": "eslint pages fusion",
+    "pre-commit": "yarn lint"
   },
   "repository": {
     "type": "git",

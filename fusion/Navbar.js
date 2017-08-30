@@ -39,9 +39,9 @@ const anchor = css`
 
 const Navbar = ({ NavList }) => (<NavbarDiv>
   <div className={lists}>
-	{!!NavList && NavList.map(({ link, navName }) => (<div className={links}>
-	  <a className={anchor} key={link} href={link}>{navName}</a>
-	</div>))}
+    {!!NavList && NavList.map(({ link, navName }) => (<div className={links}>
+      <a className={anchor} key={link} href={link}>{navName}</a>
+    </div>))}
   </div>
 </NavbarDiv>);
 
@@ -62,7 +62,7 @@ Navbar.propTypes = {
   /**
    *Navbar names
    */
-  NavList: PropTypes.array
+  NavList: PropTypes.array,
 };
 
 /* Deafult Props */
@@ -72,23 +72,23 @@ Navbar.defaultProps = {
   title: 'Home',
   header: 'Header',
   NavList: [
-	{
+    {
 	  navName: 'Home',
-	  link: '/home'
-	},
-	{
+	  link: '/home',
+    },
+    {
 	  navName: 'Recent',
-	  link: '/recent'
-	},
-	{
+	  link: '/recent',
+    },
+    {
 	  navName: 'About Us',
-	  link: '/about'
-	},
-	{
+	  link: '/about',
+    },
+    {
 	  navName: 'Contact Us',
-	  link: '/Contact'
-	}
-  ]
+	  link: '/Contact',
+    },
+  ],
 };
 
 export default Navbar;

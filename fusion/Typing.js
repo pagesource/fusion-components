@@ -34,14 +34,14 @@ Typing.propTypes = {
   /**
    *text font-size
    */
-  fontSize: PropTypes.number
+  fontSize: PropTypes.number,
 };
 
 /* Deafult Props */
 Typing.defaultProps = {
   text: 'Typing text content',
   color: 'red',
-  fontSize: 20
+  fontSize: 20,
 };
 
 export default withTheme(Typing);

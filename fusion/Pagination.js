@@ -1,8 +1,8 @@
 import { css } from 'emotion';
 import styled from 'emotion/react';
 import React from 'react';
-import Button from './Button';
 import { theme } from '../theme/index';
+import Button from './Button';
 
 const Page = styled.div`
   display: inline-block;
@@ -61,33 +61,18 @@ class Pagination extends React.PureComponent {
 	stepIndex: null,
 	visited: [],
   };
-
-  componentWillMount(){
-	const { stepIndex, visited } = this.state;
-	this.setState({ visited: visited.concat(stepIndex) });
-  }
-
-  componentWillUpdate(nextProps, nextState){
-	const { stepIndex, visited } = nextState;
-	if (visited.indexOf(stepIndex) === -1) {
-	  this.setState({ visited: visited.concat(stepIndex) });
-	}
-  }
-
   handleNext = () =>{
 	const { stepIndex } = this.state;
 	if (stepIndex < 2) {
 	  this.setState({ stepIndex: stepIndex + 1 });
 	}
   };
-
   handlePrev = () =>{
 	const { stepIndex } = this.state;
 	if (stepIndex > 0) {
 	  this.setState({ stepIndex: stepIndex - 1 });
 	}
   };
-
   getStepContent = (stepIndex) =>{
 	switch (stepIndex) {
 	  case 0:
@@ -100,6 +85,18 @@ class Pagination extends React.PureComponent {
 		return 'Click a page to get started.';
 	}
   };
+
+  componentWillMount(){
+	const { stepIndex, visited } = this.state;
+	this.setState({ visited: visited.concat(stepIndex) });
+  }
+
+  componentWillUpdate(nextProps, nextState){
+	const { stepIndex, visited } = nextState;
+	if (visited.indexOf(stepIndex) === -1) {
+	  this.setState({ visited: visited.concat(stepIndex) });
+	}
+  }
 
   render(){
 	const { stepIndex, visited } = this.state;

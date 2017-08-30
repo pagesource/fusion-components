@@ -28,31 +28,33 @@ const HiddenDiv = styled.span`
 `;
 
 class Tooltip extends React.PureComponent {
-  constructor(){
-	super();
-	this.state = {
+  constructor() {
+    super();
+    this.state = {
 	  open: false,
-	};
+    };
   }
 
-  render(){
-
-	return (
-	  <div className={TooltipBtn} onMouseEnter={() => this.onMouseEnter()} onMouseOut={() => this.onMouseOut()}>Hover
-		over me!
-		{this.state.open ? <HiddenDiv>
-			<p>{this.props.text}</p>
-		  </HiddenDiv>
-		  : null}
-	  </div>);
+  onMouseEnter() {
+    this.setState({ open: true });
   }
 
-  onMouseEnter(){
-	this.setState({ open: true });
+  onMouseOut() {
+    this.setState({ open: false });
   }
 
-  onMouseOut(){
-	this.setState({ open: false });
+  render() {
+    return (<div
+      className={TooltipBtn}
+      onMouseEnter={() => this.onMouseEnter()}
+      onMouseOut={() => this.onMouseOut()}
+    >
+	  Hoverover me!
+	  {this.state.open ? <HiddenDiv>
+        <p>{this.props.text}</p>
+</HiddenDiv>
+        : null}
+    </div>);
   }
 }
 
@@ -66,7 +68,7 @@ Tooltip.propTypes = {
 
 /* Deafult Props */
 Tooltip.defaultProps = {
-  text: 'Some hidden text.'
+  text: 'Some hidden text.',
 };
 
 export default Tooltip;

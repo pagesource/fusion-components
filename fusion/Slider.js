@@ -1,6 +1,4 @@
 import styled from 'emotion/react';
-import PropTypes from 'prop-types';
-import React from 'react';
 
 const Slider = styled.input({
   type: 'range',
@@ -28,8 +26,8 @@ const Slider = styled.input({
   }
 `;
 
-///* Props Check */
-//Slider.propTypes = {
+// /* Props Check */
+// Slider.propTypes = {
 //  /**
 //   * name
 //   */
@@ -54,15 +52,15 @@ const Slider = styled.input({
 //   * Disabled
 //   */
 //  disabled: PropTypes.bool
-//};
+// };
 //
-///* Default Props */
-//Slider.defaultProps = {
+// /* Default Props */
+// Slider.defaultProps = {
 //  name: 'slider',
 //  min: 1,
 //  max: 10,
 //  defaultValue: 1,
 //  disabled: false
-//};
+// };
 
 export default Slider;

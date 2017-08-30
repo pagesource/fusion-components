@@ -1,7 +1,7 @@
 import { css } from 'emotion';
 import React from 'react';
-import Header from './Header.js';
-import SideBar from './Sidebar.js';
+import Header from './Header';
+import SideBar from './Sidebar';
 
 const layoutContainer = css`
   margin: 20;
@@ -29,10 +29,10 @@ color#red;
 }`;
 
 const Layout = ({ children }) => (<div className={layoutContainer}>
-  <Header/>
-  <SideBar/>
+  <Header />
+  <SideBar />
   <div className={content}>
-	{children}
+    {children}
   </div>
 </div>);
 

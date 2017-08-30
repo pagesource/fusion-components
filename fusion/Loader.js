@@ -1,5 +1,6 @@
 import { css, keyframes } from 'emotion';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withTheme } from 'theming';
 
 const rotation = keyframes`  
@@ -16,19 +17,19 @@ const LoaderStyle = css`
     animation: ${rotation} 1s ease infinite;
   `;
 
-const Loader = (props) => (<div css={`composes: ${LoaderStyle}`} value={props.value}/>);
+const Loader = ({ value }) => (<div css={`composes: ${LoaderStyle}`} value={value} />);
 
 /* Props Check */
 Loader.propTypes = {
   /**
    * Progress Length
    */
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 /* Deafult Props */
 Loader.defaultProps = {
-  value: 1 / 3
+  value: 1 / 3,
 };
 
 export default withTheme(Loader);

@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "emotion/react";
-import { css } from "emotion";
+import { css } from 'emotion';
+import styled from 'emotion/react';
+import React from 'react';
 
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
+import { LiveEditor, LivePreview, LiveProvider } from 'react-live';
 
 const StyledProvider = styled(LiveProvider)`
   border-radius: 3px;
@@ -11,7 +11,7 @@ const StyledProvider = styled(LiveProvider)`
   margin-bottom: 100px;
 `;
 
-const LiveWrapper = styled("div")`
+const LiveWrapper = styled('div')`
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -52,11 +52,11 @@ const StyledPreview = styled(LivePreview)`
 `;
 
 const LiveEdit = ({ noInline, code }) =>
-  <StyledProvider code={code} noInline={noInline} mountStylesheet={false}>
+  (<StyledProvider code={code} noInline={noInline} mountStylesheet={false}>
     <LiveWrapper>
       <StyledEditor />
       <StyledPreview />
     </LiveWrapper>
-  </StyledProvider>;
+  </StyledProvider>);
 
 export default LiveEdit;

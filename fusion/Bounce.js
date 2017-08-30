@@ -1,6 +1,7 @@
 import { keyframes } from 'emotion';
 import styled from 'emotion/react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withTheme } from 'theming';
 import { theme } from '../theme/index';
 
@@ -37,7 +38,7 @@ const BounceIt = styled('div')`
 
 const Bounce = ({ fontSize, text, src, width, color }) => (<BounceIt>
   <span style={{ color: `${color}`, fontSize: `${fontSize}px` }}>{text}</span>
-  <img src={src} width={width}/>
+  <img src={src} width={width} />
 </BounceIt>);
 
 /* Props Check */

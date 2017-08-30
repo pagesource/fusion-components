@@ -1,5 +1,6 @@
 import { css } from 'emotion';
 import PropTypes from 'prop-types';
+import React from 'react';
 import { withTheme } from 'theming';
 
 const alertStyle = css`

@@ -66,36 +66,35 @@ const dropIcon = css`
 `;
 
 class Dropdown extends PureComponent {
-  constructor(){
-	super();
-	this.state = {
+  constructor() {
+    super();
+    this.state = {
 	  open: false,
-	};
+    };
   }
 
-  render(){
+  render() {
+    const { ListItems } = this.props;
 
-	const listItems = this.props.ListItems;
-
-	return (<div>
-	  <div className={dropdownMenu} onClick={() => this.onClick()}><span className={dropIcon}>Dropdown List</span>
-	  </div>
-	  {this.state.open ?
-		<DropdownDiv>
-		  <div className={container}>
-			<ul className={dropdownList}>
-			  {Array.apply(null, Array(3)).map((item, j) => (<li className={lists}>
-				<a className={links} href={listItems[j].link}>{listItems[j].option}</a>
-			  </li>), this)}
-			</ul>
-		  </div>
-		</DropdownDiv>
-		: null}
-	</div>);
+    return (<div>
+      <div className={dropdownMenu} onClick={() => this.onClick()}><span className={dropIcon}>Dropdown List</span>
+      </div>
+      {this.state.open ?
+        <DropdownDiv>
+          <div className={container}>
+            <ul className={dropdownList}>
+              {ListItems.map(({ link, option }, j) => (<li className={lists}>
+                <a className={links} href={link}>{option}</a>
+              </li>))}
+            </ul>
+          </div>
+        </DropdownDiv>
+        : null}
+    </div>);
   }
 
-  onClick(){
-	this.setState({ open: !this.state.open });
+  onClick() {
+    this.setState({ open: !this.state.open });
   }
 }
 
@@ -120,7 +119,7 @@ Dropdown.propTypes = {
   /**
    *Dropdown list items
    */
-  ListItems: PropTypes.object
+  ListItems: PropTypes.array,
 
 };
 
@@ -131,19 +130,19 @@ Dropdown.defaultProps = {
   title: 'Dropdown Name',
   header: 'Header',
   ListItems: [
-	{
-	  'option': 'Option 1',
-	  'link': 'www.google.com',
-	},
-	{
-	  'option': 'Option 2',
-	  'link': 'www.facebook.com',
-	},
-	{
-	  'option': 'Option 3',
-	  'link': 'www.twitter.com',
-	}
-  ]
+    {
+	  option: 'Option 1',
+	  link: '//www.google.com',
+    },
+    {
+	  option: 'Option 2',
+	  link: '//www.facebook.com',
+    },
+    {
+	  option: 'Option 3',
+	  link: '//www.twitter.com',
+    },
+  ],
 };
 
 export default Dropdown;
