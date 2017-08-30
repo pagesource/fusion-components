@@ -6,6 +6,7 @@ import Avatar from "../fusion/Avatar";
 import Alert from "../fusion/Alert";
 import Banner from "../fusion/Banner";
 import Panel from "../fusion/Panel";
+import Panel2 from "../fusion/Panel2";
 
 import { ThemeProvider, withTheme } from "theming";
 import theme from "../fusion/themes";
@@ -122,6 +123,13 @@ const KitchenSink = props =>
         <h2>Panel</h2>
         <div>
           <Panel>this is text inside panel</Panel>
+        </div>
+        <Row />
+        <hr />
+
+        <h2>Panel 2</h2>
+        <div>
+          <Panel2>this is text inside panel 2</Panel2>
         </div>
         <Row />
         <hr />
