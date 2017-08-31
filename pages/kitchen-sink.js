@@ -1,71 +1,68 @@
-import Layout from "./components/Layout";
+import React from 'react';
+import { ThemeProvider } from 'theming';
+import {
+  Alert,
+  Avatar,
+  BackgroundImage,
+  Banner,
+  BarChart,
+  BlockQuote,
+  Bounce,
+  Button,
+  CardGrid,
+  CountDownTimer,
+  Dialog,
+  Doughnut,
+  Dropdown,
+  Heading,
+  Loader,
+  Logo,
+  Navbar,
+  Pagination,
+  Panel,
+  Panel2,
+  PieChart,
+  ProgressBar,
+  ProgressCircle,
+  Rating,
+  Ripples,
+  Row,
+  StatusMessage,
+  Stepper,
+  StepperControl,
+  theme,
+  ToggleButton,
+  Tooltip,
+  Truncate,
+  Typing,
+} from '../';
+import Layout from './components/Layout';
 
-import Link from "next/link";
-import Button from "../fusion/Button";
-import Avatar from "../fusion/Avatar";
-import Alert from "../fusion/Alert";
-import Banner from "../fusion/Banner";
-import Panel from "../fusion/Panel";
-import Panel2 from "../fusion/Panel2";
-
-import { ThemeProvider, withTheme } from "theming";
-import theme from "../fusion/themes";
-
-import Heading from "../fusion/Heading";
-import Row from "../fusion/Row";
-import Logo from "../fusion/Logo";
-import ProgressCircle from "../fusion/ProgressCircle";
-import Loader from "../fusion/Loader";
-import ProgressBar from "../fusion/ProgressBar";
-import PanelFooter from "../fusion/PanelFooter";
-import PanelHeader from "../fusion/PanelHeader";
-import Tooltip from "../fusion/Tooltip";
-import Bounce from "../fusion/Bounce";
-import Truncate from "../fusion/Truncate";
-import Ripples from "../fusion/Ripples";
-import Blockquote from "../fusion/Blockquote";
-import BackgroundImage from "../fusion/BackgroundImage";
-import Typing from "../fusion/Typing";
-import Rating from "../fusion/Rating";
-import CountdownTimer from "../fusion/CountdownTimer";
-import Dialog from "../fusion/Dialog";
-import Dropdown from "../fusion/Dropdown";
-import Navbar from "../fusion/Navbar";
-import CardGrid from "../fusion/CardGrid";
-import Stepper from "../fusion/Stepper";
-import ControlStepper from "../fusion/StepperControl";
-import Pagination from "../fusion/Pagination";
-import Doughnut from "../fusion/Doughnut";
-import PieChart from "../fusion/PieChart";
-import BarChart from "../fusion/HorizontalBarChart";
-import ToggleButton from "../fusion/ToggleButton";
-import StatusMessage from "../fusion/StatusMessage";
-
-const KitchenSink = props =>
-  <Layout>
+const KitchenSink = () =>
+  (<Layout>
     <ThemeProvider theme={theme}>
       <div>
-      <div>
-        <StatusMessage time={5000} message={"This is a <StatusMessage/> component. This will fade out in 5 secs"}/>
-      </div>
-
-      <h2>Toggle Button</h2>
-      <div>
-      <ToggleButton />
-      </div>
-      <h2>Horizontal bar Chart</h2>
+        <h2>Toggle Button</h2>
+        <ToggleButton />
+        <Row />
+        <hr />
+        <h2>Status Message</h2>
+        <StatusMessage />
+        <Row />
+        <hr />
+        <h2>Horizontal bar Chart</h2>
         <div>
           <BarChart />
         </div>
         <Row />
         <hr />
-      <h2>Pie Chart</h2>
+        <h2>Pie Chart</h2>
         <div>
           <PieChart />
         </div>
         <Row />
         <hr />
-       <h2>Doughnut</h2>
+        <h2>Doughnut</h2>
         <div>
           <Doughnut />
         </div>
@@ -79,7 +76,7 @@ const KitchenSink = props =>
         <hr />
         <h2>Controlled Stepper</h2>
         <div>
-          <ControlStepper />
+          <StepperControl />
         </div>
         <Row />
         <hr />
@@ -120,7 +117,7 @@ const KitchenSink = props =>
 
         <h2>Celebrate New Year In</h2>
         <div>
-          <CountdownTimer endTime="Jan 1, 2018 15:37:25" />
+          <CountDownTimer endTime="Jan 1, 2018 15:37:25" />
         </div>
 
         <h2>Rating</h2>
@@ -153,10 +150,10 @@ const KitchenSink = props =>
 
         <h2>Blockquote</h2>
         <div>
-          <Blockquote>
-            Blockquote tag specifies a section that is quoted from another
-            source.
-          </Blockquote>
+          <BlockQuote>
+			Blockquote tag specifies a section that is quoted from another
+			source.
+		  </BlockQuote>
         </div>
         <Row />
         <hr />
@@ -170,7 +167,7 @@ const KitchenSink = props =>
 
         <h2>Truncate</h2>
         <Truncate>
-          SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
+		  SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
         </Truncate>
         <Row />
         <hr />
@@ -251,7 +248,7 @@ const KitchenSink = props =>
         <Row />
         <hr />
       </div>
-    </ThemeProvider>;
-  </Layout>;
+    </ThemeProvider>
+  </Layout>);
 
 export default KitchenSink;

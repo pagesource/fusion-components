@@ -1,4 +1,5 @@
-import {css} from 'emotion';
+import { css } from 'emotion';
+import React from 'react';
 
 const columnStyle = css`
   flex: 1 1 auto;
@@ -9,12 +10,4 @@ const columnStyle = css`
   position: relative;
 `;
 
-
-const Column = (props) => {
-  return (
-		<Column className={columnStyle}> </Column>
-
-  );
-};
-
-export default Column;
+export default () => (<Column className={columnStyle} />);

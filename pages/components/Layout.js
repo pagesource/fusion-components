@@ -1,8 +1,7 @@
-import { css } from "emotion";
-import styled from "emotion/react";
-import Header from "./Header";
-
-import SideBar from "./Sidebar";
+import { css } from 'emotion';
+import React from 'react';
+import Header from './Header';
+import SideBar from './Sidebar';
 
 const layoutContainer = css`
   margin: 20;
@@ -27,16 +26,14 @@ color#red;
   color:#f9f9f9;
   margin:10px;
   padding:10px;
-}
-`;
+}`;
 
-const Layout = props =>
-  <div className={layoutContainer}>
-    <Header />
-    <SideBar />
-    <div className={content}>
-      {props.children}
-    </div>
-  </div>;
+const Layout = ({ children }) => (<div className={layoutContainer}>
+  <Header />
+  <SideBar />
+  <div className={content}>
+    {children}
+  </div>
+</div>);
 
 export default Layout;
