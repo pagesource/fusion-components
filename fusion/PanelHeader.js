@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
-import {css} from 'emotion';
 import styled from 'emotion/react';
-import { withTheme } from 'theming'
+import PropTypes from 'prop-types';
+import { withTheme } from 'theming';
 
 const PanelHeader = styled.header`
   font-size: 16px;
@@ -17,18 +16,17 @@ const PanelHeader = styled.header`
 PanelHeader.propTypes = {
   /**
    * Text Color
-  */
+   */
   color: PropTypes.string,
   /**
    * Background Color
-  */
-  bg: PropTypes.string
+   */
+  bg: PropTypes.string,
 };
 
 /* Deafult Props */
 PanelHeader.defaultProps = {
-  color: "green"
+  color: 'green',
 };
-
 
 export default withTheme(PanelHeader);

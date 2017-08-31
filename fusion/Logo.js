@@ -1,5 +1,5 @@
+import { css } from 'emotion';
 import PropTypes from 'prop-types';
-import {css} from 'emotion';
 import { withTheme } from 'theming';
 
 const LogoStyle = css`
@@ -7,34 +7,27 @@ const LogoStyle = css`
   cursor: pointer;
 `;
 
-const Logo = (props) => {
-  return (
-    <div>
-       <img className={LogoStyle} src={props.src} alt={props.alt} width={props.imgWidth} />
-    </div>
-  );
-};
-
+const Logo = ({ src, alt, imgWidth }) => (<img className={LogoStyle} src={src} alt={alt} width={imgWidth} />);
 
 Logo.propTypes = {
   /**
-  * Brand Logo
-  */
+   * Brand Logo
+   */
   src: PropTypes.string,
   /**
-  * Logo Alternative Text
-  */
+   * Logo Alternative Text
+   */
   alt: PropTypes.string,
   /**
-  * Image width
-  */
-  imgWidth: PropTypes.number
+   * Image width
+   */
+  imgWidth: PropTypes.number,
 };
 
 Logo.defaultProps = {
-  src: "https://facebook.github.io/react/img/logo.svg",
-  alt: "Fusion",
-  imgWidth: 100
+  src: 'https://facebook.github.io/react/img/logo.svg',
+  alt: 'Fusion',
+  imgWidth: 100,
 };
 
 export default withTheme(Logo);

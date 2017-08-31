@@ -1,5 +1,6 @@
+import { css } from 'emotion';
 import PropTypes from 'prop-types';
-import {css} from 'emotion';
+import React from 'react';
 
 const badgeStyle = css`
   color: ${props => props.color};
@@ -18,18 +19,18 @@ const badgeStyle = css`
 Badge.propTypes = {
   /**
    * Text Color
-  */
+   */
   color: PropTypes.string,
   /**
    * Background Color
-  */
-  bg: PropTypes.string
+   */
+  bg: PropTypes.string,
 };
 
 /* Deafult Props */
 Badge.defaultProps = {
-  color: "#fff",
-  bg: "#000"
+  color: '#fff',
+  bg: '#000',
 };
 
 export default Badge;

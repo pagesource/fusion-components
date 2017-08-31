@@ -1,6 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
 import styled from "emotion/react";
+import React from "react";
 import { withTheme } from "theming";
 
 const Panel = props => {

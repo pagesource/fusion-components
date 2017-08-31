@@ -1,9 +1,8 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React, { PureComponent } from "react";
-import { theme } from "./themes";
+import { css } from 'emotion';
+import React, { PureComponent } from 'react';
+import { theme } from '../theme';
 
-const toggle= css`
+const toggle = css`
     position: relative;
     display: inline-block;
     width: 60px;
@@ -14,7 +13,7 @@ const toggle= css`
     }
 `;
 
-const slider= css`
+const slider = css`
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -42,7 +41,7 @@ const slider= css`
 
 `;
 
-const checked= css`
+const checked = css`
     background-color: #3a1f4f;
     box-shadow: 0 0 1px #3a1f4f;
 
@@ -55,37 +54,33 @@ const checked= css`
 `;
 
 class ToggleButton extends PureComponent {
-
   constructor(props) {
     super(props);
     this.state = {
-      checked : false,
-      checkedClass : "",
-    }
+	     checked: false,
+	     checkedClass: '',
+    };
   }
 
   change(e) {
-    if(e.target.checked) {
-        this.setState({
-            checked:true,
-            checkedClass : checked
-        });
-    }
-    else{
-      this.setState({
-          checked:false,
-          checkedClass: ""
-      });
+    if (e.target.checked) {
+	  this.setState({
+        checked: true,
+        checkedClass: checked,
+	  });
+    } else {
+	  this.setState({
+        checked: false,
+        checkedClass: '',
+	  });
     }
   }
 
   render() {
-    return (
-      <label className={toggle}>
-        <input className={this.state.checkedClass} type="checkbox" onChange={this.change.bind(this)} />
-        <span className={slider+" "+this.state.checkedClass}></span>
-      </label>
-    );
+    return (<label className={toggle}>
+      <input className={this.state.checkedClass} type="checkbox" onChange={this.change.bind(this)} />
+      <span className={`${slider} ${this.state.checkedClass}`} />
+    </label>);
   }
 }
 

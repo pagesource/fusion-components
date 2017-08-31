@@ -1,9 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from './Button';
-import {css} from 'emotion';
+import { css } from 'emotion';
 import styled from 'emotion/react';
-import theme from './themes';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const TooltipBtn = css`
     height: 40px;
@@ -17,7 +15,7 @@ const TooltipBtn = css`
       opacity: 0.6;
     }
 
-`
+`;
 const HiddenDiv = styled.span`
     background: aliceblue;
     position: relative;
@@ -27,50 +25,50 @@ const HiddenDiv = styled.span`
     width: 132px;
     border-radius: 3px;
     height: 19px;
-`
+`;
 
 class Tooltip extends React.PureComponent {
-    constructor() {
+  constructor() {
     super();
-      this.state = {
-       open: false,
-      };
-    }
+    this.state = {
+	  open: false,
+    };
+  }
+
+  onMouseEnter() {
+    this.setState({ open: true });
+  }
+
+  onMouseOut() {
+    this.setState({ open: false });
+  }
 
   render() {
-  
-    return (
-        <div className={TooltipBtn} onMouseEnter={() => this.onMouseEnter()} onMouseOut ={() => this.onMouseOut ()}>Hover over me!
-      {
-          this.state.open
-            ? 
-            <HiddenDiv>
-              <p>{this.props.text}</p>
-            </HiddenDiv>
-            : null
-        }
-      </div>
-    );
-  }
-  onMouseEnter() {
-    this.setState({open: true});
-  }
-  onMouseOut() {
-    this.setState({open: false});
+    return (<div
+      className={TooltipBtn}
+      onMouseEnter={() => this.onMouseEnter()}
+      onMouseOut={() => this.onMouseOut()}
+    >
+	  Hoverover me!
+	  {this.state.open ? <HiddenDiv>
+        <p>{this.props.text}</p>
+</HiddenDiv>
+        : null}
+    </div>);
   }
 }
 
 /* Props Check */
 Tooltip.propTypes = {
-    /**
-    *Tooltip list items
-    */
-    text: PropTypes.string,
+  /**
+   *Tooltip list items
+   */
+  text: PropTypes.string,
 };
 
 /* Deafult Props */
 Tooltip.defaultProps = {
-  text: "Some hidden text."
+  text: 'Some hidden text.',
 };
 
 export default Tooltip;

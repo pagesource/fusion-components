@@ -1,52 +1,45 @@
-//---- global imports ----------
-import Layout from "./components/Layout";
-import Link from "next/link";
-import { ThemeProvider, withTheme } from "theming";
-import theme from "../fusion/themes";
+import React from 'react';
+import { ThemeProvider } from 'theming';
+import { Navbar, Pagination, StepperControl } from '../';
 // --------page specific imports---------
-import Stepper from "../fusion/Stepper";
-import ControlStepper from "../fusion/StepperControl";
-import Pagination from "../fusion/Pagination";
-import Navbar from "../fusion/Navbar";
+import theme from '../theme';
+// ---- global imports ----------
+import Layout from './components/Layout';
 
-const ComingSoon = props => (
-  <Layout>
-    <ThemeProvider theme={theme}>
-      <div>
-        <h2>Navigation Components</h2>
-        Navigation Components.
-        <h3>Nav bar </h3>
-        <Navbar />
-        <pre>{` const = NavList: [
-            {
-              "navName": "Home",
-              "link":"/home"
-            },
-            {
-              "navName":"Recent",
-             "link":"/recent"
-           },
-            {
-              "navName": "About Us",
-              "link":"/about"
-            },
-            {
-              "navName": "Contact Us",
-              "link":"/Contact"}
-          ],
+export default () => (<Layout>
+  <ThemeProvider theme={theme}>
+    <div>
+      <h2>Navigation Components</h2>
+      <h3>Nav bar</h3>
+      <Navbar />
+      <pre>{`const = NavList: [
+		{
+		  'navName': 'Home',
+		  'link':'/home'
+		},
+		{
+		  'navName':'Recent',
+		  'link':'/recent'
+		},
+		{
+		  'navName': 'About Us',
+		  'link':'/about'
+		},
+		{
+		  'navName': 'Contact Us',
+		  'link':'/Contact'}
+		],
           <Navbar NavLinks={NavLinks}/>
           `}</pre>
-        <h3>Stepper Controls </h3>
-        <ControlStepper />
-        <pre>{`<ControlStepper />
+      <h3>Stepper Controls </h3>
+      <StepperControl />
+      <pre>{`<StepperControl />
           `}</pre>
-        <h3>Pagination </h3>
-        <Pagination />
-        <pre>{`<Pagination />
+      <h3>Pagination </h3>
+      <Pagination />
+      <pre>{`<Pagination />
           `}</pre>
-      </div>
-    </ThemeProvider>
-  </Layout>
-);
+    </div>
+  </ThemeProvider>
+</Layout>);
 
-export default ComingSoon;

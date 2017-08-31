@@ -1,44 +1,41 @@
-import PropTypes from "prop-types";
-import { keyframes, css } from "emotion";
-import { withTheme } from "theming";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
 
 const valueStyle = css`
   font-weight: bold;
   font-size: 35px;
   margin:auto;
-text-align:center;
+  text-align:center;
 `;
 
 const ProgressStyle = css`
-    border: 10px solid #aaa; 
-    border-top: 10px solid #3498db; 
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    display:flex
-  `;
+  border: 10px solid #aaa; 
+  border-top: 10px solid #3498db; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display:flex
+`;
 
-const ProgressCircle = props => {
-  return (
-    <div css={`composes: ${ProgressStyle}`} value={props.value}>
-      <div className={valueStyle}>
-        {props.value}%
-      </div>
-    </div>
-  );
-};
+const ProgressCircle = ({ value }) => (<div css={`composes: ${ProgressStyle}`} value={value}>
+  <div className={valueStyle}>
+    {value}%
+  </div>
+</div>);
 
 /* Props Check */
 ProgressCircle.propTypes = {
   /**
    * Progress Length
-  */
-  value: PropTypes.number
+   */
+  value: PropTypes.number,
 };
 
 /* Deafult Props */
 ProgressCircle.defaultProps = {
-  value: 1 / 3 * 100
+  value: 1 / 3 * 100,
 };
 
 export default withTheme(ProgressCircle);

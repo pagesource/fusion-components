@@ -1,4 +1,3 @@
-import {css} from 'emotion';
 import styled from 'emotion/react';
 
 const Truncate = styled.p`
