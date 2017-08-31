@@ -57,8 +57,8 @@ class ToggleButton extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-	  checked: false,
-	  checkedClass: '',
+	     checked: false,
+	     checkedClass: '',
     };
   }
 
@@ -79,7 +79,7 @@ class ToggleButton extends PureComponent {
   render() {
     return (<label className={toggle}>
       <input className={this.state.checkedClass} type="checkbox" onChange={this.change.bind(this)} />
-      <span className={`slider ${this.state.checkedClass}`} />
+      <span className={`${slider} ${this.state.checkedClass}`} />
     </label>);
   }
 }

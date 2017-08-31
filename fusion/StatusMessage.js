@@ -41,7 +41,7 @@ class StatusMessage extends PureComponent {
   }
 
   render() {
-    return (<div className={`status ${this.state.hide}`}>{this.state.message}</div>);
+    return (<div className={`${status} ${this.state.hide}`}>{this.state.message}</div>);
   }
 }
 

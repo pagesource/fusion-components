@@ -47,7 +47,7 @@ const KitchenSink = () =>
         <Row />
         <hr />
         <h2>Status Message</h2>
-        <StatusMessage />
+        <StatusMessage time={5000} message={"This is a status message"}/>
         <Row />
         <hr />
         <h2>Horizontal bar Chart</h2>
