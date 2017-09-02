@@ -122,7 +122,7 @@ const KitchenSink = () =>
 
         <h2>Rating</h2>
         <div>
-          <Rating value="3" onClick="" />
+          <Rating value={3} onClick="" />
         </div>
         <Row />
         <hr />
@@ -173,7 +173,7 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Bounce Text Animation</h2>
-        <Bounce src="" text="Sapient razorfish" width="60px" />
+        <Bounce src="" text="Sapient razorfish" width={60} />
         <Row />
         <hr />
 
@@ -181,7 +181,7 @@ const KitchenSink = () =>
         <Bounce
           src="http://www.ipuntotv.com/IMAGES/Pelota.png"
           text=" "
-          width="60px"
+          width={60}
         />
         <Row />
         <hr />
@@ -236,8 +236,7 @@ const KitchenSink = () =>
         <h2>BackgroundImage</h2>
         <div>
           <BackgroundImage
-            picUrl="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png"
-            width="400px"
+            width={400}
           />
         </div>
         <Row />
