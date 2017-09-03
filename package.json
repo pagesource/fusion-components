@@ -31,6 +31,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
+    "prestart": "npm run clean && npm run build",
     "start": "next start",
     "clean": "rimraf .next",
     "lint": "eslint pages fusion",
