@@ -35,7 +35,8 @@
     "start": "next start",
     "clean": "rimraf .next",
     "lint": "eslint pages fusion",
-    "pre-commit": "yarn lint"
+    "pre-commit": "yarn lint",
+    "heroku-postbuild": "next build"
   },
   "repository": {
     "type": "git",
