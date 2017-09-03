@@ -35,6 +35,7 @@ import {
   Tooltip,
   Truncate,
   Typing,
+  Tabs,
 } from '../';
 import Layout from './components/Layout';
 
@@ -249,6 +250,12 @@ const KitchenSink = () =>
         <Banner src="http://lorempixel.com/560/150/sports" alt="Banner" />
         <Row />
         <hr />
+
+        <h2>Tabs</h2>
+        <Tabs onClick={(selected)=>console.log(selected)}/>
+        <Row />
+        <hr />
+
       </div>
     </ThemeProvider>
   </Layout>);
