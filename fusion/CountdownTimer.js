@@ -7,13 +7,13 @@ const timerStyle = css`
 `;
 
 class CountdownTimer extends PureComponent {
-  state = {
-	timer: '',
-	interval: null
-  };
 
   constructor(props){
 	super(props);
+	this.state = {
+		timer: '',
+		interval: null
+	};
 	this.countDownDate = new Date(this.props.endTime).getTime();
   }
 
@@ -52,7 +52,7 @@ class CountdownTimer extends PureComponent {
 }
 
 CountdownTimer.propTypes = {
-  startTime: PropTypes.string.isRequired
+  endTime: PropTypes.string.isRequired
 };
 
 export default CountdownTimer;
