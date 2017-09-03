@@ -7,7 +7,6 @@ import Layout from './components/Layout';
 const ComingSoon = props => (<Layout>
   <ThemeProvider theme={theme}>
     <EmailSubscribe action="#server_address"/>
-      <hr/>
   </ThemeProvider>
 </Layout>);
 

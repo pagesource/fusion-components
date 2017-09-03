@@ -22,7 +22,7 @@ const EmailSubscribe = ({action, placeholder}) => (
         <button type="submit">Submit</button>
     </form>);
 
-/* Props Check */
+
 EmailSubscribe.propTypes = {
     action: PropTypes.string,
     placeholder: PropTypes.string
