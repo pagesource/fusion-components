@@ -47,7 +47,7 @@ const KitchenSink = () =>
         <Row />
         <hr />
         <h2>Status Message</h2>
-        <StatusMessage time={5000} message={"This is a status message"}/>
+        <StatusMessage time={5000} message={'This is a status message'} />
         <Row />
         <hr />
         <h2>Horizontal bar Chart</h2>
@@ -173,7 +173,7 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Bounce Text Animation</h2>
-        <Bounce src="" text="Sapient razorfish" width="60px" />
+        <Bounce src="" text="Sapient razorfish" width="60px" alt="" />
         <Row />
         <hr />
 
@@ -182,6 +182,7 @@ const KitchenSink = () =>
           src="http://www.ipuntotv.com/IMAGES/Pelota.png"
           text=" "
           width="60px"
+          alt="Bouncing Image"
         />
         <Row />
         <hr />
@@ -225,7 +226,7 @@ const KitchenSink = () =>
         <hr />
 
         <h3>Avatar</h3>
-        <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" />
+        <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" alt="Avatar Image" />
         <hr />
 
         <h2>Alert </h2>
@@ -244,7 +245,7 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Banner </h2>
-        <Banner src="http://lorempixel.com/560/150/sports" />
+        <Banner src="http://lorempixel.com/560/150/sports" alt="Banner" />
         <Row />
         <hr />
       </div>
