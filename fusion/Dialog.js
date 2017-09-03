@@ -61,8 +61,8 @@ class Dialog extends React.PureComponent {
   render() {
     return (<div>
       <Button label="Dialog" onClick={() => this.onClick()}>
-		Open Dialog
-	  </Button>
+      Open Dialog
+      </Button>
       {this.state.open
         ? <DialogDiv
           title="Dialog With Actions"

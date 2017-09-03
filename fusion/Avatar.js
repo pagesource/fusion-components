@@ -11,8 +11,8 @@ const Avatar = ({ src, alt }) => (<img src={src} className={avatarStyle} alt={al
 
 /* Default Props */
 Avatar.defaultProps = {
-    src: 'http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg',
-    alt : 'Avatar Image'
+  src: 'http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg',
+  alt: 'Avatar Image',
 };
 
 export default withTheme(Avatar);

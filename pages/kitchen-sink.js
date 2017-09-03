@@ -47,7 +47,7 @@ const KitchenSink = () =>
         <Row />
         <hr />
         <h2>Status Message</h2>
-        <StatusMessage time={5000} message={"This is a status message"}/>
+        <StatusMessage time={5000} message={'This is a status message'} />
         <Row />
         <hr />
         <h2>Horizontal bar Chart</h2>
@@ -173,7 +173,7 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Bounce Text Animation</h2>
-        <Bounce src="" text="Sapient razorfish" width="60px" />
+        <Bounce src="" text="Sapient razorfish" width="60px" alt="" />
         <Row />
         <hr />
 

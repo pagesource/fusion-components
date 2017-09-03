@@ -73,7 +73,7 @@ Bounce.defaultProps = {
   text: 'Boucing text',
   color: '#ASD',
   fontSize: 20,
-  alt:'Bouncing Image'
+  alt: 'Bouncing Image',
 };
 
 export default withTheme(Bounce);
