@@ -5,11 +5,11 @@ There are already a ton of really good Component Libraries out there, From [Ant 
 
 However if you are working on a project, that requires you to follow a certain Visual Style Guide and respect the brand guidelines, you would run into challenges trying to force fit any of the above component libs to meet your project needs. We also felt the time taken to tweak any of these components to meet your specific needs kills the productivity gains of using the library in the first place.
 
-We also feel many of the components in these libraries are over engineered to support multiple use cases, many of which you really dont need in your application. This is unnecessary blot.
+We also feel many of the components in these libraries are over engineered to support multiple use cases, many of which you really dont need in your application. This is unnecessary bloat.
 
 ## How does Fusion Solve this?
 
-Fusion is intended for React Developers who like to take full control on how their components look and behave.
+Fusion is intended for React Developers who like to take full control on how their components look and behavior.
 
 Fusion components contain the minimum set of features to get your component working in a project.
 
@@ -45,7 +45,7 @@ Clone the repo and do the usual
 
 `git clone git@github.com:pagesource/fusion.git`
 
-` npm install`
+`npm install`
 
  `npm start`
 
