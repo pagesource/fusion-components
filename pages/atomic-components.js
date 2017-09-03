@@ -12,9 +12,9 @@ const AtomicComponent = props => (<Layout>
       <h2>Atomic Level Components</h2>
       <p>Primitive Atomic Level Components.</p>
       <h3>Avatar</h3>
-      <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" />
+      <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" alt="Avatar Image" />
       <pre>
-        {'<Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" />'}
+        {'<Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" alt="Avatar Image" />'}
       </pre>
       <h3>Button</h3>
       <Button>Click Here</Button>

@@ -36,9 +36,9 @@ const BounceIt = styled('div')`
     transform-origin: center bottom;
 `;
 
-const Bounce = ({ fontSize, text, src, width, color }) => (<BounceIt>
+const Bounce = ({ fontSize, text, src, width, color, alt }) => (<BounceIt>
   <span style={{ color: `${color}`, fontSize: `${fontSize}px` }}>{text}</span>
-  <img src={src} width={width} />
+  <img src={src} width={width} alt={alt} />
 </BounceIt>);
 
 /* Props Check */
@@ -73,6 +73,7 @@ Bounce.defaultProps = {
   text: 'Boucing text',
   color: '#ASD',
   fontSize: 20,
+  alt:'Bouncing Image'
 };
 
 export default withTheme(Bounce);
