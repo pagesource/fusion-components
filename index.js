@@ -6,6 +6,7 @@ export { default as Banner } from './fusion/Banner';
 export { default as CountDownTimer } from './fusion/CountdownTimer';
 export { default as Dialog } from './fusion/Dialog';
 export { default as Rating } from './fusion/Rating';
+export { default as SelectRating } from './fusion/SelectRating';
 export { default as Panel } from './fusion/Panel';
 export { default as Panel2 } from './fusion/Panel2';
 export { default as Avatar } from './fusion/Avatar';
