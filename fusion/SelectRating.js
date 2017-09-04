@@ -32,13 +32,9 @@ class SelectRating extends React.PureComponent{
   render(){
     let stars = Array.from({ length: 5 }, (a, b) => b), 
         star="";
+    const newRating = this.state.count;
     for (let index of stars) {
-      const newRating = this.state.count
-      if(index < newRating){
-        star="★";
-      }else{
-        star="☆";
-      }
+      star = index < newRating ? star="★" : star="☆";
       stars[index] =  (<a href='javascript:void(0);' onClick={this.handleClick.bind(this,{index})} key={index} style={sx.star}>
                         <span>{star} </span>
                       </a>)
