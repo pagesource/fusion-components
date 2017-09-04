@@ -26,24 +26,24 @@ class SelectRating extends React.PureComponent{
 
   handleClick(ratingGiven){
     this.setState({
-      count: ratingGiven.rating + 1
+      count: ratingGiven.index + 1
     })
   }
   render(){
-    let stars = [], star="";
-        for(let rating = 0 ; rating < 5; rating++){
-          const newRating = this.state.count
-          if(rating<newRating){
-            star="★";
-          }else{
-            star="☆";
-          }
-          stars.push
-          (<a href='javascript:void(0);' onClick={this.handleClick.bind(this,{rating})} key={rating} style={sx.star}>
-          <span>{star} </span>
-          </a>)
-        }
-        return (<div>{stars}</div>)
+    let stars = Array.from({ length: 5 }, (a, b) => b), 
+        star="";
+    for (let index of stars) {
+      const newRating = this.state.count
+      if(index < newRating){
+        star="★";
+      }else{
+        star="☆";
+      }
+      stars[index] =  (<a href='javascript:void(0);' onClick={this.handleClick.bind(this,{index})} key={index} style={sx.star}>
+                        <span>{star} </span>
+                      </a>)
+    }
+    return (<div>{stars}</div>)
   }
 };
 
