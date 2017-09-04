@@ -28,7 +28,6 @@
     "theming": "^1.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
     "prestart": "npm run clean && npm run build",
