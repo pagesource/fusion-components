@@ -129,9 +129,7 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Select Rating</h2>
-        <div>
-          <SelectRating value={0} />
-        </div>
+        <SelectRating value={0} />
          <Row />
         <hr />
         <h2>Panel</h2>
