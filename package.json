@@ -32,10 +32,11 @@
     "dev": "next",
     "build": "next build",
     "prestart": "npm run clean && npm run build",
-    "start": "next start",
+    "start": "next start -p $PORT",
     "clean": "rimraf .next",
     "lint": "eslint pages fusion",
     "pre-commit": "npm run lint"
+    "heroku-postbuild": "next build"
   },
   "repository": {
     "type": "git",
