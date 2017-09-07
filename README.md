@@ -1,4 +1,7 @@
 # Fusion - React Components for *Your* Design System
+[![Build Status](https://travis-ci.org/vinaymavi/fusion.svg?branch=master)](https://travis-ci.org/vinaymavi/fusion)
+
+Demo at: https://sape-fusion.herokuapp.com/  
 
 ## Why are we building this?
 There are already a ton of really good Component Libraries out there, From [Ant Design](www.ant.design), to [MaterialUI](http://www.material-ui.com/#/) to [Rebass](http://jxnblk.com/rebass/) and many others. These are great libraries if you want to put together a great looking UI without you having to spend time on the look and feel.
