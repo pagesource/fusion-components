@@ -39,7 +39,7 @@ const anchor = css`
 
 const Navbar = ({ NavList }) => (<NavbarDiv>
   <div className={lists}>
-    {!!NavList && NavList.map(({ link, navName } , i) => (<div key={i} className={links}>
+    {!!NavList && NavList.map(({ link, navName }, i) => (<div key={i} className={links}>
       <a className={anchor} key={link} href={link}>{navName}</a>
     </div>))}
   </div>

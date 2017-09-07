@@ -42,7 +42,7 @@ const Tabs = ({ tabData, onClick, theme }) => {
     padding: ${theme.tabPanelPadding};
   `;
 
-  const handleClick = (selectedTabIndex) => () => {
+  const handleClick = selectedTabIndex => () => {
     onClick(selectedTabIndex);
   };
 
@@ -82,12 +82,12 @@ const Tabs = ({ tabData, onClick, theme }) => {
       }
     </div>
   );
-}
+};
 
 Tabs.PropTypes = {
   tabData: PropTypes.array,
   onClick: PropTypes.func,
-  selectedTab: PropTypes.number
+  selectedTab: PropTypes.number,
 };
 
 Tabs.defaultProps = {
@@ -95,19 +95,19 @@ Tabs.defaultProps = {
     {
       title: 'Tab1',
       content: 'This is content for first tab',
-      selected: false
+      selected: false,
     },
     {
       title: 'Tab2',
       content: 'This is content for second tab',
-      selected: true
+      selected: true,
     },
     {
       title: 'Tab3',
       content: 'This is content for third tab',
-      selected: false
-    }
-  ]
-}
+      selected: false,
+    },
+  ],
+};
 
 export default withTheme(Tabs);

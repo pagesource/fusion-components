@@ -131,7 +131,7 @@ const KitchenSink = () =>
 
         <h2>Select Rating</h2>
         <SelectRating value={0} />
-         <Row />
+        <Row />
         <hr />
         <h2>Panel</h2>
         <div>
@@ -257,7 +257,7 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Tabs</h2>
-        <Tabs onClick={(selected)=>console.log(selected)}/>
+        <Tabs onClick={selected => console.log(selected)} />
         <Row />
         <hr />
 

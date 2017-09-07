@@ -24,8 +24,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "react-live": "^1.7.0",
-    "theming": "^1.1.0"
+    "react-live": "^1.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,4 +1,4 @@
-import {css} from 'emotion';
+import { css } from 'emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -17,20 +17,20 @@ const formStyle = css`
       border: 1px solid gray;     
     }`;
 
-const EmailSubscribe = ({action, placeholder}) => (
-    <form className={formStyle} action={action}><input placeholder={placeholder}/>
-        <button type="submit">Submit</button>
-    </form>);
+const EmailSubscribe = ({ action, placeholder }) => (
+  <form className={formStyle} action={action}><input placeholder={placeholder} />
+    <button type="submit">Submit</button>
+  </form>);
 
 
 EmailSubscribe.propTypes = {
-    action: PropTypes.string,
-    placeholder: PropTypes.string
+  action: PropTypes.string,
+  placeholder: PropTypes.string,
 };
 
 EmailSubscribe.defaultProps = {
-    action: "#defaultAction",
-    placeholder: "Email address for latest updates"
+  action: '#defaultAction',
+  placeholder: 'Email address for latest updates',
 };
 
 
