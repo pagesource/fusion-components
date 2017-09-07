@@ -25,6 +25,7 @@ import {
   ProgressBar,
   ProgressCircle,
   Rating,
+  SelectRating,
   Ripples,
   Row,
   StatusMessage,
@@ -121,13 +122,17 @@ const KitchenSink = () =>
           <CountDownTimer endTime="Jan 1, 2018 15:37:25" />
         </div>
 
-        <h2>Rating</h2>
+        <h2>Show Rating</h2>
         <div>
           <Rating value={3} onClick="" />
         </div>
         <Row />
         <hr />
 
+        <h2>Select Rating</h2>
+        <SelectRating value={0} />
+         <Row />
+        <hr />
         <h2>Panel</h2>
         <div>
           <Panel>this is text inside panel</Panel>
