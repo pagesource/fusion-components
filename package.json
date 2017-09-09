@@ -40,12 +40,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/areai51/fusion.git"
+    "url": "git+https://github.com/pagesource/fusion.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "PageSource",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/areai51/fusion/issues"
+    "url": "https://github.com/pagesource/fusion/issues"
   },
-  "homepage": "https://github.com/areai51/fusion#readme"
+  "homepage": "https://sape-fusion.herokuapp.com/"
 }
