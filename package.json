@@ -13,38 +13,41 @@
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-chartjs-2": "^2.6.1",
-    "react-doc-generator": "^1.2.5",
     "react-dom": "^15.6.1",
-    "rimraf": "^2.6.1",
+    "react-live": "^1.7.0",
     "theming": "^1.1.0"
   },
   "devDependencies": {
+    "css-loader": "^0.28.7",
     "eslint": "^4.5.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "react-live": "^1.7.0"
+    "extract-text-webpack-plugin": "^3.0.0",
+    "react-doc-generator": "^1.2.5",
+    "rimraf": "^2.6.1",
+    "style-loader": "^0.18.2"
   },
   "scripts": {
+    "test": "npm run lint",
     "dev": "next",
     "build": "next build",
     "prestart": "npm run clean && npm run build",
-    "start": "next start",
-    "heroku-start": "npm run clean && npm run build && next start -p $PORT",
+    "start": "next start -p $PORT",
     "clean": "rimraf .next",
-    "lint": "eslint pages fusion",
-    "pre-commit": "npm run lint",
-    "heroku-postbuild": "npm run build"
+    "lint": "eslint pages fusion > eslint_l$(date +\"%m%d%Y\").log",
+    "precommit": "npm run lint",
+    "heroku-postbuild": "next build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pagesource/fusion.git"
   },
-  "author": "PageSource",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/pagesource/fusion/issues"
   },
-  "homepage": "https://sape-fusion.herokuapp.com/"
+  "homepage": "https://github.com/pagesource/fusion#readme"
 }

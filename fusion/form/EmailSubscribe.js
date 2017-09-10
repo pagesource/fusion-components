@@ -22,7 +22,6 @@ const EmailSubscribe = ({ action, placeholder }) => (
     <button type="submit">Submit</button>
   </form>);
 
-
 EmailSubscribe.propTypes = {
   action: PropTypes.string,
   placeholder: PropTypes.string,
@@ -32,6 +31,5 @@ EmailSubscribe.defaultProps = {
   action: '#defaultAction',
   placeholder: 'Email address for latest updates',
 };
-
 
 export default EmailSubscribe;

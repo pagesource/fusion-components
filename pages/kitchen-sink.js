@@ -25,18 +25,18 @@ import {
   ProgressBar,
   ProgressCircle,
   Rating,
-  SelectRating,
   Ripples,
   Row,
+  SelectRating,
   StatusMessage,
   Stepper,
   StepperControl,
+  Tabs,
   theme,
   ToggleButton,
   Tooltip,
   Truncate,
   Typing,
-  Tabs,
 } from '../';
 import Layout from './components/Layout';
 
@@ -157,9 +157,9 @@ const KitchenSink = () =>
         <h2>Blockquote</h2>
         <div>
           <BlockQuote>
-			Blockquote tag specifies a section that is quoted from another
-			source.
-		  </BlockQuote>
+            Blockquote tag specifies a section that is quoted from another
+            source.
+          </BlockQuote>
         </div>
         <Row />
         <hr />
@@ -173,7 +173,7 @@ const KitchenSink = () =>
 
         <h2>Truncate</h2>
         <Truncate>
-		  SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
+          SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
         </Truncate>
         <Row />
         <hr />
@@ -234,7 +234,10 @@ const KitchenSink = () =>
         <hr />
 
         <h3>Avatar</h3>
-        <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" alt="Avatar Image" />
+        <Avatar
+          src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg"
+          alt="Avatar Image"
+        />
         <hr />
 
         <h2>Alert </h2>

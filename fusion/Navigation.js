@@ -7,14 +7,14 @@ const Navigation = ({ theme, links, align, type }) => (<div
 >
   <ul>
     {links && links.map(link =>
-	  (<li key={`key-${link.index}`}>
-  <a
+      (<li key={`key-${link.index}`}>
+        <a
           href={link.url}
           className={classnames('nav-links', `acss-theme-${theme}`)}
         >
           {link.title}
         </a>
-	  </li>),
+      </li>),
     )}
   </ul>
 </div>);

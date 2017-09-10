@@ -4,14 +4,13 @@ import React from 'react';
 import { withTheme } from 'theming';
 
 const buttonStyle = css`
-    background-color:${props => props.theme.buttonColor}; 
-    color:${props => props.theme.buttonTextColor};
-    border-radius:5px;
-      padding:0.5rem 1rem;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
-
+  background-color:${({ theme }) => theme.buttonColor}; 
+  color:${({ theme }) => theme.buttonTextColor};
+  border-radius:5px;
+  padding:0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
 `;
 
 const Button = ({ children, onClick, disabled }) => (<button
@@ -41,4 +40,5 @@ Button.propTypes = {
 Button.defaultProps = {
   disabled: false,
 };
+
 export default withTheme(Button);

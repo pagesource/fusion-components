@@ -3,9 +3,9 @@ import styled from 'emotion/react';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'theming';
-import { theme } from '../theme/index';
+import { theme } from '../../theme/index';
 
-const bounce = keyframes`
+const bounceFrames = keyframes`
   from, 20%, 53%, 80%, to {
     transform: translate3d(0,0,0);
   }
@@ -24,16 +24,16 @@ const bounce = keyframes`
 `;
 
 const BounceIt = styled('div')`
-    width: 96px;
-    position: relative;
-    color: #;
-    top: 29px;
-    font-weight: bold;
-    text-transform: uppercase;
-    height: 96px;
-    border-radius: 50%;
-    animation: ${bounce} 1s ease infinite;
-    transform-origin: center bottom;
+  width: 96px;
+  position: relative;
+  color: #;
+  top: 29px;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 96px;
+  border-radius: 50%;
+  animation: ${bounceFrames} 1s ease infinite;
+  transform-origin: center bottom;
 `;
 
 const Bounce = ({ fontSize, text, src, width, color, alt }) => (<BounceIt>
@@ -70,7 +70,7 @@ Bounce.propTypes = {
 Bounce.defaultProps = {
   src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Basketball_ball.svg',
   width: 40,
-  text: 'Boucing text',
+  text: 'Bouncing text',
   color: '#ASD',
   fontSize: 20,
   alt: 'Bouncing Image',

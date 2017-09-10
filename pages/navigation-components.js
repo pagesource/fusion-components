@@ -13,24 +13,24 @@ export default () => (<Layout>
       <h3>Nav bar</h3>
       <Navbar />
       <pre>{`const = NavList: [
-		{
-		  'navName': 'Home',
-		  'link':'/home'
-		},
-		{
-		  'navName':'Recent',
-		  'link':'/recent'
-		},
-		{
-		  'navName': 'About Us',
-		  'link':'/about'
-		},
-		{
-		  'navName': 'Contact Us',
-		  'link':'/Contact'}
-		],
-          <Navbar NavLinks={NavLinks}/>
-          `}</pre>
+      {
+        'navName': 'Home',
+        'link':'/home'
+      },
+      {
+        'navName':'Recent',
+        'link':'/recent'
+      },
+      {
+        'navName': 'About Us',
+        'link':'/about'
+      },
+      {
+        'navName': 'Contact Us',
+        'link':'/Contact'}
+        ],
+        <Navbar NavLinks={NavLinks}/>
+      `}</pre>
       <h3>Stepper Controls </h3>
       <StepperControl />
       <pre>{`<StepperControl />

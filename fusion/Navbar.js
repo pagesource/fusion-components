@@ -73,20 +73,20 @@ Navbar.defaultProps = {
   header: 'Header',
   NavList: [
     {
-	  navName: 'Home',
-	  link: '/home',
+      navName: 'Home',
+      link: '/home',
     },
     {
-	  navName: 'Recent',
-	  link: '/recent',
+      navName: 'Recent',
+      link: '/recent',
     },
     {
-	  navName: 'About Us',
-	  link: '/about',
+      navName: 'About Us',
+      link: '/about',
     },
     {
-	  navName: 'Contact Us',
-	  link: '/Contact',
+      navName: 'Contact Us',
+      link: '/Contact',
     },
   ],
 };

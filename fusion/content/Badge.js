@@ -1,10 +1,10 @@
-import { css } from 'emotion';
+import { styled } from 'emotion/react';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const badgeStyle = css`
-  color: ${props => props.color};
-  background-color: ${props => props.bg};
+const Badge = styled.div`
+  color: ${({ color }) => color};
+  background-color: ${({ bg }) => bg};
   margin-left: 4px;
   margin-right: 4px;
   padding: 4px;

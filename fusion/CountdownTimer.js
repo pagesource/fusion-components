@@ -16,31 +16,31 @@ class CountdownTimer extends PureComponent {
     this.countDownDate = new Date(this.props.endTime).getTime();
   }
 
-  timer() {
-    const now = new Date().getTime(),
-	  distance = this.countDownDate - now,
-	  days = Math.floor(distance / (1000 * 60 * 60 * 24)),
-	  hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
-	  minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60)),
-	  seconds = Math.floor(distance % (1000 * 60) / 1000);
-
-    this.setState({
-	  timer: `${days} Days - ${hours} : ${minutes} : ${seconds}`,
-    });
-
-    if (distance < 0) {
-	  clearInterval(this.state.interval);
-	  this.setState({
-        timer: 'The time is up!!',
-	  });
-    }
-  }
-
   componentDidMount() {
     const interval = setInterval(this.timer.bind(this), 1000);
     this.setState({
-	  interval,
+      interval,
     });
+  }
+
+  timer() {
+    const now = new Date().getTime();
+    const distance = this.countDownDate - now;
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(distance % ((1000 * 60 * 60 * 24) / (1000 * 60 * 60)));
+    const minutes = Math.floor(distance % ((1000 * 60 * 60) / (1000 * 60)));
+    const seconds = Math.floor(distance % ((1000 * 60) / 1000));
+
+    this.setState({
+      timer: `${days} Days - ${hours} : ${minutes} : ${seconds}`,
+    });
+
+    if (distance < 0) {
+      clearInterval(this.state.interval);
+      this.setState({
+        timer: 'The time is up!!',
+      });
+    }
   }
 
   render() {

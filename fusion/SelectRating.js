@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const sx = {
   star: {
@@ -29,15 +29,17 @@ class SelectRating extends React.PureComponent {
       count: ratingGiven.index + 1,
     });
   }
+
   render() {
     let stars = Array.from({ length: 5 }, (a, b) => b),
       star = '';
     const newRating = this.state.count;
     for (const index of stars) {
       star = index < newRating ? star = '★' : star = '☆';
-      stars[index] = (<a href="javascript:void(0);" onClick={this.handleClick.bind(this, { index })} key={index} style={sx.star}>
-        <span>{star} </span>
-      </a>);
+      stars[index] = (
+        <a href="javascript:void(0);" onClick={this.handleClick.bind(this, { index })} key={index} style={sx.star}>
+          <span>{star} </span>
+        </a>);
     }
     return (<div>{stars}</div>);
   }

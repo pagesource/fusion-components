@@ -18,21 +18,21 @@ const Rating = ({ value, onClick }) => {
 
   const sx = {
     root: {
-	  display: 'inline-flex',
-	  fontSize: '14px',
+      display: 'inline-flex',
+      fontSize: '14px',
     },
     star: {
-	  position: 'relative',
-	  fontSize: 'inherit',
-	  textDecoration: 'none',
-	  lineHeight: 1,
-	  margin: 0,
-	  marginRight: '.25em',
-	  padding: '.25em 0',
-	  border: 0,
-	  color: 'inherit',
-	  backgroundColor: 'transparent',
-	  cursor: onClick ? 'pointer' : null,
+      position: 'relative',
+      fontSize: 'inherit',
+      textDecoration: 'none',
+      lineHeight: 1,
+      margin: 0,
+      marginRight: '.25em',
+      padding: '.25em 0',
+      border: 0,
+      color: 'inherit',
+      backgroundColor: 'transparent',
+      cursor: onClick ? 'pointer' : null,
     },
   };
 
@@ -50,17 +50,17 @@ const Rating = ({ value, onClick }) => {
     const clip = value > i && value < i + 1 ? 'rect(0, .5em, 1em, 0)' : null;
 
     return {
-	  position: 'absolute',
-	  top: '.25em',
-	  left: 0,
-	  display,
-	  clip,
+      position: 'absolute',
+      top: '.25em',
+      left: 0,
+      display,
+      clip,
     };
   };
 
   const handleClick = i => () => {
     if (onClick) {
-	  onClick(i + 1);
+      onClick(i + 1);
     }
   };
 
