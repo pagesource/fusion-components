@@ -35,7 +35,7 @@ const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
     },
     secondaryStar: {
       color: secondaryStarColor,
-    }
+    },
   };
 
   const handleClick = i => () => {
@@ -45,21 +45,21 @@ const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
   };
 
   return (
-    <div className="rating" style={sx.root} onClick={handleClick()} >
-          <div style={sx.primaryStar} >★★★★★</div>
-          <div style={sx.secondaryStar} >☆☆☆☆☆</div>
+    <div role="link" tabIndex="0" className="rating" style={sx.root} onClick={handleClick()} >
+      <div style={sx.primaryStar} >★★★★★</div>
+      <div style={sx.secondaryStar} >☆☆☆☆☆</div>
     </div>
-  )
+  );
 };
 
 Rating.defaultProps = {
   primaryStarColor: '#f4ce42',
   secondaryStarColor: '#6a6a6a',
-}
+};
 
 Rating.propTypes = {
   /** Number of star rating from 1 to 5 */
-  value: PropTypes.number,
+  value: PropTypes.number.isRequired,
   /** Click handler - returns index of star clicked */
   onClick: PropTypes.func,
   /** Main Star Color */
