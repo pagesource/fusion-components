@@ -25,6 +25,7 @@ import {
   ProgressBar,
   ProgressCircle,
   Rating,
+  SelectRating,
   Ripples,
   Row,
   StatusMessage,
@@ -35,6 +36,7 @@ import {
   Tooltip,
   Truncate,
   Typing,
+  Tabs,
 } from '../';
 import Layout from './components/Layout';
 
@@ -47,7 +49,7 @@ const KitchenSink = () =>
         <Row />
         <hr />
         <h2>Status Message</h2>
-        <StatusMessage time={5000} message={"This is a status message"}/>
+        <StatusMessage time={5000} message={'This is a status message'} />
         <Row />
         <hr />
         <h2>Horizontal bar Chart</h2>
@@ -120,13 +122,17 @@ const KitchenSink = () =>
           <CountDownTimer endTime="Jan 1, 2018 15:37:25" />
         </div>
 
-        <h2>Rating</h2>
+        <h2>Show Rating</h2>
         <div>
-          <Rating value="3" onClick="" />
+          <Rating value={3} onClick="" />
         </div>
         <Row />
         <hr />
 
+        <h2>Select Rating</h2>
+        <SelectRating value={0} />
+         <Row />
+        <hr />
         <h2>Panel</h2>
         <div>
           <Panel>this is text inside panel</Panel>
@@ -173,7 +179,9 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Bounce Text Animation</h2>
-        <Bounce src="" text="Sapient razorfish" width="60px" />
+
+        <Bounce src="" text="Sapient razorfish" width={60} />
+
         <Row />
         <hr />
 
@@ -181,7 +189,8 @@ const KitchenSink = () =>
         <Bounce
           src="http://www.ipuntotv.com/IMAGES/Pelota.png"
           text=" "
-          width="60px"
+          width={60}
+
         />
         <Row />
         <hr />
@@ -225,7 +234,7 @@ const KitchenSink = () =>
         <hr />
 
         <h3>Avatar</h3>
-        <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" />
+        <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" alt="Avatar Image" />
         <hr />
 
         <h2>Alert </h2>
@@ -236,17 +245,22 @@ const KitchenSink = () =>
         <h2>BackgroundImage</h2>
         <div>
           <BackgroundImage
-            picUrl="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png"
-            width="400px"
+            width={400}
           />
         </div>
         <Row />
         <hr />
 
         <h2>Banner </h2>
-        <Banner src="http://lorempixel.com/560/150/sports" />
+        <Banner src="http://lorempixel.com/560/150/sports" alt="Banner" />
         <Row />
         <hr />
+
+        <h2>Tabs</h2>
+        <Tabs onClick={(selected)=>console.log(selected)}/>
+        <Row />
+        <hr />
+
       </div>
     </ThemeProvider>
   </Layout>);

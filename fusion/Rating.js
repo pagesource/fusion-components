@@ -36,7 +36,7 @@ const Rating = ({ value, onClick }) => {
     },
   };
 
-  const gray = '#9a9a9a';
+  const gray = '#6a6a6a';
   const active = '#f4ce42';
   const getEmptyStyle = (i) => {
     const active = i < value;
