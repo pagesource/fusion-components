@@ -29,12 +29,12 @@ const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
       overflow: 'hidden',
       width: `${rating}%`,
       fontSize: 'inherit',
-      color: primaryStarColor? primaryStarColor : 'inherit',
+      color: primaryStarColor,
       backgroundColor: 'transparent',
       cursor: onClick ? 'pointer' : null,
     },
     secondaryStar: {
-      color: secondaryStarColor ? secondaryStarColor : '#6a6a6a',
+      color: secondaryStarColor,
     }
   };
 
@@ -51,6 +51,11 @@ const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
     </div>
   )
 };
+
+Rating.defaultProps = {
+  primaryStarColor: '#f4ce42',
+  secondaryStarColor: '#6a6a6a',
+}
 
 Rating.propTypes = {
   /** Number of star rating from 1 to 5 */
