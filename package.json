@@ -1,7 +1,7 @@
 {
   "name": "fusion",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collection of React Components built with Emotion.js",
   "main": "index.js",
   "dependencies": {
     "chart.js": "^2.6.0",
@@ -40,8 +40,8 @@
     "type": "git",
     "url": "git+https://github.com/areai51/fusion.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "pagesource",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/areai51/fusion/issues"
   },
