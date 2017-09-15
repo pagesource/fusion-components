@@ -15,6 +15,7 @@
     "react-chartjs-2": "^2.6.1",
     "react-doc-generator": "^1.2.5",
     "react-dom": "^15.6.1",
+    "react-slick": "^0.15.4",
     "rimraf": "^2.6.1",
     "theming": "^1.1.0"
   },
@@ -36,7 +37,7 @@
     "clean": "rimraf .next",
     "lint": "eslint pages fusion",
     "pre-commit": "npm run lint",
-    "test":"npm run lint",
+    "test": "npm run lint",
     "heroku-postbuild": "npm run build"
   },
   "repository": {

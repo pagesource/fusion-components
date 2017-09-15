@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'theming';
-import { Avatar, Button } from '../';
+import { Avatar, Button, Slider } from '../';
 import theme from '../theme';
 // -----Global Imports ---------
 import Layout from './components/Layout';
@@ -20,6 +20,8 @@ const AtomicComponent = props => (<Layout>
       <Button>Click Here</Button>
       <pre>{`<Button>Click Here</Button>
           `}</pre>
+      <h3>Slider</h3>
+      <Slider/>
     </div>
   </ThemeProvider>
 </Layout>);
