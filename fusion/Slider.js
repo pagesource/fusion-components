@@ -29,7 +29,7 @@ import React, { PureComponent } from 'react';
 // `;
 
 const props = {
-  totalSlides: 6,
+  totalSlides: [1,2,3,4,5,6],
   imageUrl: 'http://via.placeholder.com/650x400'
 }
 
@@ -45,7 +45,6 @@ class Slider extends PureComponent {
       dots: true,
       infinite: false,
       arrows: true,
-      mobileFirst: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       responsive: [
@@ -124,25 +123,23 @@ class Slider extends PureComponent {
   //     this.slider.slickPrev();
   // }
 
-  getSliderMarkup = () => {
-
-    return (
-      <Carousel ref={ c => this.slider = c } { ...this.settings }>
-        { props.totalSlides.map ( (slide, i) => {
-          <img key = { i }
-               className = { `image-${i}` }
-               src = { props.imageUrl }
-          />
-        })}
-      </Carousel>
-    )
-
-  }
+  const CarouselComponent = styled.div`
+    width: 80%;
+    box-sizing: border-box;
+  `;
 
   render() {
-    return (<div className={`carousel-component`}>
-              { this.getSliderMarkup }
-          </div>);
+
+    return (<CarouselComponent>
+      <Carousel ref={ c => this.slider = c } { ...this.settings }>
+        { props.totalSlides.map ( (i) => (
+          <img alt="img" key = { i }
+            className = { `image-${i}` }
+            src = { props.imageUrl }
+          />
+        ))}
+      </Carousel>
+    </CarouselComponent>);
   }
 }
 

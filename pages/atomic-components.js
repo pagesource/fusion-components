@@ -21,7 +21,7 @@ const AtomicComponent = props => (<Layout>
       <pre>{`<Button>Click Here</Button>
           `}</pre>
       <h3>Slider</h3>
-      <Slider/>
+      <Slider />
     </div>
   </ThemeProvider>
 </Layout>);
