@@ -180,7 +180,7 @@ const KitchenSink = () =>
 
         <h2>Bounce Text Animation</h2>
 
-        <Bounce src="" text="Sapient razorfish" width={60} />
+        <Bounce src="" text="Lorumtr Ipsumgypum" width={60} />
 
         <Row />
         <hr />
