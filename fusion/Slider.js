@@ -1,4 +1,4 @@
-import styled from 'emotion/react';
+import { css } from 'emotion';
 import Carousel from 'react-slick';
 import React, { PureComponent } from 'react';
 
@@ -30,8 +30,20 @@ import React, { PureComponent } from 'react';
 
 const props = {
   totalSlides: [1,2,3,4,5,6],
-  imageUrl: 'http://via.placeholder.com/650x400'
+  imageUrl: 'http://via.placeholder.com/400x200'
 }
+
+const carouselComponent = css`
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
+`;
+const dotsStyle = css`
+width: 80%;
+box-sizing: border-box;
+`;
 
 class Slider extends PureComponent {
   constructor(props) {
@@ -40,38 +52,11 @@ class Slider extends PureComponent {
       activeSlide: 0
     };
 
-    this.settings = {
-      accessibility: true,
-      dots: true,
-      infinite: false,
-      arrows: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      responsive: [
-          {
-              breakpoint: 1900,
-              settings: {
-                  centerMode: false
-              }
-          },
-          {
-              breakpoint: 769,
-              settings: {
-                  centerMode: true,
-                  centerPadding: '150px'
-              }
-          },
-          {
-              breakpoint: 376,
-              settings: {
-                  centerMode: true,
-                  centerPadding: '34px'
-              }
-          }
-      ],
-      afterChange: this.setActiveSlide
-    };
-  }
+this.settings = {
+    infinite: false,
+    dots: true
+  };
+}
 
   componentDidMount() {
     console.log('slider loading')
@@ -123,15 +108,10 @@ class Slider extends PureComponent {
   //     this.slider.slickPrev();
   // }
 
-  const CarouselComponent = styled.div`
-    width: 80%;
-    box-sizing: border-box;
-  `;
-
   render() {
 
-    return (<CarouselComponent>
-      <Carousel ref={ c => this.slider = c } { ...this.settings }>
+    return (<div className={carouselComponent}>
+      <Carousel { ...this.settings }>
         { props.totalSlides.map ( (i) => (
           <img alt="img" key = { i }
             className = { `image-${i}` }
@@ -139,7 +119,7 @@ class Slider extends PureComponent {
           />
         ))}
       </Carousel>
-    </CarouselComponent>);
+    </div>);
   }
 }
 
