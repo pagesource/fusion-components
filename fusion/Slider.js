@@ -30,7 +30,7 @@ import React, { PureComponent } from 'react';
 
 const props = {
   totalSlides: [1,2,3,4,5,6],
-  imageUrl: 'http://unsplash.it/560/420/?random'
+  imageUrl: 'https://unsplash.it/560/420/?random'
 }
 
 const carouselComponent = css`
