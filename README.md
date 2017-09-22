@@ -52,6 +52,12 @@ Clone the repo and do the usual
 
  `npm start`
 
+## Running Dev Server
+
+```bash
+npm run dev
+```
+
 The Demo Kitchen Sink page is built using next.js
 
 In the browser go to `http://localhost:3000/kitchen-sink`
