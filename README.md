@@ -70,9 +70,7 @@ All pages related kitchen-sink are located in the pages folder
 
 
 
-`git remote add fusion git@github.com:pagesource/fusion.git`
-
-`git subtree add —-prefix=fusion/ my-subtree master`
+`git subtree add --prefix fusion https://github.com/pagesource/fusion.git master`
 
 The `--prefix=fusion` will create a folder called fusion and import the components into that folder. In case you want to copy the fusion components into a folder simply change the prefix to your folder name `==prefix=<your-folder-name>` 
 
