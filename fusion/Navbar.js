@@ -1,6 +1,5 @@
 import { css } from 'emotion';
 import styled from 'emotion/react';
-import { Link } from 'next/link';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -14,13 +13,15 @@ const NavbarDiv = styled.div`
   text-align:vertical;
   box-shadow;0 2px 3px #ccc;
 `;
-const lists = css`display: inline-block;`;
+const lists = css`
+display: inline-block;
+margin: 0`;
 
 const links = css`
   display: inline-block;
   width: 120px;
   text-align: center;
-  vertical-align: sub;
+  vertical-align: middle;
   padding: 10px 20px;
   transition: 0.5s, height 4s;
   &:hover {
@@ -28,6 +29,34 @@ const links = css`
     background: PaleTurquoise;
     color: #fff;
   }
+`;
+
+const submenus = css`
+position:absolute;
+display:none;
+margin-top:0px;
+
+    & li{
+      display:block;
+      border-bottom:1px solid blue;
+    }
+`;
+
+const subMenuLinks = css`
+display: inline-block;
+width: 120px;
+text-align: center;
+vertical-align: middle;
+padding: 0px 20px;
+transition: 0.5s, height 4s;
+
+ &:hover div{
+ display:block;
+ background: skyblue;
+ border-top: 1px solid blue;
+ }
+
+
 `;
 const anchor = css`
   text-decoration: none;
@@ -37,13 +66,45 @@ const anchor = css`
   text-transform:
 `;
 
-const Navbar = ({ NavList }) => (<NavbarDiv>
-  <div className={lists}>
-    {!!NavList && NavList.map(({ link, navName } , i) => (<div key={i} className={links}>
-      <a className={anchor} key={link} href={link}>{navName}</a>
-    </div>))}
-  </div>
-</NavbarDiv>);
+
+class Navbar extends React.Component{
+  render() {
+var toRender;
+    return (
+      <NavbarDiv>
+  <ul className={lists}>
+    {!!Navbar.defaultProps && Navbar.defaultProps.NavList.map((item , i) => {
+      { toRender =item.submenu ? 
+      <ul  className={subMenuLinks}>
+         <NavbarItem link={item.link} navName = {item.navName} keys={i} />
+         <div className ={submenus}>
+          { item.submenu.map((items,j)=>(
+                     <NavbarItem link={items.link} navName = {items.navName} keys={'0'+j} />
+        ))}
+        </div>
+      </ul> : 
+      <NavbarItem link={item.link} navName = {item.navName} keys={i} />}
+      return toRender;
+     
+      
+    })}
+  </ul>
+</NavbarDiv>
+    );
+  }
+}
+
+
+
+class NavbarItem extends React.Component{
+
+  render() {
+     return <li key={this.props.keys} className={links}>
+      <a className={anchor} key={this.props.link} href={this.props.link}>{this.props.navName}</a>
+    </li>
+     }
+
+}
 
 /* Props Check */
 Navbar.propTypes = {
@@ -74,11 +135,27 @@ Navbar.defaultProps = {
   NavList: [
     {
 	  navName: 'Home',
-	  link: '/home',
+    link: '/home',
+    
+      
     },
     {
 	  navName: 'Recent',
-	  link: '/recent',
+    link: '/recent',
+    submenu: [
+      {
+        "navName": "Facebook",
+        "link": "/fb.com",
+      },
+      {
+        "navName": "Twitter",
+        "link": "/twitter.com",
+      },
+      {
+        "navName": "Snapchat",
+        "link": "/sc.com",
+      }
+        ]
     },
     {
 	  navName: 'About Us',
