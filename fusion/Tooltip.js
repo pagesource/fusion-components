@@ -31,7 +31,7 @@ class Tooltip extends React.PureComponent {
   constructor() {
     super();
     this.state = {
-	  open: false,
+      open: false,
     };
   }
 
@@ -49,11 +49,14 @@ class Tooltip extends React.PureComponent {
       onMouseEnter={() => this.onMouseEnter()}
       onMouseOut={() => this.onMouseOut()}
     >
-	  Hoverover me!
-	  {this.state.open ? <HiddenDiv>
-        <p>{this.props.text}</p>
-</HiddenDiv>
-        : null}
+    Hoverover me!
+      {
+        this.state.open
+          ? <HiddenDiv>
+            <p>{this.props.text}</p>
+          </HiddenDiv>
+          : null
+      }
     </div>);
   }
 }

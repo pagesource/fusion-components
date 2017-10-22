@@ -56,21 +56,21 @@ const H6 = styled.h6(
 
 const heading = styled(
   ({ tag, children, ...props }) => el(tag, props, children),
-)`
+) `
   color: black;
 `;
 
 const Heading = ({ title }) => (<div>
   <H1 className={headerStyle}>
-    {title}
+    { title }
   </H1>
 
   <H2>
-    {title}
+    { title }
   </H2>
 
   <H3>
-    {title}
+    { title }
   </H3>
 </div>);
 

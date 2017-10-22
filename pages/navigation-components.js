@@ -12,46 +12,46 @@ export default () => (<Layout>
       <h2>Navigation Components</h2>
       <h3>Nav bar</h3>
       <Navbar />
-      <pre>{`const = NavList: [
-		{
-		  'navName': 'Home',
-		  'link':'/home'
-		},
-		{
-		  'navName':'Recent',
-		  'link':'/recent',
-                    'submenu': [
-                      {
-                        "navName": "Facebook",
-                        "link": "/fb.com",
-                      },
-                      {
-                        "navName": "Twitter",
-                        "link": "/twitter.com",
-                      },
-                      {
-                        "navName": "Snapchat",
-                        "link": "/sc.com",
-                      }
-                    ]
-		},
-		{
-		  'navName': 'About Us',
-		  'link':'/about'
-		},
-		{
-		  'navName': 'Contact Us',
-		  'link':'/Contact'}
-		],
-          <Navbar NavLinks={NavLinks}/>
-          `}</pre>
+      <pre>{ `const = NavList: [
+        {
+          'navName': 'Home',
+          'link':'/home'
+        },
+        {
+          'navName':'Recent',
+          'link':'/recent',
+          'submenu': [
+            {
+              "navName": "Facebook",
+              "link": "/fb.com",
+            },
+            {
+              "navName": "Twitter",
+              "link": "/twitter.com",
+            },
+            {
+              "navName": "Snapchat",
+              "link": "/sc.com",
+            }
+          ]
+        },
+        {
+          'navName': 'About Us',
+          'link':'/about'
+        },
+        {
+          'navName': 'Contact Us',
+          'link':'/Contact'
+        }],
+        <Navbar NavLinks={NavLinks}/>
+      `}</pre>
       <h3>Stepper Controls </h3>
       <StepperControl />
-      <pre>{`<StepperControl />
+      <pre>{ `<StepperControl />
           `}</pre>
       <h3>Pagination </h3>
       <Pagination />
-      <pre>{`<Pagination />
+      <pre>{ `<Pagination />
           `}</pre>
     </div>
   </ThemeProvider>

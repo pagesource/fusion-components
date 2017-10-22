@@ -131,7 +131,7 @@ const KitchenSink = () =>
 
         <h2>Select Rating</h2>
         <SelectRating value={0} />
-         <Row />
+        <Row />
         <hr />
         <h2>Panel</h2>
         <div>
@@ -157,9 +157,8 @@ const KitchenSink = () =>
         <h2>Blockquote</h2>
         <div>
           <BlockQuote>
-			Blockquote tag specifies a section that is quoted from another
-			source.
-		  </BlockQuote>
+            Blockquote tag specifies a section that is quoted from another source.
+          </BlockQuote>
         </div>
         <Row />
         <hr />
@@ -173,7 +172,7 @@ const KitchenSink = () =>
 
         <h2>Truncate</h2>
         <Truncate>
-		  SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
+          SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
         </Truncate>
         <Row />
         <hr />
@@ -257,7 +256,7 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Tabs</h2>
-        <Tabs onClick={(selected)=>console.log(selected)}/>
+        <Tabs onClick={selected => console.log(selected)} />
         <Row />
         <hr />
 

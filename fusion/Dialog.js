@@ -6,10 +6,10 @@ import Button from './Button';
 
 const DialogDiv = styled.div`
   width: ${props => props.width};
-  height: ${props => props.height}; 
+  height: ${props => props.height};
   display: ${props => props.height};
   background: grey;
-  // background: ${props => props.bg}; 
+  // background: ${props => props.bg};
   position: fixed;
   z-index: 1;
   margin: 30px;
@@ -42,7 +42,7 @@ class Dialog extends React.PureComponent {
   constructor() {
     super();
     this.state = {
-	  open: false,
+      open: false,
     };
   }
 
@@ -61,22 +61,22 @@ class Dialog extends React.PureComponent {
   render() {
     return (<div>
       <Button label="Dialog" onClick={() => this.onClick()}>
-      Open Dialog
+        Open Dialog
       </Button>
-      {this.state.open
+      { this.state.open
         ? <DialogDiv
           title="Dialog With Actions"
           onRequestClose={this.handleClose}
         >
           <div className={container}>
             <span className={close} onClick={() => this.handleClose()}>
-                  X
+              X
             </span>
             <h1>
-              {this.props.header}
+              { this.props.header }
             </h1>
             <content>
-              {this.props.content}
+              { this.props.content }
             </content>
             <div className={footerStyle}>
               <div className={cancelBtn}>
@@ -88,7 +88,7 @@ class Dialog extends React.PureComponent {
             </div>
           </div>
         </DialogDiv>
-        : null}
+        : null }
     </div>);
   }
 }

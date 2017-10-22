@@ -67,51 +67,51 @@ const anchor = css`
 `;
 
 const Navbar = ({ NavList }) => {
-  var toRender;
-  return <NavbarDiv>
+  let toRender;
+  return (<NavbarDiv>
     <ul className={lists}>
-      {!!Navbar.defaultProps && Navbar.defaultProps.NavList.map((item, i) => {
+      { !!Navbar.defaultProps && Navbar.defaultProps.NavList.map((item, i) => {
         {
           toRender = item.submenu ?
-            <ul className={subMenuLinks}>
+            (<ul className={subMenuLinks}>
               <NavbarItem link={item.link} navName={item.navName} keys={i} />
               <div className={submenus}>
-                {item.submenu.map((items, j) => (
-                  <NavbarItem link={items.link} navName={items.navName} keys={'0' + j} />
-                ))}
+                { item.submenu.map((items, j) => (
+                  <NavbarItem link={items.link} navName={items.navName} keys={`0${j}`} />
+                )) }
               </div>
-            </ul> :
-            <NavbarItem link={item.link} navName={item.navName} keys={i} />
+            </ul>) :
+            <NavbarItem link={item.link} navName={item.navName} keys={i} />;
         }
         return toRender;
-      })}
+      }) }
     </ul>
-  </NavbarDiv>
+  </NavbarDiv>);
 };
 
 
 const NavbarItem = ({ link, navName, keys }) => (
   <li key={keys} className={links}>
-    <a className={anchor} key={link} href={link}>{navName}</a>
+    <a className={anchor} key={link} href={link}>{ navName }</a>
   </li>
-)
+);
 
 
 /* Props Check */
 Navbar.propTypes = {
-	/**
+  /**
 	 *NavbarNavbar width
 	 */
   width: PropTypes.number,
-	/**
+  /**
 	 *Navbar background
 	 */
   bg: PropTypes.string,
-	/**
+  /**
 	 *Navbar title
 	 */
   title: PropTypes.string,
-	/**
+  /**
 	 *Navbar names
 	 */
   NavList: PropTypes.array,
@@ -133,18 +133,18 @@ Navbar.defaultProps = {
       link: '/recent',
       submenu: [
         {
-          "navName": "Facebook",
-          "link": "/fb.com",
+          navName: 'Facebook',
+          link: '/fb.com',
         },
         {
-          "navName": "Twitter",
-          "link": "/twitter.com",
+          navName: 'Twitter',
+          link: '/twitter.com',
         },
         {
-          "navName": "Snapchat",
-          "link": "/sc.com",
-        }
-      ]
+          navName: 'Snapchat',
+          link: '/sc.com',
+        },
+      ],
     },
     {
       navName: 'About Us',

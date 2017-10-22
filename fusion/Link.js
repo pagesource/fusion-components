@@ -5,11 +5,11 @@ import { withTheme } from 'theming';
 const LinkStyle = css`
   color: violet;
   width: '90px';
-  background: black;	
+  background: black;
   text-decoration: none;
 `;
 
-const customLink = ({ href, alt }) => (<a className={LinkStyle} href={href} alt={alt}>{href}</a>);
+const customLink = ({ href, alt }) => (<a className={LinkStyle} href={href} alt={alt}>{ href }</a>);
 
 /* Props Check */
 customLink.propTypes = {

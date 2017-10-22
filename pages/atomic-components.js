@@ -6,7 +6,7 @@ import theme from '../theme';
 import Layout from './components/Layout';
 // -------- Page level Imports ----------
 
-const AtomicComponent = props => (<Layout>
+const AtomicComponent = () => (<Layout>
   <ThemeProvider theme={theme}>
     <div>
       <h2>Atomic Level Components</h2>

@@ -26,17 +26,17 @@ class StatusMessage extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-	  time: this.props.time,
-	  message: this.props.message,
-	  hide: '',
+      time: this.props.time,
+      message: this.props.message,
+      hide: '',
     };
   }
 
   componentDidMount() {
     setTimeout(() => {
-	  this.setState({
+      this.setState({
         hide,
-	  });
+      });
     }, this.state.time);
   }
 

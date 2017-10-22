@@ -6,10 +6,10 @@ import React, { PureComponent } from 'react';
 const DropdownDiv = styled.div`
   //width: ${props => props.width};
   width: 200px;
-  height: auto; 
+  height: auto;
   background: grey;
-  // background: ${props => props.bg}; 
-  z-index: 1; 
+  // background: ${props => props.bg};
+  z-index: 1;
   text-align: center;
   font-size: 24px;
 `;
@@ -29,7 +29,7 @@ const dropdownMenu = css`
 `;
 const dropdownList = css`
  width: 200px;
- width: ${props => props.width}px;  
+ width: ${props => props.width}px;
  list-style-type: none !important;
  margin: 0;
  padding-left: 0;
@@ -61,7 +61,7 @@ const dropIcon = css`
     text-align: center;
     width: 10%;
     height: 100%;
-    pointer-events: none;    
+    pointer-events: none;
 }
 `;
 
@@ -69,7 +69,7 @@ class Dropdown extends PureComponent {
   constructor() {
     super();
     this.state = {
-	  open: false,
+      open: false,
     };
   }
 
@@ -79,17 +79,17 @@ class Dropdown extends PureComponent {
     return (<div>
       <div className={dropdownMenu} onClick={() => this.onClick()}><span className={dropIcon}>Dropdown List</span>
       </div>
-      {this.state.open ?
+      { this.state.open ?
         <DropdownDiv>
           <div className={container}>
             <ul className={dropdownList}>
-              {ListItems.map(({ link, option }, j) => (<li className={lists}>
-                <a className={links} href={link}>{option}</a>
-              </li>))}
+              { ListItems.map(({ link, option }, j) => (<li className={lists}>
+                <a className={links} href={link}>{ option }</a>
+              </li>)) }
             </ul>
           </div>
         </DropdownDiv>
-        : null}
+        : null }
     </div>);
   }
 
@@ -131,16 +131,16 @@ Dropdown.defaultProps = {
   header: 'Header',
   ListItems: [
     {
-	  option: 'Option 1',
-	  link: '//www.google.com',
+      option: 'Option 1',
+      link: '//www.google.com',
     },
     {
-	  option: 'Option 2',
-	  link: '//www.facebook.com',
+      option: 'Option 2',
+      link: '//www.facebook.com',
     },
     {
-	  option: 'Option 3',
-	  link: '//www.twitter.com',
+      option: 'Option 3',
+      link: '//www.twitter.com',
     },
   ],
 };

@@ -7,52 +7,51 @@ const timerStyle = css`
 `;
 
 class CountdownTimer extends PureComponent {
-
-  constructor(props){
-	super(props);
-	this.state = {
-		timer: '',
-		interval: null
-	};
-	this.countDownDate = new Date(this.props.endTime).getTime();
+  constructor(props) {
+    super(props);
+    this.state = {
+      timer: '',
+      interval: null,
+    };
+    this.countDownDate = new Date(this.props.endTime).getTime();
   }
 
-  timer(){
-	const now = new Date().getTime(),
-	  distance = this.countDownDate - now,
-	  days = Math.floor(distance / (1000 * 60 * 60 * 24)),
-	  hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
-	  minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60)),
-	  seconds = Math.floor(distance % (1000 * 60) / 1000);
+  timer() {
+    const now = new Date().getTime(),
+      distance = this.countDownDate - now,
+      days = Math.floor(distance / (1000 * 60 * 60 * 24)),
+      hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
+      minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60)),
+      seconds = Math.floor(distance % (1000 * 60) / 1000);
 
-	this.setState({
-	  timer: `${days} Days - ${hours} : ${minutes} : ${seconds}`
-	});
+    this.setState({
+      timer: `${days} Days - ${hours} : ${minutes} : ${seconds}`,
+    });
 
-	if (distance < 0) {
-	  clearInterval(this.state.interval);
-	  this.setState({
-		timer: 'The time is up!!'
-	  });
-	}
+    if (distance < 0) {
+      clearInterval(this.state.interval);
+      this.setState({
+        timer: 'The time is up!!',
+      });
+    }
   }
 
-  componentDidMount(){
-	const interval = setInterval(this.timer.bind(this), 1000);
-	this.setState({
-	  interval: interval
-	});
+  componentDidMount() {
+    const interval = setInterval(this.timer.bind(this), 1000);
+    this.setState({
+      interval,
+    });
   }
 
-  render(){
-	return (<span className={timerStyle}>
-        {this.state.timer}
-      </span>);
+  render() {
+    return (<span className={timerStyle}>
+      { this.state.timer }
+    </span>);
   }
 }
 
 CountdownTimer.propTypes = {
-  endTime: PropTypes.string.isRequired
+  endTime: PropTypes.string.isRequired,
 };
 
 export default CountdownTimer;
