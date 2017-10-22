@@ -13,9 +13,9 @@ import React from 'react';
  * Star rating Molecule with click-able buttons
  */
 
-const Rating = ({ value, onClick }) => {
-  const stars = Array.from({ length: 5 }, (a, b) => b);
-
+const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
+  // const stars = Array.from({ length: 5 }, (a, b) => b);
+  const rating = (value / 5) * 100;
   const sx = {
     root: {
       display: 'inline-flex',
@@ -64,21 +64,28 @@ const Rating = ({ value, onClick }) => {
     }
   };
 
-  return (<a className="rating" href="" onClick={handleClick()}>
-    {stars.map(s => (
-      <span key={s} style={sx.star}>
-        <span style={getEmptyStyle(s)}>☆ </span>
-        <span style={getActiveStyle(s)}>★</span>
-      </span>
-    ))}
-  </a>);
+  return (
+    <div role="link" tabIndex="0" className="rating" style={sx.root} onClick={handleClick()} >
+      <div style={sx.primaryStar} >★★★★★</div>
+      <div style={sx.secondaryStar} >☆☆☆☆☆</div>
+    </div>
+  );
+};
+
+Rating.defaultProps = {
+  primaryStarColor: '#f4ce42',
+  secondaryStarColor: '#6a6a6a',
 };
 
 Rating.propTypes = {
   /** Number of star rating from 1 to 5 */
-  value: PropTypes.number,
+  value: PropTypes.number.isRequired,
   /** Click handler - returns index of star clicked */
   onClick: PropTypes.func,
+  /** Main Star Color */
+  primaryStarColor: PropTypes.string,
+  /** Secondary Star Color */
+  secondaryStarColor: PropTypes.string,
 };
 
 export default Rating;

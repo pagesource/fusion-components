@@ -38,6 +38,7 @@
     "clean": "rimraf .next",
     "lint": "eslint pages fusion > eslint_l$(date +\"%m%d%Y\").log",
     "precommit": "npm run lint",
+    "test":"npm run lint",
     "heroku-postbuild": "next build"
   },
   "repository": {
