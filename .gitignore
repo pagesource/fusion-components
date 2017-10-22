@@ -19,4 +19,5 @@ yarn-error.log*
 .idea/
 
 .next
+.vscode
 
