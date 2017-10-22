@@ -124,7 +124,7 @@ const KitchenSink = () =>
 
         <h2>Show Rating</h2>
         <div>
-          <Rating value={3} onClick="" />
+          <Rating value={3} />
         </div>
         <Row />
         <hr />
