@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 const DropdownDiv = styled.div`
-  //width: ${props => props.width};
+  //width: ${({ width }) => width};
   width: 200px;
   height: auto; 
   background: grey;
-  // background: ${props => props.bg}; 
+  // background: ${({ bg }) => bg}; 
   z-index: 1; 
   text-align: center;
   font-size: 24px;
@@ -19,7 +19,7 @@ const container = css`
 const dropdownMenu = css`
   width: 200px;
   content: "";
-  width: ${props => props.width}px;
+  width: ${({ width }) => width}px;
   height: 40px;
   background: grey;
   border-radius: 3px;
@@ -29,14 +29,14 @@ const dropdownMenu = css`
 `;
 const dropdownList = css`
  width: 200px;
- width: ${props => props.width}px;  
+ width: ${({ width }) => width}px;  
  list-style-type: none !important;
  margin: 0;
  padding-left: 0;
  cursor: pointer;
 `;
 const lists = css`
-  width: ${props => props.width}px;
+  width: ${({ width }) => width}px;
   padding: 3px;
   border-radius: 3px;
   &:hover{
@@ -48,53 +48,51 @@ const links = css`
   font-size: 18px;
 `;
 const dropIcon = css`
-&:before{
-  content: &#9650;
-}
-  &:after {
-    content: "▼";
-    font-size: 16px;
-    padding: 12px 8px;
-    right: 10px;
-    top: 0;
-    z-index: 1;
-    text-align: center;
-    width: 10%;
-    height: 100%;
-    pointer-events: none;    
-}
-`;
+  &:before{
+    content: &#9650;
+  }
+    &:after {
+      content: "▼";
+      font-size: 16px;
+      padding: 12px 8px;
+      right: 10px;
+      top: 0;
+      z-index: 1;
+      text-align: center;
+      width: 10%;
+      height: 100%;
+      pointer-events: none;    
+  }`;
 
 class Dropdown extends PureComponent {
   constructor() {
     super();
     this.state = {
-	  open: false,
+      open: false,
     };
+  }
+
+  onClick() {
+    this.setState({ open: !this.state.open });
   }
 
   render() {
     const { ListItems } = this.props;
 
     return (<div>
-      <div className={dropdownMenu} onClick={() => this.onClick()}><span className={dropIcon}>Dropdown List</span>
+      <div className={dropdownMenu} role={'S'} onClick={() => this.onClick()}>
+        <span className={dropIcon}>Dropdown List</span>
       </div>
-      {this.state.open ?
-        <DropdownDiv>
-          <div className={container}>
-            <ul className={dropdownList}>
-              {ListItems.map(({ link, option }, j) => (<li className={lists}>
-                <a className={links} href={link}>{option}</a>
-              </li>))}
-            </ul>
-          </div>
-        </DropdownDiv>
-        : null}
+      {this.state.open ? <DropdownDiv>
+        <div className={container}>
+          <ul className={dropdownList}>
+            {ListItems.map(({ link, option }) => (<li className={lists}>
+              <a className={links} href={link}>{option}</a>
+            </li>))}
+          </ul>
+        </div>
+      </DropdownDiv> : null}
     </div>);
-  }
-
-  onClick() {
-    this.setState({ open: !this.state.open });
   }
 }
 
@@ -131,16 +129,16 @@ Dropdown.defaultProps = {
   header: 'Header',
   ListItems: [
     {
-	  option: 'Option 1',
-	  link: '//www.google.com',
+      option: 'Option 1',
+      link: '//www.google.com',
     },
     {
-	  option: 'Option 2',
-	  link: '//www.facebook.com',
+      option: 'Option 2',
+      link: '//www.facebook.com',
     },
     {
-	  option: 'Option 3',
-	  link: '//www.twitter.com',
+      option: 'Option 3',
+      link: '//www.twitter.com',
     },
   ],
 };

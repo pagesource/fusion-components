@@ -5,7 +5,7 @@ import React from 'react';
 const BlockQuote = styled.blockquote`
   color: indigo;
   font-size: 20px;
-  text-align: ${props => props.align}
+  text-align: ${({ align }) => align}
 `;
 
 /* Props Check */
@@ -16,9 +16,9 @@ BlockQuote.propTypes = {
   align: PropTypes.string,
 };
 
-/* Deafult Props */
+/* Default Props */
 BlockQuote.defaultProps = {
-  aling: 'left',
+  align: 'left',
 };
 
 export default BlockQuote;

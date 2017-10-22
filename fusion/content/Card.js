@@ -4,8 +4,8 @@ import React from 'react';
 import { withTheme } from 'theming';
 
 import Button from './Button';
-import Panel from './Panel';
-import Rating from './Rating';
+import Panel from '../Panel';
+import Rating from '../Rating';
 
 const cardStyles = css`
   text-align: center;
@@ -24,8 +24,7 @@ const cardContainer = css`
 `;
 
 const Card = ({ cardData }) => (<div className={cardContainer}>
-  {!!cardData &&
-  cardData.map(({ image, heading, title, rating, description }, index) =>
+  {!!cardData && cardData.map(({ image, heading, title, rating, description }, index) =>
     (<Panel className={cardStyles} key={`key-${index}`}>
       <img src={image} alt={heading} />
       <h2 children={title} />

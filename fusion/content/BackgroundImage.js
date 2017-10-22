@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const BackgroundImage = styled('img')`
-  background-image: url('${props => props.src}');
-  background-size: ${props => props.size};
-  background-position: ${props => props.position};
+  background-image: url('${({ src }) => src}');
+  background-size: ${({ size }) => size};
+  background-position: ${({ position }) => position};
   height: auto;
 `;
 

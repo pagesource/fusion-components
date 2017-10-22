@@ -18,24 +18,44 @@ const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
   const rating = (value / 5) * 100;
   const sx = {
     root: {
-      display: 'inline-block',
-      position: 'relative',
-      fontSize: '20px',
+      display: 'inline-flex',
+      fontSize: '14px',
     },
-    primaryStar: {
-      position: 'absolute',
-      top: '0',
-      left: '0',
-      overflow: 'hidden',
-      width: `${rating}%`,
+    star: {
+      position: 'relative',
       fontSize: 'inherit',
-      color: primaryStarColor,
+      textDecoration: 'none',
+      lineHeight: 1,
+      margin: 0,
+      marginRight: '.25em',
+      padding: '.25em 0',
+      border: 0,
+      color: 'inherit',
       backgroundColor: 'transparent',
       cursor: onClick ? 'pointer' : null,
     },
-    secondaryStar: {
-      color: secondaryStarColor,
-    },
+  };
+
+  const gray = '#6a6a6a';
+  const active = '#f4ce42';
+  const getEmptyStyle = (i) => {
+    const active = i < value;
+    const color = active ? null : gray;
+    return { color };
+  };
+
+  const getActiveStyle = (i) => {
+    const active = i < value;
+    const display = active ? null : 'none';
+    const clip = value > i && value < i + 1 ? 'rect(0, .5em, 1em, 0)' : null;
+
+    return {
+      position: 'absolute',
+      top: '.25em',
+      left: 0,
+      display,
+      clip,
+    };
   };
 
   const handleClick = i => () => {

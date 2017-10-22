@@ -39,7 +39,7 @@ const anchor = css`
 
 const Navbar = ({ NavList }) => (<NavbarDiv>
   <div className={lists}>
-    {!!NavList && NavList.map(({ link, navName } , i) => (<div key={i} className={links}>
+    {!!NavList && NavList.map(({ link, navName }, i) => (<div key={i} className={links}>
       <a className={anchor} key={link} href={link}>{navName}</a>
     </div>))}
   </div>
@@ -73,20 +73,20 @@ Navbar.defaultProps = {
   header: 'Header',
   NavList: [
     {
-	  navName: 'Home',
-	  link: '/home',
+      navName: 'Home',
+      link: '/home',
     },
     {
-	  navName: 'Recent',
-	  link: '/recent',
+      navName: 'Recent',
+      link: '/recent',
     },
     {
-	  navName: 'About Us',
-	  link: '/about',
+      navName: 'About Us',
+      link: '/about',
     },
     {
-	  navName: 'Contact Us',
-	  link: '/Contact',
+      navName: 'Contact Us',
+      link: '/Contact',
     },
   ],
 };

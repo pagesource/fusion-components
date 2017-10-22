@@ -2,7 +2,7 @@ import { css } from 'emotion';
 import styled from 'emotion/react';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Button from './Button';
+import Button from './content/Button';
 
 const DialogDiv = styled.div`
   width: ${props => props.width};
@@ -42,7 +42,7 @@ class Dialog extends React.PureComponent {
   constructor() {
     super();
     this.state = {
-	  open: false,
+      open: false,
     };
   }
 
@@ -61,7 +61,7 @@ class Dialog extends React.PureComponent {
   render() {
     return (<div>
       <Button label="Dialog" onClick={() => this.onClick()}>
-      Open Dialog
+        Open Dialog
       </Button>
       {this.state.open
         ? <DialogDiv
@@ -132,7 +132,8 @@ Dialog.defaultProps = {
   bg: 'white',
   title: 'Title content',
   header: 'Header',
-  content: 'Your content for the Dialog box can be passed as props value',
+  content: 'Your content for the Dialog ' +
+  'box can be passed as props value',
 };
 
 export default Dialog;

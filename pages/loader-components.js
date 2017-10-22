@@ -8,9 +8,9 @@ const ContentComponent = () => (<Layout>
     <div>
       <h2>Progress & Activity</h2>
       <p>
-		This section contains a collection of progress bars and spinner
-		components .
-	  </p>
+        This section contains a collection of progress bars and spinner
+        components .
+      </p>
       <h3>Circular Loader </h3>
       <Loader />
       <pre>{`  <Loader />
