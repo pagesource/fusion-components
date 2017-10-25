@@ -19,7 +19,21 @@ export default () => (<Layout>
 		},
 		{
 		  'navName':'Recent',
-		  'link':'/recent'
+		  'link':'/recent',
+                    'submenu': [
+                      {
+                        "navName": "Facebook",
+                        "link": "/fb.com",
+                      },
+                      {
+                        "navName": "Twitter",
+                        "link": "/twitter.com",
+                      },
+                      {
+                        "navName": "Snapchat",
+                        "link": "/sc.com",
+                      }
+                    ]
 		},
 		{
 		  'navName': 'About Us',
