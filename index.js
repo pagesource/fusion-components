@@ -4,6 +4,7 @@ export { default as Button } from './fusion/Button';
 export { default as BackgroundImage } from './fusion/BackgroundImage';
 export { default as Banner } from './fusion/Banner';
 export { default as CountDownTimer } from './fusion/CountdownTimer';
+export { default as Youtube } from './fusion/Youtube';
 export { default as Dialog } from './fusion/Dialog';
 export { default as Rating } from './fusion/Rating';
 export { default as SelectRating } from './fusion/SelectRating';

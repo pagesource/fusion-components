@@ -11,6 +11,7 @@ import {
   Button,
   CardGrid,
   CountDownTimer,
+  Youtube,
   Dialog,
   Doughnut,
   Dropdown,
@@ -44,6 +45,8 @@ const KitchenSink = () =>
   (<Layout>
     <ThemeProvider theme={theme}>
       <div>
+        <h2>Embed Youtube, Pass video id, width and height</h2>
+        <Youtube id="PCMXQonN0gM" width={560} height={320}/>
         <h2>Toggle Button</h2>
         <ToggleButton />
         <Row />
