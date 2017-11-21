@@ -34,4 +34,7 @@ BackgroundImage.defaultProps = {
   src: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
 };
 
-export default BackgroundImage;
+
+export default function Img({ children, ...props }) {
+  return <BackgroundImage {...props}>{children}</BackgroundImage>;
+}
