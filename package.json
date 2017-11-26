@@ -25,7 +25,9 @@
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.1.0",
     "react-live": "^1.7.0",
-    "theming": "^1.1.0"
+    "react-styleguidist": "^6.0.33",
+    "theming": "^1.1.0",
+    "webpack": "^3.8.1"
   },
   "scripts": {
     "dev": "next",
@@ -36,8 +38,10 @@
     "clean": "rimraf .next",
     "lint": "eslint pages fusion",
     "pre-commit": "npm run lint",
-    "test":"npm run lint",
-    "heroku-postbuild": "npm run build"
+    "test": "npm run lint",
+    "heroku-postbuild": "npm run build",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build"
   },
   "repository": {
     "type": "git",
