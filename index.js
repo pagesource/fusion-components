@@ -36,3 +36,4 @@ export { default as PieChart } from './fusion/PieChart';
 export { default as BarChart } from './fusion/HorizontalBarChart';
 export { default as StatusMessage } from './fusion/StatusMessage';
 export { default as ToggleButton } from './fusion/ToggleButton';
+export { default as Label } from './fusion/Label';

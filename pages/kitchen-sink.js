@@ -15,6 +15,7 @@ import {
   Doughnut,
   Dropdown,
   Heading,
+  Label,
   Loader,
   Logo,
   Navbar,
@@ -245,6 +246,15 @@ const KitchenSink = () =>
 
         <h2>Banner </h2>
         <Banner src="http://lorempixel.com/560/150/sports" />
+        <Row />
+        <hr />
+
+        <h2>Label </h2>
+          {Label({
+            value: 'Random String',
+            color: 'red',
+            validationRequiredStateIndicator: '*'
+          })}
         <Row />
         <hr />
       </div>

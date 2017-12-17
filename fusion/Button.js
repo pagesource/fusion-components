@@ -7,7 +7,7 @@ const buttonStyle = css`
     background-color:${props => props.theme.buttonColor}; 
     color:${props => props.theme.buttonTextColor};
     border-radius:5px;
-      padding:0.5rem 1rem;
+    padding:0.5rem 1rem;
     font-size: 1rem;
     border: none;
     cursor: pointer;
