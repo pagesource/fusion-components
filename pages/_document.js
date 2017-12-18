@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
   }
 
   render() {
-    return (<html>
+    return (<html lang="en">
       <Head>
         <title>Fusion Component Library</title>
         <style dangerouslySetInnerHTML={{ __html: this.props.css }} />

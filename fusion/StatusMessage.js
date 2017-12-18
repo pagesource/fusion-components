@@ -11,7 +11,7 @@ const status = css`
     z-index : 1000;
     padding: 15px;
     border-radius: 10px;
-    background-color: yellow;
+    background-color: #ff8707;
     text-align : center;
 `;
 const hide = css`

@@ -269,6 +269,7 @@ const KitchenSink = () =>
           })}
         <Row />
         <hr />
+
       </div>
     </ThemeProvider>
   </Layout>);

@@ -1,7 +1,7 @@
 {
   "name": "fusion",
   "version": "1.0.0",
-  "description": "",
+  "description": "A collection of React Components built with Emotion.js",
   "main": "index.js",
   "dependencies": {
     "chart.js": "^2.6.0",
@@ -28,22 +28,25 @@
     "theming": "^1.1.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
     "build": "next build",
+    "prestart": "npm run clean && npm run build",
     "start": "next start",
+    "heroku-start": "npm run clean && npm run build && next start -p $PORT",
     "clean": "rimraf .next",
     "lint": "eslint pages fusion",
-    "pre-commit": "yarn lint"
+    "pre-commit": "npm run lint",
+    "test":"npm run lint",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/areai51/fusion.git"
+    "url": "git+https://github.com/pagesource/fusion.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "PageSource",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/areai51/fusion/issues"
+    "url": "https://github.com/pagesource/fusion/issues"
   },
-  "homepage": "https://github.com/areai51/fusion#readme"
+  "homepage": "https://sape-fusion.herokuapp.com/"
 }

@@ -15,7 +15,7 @@ const bannerStyle = css`
   background-image: url(${props => props.picUrl});
 `;
 
-const Banner = ({ src }) => (<img src={src} className={bannerStyle} />);
+const Banner = ({ src, alt }) => (<img src={src} className={bannerStyle} alt={alt} />);
 
 /* Props Check */
 Banner.propTypes = {
@@ -28,6 +28,7 @@ Banner.propTypes = {
 /* Default Props */
 Banner.defaultProps = {
   picUrl: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
+  alt: 'Banner',
 };
 
 export default withTheme(Banner);
