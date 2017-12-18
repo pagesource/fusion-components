@@ -261,6 +261,15 @@ const KitchenSink = () =>
         <Row />
         <hr />
 
+        <h2>Label </h2>
+          {Label({
+            value: 'Random String',
+            color: 'red',
+            validationRequiredStateIndicator: '*'
+          })}
+        <Row />
+        <hr />
+
       </div>
     </ThemeProvider>
   </Layout>);

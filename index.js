@@ -39,3 +39,4 @@ export { default as StatusMessage } from './fusion/StatusMessage';
 export { default as ToggleButton } from './fusion/ToggleButton';
 export { default as EmailSubscribe } from './fusion/form/EmailSubscribe';
 export { default as Tabs } from './fusion/Tabs';
+export { default as Label } from './fusion/Label';
