@@ -8,6 +8,7 @@ export { default as Button } from './fusion/Button';
 export { default as Card } from './fusion/Card';
 export { default as CardGrid } from './fusion/CardGrid';
 export { default as CountDownTimer } from './fusion/CountdownTimer';
+export { default as YTEmbed } from './fusion/YTEmbed';
 export { default as Dialog } from './fusion/Dialog';
 export { default as Doughnut } from './fusion/Doughnut';
 export { default as Dropdown } from './fusion/Dropdown';
