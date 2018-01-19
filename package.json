@@ -25,6 +25,7 @@
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.1.0",
     "husky": "^0.14.3",
+    "lint-staged": "^6.0.1",
     "prettier": "1.10.2",
     "react-live": "^1.7.0",
     "react-styleguidist": "^6.0.33",
@@ -45,6 +46,9 @@
     "styleguide:build": "styleguidist build",
     "precommit": "./node_modules/.bin/prettier  --single-quote --trailing-comma es5 --write '{lib,fusion,pages,theme}/**/*.js'",
     "prepush": "npm test"
+  },
+  "lint-staged":{
+    "*.{js,jsx,json,css,md}": ["./node_modules/.bin/prettier  --single-quote --trailing-comma es5 --write '{lib,fusion,pages,theme}/**/*.js'", "git add"]
   },
   "repository": {
     "type": "git",
