@@ -75,18 +75,10 @@ const Navbar = ({ NavList }) => {
             {
               toRender = item.submenu ? (
                 <ul className={subMenuLinks}>
-                  <NavbarItem
-                    link={item.link}
-                    navName={item.navName}
-                    keys={i}
-                  />
+                  <NavbarItem link={item.link} navName={item.navName} keys={i} />
                   <div className={submenus}>
                     {item.submenu.map((items, j) => (
-                      <NavbarItem
-                        link={items.link}
-                        navName={items.navName}
-                        keys={`0${j}`}
-                      />
+                      <NavbarItem link={items.link} navName={items.navName} keys={`0${j}`} />
                     ))}
                   </div>
                 </ul>

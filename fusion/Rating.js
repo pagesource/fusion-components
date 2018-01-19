@@ -1,7 +1,7 @@
 /* //------- To Do ------------
 - change the star color to yellow
 - set a local state and clicking on a star updates the state and the star color.
-//--------------------------- 
+//---------------------------
  */
 
 import PropTypes from 'prop-types';
@@ -45,13 +45,7 @@ const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
   };
 
   return (
-    <div
-      role="link"
-      tabIndex="0"
-      className="rating"
-      style={sx.root}
-      onClick={handleClick()}
-    >
+    <div role="link" tabIndex="0" className="rating" style={sx.root} onClick={handleClick()}>
       <div style={sx.primaryStar}>★★★★★</div>
       <div style={sx.secondaryStar}>☆☆☆☆☆</div>
     </div>

@@ -16,47 +16,45 @@ const H1 = styled.h1(
   {
     fontSize: 36,
   },
-  props => ({ color: props.color })
+  props => ({ color: props.color }),
 );
 
 const H2 = styled.h2(
   {
     fontSize: 30,
   },
-  props => ({ color: props.color })
+  props => ({ color: props.color }),
 );
 
 const H3 = styled.h3(
   {
     fontSize: 24,
   },
-  props => ({ color: props.color })
+  props => ({ color: props.color }),
 );
 
 const H4 = styled.h4(
   {
     fontSize: 18,
   },
-  props => ({ color: props.color })
+  props => ({ color: props.color }),
 );
 
 const H5 = styled.h5(
   {
     fontSize: 14,
   },
-  props => ({ color: props.color })
+  props => ({ color: props.color }),
 );
 
 const H6 = styled.h6(
   {
     fontSize: 12,
   },
-  props => ({ color: props.color })
+  props => ({ color: props.color }),
 );
 
-const heading = styled(({ tag, children, ...props }) =>
-  el(tag, props, children)
-)`
+const heading = styled(({ tag, children, ...props }) => el(tag, props, children))`
   color: black;
 `;
 

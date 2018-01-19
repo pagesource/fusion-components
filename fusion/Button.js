@@ -14,12 +14,7 @@ const buttonStyle = css`
 `;
 
 const Button = ({ children, onClick, disabled }) => (
-  <button
-    type="button"
-    onClick={onClick}
-    className={buttonStyle}
-    disabled={disabled}
-  >
+  <button type="button" onClick={onClick} className={buttonStyle} disabled={disabled}>
     {children}
   </button>
 );

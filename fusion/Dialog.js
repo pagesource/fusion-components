@@ -65,10 +65,7 @@ class Dialog extends React.PureComponent {
           Open Dialog
         </Button>
         {this.state.open ? (
-          <DialogDiv
-            title="Dialog With Actions"
-            onRequestClose={this.handleClose}
-          >
+          <DialogDiv title="Dialog With Actions" onRequestClose={this.handleClose}>
             <div className={container}>
               <span className={close} onClick={() => this.handleClose()}>
                 X

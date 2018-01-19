@@ -111,7 +111,7 @@ class ControlStepper extends React.PureComponent {
         <p>
           <a
             href="#"
-            onClick={event => {
+            onClick={(event) => {
               event.preventDefault();
               this.setState({ stepIndex: null, visited: [] });
             }}

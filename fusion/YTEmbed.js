@@ -6,9 +6,9 @@ const YTEmbed = ({ id, width, height }) => (
     width={width}
     height={height}
     src={`https://www.youtube.com/embed/${id}`}
-    frameborder="0"
+    frameBorder="0"
     gesture="media"
-    allowfullscreen
+    allowFullScreen
   />
 );
 

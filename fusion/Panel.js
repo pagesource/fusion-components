@@ -2,7 +2,7 @@ import styled from 'emotion/react';
 import React from 'react';
 import { withTheme } from 'theming';
 
-const Panel = props => {
+const Panel = (props) => {
   const { className, children } = props;
   return <div className={className}>{children}</div>;
 };

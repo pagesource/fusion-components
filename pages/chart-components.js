@@ -9,8 +9,8 @@ const ChartingComponent = () => (
     <ThemeProvider theme={theme}>
       <div>
         <h2>Charts</h2>
-        Contains a few charting components.This uses the charts.js library and
-        react-chartjs-2 npm module.
+        Contains a few charting components.This uses the charts.js library and react-chartjs-2 npm
+        module.
         <h3>Bar Chart </h3>
         <BarChart />
         <pre>{`<BarChart />

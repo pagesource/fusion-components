@@ -29,8 +29,7 @@ const Tabs = ({ tabData, onClick, theme }) => {
   const activeTabLink = css`
     composes: ${tabLink};
     background-color: ${theme.tabBackgroundColor};
-    border-color: ${theme.tabBorderColor} ${theme.tabBorderColor}
-      rgba(0, 0, 0, 0);
+    border-color: ${theme.tabBorderColor} ${theme.tabBorderColor} rgba(0, 0, 0, 0);
   `;
 
   const tabPanel = css`
@@ -47,14 +46,14 @@ const Tabs = ({ tabData, onClick, theme }) => {
     onClick(selectedTabIndex);
   };
 
-  const getActiveTabStyle = selected => {
+  const getActiveTabStyle = (selected) => {
     if (selected) {
       return activeTabLink;
     }
     return tabLink;
   };
 
-  const getActivePanelStyle = selected => {
+  const getActivePanelStyle = (selected) => {
     if (selected) {
       return tabPanelActive;
     }
@@ -80,11 +79,7 @@ const Tabs = ({ tabData, onClick, theme }) => {
       </ul>
       {!!tabData &&
         tabData.map(({ content, selected }, i) => (
-          <div
-            key={i}
-            id={`tab-panel${i}`}
-            className={getActivePanelStyle(selected)}
-          >
+          <div key={i} id={`tab-panel${i}`} className={getActivePanelStyle(selected)}>
             {content}
           </div>
         ))}

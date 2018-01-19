@@ -69,8 +69,7 @@ Bounce.propTypes = {
 
 /* Deafult Props */
 Bounce.defaultProps = {
-  src:
-    'https://upload.wikimedia.org/wikipedia/commons/5/5a/Basketball_ball.svg',
+  src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Basketball_ball.svg',
   width: 40,
   text: 'Boucing text',
   color: '#ASD',
