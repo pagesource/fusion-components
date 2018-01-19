@@ -30,8 +30,8 @@ class SelectRating extends React.PureComponent {
     });
   }
   render() {
-    let stars = Array.from({ length: 5 }, (a, b) => b),
-      star = '';
+    const stars = Array.from({ length: 5 }, (a, b) => b);
+    let star = '';
     const newRating = this.state.count;
     for (const index of stars) {
       star = index < newRating ? (star = '★') : (star = '☆');

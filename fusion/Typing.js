@@ -2,7 +2,6 @@ import { keyframes } from 'emotion';
 import styled from 'emotion/react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'theming';
-import { theme } from '../theme/index';
 
 const type = keyframes` 
   from { width: 0; } 

@@ -2,7 +2,6 @@ import React from 'react';
 import { css, keyframes } from 'emotion';
 import styled from 'emotion/react';
 import { withTheme } from 'theming';
-import { theme } from '../theme/index';
 
 const RippleDiv = styled('div')`
   position: relative;

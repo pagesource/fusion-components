@@ -1,6 +1,5 @@
 import { css } from 'emotion';
 import React, { PureComponent } from 'react';
-import { theme } from '../theme';
 
 const toggle = css`
   position: relative;
