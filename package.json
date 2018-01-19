@@ -11,10 +11,10 @@
     "isomorphic-unfetch": "^2.0.0",
     "next": "^3.0.6",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "react": "^15.6.2",
     "react-chartjs-2": "^2.6.1",
     "react-doc-generator": "^1.2.5",
-    "react-dom": "^15.6.1",
+    "react-dom": "^15.6.2",
     "rimraf": "^2.6.1",
     "theming": "^1.1.0"
   },
@@ -37,7 +37,9 @@
     "build": "next build",
     "prestart": "npm run clean && npm run build",
     "start": "next start",
-    "heroku-start": "npm run clean && npm run build && next start -p $PORT",
+    "heroku-next-start": "next start -p $PORT",
+    "heroku-start":
+      "npm run clean && npm run build && npm run heroku-next-start",
     "clean": "rimraf .next",
     "lint": "eslint pages fusion",
     "test": "echo 'no test :)'",
