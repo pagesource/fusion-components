@@ -41,12 +41,12 @@ import {
 } from '../';
 import Layout from './components/Layout';
 
-const KitchenSink = () =>
-  (<Layout>
+const KitchenSink = () => (
+  <Layout>
     <ThemeProvider theme={theme}>
       <div>
         <h2>Embed Youtube, Pass video id, width and height</h2>
-        <YTEmbed id="PCMXQonN0gM" width={560} height={320}/>
+        <YTEmbed id="PCMXQonN0gM" width={560} height={320} />
         <h2>Toggle Button</h2>
         <ToggleButton />
         <Row />
@@ -160,7 +160,8 @@ const KitchenSink = () =>
         <h2>Blockquote</h2>
         <div>
           <BlockQuote>
-            Blockquote tag specifies a section that is quoted from another source.
+            Blockquote tag specifies a section that is quoted from another
+            source.
           </BlockQuote>
         </div>
         <Row />
@@ -192,7 +193,6 @@ const KitchenSink = () =>
           src="http://www.ipuntotv.com/IMAGES/Pelota.png"
           text=" "
           width={60}
-
         />
         <Row />
         <hr />
@@ -236,7 +236,10 @@ const KitchenSink = () =>
         <hr />
 
         <h3>Avatar</h3>
-        <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" alt="Avatar Image" />
+        <Avatar
+          src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg"
+          alt="Avatar Image"
+        />
         <hr />
 
         <h2>Alert </h2>
@@ -246,9 +249,7 @@ const KitchenSink = () =>
 
         <h2>BackgroundImage</h2>
         <div>
-          <BackgroundImage
-            width={400}
-          />
+          <BackgroundImage width={400} />
         </div>
         <Row />
         <hr />
@@ -262,9 +263,9 @@ const KitchenSink = () =>
         <Tabs onClick={selected => console.log(selected)} />
         <Row />
         <hr />
-
       </div>
     </ThemeProvider>
-  </Layout>);
+  </Layout>
+);
 
 export default KitchenSink;

@@ -4,8 +4,8 @@ import { HorizontalBar } from 'react-chartjs-2';
 import { theme } from '../theme';
 
 const chartSize = css`
-  width: "450px";
-  height: "350px";
+  width: '450px';
+  height: '350px';
 `;
 
 const data = {
@@ -23,6 +23,8 @@ const data = {
   ],
 };
 
-export default () => (<div className={chartSize}>
-  <HorizontalBar data={data} />
-</div>);
+export default () => (
+  <div className={chartSize}>
+    <HorizontalBar data={data} />
+  </div>
+);

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 const timerStyle = css`
-    font-family : "arial"
+  font-family: 'arial';
 `;
 
 class CountdownTimer extends PureComponent {
@@ -20,9 +20,9 @@ class CountdownTimer extends PureComponent {
     const now = new Date().getTime(),
       distance = this.countDownDate - now,
       days = Math.floor(distance / (1000 * 60 * 60 * 24)),
-      hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
-      minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60)),
-      seconds = Math.floor(distance % (1000 * 60) / 1000);
+      hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+      minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+      seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     this.setState({
       timer: `${days} Days - ${hours} : ${minutes} : ${seconds}`,
@@ -44,9 +44,7 @@ class CountdownTimer extends PureComponent {
   }
 
   render() {
-    return (<span className={timerStyle}>
-      { this.state.timer }
-    </span>);
+    return <span className={timerStyle}>{this.state.timer}</span>;
   }
 }
 

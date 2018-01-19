@@ -6,24 +6,29 @@ import { withTheme } from 'theming';
 const valueStyle = css`
   font-weight: bold;
   font-size: 35px;
-  margin:auto;
-  text-align:center;
+  margin: auto;
+  text-align: center;
 `;
 
 const ProgressStyle = css`
-  border: 10px solid #aaa; 
-  border-top: 10px solid #3498db; 
+  border: 10px solid #aaa;
+  border-top: 10px solid #3498db;
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  display:flex
+  display: flex;
 `;
 
-const ProgressCircle = ({ value }) => (<div css={`composes: ${ProgressStyle}`} value={value}>
-  <div className={valueStyle}>
-    {value}%
+const ProgressCircle = ({ value }) => (
+  <div
+    css={`
+      composes: ${ProgressStyle};
+    `}
+    value={value}
+  >
+    <div className={valueStyle}>{value}%</div>
   </div>
-</div>);
+);
 
 /* Props Check */
 ProgressCircle.propTypes = {

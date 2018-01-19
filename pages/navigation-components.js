@@ -6,13 +6,14 @@ import theme from '../theme';
 // ---- global imports ----------
 import Layout from './components/Layout';
 
-export default () => (<Layout>
-  <ThemeProvider theme={theme}>
-    <div>
-      <h2>Navigation Components</h2>
-      <h3>Nav bar</h3>
-      <Navbar />
-      <pre>{ `const = NavList: [
+export default () => (
+  <Layout>
+    <ThemeProvider theme={theme}>
+      <div>
+        <h2>Navigation Components</h2>
+        <h3>Nav bar</h3>
+        <Navbar />
+        <pre>{`const = NavList: [
         {
           'navName': 'Home',
           'link':'/home'
@@ -45,15 +46,15 @@ export default () => (<Layout>
         }],
         <Navbar NavLinks={NavLinks}/>
       `}</pre>
-      <h3>Stepper Controls </h3>
-      <StepperControl />
-      <pre>{ `<StepperControl />
+        <h3>Stepper Controls </h3>
+        <StepperControl />
+        <pre>{`<StepperControl />
           `}</pre>
-      <h3>Pagination </h3>
-      <Pagination />
-      <pre>{ `<Pagination />
+        <h3>Pagination </h3>
+        <Pagination />
+        <pre>{`<Pagination />
           `}</pre>
-    </div>
-  </ThemeProvider>
-</Layout>);
-
+      </div>
+    </ThemeProvider>
+  </Layout>
+);

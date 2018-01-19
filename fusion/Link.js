@@ -9,7 +9,11 @@ const LinkStyle = css`
   text-decoration: none;
 `;
 
-const customLink = ({ href, alt }) => (<a className={LinkStyle} href={href} alt={alt}>{ href }</a>);
+const customLink = ({ href, alt }) => (
+  <a className={LinkStyle} href={href} alt={alt}>
+    {href}
+  </a>
+);
 
 /* Props Check */
 customLink.propTypes = {

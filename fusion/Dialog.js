@@ -23,7 +23,7 @@ const container = css`
 const close = css`
   font-size: 18px;
   float: right;
-  cursor:pointer
+  cursor: pointer;
 `;
 
 const cancelBtn = css`
@@ -32,10 +32,10 @@ const cancelBtn = css`
 `;
 const submitBtn = css`
   float: left;
-  margin: 30px ;
+  margin: 30px;
 `;
 const footerStyle = css`
-    padding: 10%;
+  padding: 10%;
 `;
 
 class Dialog extends React.PureComponent {
@@ -59,37 +59,35 @@ class Dialog extends React.PureComponent {
   }
 
   render() {
-    return (<div>
-      <Button label="Dialog" onClick={() => this.onClick()}>
-        Open Dialog
-      </Button>
-      { this.state.open
-        ? <DialogDiv
-          title="Dialog With Actions"
-          onRequestClose={this.handleClose}
-        >
-          <div className={container}>
-            <span className={close} onClick={() => this.handleClose()}>
-              X
-            </span>
-            <h1>
-              { this.props.header }
-            </h1>
-            <content>
-              { this.props.content }
-            </content>
-            <div className={footerStyle}>
-              <div className={cancelBtn}>
-                <Button onClick={() => this.handleClose()}>Cancel</Button>
-              </div>
-              <div className={submitBtn}>
-                <Button onClick={() => this.handleSubmit()}>Submit</Button>
+    return (
+      <div>
+        <Button label="Dialog" onClick={() => this.onClick()}>
+          Open Dialog
+        </Button>
+        {this.state.open ? (
+          <DialogDiv
+            title="Dialog With Actions"
+            onRequestClose={this.handleClose}
+          >
+            <div className={container}>
+              <span className={close} onClick={() => this.handleClose()}>
+                X
+              </span>
+              <h1>{this.props.header}</h1>
+              <content>{this.props.content}</content>
+              <div className={footerStyle}>
+                <div className={cancelBtn}>
+                  <Button onClick={() => this.handleClose()}>Cancel</Button>
+                </div>
+                <div className={submitBtn}>
+                  <Button onClick={() => this.handleSubmit()}>Submit</Button>
+                </div>
               </div>
             </div>
-          </div>
-        </DialogDiv>
-        : null }
-    </div>);
+          </DialogDiv>
+        ) : null}
+      </div>
+    );
   }
 }
 

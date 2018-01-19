@@ -7,7 +7,9 @@ const LogoStyle = css`
   cursor: pointer;
 `;
 
-const Logo = ({ src, alt, imgWidth }) => (<img className={LogoStyle} src={src} alt={alt} width={imgWidth} />);
+const Logo = ({ src, alt, imgWidth }) => (
+  <img className={LogoStyle} src={src} alt={alt} width={imgWidth} />
+);
 
 Logo.propTypes = {
   /**

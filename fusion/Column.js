@@ -10,4 +10,4 @@ const columnStyle = css`
   position: relative;
 `;
 
-export default () => (<Column className={columnStyle} />);
+export default () => <Column className={columnStyle} />;

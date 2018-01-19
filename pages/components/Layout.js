@@ -6,7 +6,7 @@ import SideBar from './Sidebar';
 const layoutContainer = css`
   margin: 20;
   padding: 20;
-  border: '1px solid #DDD'
+  border: '1px solid #DDD';
 `;
 
 const content = css`
@@ -28,12 +28,12 @@ color#red;
   padding:10px;
 }`;
 
-const Layout = ({ children }) => (<div className={layoutContainer}>
-  <Header />
-  <SideBar />
-  <div className={content}>
-    {children}
+const Layout = ({ children }) => (
+  <div className={layoutContainer}>
+    <Header />
+    <SideBar />
+    <div className={content}>{children}</div>
   </div>
-</div>);
+);
 
 export default Layout;

@@ -13,7 +13,7 @@ const Tabs = ({ tabData, onClick, theme }) => {
   `;
 
   const tab = css`
-    margin-bottom:-1px;
+    margin-bottom: -1px;
   `;
 
   const tabLink = css`
@@ -29,7 +29,8 @@ const Tabs = ({ tabData, onClick, theme }) => {
   const activeTabLink = css`
     composes: ${tabLink};
     background-color: ${theme.tabBackgroundColor};
-    border-color: ${theme.tabBorderColor} ${theme.tabBorderColor} rgba(0,0,0,0);
+    border-color: ${theme.tabBorderColor} ${theme.tabBorderColor}
+      rgba(0, 0, 0, 0);
   `;
 
   const tabPanel = css`
@@ -46,14 +47,14 @@ const Tabs = ({ tabData, onClick, theme }) => {
     onClick(selectedTabIndex);
   };
 
-  const getActiveTabStyle = (selected) => {
+  const getActiveTabStyle = selected => {
     if (selected) {
       return activeTabLink;
     }
     return tabLink;
   };
 
-  const getActivePanelStyle = (selected) => {
+  const getActivePanelStyle = selected => {
     if (selected) {
       return tabPanelActive;
     }
@@ -63,23 +64,30 @@ const Tabs = ({ tabData, onClick, theme }) => {
   return (
     <div>
       <ul className={tabList}>
-        {
-          !!tabData && tabData.map(({ title, selected }, i) => (
+        {!!tabData &&
+          tabData.map(({ title, selected }, i) => (
             <li key={i} className={tab}>
-              <a key={i} href={`#tab-panel${i}`} className={getActiveTabStyle(selected)} onClick={handleClick(i)}>
+              <a
+                key={i}
+                href={`#tab-panel${i}`}
+                className={getActiveTabStyle(selected)}
+                onClick={handleClick(i)}
+              >
                 {title}
               </a>
             </li>
-          ))
-        }
+          ))}
       </ul>
-      {
-        !!tabData && tabData.map(({ content, selected }, i) => (
-          <div key={i} id={`tab-panel${i}`} className={getActivePanelStyle(selected)}>
+      {!!tabData &&
+        tabData.map(({ content, selected }, i) => (
+          <div
+            key={i}
+            id={`tab-panel${i}`}
+            className={getActivePanelStyle(selected)}
+          >
             {content}
           </div>
-        ))
-      }
+        ))}
     </div>
   );
 };

@@ -15,7 +15,7 @@ import React from 'react';
 
 const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
   // const stars = Array.from({ length: 5 }, (a, b) => b);
-  const rating = (value / 5) * 100;
+  const rating = value / 5 * 100;
   const sx = {
     root: {
       display: 'inline-block',
@@ -45,9 +45,15 @@ const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
   };
 
   return (
-    <div role="link" tabIndex="0" className="rating" style={sx.root} onClick={handleClick()} >
-      <div style={sx.primaryStar} >★★★★★</div>
-      <div style={sx.secondaryStar} >☆☆☆☆☆</div>
+    <div
+      role="link"
+      tabIndex="0"
+      className="rating"
+      style={sx.root}
+      onClick={handleClick()}
+    >
+      <div style={sx.primaryStar}>★★★★★</div>
+      <div style={sx.secondaryStar}>☆☆☆☆☆</div>
     </div>
   );
 };

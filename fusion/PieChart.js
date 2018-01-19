@@ -12,4 +12,4 @@ const data = {
   ],
 };
 
-export default () => (<Pie data={data} />);
+export default () => <Pie data={data} />;

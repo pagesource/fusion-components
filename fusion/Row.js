@@ -6,6 +6,6 @@ const rowStyle = css`
   color: #fff;
 `;
 
-const Row = () => (<div className={rowStyle} />);
+const Row = () => <div className={rowStyle} />;
 
 export default Row;
