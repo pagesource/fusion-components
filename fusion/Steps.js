@@ -1,7 +1,7 @@
-import { css } from 'emotion';
-import styled from 'emotion/react';
-import PropTypes from 'prop-types';
-import React from 'react';
+import { css } from "emotion";
+import styled from "emotion/react";
+import PropTypes from "prop-types";
+import React from "react";
 
 const StepDiv = styled.div``;
 const Step = styled.div`
@@ -35,8 +35,8 @@ const rightArrow = css`
 const Steps = ({ steps }) => (
   <StepDiv>
     {!!steps &&
-      steps.map((step, index) => (
-        <Step key={index}>
+      steps.map(step => (
+        <Step key={step.icon}>
           <StepContent>
             <div>
               <img src={step.icon} alt={step.heading} width="30px" />
@@ -58,7 +58,24 @@ Steps.propTypes = {
   /**
    *Steps array
    */
-  steps: PropTypes.arrayOf(PropTypes.shape({})),
+  steps: PropTypes.arrayOf(
+    PropTypes.shape({
+      icon: PropTypes.String,
+      heading: PropTypes.String,
+      title: PropTypes.String,
+      description: PropTypes.String
+    })
+  )
+};
+Steps.defaultProps = {
+  steps: [
+    {
+      icon: "Icon",
+      heading: "heading",
+      title: "title",
+      description: "description"
+    }
+  ]
 };
 
 export default Steps;

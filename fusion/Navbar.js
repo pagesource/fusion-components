@@ -1,7 +1,7 @@
-import { css } from 'emotion';
-import styled from 'emotion/react';
-import PropTypes from 'prop-types';
-import React from 'react';
+import { css } from "emotion";
+import styled from "emotion/react";
+import PropTypes from "prop-types";
+import React from "react";
 
 const NavbarDiv = styled.div`
   display: flex;
@@ -65,7 +65,7 @@ const anchor = css`
   text-transform:
 `;
 
-const Navbar = ({ NavList }) => {
+const Navbar = () => {
   let toRender;
   return (
     <NavbarDiv>
@@ -75,10 +75,18 @@ const Navbar = ({ NavList }) => {
             {
               toRender = item.submenu ? (
                 <ul className={subMenuLinks}>
-                  <NavbarItem link={item.link} navName={item.navName} keys={i} />
+                  <NavbarItem
+                    link={item.link}
+                    navName={item.navName}
+                    keys={i}
+                  />
                   <div className={submenus}>
-                    {item.submenu.map((items, j) => (
-                      <NavbarItem link={items.link} navName={items.navName} keys={`0${j}`} />
+                    {item.submenu.map(items => (
+                      <NavbarItem
+                        key={items.navName}
+                        link={items.link}
+                        navName={items.navName}
+                      />
                     ))}
                   </div>
                 </ul>
@@ -93,72 +101,62 @@ const Navbar = ({ NavList }) => {
   );
 };
 
-const NavbarItem = ({ link, navName, keys }) => (
-  <li key={keys} className={links}>
-    <a className={anchor} key={link} href={link}>
+const NavbarItem = ({ link, navName }) => (
+  <li className={links}>
+    <a className={anchor} href={link}>
       {navName}
     </a>
   </li>
 );
 
-/* Props Check */
-Navbar.propTypes = {
-  /**
-   *NavbarNavbar width
-   */
-  width: PropTypes.number,
-  /**
-   *Navbar background
-   */
-  bg: PropTypes.string,
-  /**
-   *Navbar title
-   */
-  title: PropTypes.string,
-  /**
-   *Navbar names
-   */
-  NavList: PropTypes.array,
+NavbarItem.propTypes = {
+  link: PropTypes.string,
+  navName: PropTypes.string
+};
+
+NavbarItem.defaultProps = {
+  link: " Default Link",
+  navName: "Default Nav Name"
 };
 
 /* Deafult Props */
 Navbar.defaultProps = {
   width: 200,
-  bg: 'white',
-  title: 'Home',
-  header: 'Header',
+  bg: "white",
+  title: "Home",
+  header: "Header",
   NavList: [
     {
-      navName: 'Home',
-      link: '/home',
+      navName: "Home",
+      link: "/home"
     },
     {
-      navName: 'Recent',
-      link: '/recent',
+      navName: "Recent",
+      link: "/recent",
       submenu: [
         {
-          navName: 'Facebook',
-          link: '/fb.com',
+          navName: "Facebook",
+          link: "/fb.com"
         },
         {
-          navName: 'Twitter',
-          link: '/twitter.com',
+          navName: "Twitter",
+          link: "/twitter.com"
         },
         {
-          navName: 'Snapchat',
-          link: '/sc.com',
-        },
-      ],
+          navName: "Snapchat",
+          link: "/sc.com"
+        }
+      ]
     },
     {
-      navName: 'About Us',
-      link: '/about',
+      navName: "About Us",
+      link: "/about"
     },
     {
-      navName: 'Contact Us',
-      link: '/Contact',
-    },
-  ],
+      navName: "Contact Us",
+      link: "/Contact"
+    }
+  ]
 };
 
 export default Navbar;

@@ -1,5 +1,5 @@
-import React from 'react';
-import { ThemeProvider } from 'theming';
+import React from "react";
+import { ThemeProvider } from "theming";
 import {
   Alert,
   Avatar,
@@ -37,9 +37,9 @@ import {
   Tooltip,
   Truncate,
   Typing,
-  Tabs,
-} from '../';
-import Layout from './components/Layout';
+  Tabs
+} from "../";
+import Layout from "./components/Layout";
 
 const KitchenSink = () => (
   <Layout>
@@ -52,7 +52,7 @@ const KitchenSink = () => (
         <Row />
         <hr />
         <h2>Status Message</h2>
-        <StatusMessage time={5000} message={'This is a status message'} />
+        <StatusMessage time={5000} message={"This is a status message"} />
         <Row />
         <hr />
         <h2>Horizontal bar Chart</h2>
@@ -160,7 +160,8 @@ const KitchenSink = () => (
         <h2>Blockquote</h2>
         <div>
           <BlockQuote>
-            Blockquote tag specifies a section that is quoted from another source.
+            Blockquote tag specifies a section that is quoted from another
+            source.
           </BlockQuote>
         </div>
         <Row />
@@ -188,7 +189,11 @@ const KitchenSink = () => (
         <hr />
 
         <h2>Bounce Image Animation</h2>
-        <Bounce src="http://www.ipuntotv.com/IMAGES/Pelota.png" text=" " width={60} />
+        <Bounce
+          src="http://www.ipuntotv.com/IMAGES/Pelota.png"
+          text=" "
+          width={60}
+        />
         <Row />
         <hr />
 
@@ -213,7 +218,10 @@ const KitchenSink = () => (
         <hr />
 
         <h2>Logo</h2>
-        <Logo src="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png" alt="fusion logo" />
+        <Logo
+          src="https://emotion.sh/a76dfa0d18a0536af9e917cdb8f873b9.png"
+          alt="fusion logo"
+        />
         <Row />
         <hr />
 
@@ -252,7 +260,7 @@ const KitchenSink = () => (
         <hr />
 
         <h2>Tabs</h2>
-        <Tabs onClick={selected => console.log(selected)} />
+        <Tabs onClick={() => {}} />
         <Row />
         <hr />
       </div>

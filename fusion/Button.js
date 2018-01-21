@@ -1,7 +1,7 @@
-import { css } from 'emotion';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { withTheme } from 'theming';
+import { css } from "emotion";
+import PropTypes from "prop-types";
+import React from "react";
+import { withTheme } from "theming";
 
 const buttonStyle = css`
   background-color: ${props => props.theme.buttonColor};
@@ -14,7 +14,12 @@ const buttonStyle = css`
 `;
 
 const Button = ({ children, onClick, disabled }) => (
-  <button type="button" onClick={onClick} className={buttonStyle} disabled={disabled}>
+  <button
+    type="button"
+    onClick={onClick}
+    className={buttonStyle}
+    disabled={disabled}
+  >
     {children}
   </button>
 );
@@ -27,14 +32,16 @@ Button.propTypes = {
   /**
    * Children
    */
-  children: PropTypes.string,
+  children: PropTypes.element,
   /**
    * disabled
    */
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 Button.defaultProps = {
   disabled: false,
+  children: "",
+  onClick: () => {}
 };
 export default withTheme(Button);

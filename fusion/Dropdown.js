@@ -1,7 +1,7 @@
-import { css } from 'emotion';
-import styled from 'emotion/react';
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import { css } from "emotion";
+import styled from "emotion/react";
+import PropTypes from "prop-types";
+import React, { PureComponent } from "react";
 
 const DropdownDiv = styled.div`
   //width: ${props => props.width};
@@ -16,7 +16,7 @@ const DropdownDiv = styled.div`
 const container = css``;
 const dropdownMenu = css`
   width: 200px;
-  content: '';
+  content: "";
   width: ${props => props.width}px;
   height: 40px;
   background: grey;
@@ -50,7 +50,7 @@ const dropIcon = css`
     content: &#9650;
   }
   &:after {
-    content: '▼';
+    content: "▼";
     font-size: 16px;
     padding: 12px 8px;
     right: 10px;
@@ -67,8 +67,13 @@ class Dropdown extends PureComponent {
   constructor() {
     super();
     this.state = {
-      open: false,
+      open: false
     };
+    this.onClick = this.onClick.bind(this);
+  }
+
+  onClick() {
+    this.setState({ open: !this.state.open });
   }
 
   render() {
@@ -76,7 +81,12 @@ class Dropdown extends PureComponent {
 
     return (
       <div>
-        <div className={dropdownMenu} onClick={() => this.onClick()}>
+        <div
+          tabIndex={0}
+          role="button"
+          className={dropdownMenu}
+          onClick={this.onClick}
+        >
           <span className={dropIcon}>Dropdown List</span>
         </div>
         {this.state.open ? (
@@ -84,7 +94,7 @@ class Dropdown extends PureComponent {
             <div className={container}>
               <ul className={dropdownList}>
                 {ListItems.map(({ link, option }, j) => (
-                  <li className={lists}>
+                  <li key={j.toSting()} className={lists}>
                     <a className={links} href={link}>
                       {option}
                     </a>
@@ -97,56 +107,36 @@ class Dropdown extends PureComponent {
       </div>
     );
   }
-
-  onClick() {
-    this.setState({ open: !this.state.open });
-  }
 }
 
 /* Props Check */
 Dropdown.propTypes = {
   /**
-   *Dropdown width
-   */
-  width: PropTypes.number,
-  /**
-   *Dropdown background
-   */
-  bg: PropTypes.string,
-  /**
-   *Dropdown title
-   */
-  title: PropTypes.string,
-  /**
-   *Dropdown display status
-   */
-  open: PropTypes.string,
-  /**
    *Dropdown list items
    */
-  ListItems: PropTypes.array,
+  ListItems: PropTypes.arrayOf(PropTypes.shape({}))
 };
 
 /* Deafult Props */
 Dropdown.defaultProps = {
   width: 200,
-  bg: 'white',
-  title: 'Dropdown Name',
-  header: 'Header',
+  bg: "white",
+  title: "Dropdown Name",
+  header: "Header",
   ListItems: [
     {
-      option: 'Option 1',
-      link: '//www.google.com',
+      option: "Option 1",
+      link: "//www.google.com"
     },
     {
-      option: 'Option 2',
-      link: '//www.facebook.com',
+      option: "Option 2",
+      link: "//www.facebook.com"
     },
     {
-      option: 'Option 3',
-      link: '//www.twitter.com',
-    },
-  ],
+      option: "Option 3",
+      link: "//www.twitter.com"
+    }
+  ]
 };
 
 export default Dropdown;

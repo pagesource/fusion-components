@@ -1,12 +1,12 @@
-import React from 'react';
-import { ThemeProvider } from 'theming';
-import { Navbar, Pagination, StepperControl } from '../';
+import React from "react";
+import { ThemeProvider } from "theming";
+import { Navbar, Pagination, StepperControl } from "../";
 // --------page specific imports---------
-import theme from '../theme';
+import theme from "../theme";
 // ---- global imports ----------
-import Layout from './components/Layout';
+import Layout from "./components/Layout";
 
-export default () => (
+const NavigationComponent = () => (
   <Layout>
     <ThemeProvider theme={theme}>
       <div>
@@ -58,3 +58,4 @@ export default () => (
     </ThemeProvider>
   </Layout>
 );
+export default NavigationComponent;

@@ -1,8 +1,8 @@
-import { css } from 'emotion';
-import styled from 'emotion/react';
-import PropTypes from 'prop-types';
-import React from 'react';
-import Button from './Button';
+import { css } from "emotion";
+import styled from "emotion/react";
+import PropTypes from "prop-types";
+import React from "react";
+import Button from "./Button";
 
 const DialogDiv = styled.div`
   width: ${props => props.width};
@@ -42,7 +42,7 @@ class Dialog extends React.PureComponent {
   constructor() {
     super();
     this.state = {
-      open: false,
+      open: false
     };
   }
 
@@ -65,9 +65,17 @@ class Dialog extends React.PureComponent {
           Open Dialog
         </Button>
         {this.state.open ? (
-          <DialogDiv title="Dialog With Actions" onRequestClose={this.handleClose}>
+          <DialogDiv
+            title="Dialog With Actions"
+            onRequestClose={this.handleClose}
+          >
             <div className={container}>
-              <span className={close} onClick={() => this.handleClose()}>
+              <span
+                role="button"
+                tabIndex={0}
+                className={close}
+                onClick={() => this.handleClose()}
+              >
                 X
               </span>
               <h1>{this.props.header}</h1>
@@ -91,43 +99,24 @@ class Dialog extends React.PureComponent {
 /* Props Check */
 Dialog.propTypes = {
   /**
-   *Dialog width
-   */
-  width: PropTypes.number,
-  /**
-   *Dialog height
-   */
-  height: PropTypes.number,
-  /**
-   *Dialog background
-   */
-  bg: PropTypes.string,
-  /**
-   *Dialog title
-   */
-  title: PropTypes.string,
-  /**
    *Dialog header
    */
   header: PropTypes.string,
-  /**
-   *Dialog display status
-   */
-  open: PropTypes.string,
+
   /**
    *Dialog body content
    */
-  content: PropTypes.string,
+  content: PropTypes.string
 };
 
 /* Deafult Props */
 Dialog.defaultProps = {
   width: 800,
   height: 300,
-  bg: 'white',
-  title: 'Title content',
-  header: 'Header',
-  content: 'Your content for the Dialog box can be passed as props value',
+  bg: "white",
+  title: "Title content",
+  header: "Header",
+  content: "Your content for the Dialog box can be passed as props value"
 };
 
 export default Dialog;

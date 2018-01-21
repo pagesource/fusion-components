@@ -16,7 +16,8 @@
     "react-doc-generator": "^1.2.5",
     "react-dom": "^15.6.2",
     "rimraf": "^2.6.1",
-    "theming": "^1.1.0"
+    "theming": "^1.1.0",
+    "react-live": "^1.7.0"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
@@ -27,8 +28,7 @@
     "husky": "^0.14.3",
     "lint-staged": "^6.0.1",
     "prettier": "1.10.2",
-    "prettier-eslint-cli": "^4.7.0",
-    "react-live": "^1.7.0",
+    "prettier-eslint-cli": "^4.7.0",    
     "react-styleguidist": "^6.0.33",
     "theming": "^1.1.0",
     "webpack": "^3.8.1"
@@ -42,7 +42,7 @@
     "heroku-start": "npm run clean && npm run build && npm run heroku-next-start",
     "clean": "rimraf .next",
     "lint": "eslint pages fusion lib theme",
-    "test": "echo 'no test :)'",
+    "test": "npm run lint",
     "heroku-postbuild": "npm run build",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
@@ -53,7 +53,7 @@
     "format": "prettier-eslint --write '{lib,fusion,pages,theme}/**/*.js'"
   },
   "lint-staged": {
-    "*.{js,jsx,css,md}": ["npm run prettier", "npm run format", "git add"]
+    "*.{js,jsx,css,md}": ["npm run lint","npm run prettier", "npm run format", "git add"]
   },
   "repository": {
     "type": "git",

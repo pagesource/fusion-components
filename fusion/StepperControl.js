@@ -1,24 +1,23 @@
-import { css } from 'emotion';
-import styled from 'emotion/react';
-import React from 'react';
-import { theme } from '../theme';
-import Button from './Button';
+import { css } from "emotion";
+import styled from "emotion/react";
+import React from "react";
+import Button from "./Button";
 
 const styles = {
   root: {
-    width: '100%',
+    width: "100%",
     maxWidth: 700,
-    margin: '40px',
+    margin: "40px"
   },
   content: {
-    margin: '0 16px',
+    margin: "0 16px"
   },
   actions: {
-    marginTop: 12,
+    marginTop: 12
   },
   backButton: {
-    marginRight: 12,
-  },
+    marginRight: 12
+  }
 };
 
 const Step = styled.div`
@@ -58,7 +57,7 @@ class ControlStepper extends React.PureComponent {
     super();
     this.state = {
       stepIndex: null,
-      visited: [],
+      visited: []
     };
     this.handleNext = this.handleNext.bind(this);
     this.handlePrev = this.handlePrev.bind(this);
@@ -81,13 +80,13 @@ class ControlStepper extends React.PureComponent {
   getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return 'First step content......';
+        return "First step content......";
       case 1:
-        return 'Second step content......';
+        return "Second step content......";
       case 2:
-        return 'Third step content......';
+        return "Third step content......";
       default:
-        return 'Click a step to get started.';
+        return "Click a step to get started.";
     }
   }
   handleNext() {
@@ -110,14 +109,14 @@ class ControlStepper extends React.PureComponent {
       <div style={styles.root}>
         <p>
           <a
-            href="#"
-            onClick={(event) => {
+            href="no-action"
+            onClick={event => {
               event.preventDefault();
               this.setState({ stepIndex: null, visited: [] });
             }}
           >
             Click here
-          </a>{' '}
+          </a>{" "}
           to reset the example.
         </p>
         <Stepper linear={false}>
@@ -150,7 +149,10 @@ class ControlStepper extends React.PureComponent {
               >
                 Prev
               </Button>
-              <Button style="margin-left: 30px" onClick={this.handleNext}>
+              <Button
+                style={{ "margin-left": "30px" }}
+                onClick={this.handleNext}
+              >
                 Next
               </Button>
             </div>
