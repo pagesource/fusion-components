@@ -17,7 +17,8 @@
     "react-dom": "^15.6.2",
     "rimraf": "^2.6.1",
     "theming": "^1.1.0",
-    "react-live": "^1.7.0"
+    "react-live": "^1.7.0",
+    "webpack": "^3.8.1"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
@@ -30,8 +31,7 @@
     "prettier": "1.10.2",
     "prettier-eslint-cli": "^4.7.0",    
     "react-styleguidist": "^6.0.33",
-    "theming": "^1.1.0",
-    "webpack": "^3.8.1"
+    "theming": "^1.1.0"
   },
   "scripts": {
     "dev": "next",
