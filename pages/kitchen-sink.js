@@ -11,7 +11,6 @@ import {
   Button,
   CardGrid,
   CountDownTimer,
-  YTEmbed,
   Dialog,
   Doughnut,
   Dropdown,
@@ -26,18 +25,19 @@ import {
   ProgressBar,
   ProgressCircle,
   Rating,
-  SelectRating,
   Ripples,
   Row,
+  SelectRating,
   StatusMessage,
   Stepper,
   StepperControl,
+  Tabs,
   theme,
   ToggleButton,
   Tooltip,
   Truncate,
   Typing,
-  Tabs,
+  YTEmbed,
 } from '../';
 import Layout from './components/Layout';
 
@@ -138,14 +138,18 @@ const KitchenSink = () =>
         <hr />
         <h2>Panel</h2>
         <div>
-          <Panel>this is text inside panel</Panel>
+          <Panel>
+            <span>this is text inside panel</span>
+          </Panel>
         </div>
         <Row />
         <hr />
 
         <h2>Panel 2</h2>
         <div>
-          <Panel2>this is text inside panel 2</Panel2>
+          <Panel2>
+            <span>this is text inside panel 2</span>
+          </Panel2>
         </div>
         <Row />
         <hr />
@@ -160,7 +164,7 @@ const KitchenSink = () =>
         <h2>Blockquote</h2>
         <div>
           <BlockQuote>
-            Blockquote tag specifies a section that is quoted from another source.
+            <span>Blockquote tag specifies a section that is quoted from another source.</span>
           </BlockQuote>
         </div>
         <Row />
@@ -236,11 +240,14 @@ const KitchenSink = () =>
         <hr />
 
         <h3>Avatar</h3>
-        <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" alt="Avatar Image" />
+        <Avatar
+          src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg"
+          alt="Avatar Image"
+        />
         <hr />
 
         <h2>Alert </h2>
-        <Alert>There was a problem rendering this box</Alert>
+        <Alert><span>There was a problem rendering this box</span></Alert>
         <Row />
         <hr />
 

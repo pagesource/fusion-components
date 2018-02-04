@@ -1,6 +1,6 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React, { PureComponent } from "react";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 
 const timerStyle = css`
   font-family: "arial";
@@ -10,14 +10,14 @@ class CountdownTimer extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      timer: "",
-      interval: null
+      timer: '',
+      interval: null,
     };
     this.countDownDate = new Date(this.props.endTime).getTime();
     this.timer = this.timer.bind(this);
     const interval = setInterval(this.timer, 1000);
     this.setState({
-      interval
+      interval,
     });
   }
 
@@ -30,13 +30,13 @@ class CountdownTimer extends PureComponent {
       seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     this.setState({
-      timer: `${days} Days - ${hours} : ${minutes} : ${seconds}`
+      timer: `${days} Days - ${hours} : ${minutes} : ${seconds}`,
     });
 
     if (distance < 0) {
       clearInterval(this.state.interval);
       this.setState({
-        timer: "The time is up!!"
+        timer: 'The time is up!!',
       });
     }
   }
@@ -47,7 +47,7 @@ class CountdownTimer extends PureComponent {
 }
 
 CountdownTimer.propTypes = {
-  endTime: PropTypes.string.isRequired
+  endTime: PropTypes.string.isRequired,
 };
 
 export default CountdownTimer;

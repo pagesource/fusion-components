@@ -2,10 +2,10 @@ import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const BlockQuote = ({ align }) => styled('blockquote')`
+const BlockQuote = styled('blockquote')`
   color: indigo;
   font-size: 20px;
-  text-align: ${align}
+  text-align: ${props => props.align}
 `;
 
 /* Props Check */

@@ -20,6 +20,6 @@ Alert.propTypes = {
 };
 Alert.defaultProps = {
   type: 'error',
-  children: 'Success is not this!',
+  children: <span>'Success is not this!'</span>,
 };
 export default withTheme(Alert);

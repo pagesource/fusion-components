@@ -29,30 +29,30 @@ const Stepper = styled('div')`
 
 `;
 const StepButton = styled('div')`
-    width: 160px;
-    border-radius: 7px;
-    height: 50px;
-    text-align: center;
-    background: skyblue;
+  width: 160px;
+  border-radius: 7px;
+  height: 50px;
+  text-align: center;
+  background: skyblue;
   &:hover{
     background: Aquamarine;
   }
 `;
 const rightArrow = css`
-    font-size: 24px;
-    position: relative;
-    padding: 0px 5px;
-    top: 17px;
-    left: -4px;
+  font-size: 24px;
+  position: relative;
+  padding: 0px 5px;
+  top: 17px;
+  left: -4px;
 `;
 const stepName = css`
-    position: relative;
-    top: 15px;
+  position: relative;
+  top: 15px;
 `;
 const container = css`
-    width: 100%;
-    background: aliceblue;
-    height: auto;
+  width: 100%;
+  background: aliceblue;
+  height: auto;
 `;
 
 class ControlStepper extends React.PureComponent {
@@ -73,8 +73,9 @@ class ControlStepper extends React.PureComponent {
   }
 
   componentWillUpdate(nextState) {
+    if (!nextState) return;
     const { stepIndex, visited } = nextState;
-    if (visited.indexOf(stepIndex) === -1) {
+    if (!visited.indexOf(stepIndex)) {
       // eslint-disable-next-line react/no-will-update-set-state
       this.setState({ visited: visited.concat(stepIndex) });
     }
@@ -92,12 +93,14 @@ class ControlStepper extends React.PureComponent {
         return 'Click a step to get started.';
     }
   }
+
   handleNext() {
     const { stepIndex } = this.state;
     if (stepIndex < 2) {
       this.setState({ stepIndex: stepIndex + 1 });
     }
   }
+
   handlePrev() {
     const { stepIndex } = this.state;
     if (stepIndex > 0) {
@@ -113,6 +116,7 @@ class ControlStepper extends React.PureComponent {
         <p>
           <a
             href="#"
+            role='button'
             onClick={(event) => {
               event.preventDefault();
               this.setState({ stepIndex: null, visited: [] });
@@ -122,32 +126,32 @@ class ControlStepper extends React.PureComponent {
           </a> to reset the example.
         </p>
         <Stepper linear={false}>
-          <Step completed={visited.indexOf(0) !== -1} active={stepIndex === 0}>
+          <Step completed={visited.indexOf(0)} active={stepIndex === 0}>
             <StepButton onClick={() => this.setState({ stepIndex: 0 })}>
               <span className={stepName}>STEP 1</span>
             </StepButton>
           </Step>
           <span className={rightArrow}>&#10145;</span>
-          <Step completed={visited.indexOf(1) !== -1} active={stepIndex === 1}>
+          <Step completed={visited.indexOf(1)} active={stepIndex === 1}>
             <StepButton onClick={() => this.setState({ stepIndex: 1 })}>
               <span className={stepName}>STEP 2 </span>
             </StepButton>
           </Step>
           <span className={rightArrow}>&#10145;</span>
-          <Step completed={visited.indexOf(2) !== -1} active={stepIndex === 2}>
+          <Step completed={visited.indexOf(2)} active={stepIndex === 2}>
             <StepButton onClick={() => this.setState({ stepIndex: 2 })}>
               <span className={stepName}>STEP 3</span>
             </StepButton>
           </Step>
         </Stepper>
         <div style={styles.content}>
-          <p className={container}>{ this.getStepContent(stepIndex) }</p>
-          { stepIndex !== null && (
+          <p className={container}>{this.getStepContent(stepIndex)}</p>
+          {stepIndex !== null && (
             <div style={styles.actions}>
               <Button disabled={stepIndex === 0} onClick={this.handlePrev} style={styles.backButton}>Prev</Button>
-              <Button style="margin-left: 30px" onClick={this.handleNext}>Next</Button>
+              <Button style={{ marginLeft: 30 }} onClick={this.handleNext}>Next</Button>
             </div>
-          ) }
+          )}
         </div>
       </div>
     );

@@ -68,17 +68,17 @@ const Navbar = ({ NavList }) => {
   return (
     <NavbarDiv>
       <ul className={lists}>
-        {!!Navbar.defaultProps && Navbar.defaultProps.NavList.map((item, i) => {
+        {!!Navbar.defaultProps && Navbar.defaultProps.NavList.map((item) => {
           {
-            toRender = item.submenu ?
-              (<ul className={subMenuLinks}>
-                <NavbarItem link={item.link} navName={item.navName} keys={i} />
+            toRender = item.submenu ? (
+              <ul className={subMenuLinks} key={item.navName}>
+                <NavbarItem link={item.link} navName={item.navName} key={item.navName} />
                 <div className={submenus}>
-                  {item.submenu.map((items, j) => (
-                    <NavbarItem link={items.link} navName={items.navName} keys={`0${j}`} />
+                  {item.submenu.map((items) => (
+                    <NavbarItem link={items.link} navName={items.navName} key={items.navName} />
                   ))}
                 </div>
-              </ul>) : <NavbarItem link={item.link} navName={item.navName} keys={i} />;
+              </ul>) : <NavbarItem link={item.link} navName={item.navName} key={item.navName} />;
           }
           return toRender;
         })}
@@ -86,8 +86,8 @@ const Navbar = ({ NavList }) => {
     </NavbarDiv>);
 };
 
-const NavbarItem = ({ link, navName, keys }) => (
-  <li key={keys} className={links}>
+const NavbarItem = ({ link, navName }) => (
+  <li className={links}>
     <a className={anchor} key={link} href={link}>{navName}</a>
   </li>
 );

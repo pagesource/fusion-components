@@ -3,6 +3,9 @@ import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
+const container = css`
+`;
+
 const DropdownDiv = props => styled('div')`
   //width: ${props.width};
   width: 200px;
@@ -13,38 +16,6 @@ const DropdownDiv = props => styled('div')`
   text-align: center;
   font-size: 24px;
 `;
-const container = css`
-`;
-
-const dropdownMenu = props => css`
-  width: 200px;
-  content: "";
-  width: ${props.width}px;
-  height: 40px;
-  background: grey;
-  border-radius: 3px;
-  opacity: 0.8;
-  text-align: center;
-  font-size: 24px;
-`;
-
-const dropdownList = props => css`
- width: 200px;
- width: ${props.width}px;
- list-style-type: none !important;
- margin: 0;
- padding-left: 0;
- cursor: pointer;
-`;
-const lists = props => css`
-  width: ${props.width}px;
-  padding: 3px;
-  border-radius: 3px;
-  &:hover{
-    background: silver
-  }
-`;
-
 const links = css`
   text-decoration: none;
   font-size: 18px;
@@ -77,8 +48,35 @@ class Dropdown extends PureComponent {
   }
 
   render() {
-    const { ListItems } = this.props;
+    const { ListItems, width } = this.props;
+    const dropdownMenu = css`
+      width: 200px;
+      content: "";
+      width: ${width}px;
+      height: 40px;
+      background: grey;
+      border-radius: 3px;
+      opacity: 0.8;
+      text-align: center;
+      font-size: 24px;
+    `;
 
+    const dropdownList = css`
+     width: 200px;
+     width: ${width}px;
+     list-style-type: none !important;
+     margin: 0;
+     padding-left: 0;
+     cursor: pointer;
+    `;
+    const lists = css`
+      width: ${width}px;
+      padding: 3px;
+      border-radius: 3px;
+      &:hover{
+        background: silver
+      }
+    `;
     return (
       <section>
         <div className={dropdownMenu} onClick={() => this.onClick()} role="listbox">
@@ -88,9 +86,10 @@ class Dropdown extends PureComponent {
           <DropdownDiv>
             <div className={container}>
               <ul className={dropdownList}>
-                {ListItems.map(({ link, option }, j) => (<li className={lists}>
-                  <a className={links} href={link}>{option}</a>
-                </li>))}
+                {ListItems.map(({ link, option }) => (
+                  <li className={lists}>
+                    <a className={links} href={link}>{option}</a>
+                  </li>))}
               </ul>
             </div>
           </DropdownDiv>

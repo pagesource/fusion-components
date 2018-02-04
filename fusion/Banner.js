@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'theming';
 
-const bannerStyle = ({ picUrl }) => css`
+const Banner = ({ src, alt, picUrl }) => {
+  const bannerStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
   width:100%;
   min-height: 80vh;
   background-size: cover;
@@ -15,7 +16,8 @@ const bannerStyle = ({ picUrl }) => css`
   background-image: url(${picUrl});
 `;
 
-const Banner = ({ src, alt, picUrl }) => (<img src={src} className={bannerStyle} alt={alt} />);
+  return (<img src={src} className={bannerStyle} alt={alt} />);
+};
 
 /* Props Check */
 Banner.propTypes = {
