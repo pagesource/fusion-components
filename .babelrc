@@ -3,6 +3,8 @@
     "next/babel"
   ],
   "plugins": [
-    ["emotion"]
+    [
+      "emotion/babel"
+    ]
   ]
 }
