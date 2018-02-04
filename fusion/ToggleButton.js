@@ -1,56 +1,49 @@
 import { css } from 'emotion';
 import React, { PureComponent } from 'react';
-import { theme } from '../theme';
 
 const toggle = css`
-    position: relative;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-
-    >input {
-      display: none;
-    }
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  >input {
+    display: none;
+  }
 `;
 
 const slider = css`
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+  &:before {
     position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
-    border-radius: 34px;
-
-    &:before {
-        position: absolute;
-        content: "";
-        height: 26px;
-        width: 26px;
-        left: 4px;
-        bottom: 4px;
-        background-color: white;
-        -webkit-transition: .4s;
-        transition: .4s;
-        border-radius: 50%;
-    }
-
-
+    border-radius: 50%;
+  }
 `;
 
 const checked = css`
-    background-color: #3a1f4f;
-    box-shadow: 0 0 1px #3a1f4f;
-
-    &:before {
-        -webkit-transform: translateX(26px);
-        -ms-transform: translateX(26px);
-        transform: translateX(26px);
-    }
-
+  background-color: #3a1f4f;
+  box-shadow: 0 0 1px #3a1f4f;
+  &:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
 `;
 
 class ToggleButton extends PureComponent {
@@ -60,9 +53,10 @@ class ToggleButton extends PureComponent {
       checked: false,
       checkedClass: '',
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  change(e) {
+  handleChange(e) {
     if (e.target.checked) {
       this.setState({
         checked: true,
@@ -78,11 +72,13 @@ class ToggleButton extends PureComponent {
 
   render() {
     return (
-      <label className={toggle}>
+      <label className={toggle} htmlFor="checked">
         <input
           className={this.state.checkedClass}
+          name="checked"
           type="checkbox"
-          onChange={this.change.bind(this)}
+          checked={this.state.checked}
+          onChange={this.handleChange}
         />
         <span className={`${slider} ${this.state.checkedClass}`} />
       </label>

@@ -46,13 +46,13 @@ const KitchenSink = () =>
     <ThemeProvider theme={theme}>
       <div>
         <h2>Embed Youtube, Pass video id, width and height</h2>
-        <YTEmbed id="PCMXQonN0gM" width={560} height={320}/>
+        <YTEmbed id="PCMXQonN0gM" width={560} height={320} />
         <h2>Toggle Button</h2>
         <ToggleButton />
         <Row />
         <hr />
         <h2>Status Message</h2>
-        <StatusMessage time={5000} message={'This is a status message'} />
+        <StatusMessage time={5000} message="This is a status message" />
         <Row />
         <hr />
         <h2>Horizontal bar Chart</h2>

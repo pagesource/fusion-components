@@ -1,5 +1,5 @@
 import { css } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import React from 'react';
 import { theme } from '../theme';
 import Button from './Button';
@@ -21,14 +21,14 @@ const styles = {
   },
 };
 
-const Step = styled.div`
+const Step = styled('div')`
   display: inline-block;
   margin: 10px 20px;
 `;
-const Stepper = styled.div`
+const Stepper = styled('div')`
 
 `;
-const StepButton = styled.div`
+const StepButton = styled('div')`
     width: 160px;
     border-radius: 7px;
     height: 50px;
@@ -119,7 +119,7 @@ class ControlStepper extends React.PureComponent {
             }}
           >
             Click here
-		  </a> to reset the example.
+          </a> to reset the example.
         </p>
         <Stepper linear={false}>
           <Step completed={visited.indexOf(0) !== -1} active={stepIndex === 0}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { css, keyframes } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import { withTheme } from 'theming';
 import { theme } from '../theme/index';
 

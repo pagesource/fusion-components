@@ -1,16 +1,16 @@
+import React from 'react';
+import styled from 'react-emotion';
 import { keyframes } from 'emotion';
-import styled from 'emotion/react';
 import PropTypes from 'prop-types';
 import { withTheme } from 'theming';
-import { theme } from '../theme/index';
 
 const type = keyframes` 
   from { width: 0; } 
 `;
 const TypingDiv = styled('p')`
-
   font-family: "Courier";
-  font-size: 20px;
+  color:${props => props.color};
+  font-size: ${props => props.fontSize};
   font-weight: bold;
   margin: 10px 0 0 10px;
   white-space: nowrap;
@@ -19,7 +19,8 @@ const TypingDiv = styled('p')`
   animation: ${type} 4s 1s ease infinite; 
 `;
 
-const Typing = ({ text }) => (<TypingDiv>{text}</TypingDiv>);
+const Typing = ({ text, color, fontSize }) => (
+  <TypingDiv color={color} fontSize={fontSize}>{text}</TypingDiv>);
 
 /* Props Check */
 Typing.propTypes = {
@@ -40,8 +41,8 @@ Typing.propTypes = {
 /* Deafult Props */
 Typing.defaultProps = {
   text: 'Typing text content',
-  color: 'red',
-  fontSize: 20,
+  color: '#432234',
+  fontSize: 16,
 };
 
 export default withTheme(Typing);

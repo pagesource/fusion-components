@@ -1,8 +1,8 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import { withTheme } from 'theming';
 
-const PanelFooter = styled.header`
+const PanelFooter = styled('header')`
   padding: 8px;
   font-size: 14px;
   color: ${props => props.color};

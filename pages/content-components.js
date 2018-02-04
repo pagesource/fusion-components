@@ -13,7 +13,8 @@ const ContentComponent = () => (<Layout>
       <h3>Panel </h3>
       <Panel>this is a panel</Panel>
       <pre>{ `<Panel>this is a panel</Panel>
-          `}</pre>
+          `}
+      </pre>
       <h3>Cards</h3>
       <CardGrid />
       <pre>{ `const cardData = [{
@@ -39,7 +40,8 @@ const ContentComponent = () => (<Layout>
         image: "http://lorempixel.com/250/150/food/"
       }];
       <Card cardData={cardData} />
-      `}</pre>
+      `}
+      </pre>
     </div>
   </ThemeProvider>
 </Layout>);

@@ -2,6 +2,7 @@ import { css } from 'emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'theming';
+import theme from '../theme';
 
 const Tabs = ({ tabData, onClick, theme }) => {
   const tabList = css`
@@ -63,31 +64,32 @@ const Tabs = ({ tabData, onClick, theme }) => {
   return (
     <div>
       <ul className={tabList}>
-        {
-          !!tabData && tabData.map(({ title, selected }, i) => (
-            <li key={i} className={tab}>
-              <a key={i} href={`#tab-panel${i}`} className={getActiveTabStyle(selected)} onClick={handleClick(i)}>
-                {title}
-              </a>
-            </li>
-          ))
-        }
+        {!!tabData && tabData.map(({ title, selected }, i) => (
+          <li key={title} className={tab}>
+            <a key={title} href={`#tab-panel${i}`} className={getActiveTabStyle(selected)} onClick={handleClick(i)}>
+              {title}
+            </a>
+          </li>
+        ))}
       </ul>
-      {
-        !!tabData && tabData.map(({ content, selected }, i) => (
-          <div key={i} id={`tab-panel${i}`} className={getActivePanelStyle(selected)}>
-            {content}
-          </div>
-        ))
-      }
+      {!!tabData && tabData.map(({ title, content, selected }, i) => (
+        <div key={title} id={`tab-panel${i}`} className={getActivePanelStyle(selected)}>
+          {content}
+        </div>
+      ))}
     </div>
   );
 };
 
-Tabs.PropTypes = {
-  tabData: PropTypes.array,
-  onClick: PropTypes.func,
+Tabs.propTypes = {
+  tabData: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string,
+    content: PropTypes.string,
+    selected: PropTypes.bool,
+  })),
+  onClick: PropTypes.func.isRequired,
   selectedTab: PropTypes.number,
+  theme: PropTypes.shape,
 };
 
 Tabs.defaultProps = {
@@ -108,6 +110,8 @@ Tabs.defaultProps = {
       selected: false,
     },
   ],
+  selectedTab: 2,
+  theme,
 };
 
 export default withTheme(Tabs);

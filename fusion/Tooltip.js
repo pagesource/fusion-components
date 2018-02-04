@@ -1,5 +1,5 @@
 import { css } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -14,9 +14,8 @@ const TooltipBtn = css`
     &:hover{
       opacity: 0.6;
     }
-
 `;
-const HiddenDiv = styled.span`
+const HiddenDiv = styled('span')`
     background: aliceblue;
     position: relative;
     left: 60%;
@@ -44,20 +43,20 @@ class Tooltip extends React.PureComponent {
   }
 
   render() {
-    return (<div
-      className={TooltipBtn}
-      onMouseEnter={() => this.onMouseEnter()}
-      onMouseOut={() => this.onMouseOut()}
-    >
-    Hoverover me!
-      {
-        this.state.open
-          ? <HiddenDiv>
+    return (
+      <div
+        className={TooltipBtn}
+        onMouseEnter={() => this.onMouseEnter()}
+        onMouseOut={() => this.onMouseOut()}
+        onBlur={() => this.onMouseOut()}
+      >
+        Hover over me!
+        {this.state.open ?
+          <HiddenDiv>
             <p>{this.props.text}</p>
           </HiddenDiv>
-          : null
-      }
-    </div>);
+          : null}
+      </div>);
   }
 }
 

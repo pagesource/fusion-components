@@ -1,11 +1,11 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const BackgroundImage = styled('img')`
-  background-image: url('${props => props.src}');
-  background-size: ${props => props.size};
-  background-position: ${props => props.position};
+const BackgroundImage = ({ src, size, position }) => styled('img')`
+  background-image: url('${src}');
+  background-size: ${size};
+  background-position: ${position};
   height: auto;
 `;
 
@@ -33,7 +33,6 @@ BackgroundImage.propTypes = {
 BackgroundImage.defaultProps = {
   src: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
 };
-
 
 export default function Img({ children, ...props }) {
   return <BackgroundImage {...props}>{children}</BackgroundImage>;

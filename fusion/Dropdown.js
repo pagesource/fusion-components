@@ -1,25 +1,25 @@
 import { css } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
-const DropdownDiv = styled.div`
-  //width: ${props => props.width};
+const DropdownDiv = props => styled('div')`
+  //width: ${props.width};
   width: 200px;
   height: auto;
   background: grey;
-  // background: ${props => props.bg};
+  // background: ${props.bg};
   z-index: 1;
   text-align: center;
   font-size: 24px;
 `;
 const container = css`
-
 `;
-const dropdownMenu = css`
+
+const dropdownMenu = props => css`
   width: 200px;
   content: "";
-  width: ${props => props.width}px;
+  width: ${props.width}px;
   height: 40px;
   background: grey;
   border-radius: 3px;
@@ -27,30 +27,33 @@ const dropdownMenu = css`
   text-align: center;
   font-size: 24px;
 `;
-const dropdownList = css`
+
+const dropdownList = props => css`
  width: 200px;
- width: ${props => props.width}px;
+ width: ${props.width}px;
  list-style-type: none !important;
  margin: 0;
  padding-left: 0;
  cursor: pointer;
 `;
-const lists = css`
-  width: ${props => props.width}px;
+const lists = props => css`
+  width: ${props.width}px;
   padding: 3px;
   border-radius: 3px;
   &:hover{
     background: silver
   }
 `;
+
 const links = css`
   text-decoration: none;
   font-size: 18px;
 `;
+
 const dropIcon = css`
-&:before{
-  content: &#9650;
-}
+  &:before{
+    content: &#9650;
+  }
   &:after {
     content: "▼";
     font-size: 16px;
@@ -76,21 +79,23 @@ class Dropdown extends PureComponent {
   render() {
     const { ListItems } = this.props;
 
-    return (<div>
-      <div className={dropdownMenu} onClick={() => this.onClick()}><span className={dropIcon}>Dropdown List</span>
-      </div>
-      { this.state.open ?
-        <DropdownDiv>
-          <div className={container}>
-            <ul className={dropdownList}>
-              { ListItems.map(({ link, option }, j) => (<li className={lists}>
-                <a className={links} href={link}>{ option }</a>
-              </li>)) }
-            </ul>
-          </div>
-        </DropdownDiv>
-        : null }
-    </div>);
+    return (
+      <section>
+        <div className={dropdownMenu} onClick={() => this.onClick()} role="listbox">
+          <span className={dropIcon}>Dropdown List</span>
+        </div>
+        {this.state.open ?
+          <DropdownDiv>
+            <div className={container}>
+              <ul className={dropdownList}>
+                {ListItems.map(({ link, option }, j) => (<li className={lists}>
+                  <a className={links} href={link}>{option}</a>
+                </li>))}
+              </ul>
+            </div>
+          </DropdownDiv>
+          : null}
+      </section>);
   }
 
   onClick() {

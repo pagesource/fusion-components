@@ -2,9 +2,9 @@ import { css } from 'emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const badgeStyle = css`
-  color: ${props => props.color};
-  background-color: ${props => props.bg};
+const badgeStyle = ({ color, bg }) => css`
+  color: ${color};
+  background-color: ${bg};
   margin-left: 4px;
   margin-right: 4px;
   padding: 4px;

@@ -1,9 +1,9 @@
 import { css } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const NavbarDiv = styled.div`
+const NavbarDiv = styled('div')`
   display: flex;
   height: 40px;
   background: skyblue;
@@ -43,20 +43,17 @@ margin-top:0px;
 `;
 
 const subMenuLinks = css`
-display: inline-block;
-width: 120px;
-text-align: center;
-vertical-align: middle;
-padding: 0px 20px;
-transition: 0.5s, height 4s;
-
- &:hover div{
- display:block;
- background: skyblue;
- border-top: 1px solid blue;
- }
-
-
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0px 20px;
+  transition: 0.5s, height 4s;
+  &:hover div{
+    display:block;
+    background: skyblue;
+    border-top: 1px solid blue;
+  }
 `;
 const anchor = css`
   text-decoration: none;
@@ -68,52 +65,50 @@ const anchor = css`
 
 const Navbar = ({ NavList }) => {
   let toRender;
-  return (<NavbarDiv>
-    <ul className={lists}>
-      { !!Navbar.defaultProps && Navbar.defaultProps.NavList.map((item, i) => {
-        {
-          toRender = item.submenu ?
-            (<ul className={subMenuLinks}>
-              <NavbarItem link={item.link} navName={item.navName} keys={i} />
-              <div className={submenus}>
-                { item.submenu.map((items, j) => (
-                  <NavbarItem link={items.link} navName={items.navName} keys={`0${j}`} />
-                )) }
-              </div>
-            </ul>) :
-            <NavbarItem link={item.link} navName={item.navName} keys={i} />;
-        }
-        return toRender;
-      }) }
-    </ul>
-  </NavbarDiv>);
+  return (
+    <NavbarDiv>
+      <ul className={lists}>
+        {!!Navbar.defaultProps && Navbar.defaultProps.NavList.map((item, i) => {
+          {
+            toRender = item.submenu ?
+              (<ul className={subMenuLinks}>
+                <NavbarItem link={item.link} navName={item.navName} keys={i} />
+                <div className={submenus}>
+                  {item.submenu.map((items, j) => (
+                    <NavbarItem link={items.link} navName={items.navName} keys={`0${j}`} />
+                  ))}
+                </div>
+              </ul>) : <NavbarItem link={item.link} navName={item.navName} keys={i} />;
+          }
+          return toRender;
+        })}
+      </ul>
+    </NavbarDiv>);
 };
-
 
 const NavbarItem = ({ link, navName, keys }) => (
   <li key={keys} className={links}>
-    <a className={anchor} key={link} href={link}>{ navName }</a>
+    <a className={anchor} key={link} href={link}>{navName}</a>
   </li>
 );
-
 
 /* Props Check */
 Navbar.propTypes = {
   /**
-	 *NavbarNavbar width
-	 */
+   *NavbarNavbar width
+   */
   width: PropTypes.number,
   /**
-	 *Navbar background
-	 */
+   *Navbar background
+   */
   bg: PropTypes.string,
   /**
-	 *Navbar title
-	 */
+   *Navbar title
+   */
   title: PropTypes.string,
   /**
-	 *Navbar names
-	 */
+   *Navbar names
+   */
   NavList: PropTypes.array,
 };
 

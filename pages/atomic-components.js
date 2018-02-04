@@ -19,7 +19,8 @@ const AtomicComponent = () => (<Layout>
       <h3>Button</h3>
       <Button>Click Here</Button>
       <pre>{`<Button>Click Here</Button>
-          `}</pre>
+          `}
+      </pre>
     </div>
   </ThemeProvider>
 </Layout>);

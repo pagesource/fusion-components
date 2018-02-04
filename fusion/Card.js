@@ -25,7 +25,9 @@ const cardContainer = css`
 
 const Card = ({ cardData }) => (<div className={cardContainer}>
   {!!cardData &&
-  cardData.map(({ image, heading, title, rating, description }, index) =>
+  cardData.map(({
+ image, heading, title, rating, description,
+}, index) =>
     (<Panel className={cardStyles} key={`key-${index}`}>
       <img src={image} alt={heading} />
       <h2 children={title} />
@@ -34,8 +36,7 @@ const Card = ({ cardData }) => (<div className={cardContainer}>
         {description}
       </p>
       <Button>Add to Cart</Button>
-    </Panel>),
-  )}
+    </Panel>))}
 </div>);
 
 Card.propTypes = {

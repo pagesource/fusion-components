@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'theming';
 
-const bannerStyle = css`
+const bannerStyle = ({ picUrl }) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,10 +12,10 @@ const bannerStyle = css`
   min-height: 80vh;
   background-size: cover;
   background-position: center;
-  background-image: url(${props => props.picUrl});
+  background-image: url(${picUrl});
 `;
 
-const Banner = ({ src, alt }) => (<img src={src} className={bannerStyle} alt={alt} />);
+const Banner = ({ src, alt, picUrl }) => (<img src={src} className={bannerStyle} alt={alt} />);
 
 /* Props Check */
 Banner.propTypes = {
@@ -23,6 +23,10 @@ Banner.propTypes = {
    * Image URL
    */
   picUrl: PropTypes.string,
+  /**
+   * alt text
+   */
+  alt: PropTypes.string,
 };
 
 /* Default Props */

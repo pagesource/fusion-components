@@ -1,11 +1,8 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import React from 'react';
 import { withTheme } from 'theming';
 
-const Panel = (props) => {
-  const { className, children } = props;
-  return <div className={className}>{children}</div>;
-};
+const Panel = ({ className, children }) => <div className={className}>{children}</div>;
 
 const styledPanel = styled(Panel)`
   border: thin solid #aaa;
