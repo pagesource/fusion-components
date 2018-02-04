@@ -1,12 +1,13 @@
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
-import React from 'react';
+import styled from "emotion/react";
+import PropTypes from "prop-types";
+import React from "react";
 
-const BackgroundImage = ({ src, size, position }) => styled('img')`
-  background-image: url('${src}');
-  background-size: ${size};
-  background-position: ${position};
+const BackgroundImage = styled("div")`
+  background-image: url('${props => props.src}');
+  background-size: ${props => props.size};
+  background-position: ${props => props.position};
   height: auto;
+  min-height:${props => props.minHeight}
 `;
 
 /* Props Check */
@@ -23,21 +24,25 @@ BackgroundImage.propTypes = {
    * Image Size
    */
   size: PropTypes.number,
+  minHeight: PropTypes.number,
   /**
    * Image position
    */
-  position: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  position: PropTypes.string
 };
 
 /* Deafult Props */
 BackgroundImage.defaultProps = {
-  src: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
+  src:
+    "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20",
+  minHeight: 400
 };
-
-const BgImage = ({ children, ...props }) => (<BackgroundImage {...props}>{children}</BackgroundImage>);
-
-export default BgImage;
+MyBackground.propTypes = {
+  children: PropTypes.element
+};
+MyBackground.defaultProps = {
+  children: ""
+};
+export default function MyBackground({ children, ...props }) {
+  return <BackgroundImage {...props}>{children}</BackgroundImage>;
+}

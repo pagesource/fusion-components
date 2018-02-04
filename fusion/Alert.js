@@ -1,7 +1,7 @@
-import { css } from 'emotion';
-import React from 'react';
-import { withTheme } from 'theming';
-import PropTypes from 'prop-types';
+import { css } from "emotion";
+import React from "react";
+import { withTheme } from "theming";
+import PropTypes from "prop-types";
 
 const alertStyle = css`
   background: #ccc;
@@ -10,16 +10,10 @@ const alertStyle = css`
 `;
 
 const Alert = ({ children }) => <div className={alertStyle}> {children} </div>;
-
 Alert.propTypes = {
-  /**
-   * Type of Alert
-   */
-  type: PropTypes.oneOf(['warning', 'info', 'error', 'success']),
-  children: PropTypes.element,
+  children: PropTypes.element
 };
 Alert.defaultProps = {
-  type: 'error',
-  children: 'Success is not this!',
+  children: PropTypes.element
 };
 export default withTheme(Alert);

@@ -1,4 +1,4 @@
-import { extractCritical } from 'emotion-server';
+import { extractCritical } from 'emotion/server';
 import Document, { Head, Main, NextScript } from 'next/document';
 import React from 'react';
 
