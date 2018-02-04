@@ -4,8 +4,8 @@
 //---------------------------
  */
 
-import PropTypes from 'prop-types';
-import React from 'react';
+import PropTypes from "prop-types";
+import React from "react";
 // import skeleton from './skeleton'
 // import './Rating.css';
 
@@ -17,27 +17,27 @@ const Rating = ({
   value, onClick, primaryStarColor, secondaryStarColor,
 }) => {
   // const stars = Array.from({ length: 5 }, (a, b) => b);
-  const rating = (value / 5) * 100;
+  const rating = value / 5 * 100;
   const sx = {
     root: {
-      display: 'inline-block',
-      position: 'relative',
-      fontSize: '20px',
+      display: "inline-block",
+      position: "relative",
+      fontSize: "20px"
     },
     primaryStar: {
-      position: 'absolute',
-      top: '0',
-      left: '0',
-      overflow: 'hidden',
+      position: "absolute",
+      top: "0",
+      left: "0",
+      overflow: "hidden",
       width: `${rating}%`,
-      fontSize: 'inherit',
+      fontSize: "inherit",
       color: primaryStarColor,
-      backgroundColor: 'transparent',
-      cursor: onClick ? 'pointer' : null,
+      backgroundColor: "transparent",
+      cursor: onClick ? "pointer" : null
     },
     secondaryStar: {
-      color: secondaryStarColor,
-    },
+      color: secondaryStarColor
+    }
   };
 
   const handleClick = i => () => {
@@ -47,16 +47,23 @@ const Rating = ({
   };
 
   return (
-    <div role="link" tabIndex="0" className="rating" style={sx.root} onClick={handleClick()} >
-      <div style={sx.primaryStar} >★★★★★</div>
-      <div style={sx.secondaryStar} >☆☆☆☆☆</div>
+    <div
+      role="link"
+      tabIndex="0"
+      className="rating"
+      style={sx.root}
+      onClick={handleClick()}
+    >
+      <div style={sx.primaryStar}>★★★★★</div>
+      <div style={sx.secondaryStar}>☆☆☆☆☆</div>
     </div>
   );
 };
 
 Rating.defaultProps = {
-  primaryStarColor: '#f4ce42',
-  secondaryStarColor: '#6a6a6a',
+  primaryStarColor: "#f4ce42",
+  secondaryStarColor: "#6a6a6a",
+  onClick: () => {}
 };
 
 Rating.propTypes = {
@@ -67,7 +74,7 @@ Rating.propTypes = {
   /** Main Star Color */
   primaryStarColor: PropTypes.string,
   /** Secondary Star Color */
-  secondaryStarColor: PropTypes.string,
+  secondaryStarColor: PropTypes.string
 };
 
 export default Rating;

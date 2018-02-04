@@ -27,6 +27,10 @@ BackgroundImage.propTypes = {
    * Image position
    */
   position: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };
 
 /* Deafult Props */
@@ -34,6 +38,6 @@ BackgroundImage.defaultProps = {
   src: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
 };
 
-export default function Img({ children, ...props }) {
-  return <BackgroundImage {...props}>{children}</BackgroundImage>;
-}
+const BgImage = ({ children, ...props }) => (<BackgroundImage {...props}>{children}</BackgroundImage>);
+
+export default BgImage;

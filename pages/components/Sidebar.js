@@ -31,44 +31,46 @@ const navStyle = css`
   }
 `;
 
-const SideBar = () => (<nav className={navStyle}>
-  <ul>
-    <li>
-      <Link href="/kitchen-sink">
-        <a style={linkStyle}>Kitchen Sink</a>
-      </Link>
-    </li>
-    <li>
-      <Link href="/atomic-components">
-        <a style={linkStyle}>Atomic</a>
-      </Link>
-    </li>
-    <li>
-      <Link href="/content-components">
-        <a style={linkStyle}>Content</a>
-      </Link>
-    </li>
-    <li>
-      <Link href="/loader-components">
-        <a style={linkStyle}>Progress & Activity</a>
-      </Link>
-    </li>
-    <li>
-      <Link href="/navigation-components">
-        <a style={linkStyle}>Navigation</a>
-      </Link>
-    </li>
-    <li>
-      <Link href="/chart-components">
-        <a style={linkStyle}>Charting</a>
-      </Link>
-    </li>
-    <li>
-      <Link href="/coming-soon">
-        <a style={linkStyle}>Form Elements</a>
-      </Link>
-    </li>
-  </ul>
-</nav>);
+const SideBar = () => (
+  <nav className={navStyle}>
+    <ul>
+      <li>
+        <Link href="/kitchen-sink">
+          <a style={linkStyle}>Kitchen Sink</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/atomic-components">
+          <a style={linkStyle}>Atomic</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/content-components">
+          <a style={linkStyle}>Content</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/loader-components">
+          <a style={linkStyle}>Progress & Activity</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/navigation-components">
+          <a style={linkStyle}>Navigation</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/chart-components">
+          <a style={linkStyle}>Charting</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/coming-soon">
+          <a style={linkStyle}>Form Elements</a>
+        </Link>
+      </li>
+    </ul>
+  </nav>
+);
 
 export default SideBar;

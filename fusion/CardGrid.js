@@ -6,10 +6,9 @@ import { withTheme } from 'theming';
 import Card from './Card';
 
 const cardGrid = css`
-
   display: flex;
-  flex-direction:row;
-  width:100%;
+  flex-direction: row;
+  width: 100%;
 `;
 const cardData = [
   {
@@ -36,9 +35,11 @@ const cardData = [
   },
 ];
 
-const CardGrid = () => (<div className={cardGrid}>
-  <Card cardData={cardData} />
-</div>);
+const CardGrid = () => (
+  <div className={cardGrid}>
+    <Card cardData={cardData} />
+  </div>
+);
 
 Card.propTypes = {
   /**
