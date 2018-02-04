@@ -1,3 +1,4 @@
+import React from 'react';
 import { css } from 'emotion';
 
 const rowStyle = css`
@@ -6,6 +7,6 @@ const rowStyle = css`
   color: #fff;
 `;
 
-const Row = () => (<div className={rowStyle} />);
+const Row = () => <div className={rowStyle} />;
 
 export default Row;

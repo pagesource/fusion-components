@@ -3,23 +3,23 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 const status = css`
-    width : 90%;
-    position:fixed;
-    top: 10px;
-    left: 5%;
-    right: 5%;
-    z-index : 1000;
-    padding: 15px;
-    border-radius: 10px;
-    background-color: #ff8707;
-    text-align : center;
+  width: 90%;
+  position: fixed;
+  top: 10px;
+  left: 5%;
+  right: 5%;
+  z-index: 1000;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ff8707;
+  text-align: center;
 `;
 const hide = css`
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -ms-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
-   opacity: 0;
+  opacity: 0;
 `;
 
 class StatusMessage extends PureComponent {
@@ -41,7 +41,7 @@ class StatusMessage extends PureComponent {
   }
 
   render() {
-    return (<div className={`${status} ${this.state.hide}`}>{this.state.message}</div>);
+    return <div className={`${status} ${this.state.hide}`}>{this.state.message}</div>;
   }
 }
 

@@ -17,14 +17,14 @@ const TooltipBtn = css`
 
 `;
 const HiddenDiv = styled.span`
-    background: aliceblue;
-    position: relative;
-    left: 60%;
-    color: blue;
-    bottom: 51px;
-    width: 132px;
-    border-radius: 3px;
-    height: 19px;
+  background: aliceblue;
+  position: relative;
+  left: 60%;
+  color: blue;
+  bottom: 51px;
+  width: 132px;
+  border-radius: 3px;
+  height: 19px;
 `;
 
 class Tooltip extends React.PureComponent {
@@ -44,20 +44,20 @@ class Tooltip extends React.PureComponent {
   }
 
   render() {
-    return (<div
-      className={TooltipBtn}
-      onMouseEnter={() => this.onMouseEnter()}
-      onMouseOut={() => this.onMouseOut()}
-    >
-    Hoverover me!
-      {
-        this.state.open
-          ? <HiddenDiv>
+    return (
+      <div
+        className={TooltipBtn}
+        onMouseEnter={() => this.onMouseEnter()}
+        onMouseOut={() => this.onMouseOut()}
+      >
+        Hoverover me!
+        {this.state.open ? (
+          <HiddenDiv>
             <p>{this.props.text}</p>
           </HiddenDiv>
-          : null
-      }
-    </div>);
+        ) : null}
+      </div>
+    );
   }
 }
 

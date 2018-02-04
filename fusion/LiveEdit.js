@@ -1,17 +1,17 @@
-import { css } from 'emotion';
-import styled from 'emotion/react';
-import React from 'react';
+import { css } from "emotion";
+import styled from "emotion/react";
+import React from "react";
+import PropTypes from "prop-types";
+import { LiveEditor, LivePreview, LiveProvider } from "react-live";
 
-import { LiveEditor, LivePreview, LiveProvider } from 'react-live';
-
-const StyledProvider = styled(LiveProvider) `
+const StyledProvider = styled(LiveProvider)`
   border-radius: 3px;
   box-shadow: 1px 1px 20px rgba(20, 20, 20, 0.27);
   overflow: hidden;
   margin-bottom: 100px;
 `;
 
-const LiveWrapper = styled('div') `
+const LiveWrapper = styled("div")`
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -32,31 +32,40 @@ const column = css`
   }
 `;
 
-const StyledEditor = styled(LiveEditor) `
+const StyledEditor = styled(LiveEditor)`
   background: #999;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   font-size: 14px;
   height: 350px;
   overflow: scroll;
-  ${column}
+  ${column};
 `;
 
-const StyledPreview = styled(LivePreview) `
+const StyledPreview = styled(LivePreview)`
   position: relative;
   padding: 0.5rem;
   background: white;
   color: black;
   height: auto;
   overflow: hidden;
-  ${column}
+  ${column};
 `;
 
-const LiveEdit = ({ noInline, code }) =>
-  (<StyledProvider code={code} noInline={noInline} mountStylesheet={false}>
+const LiveEdit = ({ noInline, code }) => (
+  <StyledProvider code={code} noInline={noInline} mountStylesheet={false}>
     <LiveWrapper>
       <StyledEditor />
       <StyledPreview />
     </LiveWrapper>
-  </StyledProvider>);
+  </StyledProvider>
+);
+LiveEdit.propTypes = {
+  noInline: PropTypes.string,
+  code: PropTypes.string
+};
+LiveEdit.defaultProps = {
+  noInline: PropTypes.string,
+  code: PropTypes.string
+};
 
 export default LiveEdit;

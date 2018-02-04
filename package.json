@@ -11,12 +11,13 @@
     "isomorphic-unfetch": "^2.0.0",
     "next": "^3.0.6",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "react": "^15.6.2",
     "react-chartjs-2": "^2.6.1",
     "react-doc-generator": "^1.2.5",
-    "react-dom": "^15.6.1",
+    "react-dom": "^15.6.2",
     "rimraf": "^2.6.1",
-    "theming": "^1.1.0"
+    "theming": "^1.1.0",
+    "react-live": "^1.7.0"
   },
   "devDependencies": {
     "eslint": "^4.5.0",
@@ -24,7 +25,10 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.1.0",
-    "react-live": "^1.7.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.1",
+    "prettier": "1.10.2",
+    "prettier-eslint-cli": "^4.7.0",    
     "react-styleguidist": "^6.0.33",
     "theming": "^1.1.0",
     "webpack": "^3.8.1"
@@ -34,14 +38,21 @@
     "build": "next build",
     "prestart": "npm run clean && npm run build",
     "start": "next start",
-    "heroku-start": "npm run clean && npm run build && next start -p $PORT",
+    "heroku-next-start": "next start -p $PORT",
+    "heroku-start": "npm run clean && npm run build && npm run heroku-next-start",
     "clean": "rimraf .next",
-    "lint": "eslint pages fusion",
-    "pre-commit": "npm run lint",
+    "lint": "eslint pages fusion lib theme",
     "test": "npm run lint",
     "heroku-postbuild": "npm run build",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "precommit": "lint-staged",
+    "prettier":
+      "./node_modules/.bin/prettier  --single-quote --trailing-comma es5 --write '{lib,fusion,pages,theme}/**/*.js'",
+    "format": "prettier-eslint --write '{lib,fusion,pages,theme}/**/*.js'"
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,md}": ["npm run lint","npm run prettier", "npm run format", "git add"]
   },
   "repository": {
     "type": "git",
@@ -52,5 +63,8 @@
   "bugs": {
     "url": "https://github.com/pagesource/fusion/issues"
   },
-  "homepage": "https://sape-fusion.herokuapp.com/"
+  "homepage": "https://sape-fusion.herokuapp.com/",
+  "engines": {
+    "node": "8.9.3"
+  }
 }

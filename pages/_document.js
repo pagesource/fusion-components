@@ -18,15 +18,17 @@ export default class MyDocument extends Document {
   }
 
   render() {
-    return (<html lang="en">
-      <Head>
-        <title>Fusion Component Library</title>
-        <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
-      </Head>
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </html>);
+    return (
+      <html lang="en">
+        <Head>
+          <title>Fusion Component Library</title>
+          <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    );
   }
 }
