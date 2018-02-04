@@ -1,5 +1,5 @@
-import React from 'react';
-import { ThemeProvider } from 'theming';
+import React from "react";
+import { ThemeProvider } from "theming";
 import {
   Alert,
   Avatar,
@@ -11,6 +11,7 @@ import {
   Button,
   CardGrid,
   CountDownTimer,
+  YTEmbed,
   Dialog,
   Doughnut,
   Dropdown,
@@ -36,20 +37,22 @@ import {
   Tooltip,
   Truncate,
   Typing,
-  Tabs,
-} from '../';
-import Layout from './components/Layout';
+  Tabs
+} from "../";
+import Layout from "./components/Layout";
 
-const KitchenSink = () =>
-  (<Layout>
+const KitchenSink = () => (
+  <Layout>
     <ThemeProvider theme={theme}>
       <div>
+        <h2>Embed Youtube, Pass video id, width and height</h2>
+        <YTEmbed id="PCMXQonN0gM" width={560} height={320} />
         <h2>Toggle Button</h2>
         <ToggleButton />
         <Row />
         <hr />
         <h2>Status Message</h2>
-        <StatusMessage time={5000} message={'This is a status message'} />
+        <StatusMessage time={5000} message={"This is a status message"} />
         <Row />
         <hr />
         <h2>Horizontal bar Chart</h2>
@@ -131,7 +134,7 @@ const KitchenSink = () =>
 
         <h2>Select Rating</h2>
         <SelectRating value={0} />
-         <Row />
+        <Row />
         <hr />
         <h2>Panel</h2>
         <div>
@@ -157,9 +160,9 @@ const KitchenSink = () =>
         <h2>Blockquote</h2>
         <div>
           <BlockQuote>
-			Blockquote tag specifies a section that is quoted from another
-			source.
-		  </BlockQuote>
+            Blockquote tag specifies a section that is quoted from another
+            source.
+          </BlockQuote>
         </div>
         <Row />
         <hr />
@@ -173,7 +176,7 @@ const KitchenSink = () =>
 
         <h2>Truncate</h2>
         <Truncate>
-		  SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
+          SomelongdataSomelongdataSomeataSomelongdataSomelongdataSomelongdataSomelongdata
         </Truncate>
         <Row />
         <hr />
@@ -190,7 +193,6 @@ const KitchenSink = () =>
           src="http://www.ipuntotv.com/IMAGES/Pelota.png"
           text=" "
           width={60}
-
         />
         <Row />
         <hr />
@@ -234,7 +236,10 @@ const KitchenSink = () =>
         <hr />
 
         <h3>Avatar</h3>
-        <Avatar src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg" alt="Avatar Image" />
+        <Avatar
+          src="http://www.spaceandmotion.com/Images/albert-einstein-theory-general-relativity.jpg"
+          alt="Avatar Image"
+        />
         <hr />
 
         <h2>Alert </h2>
@@ -244,9 +249,7 @@ const KitchenSink = () =>
 
         <h2>BackgroundImage</h2>
         <div>
-          <BackgroundImage
-            width={400}
-          />
+          <BackgroundImage width={400} />
         </div>
         <Row />
         <hr />
@@ -257,12 +260,12 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Tabs</h2>
-        <Tabs onClick={(selected)=>console.log(selected)}/>
+        <Tabs onClick={() => {}} />
         <Row />
         <hr />
-
       </div>
     </ThemeProvider>
-  </Layout>);
+  </Layout>
+);
 
 export default KitchenSink;

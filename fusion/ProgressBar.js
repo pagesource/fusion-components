@@ -23,12 +23,14 @@ const ProgressBar = styled('div')`
   transition-property: width, background-color;
 `;
 
-const Progress = ({ value }) => (<Container>
-  {value}%
-  <ProgressBlock>
-    <ProgressBar value={value} />
-  </ProgressBlock>
-</Container>);
+const Progress = ({ value }) => (
+  <Container>
+    {value}%
+    <ProgressBlock>
+      <ProgressBar value={value} />
+    </ProgressBlock>
+  </Container>
+);
 
 /* Props Check */
 Progress.propTypes = {

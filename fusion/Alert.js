@@ -1,26 +1,19 @@
-import { css } from 'emotion';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { withTheme } from 'theming';
+import { css } from "emotion";
+import React from "react";
+import { withTheme } from "theming";
+import PropTypes from "prop-types";
 
 const alertStyle = css`
-background:#ccc;
-box-shadow:0 0 3px #aaa;
-padding:5px;`;
+  background: #ccc;
+  box-shadow: 0 0 3px #aaa;
+  padding: 5px;
+`;
 
-const Alert = ({ children }) => (<div className={alertStyle}> {children} </div>);
-
-/* Props Check */
+const Alert = ({ children }) => <div className={alertStyle}> {children} </div>;
 Alert.propTypes = {
-  /**
-   * Type of Alert
-   */
-  type: PropTypes.oneOf(['warning', 'info', 'error', 'success']),
+  children: PropTypes.element
 };
-
-/* Deafult Props */
 Alert.defaultProps = {
-  type: 'success',
+  children: PropTypes.element
 };
-
 export default withTheme(Alert);
