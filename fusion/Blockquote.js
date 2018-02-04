@@ -1,10 +1,11 @@
-import styled from "emotion/react";
-import PropTypes from "prop-types";
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const BlockQuote = styled.blockquote`
+const BlockQuote = ({ align }) => styled('blockquote')`
   color: indigo;
   font-size: 20px;
-  text-align: ${props => props.align};
+  text-align: ${align}
 `;
 
 /* Props Check */
@@ -12,12 +13,12 @@ BlockQuote.propTypes = {
   /**
    * Text Align
    */
-  align: PropTypes.string
+  align: PropTypes.string,
 };
 
 /* Deafult Props */
 BlockQuote.defaultProps = {
-  aling: "left"
+  aling: 'left',
 };
 
 export default BlockQuote;

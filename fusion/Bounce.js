@@ -1,8 +1,9 @@
-import { keyframes } from "emotion";
-import styled from "emotion/react";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
+import { keyframes } from 'emotion';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
+import { theme } from '../theme/index';
 
 const bounce = keyframes`
   from, 20%, 53%, 80%, to {
@@ -22,25 +23,25 @@ const bounce = keyframes`
   }
 `;
 
-const BounceIt = styled("div")`
-  width: 96px;
-  position: relative;
-  color: #;
-  top: 29px;
-  font-weight: bold;
-  text-transform: uppercase;
-  height: 96px;
-  border-radius: 50%;
-  animation: ${bounce} 1s ease infinite;
-  transform-origin: center bottom;
+const BounceIt = styled('div')`
+    width: 96px;
+    position: relative;
+    color: #;
+    top: 29px;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 96px;
+    border-radius: 50%;
+    animation: ${bounce} 1s ease infinite;
+    transform-origin: center bottom;
 `;
 
-const Bounce = ({ fontSize, text, src, width, color, alt }) => (
-  <BounceIt>
-    <span style={{ color: `${color}`, fontSize: `${fontSize}px` }}>{text}</span>
-    <img src={src} width={width} alt={alt} />
-  </BounceIt>
-);
+const Bounce = ({
+  fontSize, text, src, width, color, alt,
+}) => (<BounceIt>
+  <span style={{ color: `${color}`, fontSize: `${fontSize}px` }}>{text}</span>
+  <img src={src} width={width} alt={alt} />
+       </BounceIt>);
 
 /* Props Check */
 Bounce.propTypes = {
@@ -65,18 +66,16 @@ Bounce.propTypes = {
    */
   fontSize: PropTypes.number,
 
-  alt: PropTypes.string
 };
 
 /* Deafult Props */
 Bounce.defaultProps = {
-  src:
-    "https://upload.wikimedia.org/wikipedia/commons/5/5a/Basketball_ball.svg",
+  src: 'https://upload.wikimedia.org/wikipedia/commons/5/5a/Basketball_ball.svg',
   width: 40,
-  text: "Boucing text",
-  color: "#ASD",
+  text: 'Boucing text',
+  color: '#ASD',
   fontSize: 20,
-  alt: "Bouncing Image"
+  alt: 'Bouncing Image',
 };
 
 export default withTheme(Bounce);

@@ -1,38 +1,31 @@
-import classnames from "classnames";
-import PropTypes from "prop-types";
-import React from "react";
+import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const Navigation = ({ theme, links, align, type }) => (
+const Navigation = ({
+  theme, links, align, type,
+}) => (
   <div
-    className={classnames(
-      "navigation",
-      `${type}-navigation`,
-      `acss-theme-${theme}`,
-      `align-${align}`,
-      "acss-background-secondary"
-    )}
+    className={classnames('navigation', `${type}-navigation`, `acss-theme-${theme}`, `align-${align}`, 'acss-background-secondary')}
   >
     <ul>
-      {links &&
-        links.map(link => (
-          <li key={`key-${link.index}`}>
-            <a
-              href={link.url}
-              className={classnames("nav-links", `acss-theme-${theme}`)}
-            >
-              {link.title}
-            </a>
-          </li>
-        ))}
+      {links && links.map(link => (
+        <li key={`key-${link.index}`}>
+          <a
+            href={link.url}
+            className={classnames('nav-links', `acss-theme-${theme}`)}
+          >
+            {link.title}
+          </a>
+        </li>))}
     </ul>
-  </div>
-);
+  </div>);
 
 Navigation.propTypes = {
   /**
    * Theme
    */
-  theme: PropTypes.oneOf(["light", "dark"]),
+  theme: PropTypes.oneOf(['light', 'dark']),
   /**
    * Links
    */
@@ -40,15 +33,12 @@ Navigation.propTypes = {
   /**
    * Nav Links Alignment
    */
-  align: PropTypes.oneOf(["left", "right"]),
-  type: PropTypes.string
+  align: PropTypes.oneOf(['left', 'right']),
 };
 
 Navigation.defaultProps = {
-  align: "left",
-  theme: "light",
-  links: [],
-  type: ""
+  align: 'left',
+  theme: 'light',
 };
 
 export default Navigation;

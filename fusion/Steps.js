@@ -1,10 +1,12 @@
-import { css } from "emotion";
-import styled from "emotion/react";
-import PropTypes from "prop-types";
-import React from "react";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { css } from 'emotion';
+import styled from 'react-emotion';
 
-const StepDiv = styled.div``;
-const Step = styled.div`
+const StepDiv = styled('div')`
+`;
+
+const Step = styled('div')`
   display: inline-block;
   width: 180px;
   margin: 5px;
@@ -12,14 +14,15 @@ const Step = styled.div`
   /* border-radius: 3px; */
   background: aliceblue;
 `;
-const StepContent = styled.div``;
-const StepTitle = styled.span`
+const StepContent = styled('div')`
+`;
+const StepTitle = styled('span')`
   font-size: 16px;
   font-weight: bold;
   position: relative;
   bottom: 10px;
 `;
-const StepDescr = styled.div`
+const StepDesc = styled('div')`
   font-size: 16px;
 `;
 const secDiv = css`
@@ -32,50 +35,29 @@ const rightArrow = css`
   top: -5px;
   left: 15px;
 `;
+
 const Steps = ({ steps }) => (
   <StepDiv>
-    {!!steps &&
-      steps.map(step => (
-        <Step key={step.icon}>
-          <StepContent>
-            <div>
-              <img src={step.icon} alt={step.heading} width="30px" />
-              <StepTitle>{step.title}</StepTitle>
-              <span className={rightArrow}>&#10145;</span>
-            </div>
-
-            <div className={secDiv}>
-              <StepDescr>{step.description}</StepDescr>
-            </div>
-          </StepContent>
-        </Step>
-      ))}
-  </StepDiv>
-);
+    {!!steps && steps.map((step, index) => (
+      <Step key={`step${index}`}>
+        <StepContent>
+          <div><img src={step.icon} alt={step.heading} width="30px" />
+            <StepTitle>{step.title}</StepTitle>
+            <span className={rightArrow}>&#10145;</span>
+          </div>
+          <div className={secDiv}>
+            <StepDesc>{step.description}</StepDesc>
+          </div>
+        </StepContent>
+      </Step>))}
+  </StepDiv>);
 
 /* Props Check */
 Steps.propTypes = {
   /**
    *Steps array
    */
-  steps: PropTypes.arrayOf(
-    PropTypes.shape({
-      icon: PropTypes.String,
-      heading: PropTypes.String,
-      title: PropTypes.String,
-      description: PropTypes.String
-    })
-  )
-};
-Steps.defaultProps = {
-  steps: [
-    {
-      icon: "Icon",
-      heading: "heading",
-      title: "title",
-      description: "description"
-    }
-  ]
+  steps: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 export default Steps;

@@ -13,7 +13,9 @@ import React from "react";
  * Star rating Molecule with click-able buttons
  */
 
-const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
+const Rating = ({
+  value, onClick, primaryStarColor, secondaryStarColor,
+}) => {
   // const stars = Array.from({ length: 5 }, (a, b) => b);
   const rating = value / 5 * 100;
   const sx = {

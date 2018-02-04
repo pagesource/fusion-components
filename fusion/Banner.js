@@ -1,35 +1,38 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
 
-const bannerStyle = css`
+const bannerStyle = ({ picUrl }) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width:100%;
   min-height: 80vh;
   background-size: cover;
   background-position: center;
-  background-image: url(${props => props.picUrl});
+  background-image: url(${picUrl});
 `;
 
-const Banner = ({ src, alt }) => (
-  <img src={src} className={bannerStyle} alt={alt} />
-);
+const Banner = ({ src, alt, picUrl }) => (<img src={src} className={bannerStyle} alt={alt} />);
 
 /* Props Check */
 Banner.propTypes = {
-  src: PropTypes.string,
-  alt: PropTypes.string
+  /**
+   * Image URL
+   */
+  picUrl: PropTypes.string,
+  /**
+   * alt text
+   */
+  alt: PropTypes.string,
 };
 
 /* Default Props */
 Banner.defaultProps = {
-  src:
-    "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20",
-  alt: "Banner"
+  picUrl: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
+  alt: 'Banner',
 };
 
 export default withTheme(Banner);

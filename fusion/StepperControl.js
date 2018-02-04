@@ -1,55 +1,58 @@
-import { css } from "emotion";
-import styled from "emotion/react";
-import React from "react";
-import Button from "./Button";
+import { css } from 'emotion';
+import styled from 'react-emotion';
+import React from 'react';
+import { theme } from '../theme';
+import Button from './Button';
 
 const styles = {
   root: {
-    width: "100%",
+    width: '100%',
     maxWidth: 700,
-    margin: "40px"
+    margin: '40px',
   },
   content: {
-    margin: "0 16px"
+    margin: '0 16px',
   },
   actions: {
-    marginTop: 12
+    marginTop: 12,
   },
   backButton: {
-    marginRight: 12
-  }
+    marginRight: 12,
+  },
 };
 
-const Step = styled.div`
+const Step = styled('div')`
   display: inline-block;
   margin: 10px 20px;
 `;
-const Stepper = styled.div``;
-const StepButton = styled.div`
-  width: 160px;
-  border-radius: 7px;
-  height: 50px;
-  text-align: center;
-  background: skyblue;
-  &:hover {
+const Stepper = styled('div')`
+
+`;
+const StepButton = styled('div')`
+    width: 160px;
+    border-radius: 7px;
+    height: 50px;
+    text-align: center;
+    background: skyblue;
+  &:hover{
     background: Aquamarine;
   }
 `;
 const rightArrow = css`
-  font-size: 24px;
-  position: relative;
-  padding: 0px 5px;
-  top: 17px;
-  left: -4px;
+    font-size: 24px;
+    position: relative;
+    padding: 0px 5px;
+    top: 17px;
+    left: -4px;
 `;
 const stepName = css`
-  position: relative;
-  top: 15px;
+    position: relative;
+    top: 15px;
 `;
 const container = css`
-  width: 100%;
-  background: aliceblue;
-  height: auto;
+    width: 100%;
+    background: aliceblue;
+    height: auto;
 `;
 
 class ControlStepper extends React.PureComponent {
@@ -57,7 +60,7 @@ class ControlStepper extends React.PureComponent {
     super();
     this.state = {
       stepIndex: null,
-      visited: []
+      visited: [],
     };
     this.handleNext = this.handleNext.bind(this);
     this.handlePrev = this.handlePrev.bind(this);
@@ -80,13 +83,13 @@ class ControlStepper extends React.PureComponent {
   getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return "First step content......";
+        return 'First step content......';
       case 1:
-        return "Second step content......";
+        return 'Second step content......';
       case 2:
-        return "Third step content......";
+        return 'Third step content......';
       default:
-        return "Click a step to get started.";
+        return 'Click a step to get started.';
     }
   }
   handleNext() {
@@ -109,15 +112,14 @@ class ControlStepper extends React.PureComponent {
       <div style={styles.root}>
         <p>
           <a
-            href="no-action"
-            onClick={event => {
+            href="#"
+            onClick={(event) => {
               event.preventDefault();
               this.setState({ stepIndex: null, visited: [] });
             }}
           >
             Click here
-          </a>{" "}
-          to reset the example.
+          </a> to reset the example.
         </p>
         <Stepper linear={false}>
           <Step completed={visited.indexOf(0) !== -1} active={stepIndex === 0}>
@@ -139,24 +141,13 @@ class ControlStepper extends React.PureComponent {
           </Step>
         </Stepper>
         <div style={styles.content}>
-          <p className={container}>{this.getStepContent(stepIndex)}</p>
-          {stepIndex !== null && (
+          <p className={container}>{ this.getStepContent(stepIndex) }</p>
+          { stepIndex !== null && (
             <div style={styles.actions}>
-              <Button
-                disabled={stepIndex === 0}
-                onClick={this.handlePrev}
-                style={styles.backButton}
-              >
-                Prev
-              </Button>
-              <Button
-                style={{ "margin-left": "30px" }}
-                onClick={this.handleNext}
-              >
-                Next
-              </Button>
+              <Button disabled={stepIndex === 0} onClick={this.handlePrev} style={styles.backButton}>Prev</Button>
+              <Button style="margin-left: 30px" onClick={this.handleNext}>Next</Button>
             </div>
-          )}
+          ) }
         </div>
       </div>
     );

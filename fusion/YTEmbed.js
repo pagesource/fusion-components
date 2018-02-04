@@ -1,7 +1,9 @@
-import PropTypes from "prop-types";
-import React from "react";
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const YTEmbed = ({ id, width, height, title = "" }) => (
+const YTEmbed = ({
+  id = 'PCMXQonN0gM', width, height, title,
+}) => (
   <iframe
     title={title}
     width={width}
@@ -17,14 +19,13 @@ YTEmbed.propTypes = {
   id: PropTypes.string.isRequired,
   width: PropTypes.number,
   height: PropTypes.number,
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 YTEmbed.defaultProps = {
-  id: "PCMXQonN0gM",
+  title: 'you tube vids',
   width: 560,
   height: 315,
-  title: "I frame title"
 };
 
 export default YTEmbed;

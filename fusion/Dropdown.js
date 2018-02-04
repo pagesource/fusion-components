@@ -1,23 +1,25 @@
-import { css } from "emotion";
-import styled from "emotion/react";
-import PropTypes from "prop-types";
-import React, { PureComponent } from "react";
+import { css } from 'emotion';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 
-const DropdownDiv = styled.div`
-  //width: ${props => props.width};
+const DropdownDiv = props => styled('div')`
+  //width: ${props.width};
   width: 200px;
   height: auto;
   background: grey;
-  // background: ${props => props.bg};
+  // background: ${props.bg};
   z-index: 1;
   text-align: center;
   font-size: 24px;
 `;
-const container = css``;
-const dropdownMenu = css`
+const container = css`
+`;
+
+const dropdownMenu = props => css`
   width: 200px;
   content: "";
-  width: ${props => props.width}px;
+  width: ${props.width}px;
   height: 40px;
   background: grey;
   border-radius: 3px;
@@ -25,28 +27,31 @@ const dropdownMenu = css`
   text-align: center;
   font-size: 24px;
 `;
-const dropdownList = css`
-  width: 200px;
-  width: ${props => props.width}px;
-  list-style-type: none !important;
-  margin: 0;
-  padding-left: 0;
-  cursor: pointer;
+
+const dropdownList = props => css`
+ width: 200px;
+ width: ${props.width}px;
+ list-style-type: none !important;
+ margin: 0;
+ padding-left: 0;
+ cursor: pointer;
 `;
-const lists = css`
-  width: ${props => props.width}px;
+const lists = props => css`
+  width: ${props.width}px;
   padding: 3px;
   border-radius: 3px;
-  &:hover {
-    background: silver;
+  &:hover{
+    background: silver
   }
 `;
+
 const links = css`
   text-decoration: none;
   font-size: 18px;
 `;
+
 const dropIcon = css`
-  &:before {
+  &:before{
     content: &#9650;
   }
   &:after {
@@ -60,83 +65,89 @@ const dropIcon = css`
     width: 10%;
     height: 100%;
     pointer-events: none;
-  }
+}
 `;
 
 class Dropdown extends PureComponent {
   constructor() {
     super();
     this.state = {
-      open: false
+      open: false,
     };
-    this.onClick = this.onClick.bind(this);
-  }
-
-  onClick() {
-    this.setState({ open: !this.state.open });
   }
 
   render() {
     const { ListItems } = this.props;
 
     return (
-      <div>
-        <div
-          tabIndex={0}
-          role="button"
-          className={dropdownMenu}
-          onClick={this.onClick}
-        >
+      <section>
+        <div className={dropdownMenu} onClick={() => this.onClick()} role="listbox">
           <span className={dropIcon}>Dropdown List</span>
         </div>
-        {this.state.open ? (
+        {this.state.open ?
           <DropdownDiv>
             <div className={container}>
               <ul className={dropdownList}>
-                {ListItems.map(({ link, option }, j) => (
-                  <li key={j.toSting()} className={lists}>
-                    <a className={links} href={link}>
-                      {option}
-                    </a>
-                  </li>
-                ))}
+                {ListItems.map(({ link, option }, j) => (<li className={lists}>
+                  <a className={links} href={link}>{option}</a>
+                </li>))}
               </ul>
             </div>
           </DropdownDiv>
-        ) : null}
-      </div>
-    );
+          : null}
+      </section>);
+  }
+
+  onClick() {
+    this.setState({ open: !this.state.open });
   }
 }
 
 /* Props Check */
 Dropdown.propTypes = {
   /**
+   *Dropdown width
+   */
+  width: PropTypes.number,
+  /**
+   *Dropdown background
+   */
+  bg: PropTypes.string,
+  /**
+   *Dropdown title
+   */
+  title: PropTypes.string,
+  /**
+   *Dropdown display status
+   */
+  open: PropTypes.string,
+  /**
    *Dropdown list items
    */
-  ListItems: PropTypes.arrayOf(PropTypes.shape({}))
+  ListItems: PropTypes.array,
+
 };
 
 /* Deafult Props */
 Dropdown.defaultProps = {
   width: 200,
-  bg: "white",
-  title: "Dropdown Name",
-  header: "Header",
+  bg: 'white',
+  title: 'Dropdown Name',
+  header: 'Header',
   ListItems: [
     {
-      option: "Option 1",
-      link: "//www.google.com"
+      option: 'Option 1',
+      link: '//www.google.com',
     },
     {
-      option: "Option 2",
-      link: "//www.facebook.com"
+      option: 'Option 2',
+      link: '//www.facebook.com',
     },
     {
-      option: "Option 3",
-      link: "//www.twitter.com"
-    }
-  ]
+      option: 'Option 3',
+      link: '//www.twitter.com',
+    },
+  ],
 };
 
 export default Dropdown;

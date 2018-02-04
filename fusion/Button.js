@@ -1,13 +1,14 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
+import theme from '../theme';
 
 const buttonStyle = css`
-  background-color: ${props => props.theme.buttonColor};
-  color: ${props => props.theme.buttonTextColor};
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
+  background-color:${theme.buttonColor}; 
+  color:${theme.buttonTextColor};
+  border-radius:5px;
+  padding:0.5rem 1rem;
   font-size: 1rem;
   border: none;
   cursor: pointer;
@@ -17,12 +18,11 @@ const Button = ({ children, onClick, disabled }) => (
   <button
     type="button"
     onClick={onClick}
-    className={buttonStyle}
+    className={css`${buttonStyle}`}
     disabled={disabled}
   >
     {children}
-  </button>
-);
+  </button>);
 
 Button.propTypes = {
   /**
@@ -32,16 +32,14 @@ Button.propTypes = {
   /**
    * Children
    */
-  children: PropTypes.element,
+  children: PropTypes.string,
   /**
    * disabled
    */
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
   disabled: false,
-  children: "",
-  onClick: () => {}
 };
 export default withTheme(Button);
