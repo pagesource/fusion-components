@@ -122,7 +122,7 @@ const KitchenSink = () =>
 
         <h2>Celebrate New Year In</h2>
         <div>
-          <CountDownTimer endTime="Jan 1, 2018 15:37:25" />
+          <CountDownTimer endTime="Jan 1, 2019 15:37:25" />
         </div>
 
         <h2>Show Rating</h2>

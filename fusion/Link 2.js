@@ -1,6 +1,6 @@
 // import PropTypes from 'prop-types';
 
-// const Link = styled.a.attrs({
+// const Link = styled('a.attrs({
 //   href: props => props.href,
 // })`
 //   color: violet;

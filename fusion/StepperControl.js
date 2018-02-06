@@ -73,7 +73,7 @@ class ControlStepper extends React.PureComponent {
   }
 
   componentWillUpdate(nextState) {
-    if (!nextState) return;
+    if (Object.keys(nextState).length === 0 && nextState.constructor === Object) return;
     const { stepIndex, visited } = nextState;
     if (!visited.indexOf(stepIndex)) {
       // eslint-disable-next-line react/no-will-update-set-state

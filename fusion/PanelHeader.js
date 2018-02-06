@@ -1,8 +1,8 @@
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import { withTheme } from 'theming';
 
-const PanelHeader = styled.header`
+const PanelHeader = styled('header')`
   font-size: 16px;
   color: ${props => props.color};
   background-color: ${props => props.bg};
