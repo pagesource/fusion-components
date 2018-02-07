@@ -1,5 +1,5 @@
 import { css } from 'emotion';
-import styled from 'emotion/react';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -16,7 +16,7 @@ const TooltipBtn = css`
     }
 
 `;
-const HiddenDiv = styled.span`
+const HiddenDiv = styled('span')`
   background: aliceblue;
   position: relative;
   left: 60%;

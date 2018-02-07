@@ -1,37 +1,40 @@
-import { css } from "emotion";
-import styled from "emotion/react";
-import React from "react";
-import Button from "./Button";
+import { css } from 'emotion';
+import styled from 'react-emotion';
+import React from 'react';
+import { theme } from '../theme';
+import Button from './Button';
 
 const styles = {
   root: {
-    width: "100%",
+    width: '100%',
     maxWidth: 700,
-    margin: "40px"
+    margin: '40px',
   },
   content: {
-    margin: "0 16px"
+    margin: '0 16px',
   },
   actions: {
-    marginTop: 12
+    marginTop: 12,
   },
   backButton: {
-    marginRight: 12
-  }
+    marginRight: 12,
+  },
 };
 
-const Step = styled.div`
+const Step = styled('div')`
   display: inline-block;
   margin: 10px 20px;
 `;
-const Stepper = styled.div``;
-const StepButton = styled.div`
+const Stepper = styled('div')`
+
+`;
+const StepButton = styled('div')`
   width: 160px;
   border-radius: 7px;
   height: 50px;
   text-align: center;
   background: skyblue;
-  &:hover {
+  &:hover{
     background: Aquamarine;
   }
 `;
@@ -57,7 +60,7 @@ class ControlStepper extends React.PureComponent {
     super();
     this.state = {
       stepIndex: null,
-      visited: []
+      visited: [],
     };
     this.handleNext = this.handleNext.bind(this);
     this.handlePrev = this.handlePrev.bind(this);
@@ -70,8 +73,9 @@ class ControlStepper extends React.PureComponent {
   }
 
   componentWillUpdate(nextState) {
+    if (Object.keys(nextState).length === 0 && nextState.constructor === Object) return;
     const { stepIndex, visited } = nextState;
-    if (visited.indexOf(stepIndex) === -1) {
+    if (!visited.indexOf(stepIndex)) {
       // eslint-disable-next-line react/no-will-update-set-state
       this.setState({ visited: visited.concat(stepIndex) });
     }
@@ -80,21 +84,23 @@ class ControlStepper extends React.PureComponent {
   getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return "First step content......";
+        return 'First step content......';
       case 1:
-        return "Second step content......";
+        return 'Second step content......';
       case 2:
-        return "Third step content......";
+        return 'Third step content......';
       default:
-        return "Click a step to get started.";
+        return 'Click a step to get started.';
     }
   }
+
   handleNext() {
     const { stepIndex } = this.state;
     if (stepIndex < 2) {
       this.setState({ stepIndex: stepIndex + 1 });
     }
   }
+
   handlePrev() {
     const { stepIndex } = this.state;
     if (stepIndex > 0) {
@@ -109,30 +115,30 @@ class ControlStepper extends React.PureComponent {
       <div style={styles.root}>
         <p>
           <a
-            href="no-action"
-            onClick={event => {
+            href="#"
+            role='button'
+            onClick={(event) => {
               event.preventDefault();
               this.setState({ stepIndex: null, visited: [] });
             }}
           >
             Click here
-          </a>{" "}
-          to reset the example.
+          </a> to reset the example.
         </p>
         <Stepper linear={false}>
-          <Step completed={visited.indexOf(0) !== -1} active={stepIndex === 0}>
+          <Step completed={visited.indexOf(0)} active={stepIndex === 0}>
             <StepButton onClick={() => this.setState({ stepIndex: 0 })}>
               <span className={stepName}>STEP 1</span>
             </StepButton>
           </Step>
           <span className={rightArrow}>&#10145;</span>
-          <Step completed={visited.indexOf(1) !== -1} active={stepIndex === 1}>
+          <Step completed={visited.indexOf(1)} active={stepIndex === 1}>
             <StepButton onClick={() => this.setState({ stepIndex: 1 })}>
               <span className={stepName}>STEP 2 </span>
             </StepButton>
           </Step>
           <span className={rightArrow}>&#10145;</span>
-          <Step completed={visited.indexOf(2) !== -1} active={stepIndex === 2}>
+          <Step completed={visited.indexOf(2)} active={stepIndex === 2}>
             <StepButton onClick={() => this.setState({ stepIndex: 2 })}>
               <span className={stepName}>STEP 3</span>
             </StepButton>
@@ -142,19 +148,8 @@ class ControlStepper extends React.PureComponent {
           <p className={container}>{this.getStepContent(stepIndex)}</p>
           {stepIndex !== null && (
             <div style={styles.actions}>
-              <Button
-                disabled={stepIndex === 0}
-                onClick={this.handlePrev}
-                style={styles.backButton}
-              >
-                Prev
-              </Button>
-              <Button
-                style={{ "margin-left": "30px" }}
-                onClick={this.handleNext}
-              >
-                Next
-              </Button>
+              <Button disabled={stepIndex === 0} onClick={this.handlePrev} style={styles.backButton}>Prev</Button>
+              <Button style={{ marginLeft: 30 }} onClick={this.handleNext}>Next</Button>
             </div>
           )}
         </div>

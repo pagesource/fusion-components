@@ -1,5 +1,5 @@
 import { css } from "emotion";
-import styled from "emotion/react";
+import styled from "react-emotion";
 import React from "react";
 import PropTypes from "prop-types";
 import { LiveEditor, LivePreview, LiveProvider } from "react-live";

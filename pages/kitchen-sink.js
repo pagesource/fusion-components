@@ -1,5 +1,5 @@
-import React from "react";
-import { ThemeProvider } from "theming";
+import React from 'react';
+import { ThemeProvider } from 'theming';
 import {
   Alert,
   Avatar,
@@ -11,7 +11,6 @@ import {
   Button,
   CardGrid,
   CountDownTimer,
-  YTEmbed,
   Dialog,
   Doughnut,
   Dropdown,
@@ -26,23 +25,24 @@ import {
   ProgressBar,
   ProgressCircle,
   Rating,
-  SelectRating,
   Ripples,
   Row,
+  SelectRating,
   StatusMessage,
   Stepper,
   StepperControl,
+  Tabs,
   theme,
   ToggleButton,
   Tooltip,
   Truncate,
   Typing,
-  Tabs
-} from "../";
-import Layout from "./components/Layout";
+  YTEmbed,
+} from '../';
+import Layout from './components/Layout';
 
-const KitchenSink = () => (
-  <Layout>
+const KitchenSink = () =>
+  (<Layout>
     <ThemeProvider theme={theme}>
       <div>
         <h2>Embed Youtube, Pass video id, width and height</h2>
@@ -52,7 +52,7 @@ const KitchenSink = () => (
         <Row />
         <hr />
         <h2>Status Message</h2>
-        <StatusMessage time={5000} message={"This is a status message"} />
+        <StatusMessage time={5000} message="This is a status message" />
         <Row />
         <hr />
         <h2>Horizontal bar Chart</h2>
@@ -122,7 +122,7 @@ const KitchenSink = () => (
 
         <h2>Celebrate New Year In</h2>
         <div>
-          <CountDownTimer endTime="Jan 1, 2018 15:37:25" />
+          <CountDownTimer endTime="Jan 1, 2019 15:37:25" />
         </div>
 
         <h2>Show Rating</h2>
@@ -138,14 +138,18 @@ const KitchenSink = () => (
         <hr />
         <h2>Panel</h2>
         <div>
-          <Panel>this is text inside panel</Panel>
+          <Panel>
+            <span>this is text inside panel</span>
+          </Panel>
         </div>
         <Row />
         <hr />
 
         <h2>Panel 2</h2>
         <div>
-          <Panel2>this is text inside panel 2</Panel2>
+          <Panel2>
+            <span>this is text inside panel 2</span>
+          </Panel2>
         </div>
         <Row />
         <hr />
@@ -160,8 +164,7 @@ const KitchenSink = () => (
         <h2>Blockquote</h2>
         <div>
           <BlockQuote>
-            Blockquote tag specifies a section that is quoted from another
-            source.
+            <span>Blockquote tag specifies a section that is quoted from another source.</span>
           </BlockQuote>
         </div>
         <Row />
@@ -193,6 +196,7 @@ const KitchenSink = () => (
           src="http://www.ipuntotv.com/IMAGES/Pelota.png"
           text=" "
           width={60}
+
         />
         <Row />
         <hr />
@@ -243,13 +247,15 @@ const KitchenSink = () => (
         <hr />
 
         <h2>Alert </h2>
-        <Alert>There was a problem rendering this box</Alert>
+        <Alert><span>There was a problem rendering this box</span></Alert>
         <Row />
         <hr />
 
         <h2>BackgroundImage</h2>
         <div>
-          <BackgroundImage width={400} />
+          <BackgroundImage
+            width={400}
+          />
         </div>
         <Row />
         <hr />
@@ -260,12 +266,12 @@ const KitchenSink = () => (
         <hr />
 
         <h2>Tabs</h2>
-        <Tabs onClick={() => {}} />
+        <Tabs onClick={selected => console.log(selected)} />
         <Row />
         <hr />
+
       </div>
     </ThemeProvider>
-  </Layout>
-);
+  </Layout>);
 
 export default KitchenSink;
