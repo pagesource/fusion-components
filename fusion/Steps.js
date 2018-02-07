@@ -1,10 +1,10 @@
-import { css } from "emotion";
-import styled from "emotion/react";
-import PropTypes from "prop-types";
-import React from "react";
+import { css } from 'emotion';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const StepDiv = styled.div``;
-const Step = styled.div`
+const StepDiv = styled('div')``;
+const Step = styled('div')`
   display: inline-block;
   width: 180px;
   margin: 5px;
@@ -12,14 +12,14 @@ const Step = styled.div`
   /* border-radius: 3px; */
   background: aliceblue;
 `;
-const StepContent = styled.div``;
-const StepTitle = styled.span`
+const StepContent = styled('div')``;
+const StepTitle = styled('span')`
   font-size: 16px;
   font-weight: bold;
   position: relative;
   bottom: 10px;
 `;
-const StepDescr = styled.div`
+const StepDescr = styled('div')`
   font-size: 16px;
 `;
 const secDiv = css`
@@ -35,21 +35,21 @@ const rightArrow = css`
 const Steps = ({ steps }) => (
   <StepDiv>
     {!!steps &&
-      steps.map(step => (
-        <Step key={step.icon}>
-          <StepContent>
-            <div>
-              <img src={step.icon} alt={step.heading} width="30px" />
-              <StepTitle>{step.title}</StepTitle>
-              <span className={rightArrow}>&#10145;</span>
-            </div>
+    steps.map(step => (
+      <Step key={step.icon}>
+        <StepContent>
+          <div>
+            <img src={step.icon} alt={step.heading} width="30px" />
+            <StepTitle>{step.title}</StepTitle>
+            <span className={rightArrow}>&#10145;</span>
+          </div>
 
-            <div className={secDiv}>
-              <StepDescr>{step.description}</StepDescr>
-            </div>
-          </StepContent>
-        </Step>
-      ))}
+          <div className={secDiv}>
+            <StepDescr>{step.description}</StepDescr>
+          </div>
+        </StepContent>
+      </Step>
+    ))}
   </StepDiv>
 );
 
@@ -63,19 +63,19 @@ Steps.propTypes = {
       icon: PropTypes.String,
       heading: PropTypes.String,
       title: PropTypes.String,
-      description: PropTypes.String
-    })
-  )
+      description: PropTypes.String,
+    }),
+  ),
 };
 Steps.defaultProps = {
   steps: [
     {
-      icon: "Icon",
-      heading: "heading",
-      title: "title",
-      description: "description"
-    }
-  ]
+      icon: 'Icon',
+      heading: 'heading',
+      title: 'title',
+      description: 'description',
+    },
+  ],
 };
 
 export default Steps;

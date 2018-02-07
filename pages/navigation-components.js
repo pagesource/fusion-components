@@ -49,11 +49,13 @@ const NavigationComponent = () => (
         <h3>Stepper Controls </h3>
         <StepperControl />
         <pre>{`<StepperControl />
-          `}</pre>
+          `}
+        </pre>
         <h3>Pagination </h3>
         <Pagination />
         <pre>{`<Pagination />
-          `}</pre>
+          `}
+        </pre>
       </div>
     </ThemeProvider>
   </Layout>

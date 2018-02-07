@@ -12,24 +12,28 @@ const ContentComponent = () => (
         <h3>Circular Loader </h3>
         <Loader />
         <pre>{`  <Loader />
-          `}</pre>
+          `}
+        </pre>
         <h3>Rippling Loader</h3>
         <Ripples />
         <pre>{`
        <Ripples/>
-          `}</pre>
+          `}
+        </pre>
 
         <h3>Progress Bar</h3>
         <ProgressBar value={25} />
         <pre>{`
        <ProgressBar value={25}/>
-          `}</pre>
+          `}
+        </pre>
 
         <h3>Progress Circle</h3>
         <ProgressCircle value={65} />
         <pre>{`
        <ProgressCircle value={65}/>
-          `}</pre>
+          `}
+        </pre>
       </div>
     </ThemeProvider>
   </Layout>

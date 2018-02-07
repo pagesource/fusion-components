@@ -2,7 +2,7 @@ const theme = {
   // Theme Colors
   primaryColor: '#3a1f4f',
   buttonTextColor: '#f9f9f9',
-  buttonColor: '060',
+  buttonColor: '#060',
   borderRadius: '50%',
   borderColor: '#BF67AD',
 

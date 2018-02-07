@@ -14,15 +14,18 @@ const ChartingComponent = () => (
         <h3>Bar Chart </h3>
         <BarChart />
         <pre>{`<BarChart />
-          `}</pre>
+          `}
+        </pre>
         <h3>Pie Chart </h3>
         <PieChart />
         <pre>{`<BarChart />
-          `}</pre>
+          `}
+        </pre>
         <h3>Doughnut Chart </h3>
         <Doughnut />
         <pre>{`<DoughnutChart />
-          `}</pre>
+          `}
+        </pre>
       </div>
     </ThemeProvider>
   </Layout>
