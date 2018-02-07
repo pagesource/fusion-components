@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- lts/*
+- 8.9.3
 deploy:
   provider: heroku
   api_key:
