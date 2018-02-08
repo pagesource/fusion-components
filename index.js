@@ -39,4 +39,5 @@ export { default as ToggleButton } from './fusion/ToggleButton';
 export { default as Tooltip } from './fusion/Tooltip';
 export { default as Truncate } from './fusion/Truncate';
 export { default as Typing } from './fusion/Typing';
+export { default as Breadcrumb } from './fusion/Breadcrumb';
 export { default as theme } from './theme/';
