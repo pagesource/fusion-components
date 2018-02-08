@@ -1,15 +1,14 @@
-import { css } from "emotion";
-import styled from "emotion/react";
-import PropTypes from "prop-types";
-import React from "react";
-import Button from "./Button";
+import { css } from 'emotion';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import Button from './Button';
 
-const DialogDiv = styled.div`
+const DialogDiv = styled('div')`
   width: ${props => props.width};
   height: ${props => props.height};
   display: ${props => props.height};
-  background: grey;
-  // background: ${props => props.bg};
+  background: ${props => props.bg};
   position: fixed;
   z-index: 1;
   margin: 30px;
@@ -42,7 +41,7 @@ class Dialog extends React.PureComponent {
   constructor() {
     super();
     this.state = {
-      open: false
+      open: false,
     };
   }
 
@@ -106,17 +105,17 @@ Dialog.propTypes = {
   /**
    *Dialog body content
    */
-  content: PropTypes.string
+  content: PropTypes.string,
 };
 
 /* Deafult Props */
 Dialog.defaultProps = {
   width: 800,
   height: 300,
-  bg: "white",
-  title: "Title content",
-  header: "Header",
-  content: "Your content for the Dialog box can be passed as props value"
+  bg: 'white',
+  title: 'Title content',
+  header: 'Header',
+  content: 'Your content for the Dialog box can be passed as props value',
 };
 
 export default Dialog;

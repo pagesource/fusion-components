@@ -12,7 +12,8 @@ const ContentComponent = () => (
         <h3>Panel </h3>
         <Panel>this is a panel</Panel>
         <pre>{`<Panel>this is a panel</Panel>
-          `}</pre>
+          `}
+        </pre>
         <h3>Cards</h3>
         <CardGrid />
         <pre>{`const cardData = [{
