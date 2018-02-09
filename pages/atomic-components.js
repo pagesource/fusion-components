@@ -24,7 +24,8 @@ const AtomicComponent = () => (
         </pre>
         <h3>Button</h3>
         <Button>Click Here</Button>
-        <pre>{`<Button>Click Here</Button>
+        <pre>
+          {`<Button>Click Here</Button>
           `}
         </pre>
       </div>

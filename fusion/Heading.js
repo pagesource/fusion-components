@@ -14,21 +14,21 @@ const H1 = styled('h1')(
   {
     fontSize: 36,
   },
-  props => ({ color: props.color }),
+  props => ({ color: props.color })
 );
 
 const H2 = styled('h2')(
   {
     fontSize: 30,
   },
-  props => ({ color: props.color }),
+  props => ({ color: props.color })
 );
 
 const H3 = styled('h3')(
   {
     fontSize: 24,
   },
-  props => ({ color: props.color }),
+  props => ({ color: props.color })
 );
 
 const Heading = ({ title }) => (

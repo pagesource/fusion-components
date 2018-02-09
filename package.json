@@ -26,6 +26,10 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-react": "^7.6.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.1",
+    "prettier": "1.10.2",
+    "prettier-eslint-cli": "^4.7.0",
     "react-live": "^1.9.2",
     "react-styleguidist": "^6.2.2",
     "theming": "^1.3.0",
@@ -36,14 +40,21 @@
     "build": "next build",
     "prestart": "npm run clean && npm run build",
     "start": "next start",
-    "heroku-start": "npm run clean && npm run build && next start -p $PORT",
+    "heroku-next-start": "next start -p $PORT",
+    "heroku-start": "npm run clean && npm run build && npm run heroku-next-start",
     "clean": "rimraf .next",
-    "lint": "eslint pages fusion",
+    "lint": "eslint pages fusion lib theme",
     "pre-commit": "npm run lint",
     "test": "npm run lint",
     "heroku-postbuild": "npm run build",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "precommit": "lint-staged",
+    "prettier": "prettier  --single-quote --trailing-comma es5 --write '{lib,fusion,pages,theme}/**/*.js'",
+    "format": "prettier-eslint --write '{lib,fusion,pages,theme}/**/*.js'"
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,md}": ["npm run lint","npm run prettier", "npm run format", "git add"]
   },
   "repository": {
     "type": "git",
@@ -54,5 +65,8 @@
   "bugs": {
     "url": "https://github.com/pagesource/fusion/issues"
   },
-  "homepage": "https://sape-fusion.herokuapp.com/"
+  "homepage": "https://sape-fusion.herokuapp.com/",
+  "engines": {
+    "node": "8.9.3"
+  }
 }

@@ -25,16 +25,14 @@ const Step = styled('div')`
   display: inline-block;
   margin: 10px 20px;
 `;
-const Stepper = styled('div')`
-
-`;
+const Stepper = styled('div')``;
 const StepButton = styled('div')`
   width: 160px;
   border-radius: 7px;
   height: 50px;
   text-align: center;
   background: skyblue;
-  &:hover{
+  &:hover {
     background: Aquamarine;
   }
 `;
@@ -73,7 +71,8 @@ class ControlStepper extends React.PureComponent {
   }
 
   componentWillUpdate(nextState) {
-    if (Object.keys(nextState).length === 0 && nextState.constructor === Object) return;
+    if (Object.keys(nextState).length === 0 && nextState.constructor === Object)
+      return;
     const { stepIndex, visited } = nextState;
     if (!visited.indexOf(stepIndex)) {
       // eslint-disable-next-line react/no-will-update-set-state
@@ -116,14 +115,15 @@ class ControlStepper extends React.PureComponent {
         <p>
           <a
             href="#"
-            role='button'
-            onClick={(event) => {
+            role="button"
+            onClick={event => {
               event.preventDefault();
               this.setState({ stepIndex: null, visited: [] });
             }}
           >
             Click here
-          </a> to reset the example.
+          </a>{' '}
+          to reset the example.
         </p>
         <Stepper linear={false}>
           <Step completed={visited.indexOf(0)} active={stepIndex === 0}>
@@ -148,8 +148,16 @@ class ControlStepper extends React.PureComponent {
           <p className={container}>{this.getStepContent(stepIndex)}</p>
           {stepIndex !== null && (
             <div style={styles.actions}>
-              <Button disabled={stepIndex === 0} onClick={this.handlePrev} style={styles.backButton}>Prev</Button>
-              <Button style={{ marginLeft: 30 }} onClick={this.handleNext}>Next</Button>
+              <Button
+                disabled={stepIndex === 0}
+                onClick={this.handlePrev}
+                style={styles.backButton}
+              >
+                Prev
+              </Button>
+              <Button style={{ marginLeft: 30 }} onClick={this.handleNext}>
+                Next
+              </Button>
             </div>
           )}
         </div>

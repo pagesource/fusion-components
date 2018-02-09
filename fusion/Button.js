@@ -5,14 +5,14 @@ import { withTheme } from 'theming';
 
 const Button = ({ children, onClick, disabled, theme }) => {
   const buttonStyle = css`
-  background-color: ${theme.buttonColor};
-  color: ${theme.buttonTextColor};
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-`;
+    background-color: ${theme.buttonColor};
+    color: ${theme.buttonTextColor};
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+  `;
   return (
     <button
       type="button"
@@ -43,7 +43,6 @@ Button.propTypes = {
 Button.defaultProps = {
   disabled: false,
   children: '',
-  onClick: () => {
-  },
+  onClick: () => {},
 };
 export default withTheme(Button);

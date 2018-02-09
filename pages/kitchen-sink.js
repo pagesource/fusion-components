@@ -41,8 +41,8 @@ import {
 } from '../';
 import Layout from './components/Layout';
 
-const KitchenSink = () =>
-  (<Layout>
+const KitchenSink = () => (
+  <Layout>
     <ThemeProvider theme={theme}>
       <div>
         <h2>Embed Youtube, Pass video id, width and height</h2>
@@ -164,7 +164,10 @@ const KitchenSink = () =>
         <h2>Blockquote</h2>
         <div>
           <BlockQuote>
-            <span>Blockquote tag specifies a section that is quoted from another source.</span>
+            <span>
+              Blockquote tag specifies a section that is quoted from another
+              source.
+            </span>
           </BlockQuote>
         </div>
         <Row />
@@ -196,7 +199,6 @@ const KitchenSink = () =>
           src="http://www.ipuntotv.com/IMAGES/Pelota.png"
           text=" "
           width={60}
-
         />
         <Row />
         <hr />
@@ -247,15 +249,15 @@ const KitchenSink = () =>
         <hr />
 
         <h2>Alert </h2>
-        <Alert><span>There was a problem rendering this box</span></Alert>
+        <Alert>
+          <span>There was a problem rendering this box</span>
+        </Alert>
         <Row />
         <hr />
 
         <h2>BackgroundImage</h2>
         <div>
-          <BackgroundImage
-            width={400}
-          />
+          <BackgroundImage width={400} />
         </div>
         <Row />
         <hr />
@@ -269,9 +271,9 @@ const KitchenSink = () =>
         <Tabs onClick={selected => console.log(selected)} />
         <Row />
         <hr />
-
       </div>
     </ThemeProvider>
-  </Layout>);
+  </Layout>
+);
 
 export default KitchenSink;

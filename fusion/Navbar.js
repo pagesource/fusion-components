@@ -14,8 +14,9 @@ const NavbarDiv = styled('div')`
   box-shadow;0 2px 3px #ccc;
 `;
 const lists = css`
-display: inline-block;
-margin: 0`;
+  display: inline-block;
+  margin: 0;
+`;
 
 const links = css`
   display: inline-block;
@@ -32,14 +33,14 @@ const links = css`
 `;
 
 const submenus = css`
-position:absolute;
-display:none;
-margin-top:0px;
+  position: absolute;
+  display: none;
+  margin-top: 0px;
 
-    & li{
-      display:block;
-      border-bottom:1px solid blue;
-    }
+  & li {
+    display: block;
+    border-bottom: 1px solid blue;
+  }
 `;
 
 const subMenuLinks = css`
@@ -49,8 +50,8 @@ const subMenuLinks = css`
   vertical-align: middle;
   padding: 0px 20px;
   transition: 0.5s, height 4s;
-  &:hover div{
-    display:block;
+  &:hover div {
+    display: block;
     background: skyblue;
     border-top: 1px solid blue;
   }
@@ -68,27 +69,46 @@ const Navbar = ({ NavList }) => {
   return (
     <NavbarDiv>
       <ul className={lists}>
-        {!!Navbar.defaultProps && Navbar.defaultProps.NavList.map((item) => {
-          {
-            toRender = item.submenu ? (
-              <ul className={subMenuLinks} key={item.navName}>
-                <NavbarItem link={item.link} navName={item.navName} key={item.navName} />
-                <div className={submenus}>
-                  {item.submenu.map((items) => (
-                    <NavbarItem link={items.link} navName={items.navName} key={items.navName} />
-                  ))}
-                </div>
-              </ul>) : <NavbarItem link={item.link} navName={item.navName} key={item.navName} />;
-          }
-          return toRender;
-        })}
+        {!!Navbar.defaultProps &&
+          Navbar.defaultProps.NavList.map(item => {
+            {
+              toRender = item.submenu ? (
+                <ul className={subMenuLinks} key={item.navName}>
+                  <NavbarItem
+                    link={item.link}
+                    navName={item.navName}
+                    key={item.navName}
+                  />
+                  <div className={submenus}>
+                    {item.submenu.map(items => (
+                      <NavbarItem
+                        link={items.link}
+                        navName={items.navName}
+                        key={items.navName}
+                      />
+                    ))}
+                  </div>
+                </ul>
+              ) : (
+                <NavbarItem
+                  link={item.link}
+                  navName={item.navName}
+                  key={item.navName}
+                />
+              );
+            }
+            return toRender;
+          })}
       </ul>
-    </NavbarDiv>);
+    </NavbarDiv>
+  );
 };
 
 const NavbarItem = ({ link, navName }) => (
   <li className={links}>
-    <a className={anchor} key={link} href={link}>{navName}</a>
+    <a className={anchor} key={link} href={link}>
+      {navName}
+    </a>
   </li>
 );
 

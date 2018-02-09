@@ -1,5 +1,5 @@
-import { css } from "emotion";
-import React, { PureComponent } from "react";
+import { css } from 'emotion';
+import React, { PureComponent } from 'react';
 
 const toggle = css`
   position: relative;
@@ -26,7 +26,7 @@ const slider = css`
 
   &:before {
     position: absolute;
-    content: "";
+    content: '';
     height: 26px;
     width: 26px;
     left: 4px;
@@ -54,7 +54,7 @@ class ToggleButton extends PureComponent {
     super(props);
     this.state = {
       checked: false,
-      checkedClass: ""
+      checkedClass: '',
     };
     this.change.bind(this);
   }
@@ -63,12 +63,12 @@ class ToggleButton extends PureComponent {
     if (e.target.checked) {
       this.setState({
         checked: true,
-        checkedClass: checked
+        checkedClass: checked,
       });
     } else {
       this.setState({
         checked: false,
-        checkedClass: ""
+        checkedClass: '',
       });
     }
   }

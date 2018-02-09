@@ -35,21 +35,21 @@ const rightArrow = css`
 const Steps = ({ steps }) => (
   <StepDiv>
     {!!steps &&
-    steps.map(step => (
-      <Step key={step.icon}>
-        <StepContent>
-          <div>
-            <img src={step.icon} alt={step.heading} width="30px" />
-            <StepTitle>{step.title}</StepTitle>
-            <span className={rightArrow}>&#10145;</span>
-          </div>
+      steps.map(step => (
+        <Step key={step.icon}>
+          <StepContent>
+            <div>
+              <img src={step.icon} alt={step.heading} width="30px" />
+              <StepTitle>{step.title}</StepTitle>
+              <span className={rightArrow}>&#10145;</span>
+            </div>
 
-          <div className={secDiv}>
-            <StepDescr>{step.description}</StepDescr>
-          </div>
-        </StepContent>
-      </Step>
-    ))}
+            <div className={secDiv}>
+              <StepDescr>{step.description}</StepDescr>
+            </div>
+          </StepContent>
+        </Step>
+      ))}
   </StepDiv>
 );
 
@@ -64,7 +64,7 @@ Steps.propTypes = {
       heading: PropTypes.String,
       title: PropTypes.String,
       description: PropTypes.String,
-    }),
+    })
   ),
 };
 Steps.defaultProps = {

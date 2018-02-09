@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
 const timerStyle = css`
-  font-family: "arial";
+  font-family: 'arial';
 `;
 
 class CountdownTimer extends PureComponent {

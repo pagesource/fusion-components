@@ -8,10 +8,13 @@ const ContentComponent = () => (
     <ThemeProvider theme={theme}>
       <div>
         <h2>Content Components</h2>
-        <p>This section contains components that can be used to display content.</p>
+        <p>
+          This section contains components that can be used to display content.
+        </p>
         <h3>Panel </h3>
         <Panel>this is a panel</Panel>
-        <pre>{`<Panel>this is a panel</Panel>
+        <pre>
+          {`<Panel>this is a panel</Panel>
           `}
         </pre>
         <h3>Cards</h3>

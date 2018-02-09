@@ -35,9 +35,12 @@ BackgroundImage.propTypes = {
 
 /* Deafult Props */
 BackgroundImage.defaultProps = {
-  src: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
+  src:
+    'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
 };
 
-const BgImage = ({ children, ...props }) => (<BackgroundImage {...props}>{children}</BackgroundImage>);
+const BgImage = ({ children, ...props }) => (
+  <BackgroundImage {...props}>{children}</BackgroundImage>
+);
 
 export default BgImage;
