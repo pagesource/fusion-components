@@ -268,7 +268,7 @@ const KitchenSink = () => (
         <hr />
 
         <h2>Tabs</h2>
-        <Tabs onClick={selected => console.log(selected)} />
+        <Tabs />
         <Row />
         <hr />
       </div>

@@ -49,6 +49,7 @@ class Tooltip extends React.PureComponent {
         className={TooltipBtn}
         onMouseEnter={() => this.onMouseEnter()}
         onMouseOut={() => this.onMouseOut()}
+        onBlur={() => this.onMouseOut()}
       >
         Hoverover me!
         {this.state.open ? (

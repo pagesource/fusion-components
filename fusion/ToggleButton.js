@@ -53,7 +53,7 @@ class ToggleButton extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      checked: false,
+      // checked: false,
       checkedClass: '',
     };
     this.change.bind(this);
@@ -62,12 +62,12 @@ class ToggleButton extends PureComponent {
   change(e) {
     if (e.target.checked) {
       this.setState({
-        checked: true,
+        // checked: true,
         checkedClass: checked,
       });
     } else {
       this.setState({
-        checked: false,
+        // checked: false,
         checkedClass: '',
       });
     }

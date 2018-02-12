@@ -102,7 +102,8 @@ Tabs.propTypes = {
     })
   ),
   onClick: PropTypes.func.isRequired,
-  selectedTab: PropTypes.number,
+  theme: PropTypes.objectOf(PropTypes.string),
+  // selectedTab: PropTypes.number,
 };
 
 Tabs.defaultProps = {
@@ -123,7 +124,7 @@ Tabs.defaultProps = {
       selected: false,
     },
   ],
-  selectedTab: 1,
+  // selectedTab: 1,
   theme,
 };
 

@@ -25,6 +25,11 @@ Banner.propTypes = {
    * Image URL
    */
   picUrl: PropTypes.string,
+
+  /**
+   * src
+   */
+  src: PropTypes.string,
   /**
    * alt text
    */
@@ -33,8 +38,8 @@ Banner.propTypes = {
 
 /* Default Props */
 Banner.defaultProps = {
-  picUrl:
-    'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
+  picUrl: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
+  src: 'http://via.placeholder.com/350x150',
   alt: 'Banner',
 };
 

@@ -2,6 +2,7 @@ import { css } from 'emotion';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'theming';
+import theme from '../theme';
 
 const Button = ({ children, onClick, disabled, theme }) => {
   const buttonStyle = css`
@@ -38,11 +39,16 @@ Button.propTypes = {
    * disabled
    */
   disabled: PropTypes.bool,
+  /**
+   * disabled
+   */
+  theme: PropTypes.objectOf(PropTypes.string),
 };
 
 Button.defaultProps = {
   disabled: false,
   children: '',
   onClick: () => {},
+  theme,
 };
 export default withTheme(Button);

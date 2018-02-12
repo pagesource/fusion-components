@@ -106,14 +106,18 @@ Dialog.propTypes = {
    *Dialog body content
    */
   content: PropTypes.string,
+  // width: PropTypes.number,
+  // height: PropTypes.number,
+  // bg: PropTypes.string,
+  // title: PropTypes.string,
 };
 
 /* Deafult Props */
 Dialog.defaultProps = {
-  width: 800,
-  height: 300,
-  bg: 'white',
-  title: 'Title content',
+  // width: 800,
+  // height: 300,
+  // bg: 'white',
+  // title: 'Title content',
   header: 'Header',
   content: 'Your content for the Dialog box can be passed as props value',
 };

@@ -1,7 +1,6 @@
 import { css } from 'emotion';
 import styled from 'react-emotion';
 import React from 'react';
-import { theme } from '../theme';
 import Button from './Button';
 
 const styles = {
@@ -115,7 +114,6 @@ class ControlStepper extends React.PureComponent {
         <p>
           <a
             href="#"
-            role="button"
             onClick={event => {
               event.preventDefault();
               this.setState({ stepIndex: null, visited: [] });
