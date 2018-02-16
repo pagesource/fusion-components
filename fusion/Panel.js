@@ -1,7 +1,8 @@
-import styled from 'react-emotion';
-import React from 'react';
-import { withTheme } from 'theming';
-import theme from '../theme';
+import styled from "react-emotion";
+import React from "react";
+import { withTheme } from "theming";
+import PropTypes from "prop-types";
+import theme from "../theme";
 
 const Panel = ({ className, children }) => (
   <div theme={theme} className={className}>
@@ -17,4 +18,12 @@ const styledPanel = styled(Panel)`
   padding: ${props => props.theme.panelPadding};
 `;
 
+Panel.propTypes = {
+  children: PropTypes.children,
+  className: PropTypes.string
+};
+Panel.defaultProps = {
+  children: null,
+  className: "default"
+};
 export default withTheme(styledPanel);

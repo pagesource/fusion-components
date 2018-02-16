@@ -1,11 +1,11 @@
-import { css } from 'emotion';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
-import React, { PureComponent } from 'react';
+import { css } from "emotion";
+import styled from "react-emotion";
+import PropTypes from "prop-types";
+import React, { PureComponent } from "react";
 
 const container = css``;
 
-const DropdownDiv = props => styled('div')`
+const DropdownDiv = props => styled("div")`
   //width: ${props.width};
   width: 200px;
   height: auto;
@@ -25,7 +25,7 @@ const dropIcon = css`
     content: &#9650;
   }
   &:after {
-    content: '▼';
+    content: "▼";
     font-size: 16px;
     padding: 12px 8px;
     right: 10px;
@@ -42,15 +42,19 @@ class Dropdown extends PureComponent {
   constructor() {
     super();
     this.state = {
-      open: false,
+      open: false
     };
+  }
+
+  onClick() {
+    this.setState({ open: !this.state.open });
   }
 
   render() {
     const { ListItems, width } = this.props;
     const dropdownMenu = css`
       width: 200px;
-      content: '';
+      content: "";
       width: ${width}px;
       height: 40px;
       background: grey;
@@ -82,6 +86,7 @@ class Dropdown extends PureComponent {
           className={dropdownMenu}
           onClick={() => this.onClick()}
           role="listbox"
+          tabIndex={0}
         >
           <span className={dropIcon}>Dropdown List</span>
         </div>
@@ -90,7 +95,7 @@ class Dropdown extends PureComponent {
             <div className={container}>
               <ul className={dropdownList}>
                 {ListItems.map(({ link, option }) => (
-                  <li className={lists}>
+                  <li key={link} className={lists}>
                     <a className={links} href={link}>
                       {option}
                     </a>
@@ -103,10 +108,6 @@ class Dropdown extends PureComponent {
       </section>
     );
   }
-
-  onClick() {
-    this.setState({ open: !this.state.open });
-  }
 }
 
 /* Props Check */
@@ -115,44 +116,33 @@ Dropdown.propTypes = {
    *Dropdown width
    */
   width: PropTypes.number,
-  /**
-   *Dropdown background
-   */
-  bg: PropTypes.string,
-  /**
-   *Dropdown title
-   */
-  title: PropTypes.string,
-  /**
-   *Dropdown display status
-   */
-  open: PropTypes.string,
+
   /**
    *Dropdown list items
    */
-  ListItems: PropTypes.array,
+  ListItems: PropTypes.arrayOf(
+    PropTypes.shape({ option: PropTypes.string, link: PropTypes.string })
+  )
 };
 
 /* Deafult Props */
 Dropdown.defaultProps = {
   width: 200,
-  bg: 'white',
-  title: 'Dropdown Name',
-  header: 'Header',
+  header: "Header",
   ListItems: [
     {
-      option: 'Option 1',
-      link: '//www.google.com',
+      option: "Option 1",
+      link: "//www.google.com"
     },
     {
-      option: 'Option 2',
-      link: '//www.facebook.com',
+      option: "Option 2",
+      link: "//www.facebook.com"
     },
     {
-      option: 'Option 3',
-      link: '//www.twitter.com',
-    },
-  ],
+      option: "Option 3",
+      link: "//www.twitter.com"
+    }
+  ]
 };
 
 export default Dropdown;
