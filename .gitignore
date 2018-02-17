@@ -20,4 +20,4 @@ yarn-error.log*
 
 .next
 .vscode
-
+.travis.yml
