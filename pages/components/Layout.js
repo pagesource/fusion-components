@@ -1,3 +1,4 @@
+import reboot from '../../Assets/bootstrap-reboot.css';
 import { css } from 'emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -11,9 +12,9 @@ const layoutContainer = css`
 `;
 
 const content = css`
-width:79%;
-margin-left:200px;
-padding:3rem;
+width: calc(100% - 250px);
+margin-left: 250px;
+padding: 100px 3rem 3rem;
 background:#eaeaea;
 font-family: Arial, Helvetica, sans-serif;
 color#red;

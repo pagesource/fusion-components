@@ -22,6 +22,7 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <title>Fusion Component Library</title>
+          <link rel="stylesheet" href="/_next/static/style.css" />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
