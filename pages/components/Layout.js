@@ -1,7 +1,7 @@
-import reboot from '../../Assets/bootstrap-reboot.css';
 import { css } from 'emotion';
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../Assets/bootstrap-reboot.css';
 import Header from './Header';
 import SideBar from './Sidebar';
 
