@@ -39,15 +39,14 @@ class SelectRating extends React.PureComponent {
     for (const index of stars) {
       star = index < newRating ? (star = "★") : (star = "☆");
       stars[index] = (
-        <a
-          href="javascript:void(0);"
+        <button
           data-index={index}
           onClick={this.handleClick}
           key={index}
           style={sx.star}
         >
           <span>{star} </span>
-        </a>
+        </button>
       );
     }
     return <div>{stars}</div>;

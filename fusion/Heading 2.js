@@ -4,7 +4,9 @@ import React from 'react';
 
 const el = React.createElement;
 
-const Heading = styled(({ tag, children, ...props }) => el(tag, props, children))`
+const Heading = styled(({ tag, children, ...props }) =>
+  el(tag, props, children)
+)`
   color: black;
 `;
 

@@ -1,9 +1,9 @@
-import { css } from 'emotion';
-import Link from 'next/link';
-import React from 'react';
+import { css } from "emotion";
+import Link from "next/link";
+import React from "react";
 
 const linkStyle = {
-  marginRight: 15,
+  marginRight: 15
 };
 
 const navStyle = css`
@@ -25,6 +25,10 @@ const navStyle = css`
     color: #f60;
   }
 
+  & ul{
+    padding:20px;
+  }
+
   & ul li {
     list-style: none;
     padding: 10px 0;
@@ -36,37 +40,51 @@ const SideBar = () => (
     <ul>
       <li>
         <Link href="/kitchen-sink">
-          <a style={linkStyle}>Kitchen Sink</a>
+          <a href="/kitchen-sink" style={linkStyle}>
+            Kitchen Sink
+          </a>
         </Link>
       </li>
       <li>
         <Link href="/atomic-components">
-          <a style={linkStyle}>Atomic</a>
+          <a href="/atomic-components" style={linkStyle}>
+            Atomic
+          </a>
         </Link>
       </li>
       <li>
         <Link href="/content-components">
-          <a style={linkStyle}>Content</a>
+          <a href="/content-components" style={linkStyle}>
+            Content
+          </a>
         </Link>
       </li>
       <li>
         <Link href="/loader-components">
-          <a style={linkStyle}>Progress & Activity</a>
+          <a href="/loader-components" style={linkStyle}>
+            Progress & Activity
+          </a>
         </Link>
       </li>
       <li>
         <Link href="/navigation-components">
-          <a style={linkStyle}>Navigation</a>
+          <a href="/navigation-components" style={linkStyle}>
+            Navigation
+          </a>
         </Link>
       </li>
       <li>
         <Link href="/chart-components">
-          <a style={linkStyle}>Charting</a>
+          <a href="/chart-components" style={linkStyle}>
+            Charting
+          </a>
         </Link>
       </li>
       <li>
         <Link href="/coming-soon">
-          <a style={linkStyle}>Form Elements</a>
+          <a href="/coming-soon" style={linkStyle}>
+            Form Elements
+          </a>
         </Link>
       </li>
     </ul>

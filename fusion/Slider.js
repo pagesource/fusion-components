@@ -11,11 +11,12 @@ const Slider = ({ name, min, max, defaultValue, onChange, disabled }) => (
     defaultValue={defaultValue}
     onChange={onChange}
     disabled={disabled}
-  />);
+  />
+);
 
 const SliderStyled = styled(Slider)`
   -webkit-appearance: none;
-  background-color: #cccccc;;
+  background-color: #cccccc;
   height: 5px;
   border-radius: 5px;
   &::-webkit-slider-thumb {
@@ -66,6 +67,7 @@ Slider.defaultProps = {
   max: 10,
   defaultValue: 1,
   disabled: false,
+  onChange: null
 };
 
 export default SliderStyled;

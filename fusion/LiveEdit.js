@@ -1,8 +1,8 @@
-import { css } from "emotion";
-import styled from "react-emotion";
-import React from "react";
-import PropTypes from "prop-types";
-import { LiveEditor, LivePreview, LiveProvider } from "react-live";
+import { css } from 'emotion';
+import styled from 'react-emotion';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { LiveEditor, LivePreview, LiveProvider } from 'react-live';
 
 const StyledProvider = styled(LiveProvider)`
   border-radius: 3px;
@@ -11,7 +11,7 @@ const StyledProvider = styled(LiveProvider)`
   margin-bottom: 100px;
 `;
 
-const LiveWrapper = styled("div")`
+const LiveWrapper = styled('div')`
   display: flex;
   flex-direction: row;
   justify-content: stretch;
@@ -34,7 +34,7 @@ const column = css`
 
 const StyledEditor = styled(LiveEditor)`
   background: #999;
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   font-size: 14px;
   height: 350px;
   overflow: scroll;
@@ -61,11 +61,11 @@ const LiveEdit = ({ noInline, code }) => (
 );
 LiveEdit.propTypes = {
   noInline: PropTypes.string,
-  code: PropTypes.string
+  code: PropTypes.string,
 };
 LiveEdit.defaultProps = {
   noInline: PropTypes.string,
-  code: PropTypes.string
+  code: PropTypes.string,
 };
 
 export default LiveEdit;

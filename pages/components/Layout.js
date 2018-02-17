@@ -1,19 +1,20 @@
-import { css } from "emotion";
-import React from "react";
-import PropTypes from "prop-types";
-import Header from "./Header";
-import SideBar from "./Sidebar";
+import { css } from 'emotion';
+import React from 'react';
+import PropTypes from 'prop-types';
+import '../../Assets/bootstrap-reboot.css';
+import Header from './Header';
+import SideBar from './Sidebar';
 
 const layoutContainer = css`
   margin: 20;
   padding: 20;
-  border: "1px solid #DDD";
+  border: '1px solid #DDD';
 `;
 
 const content = css`
-width:79%;
-margin-left:200px;
-padding:3rem;
+width: calc(100% - 250px);
+margin-left: 250px;
+padding: 100px 3rem 3rem;
 background:#eaeaea;
 font-family: Arial, Helvetica, sans-serif;
 color#red;
@@ -37,10 +38,10 @@ const Layout = ({ children }) => (
   </div>
 );
 Layout.propTypes = {
-  children: PropTypes.element
+  children: PropTypes.element,
 };
 Layout.defaultProps = {
-  children: ""
+  children: '',
 };
 
 export default Layout;

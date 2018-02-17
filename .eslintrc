@@ -6,5 +6,8 @@
   ],
   "rules": {
     "react/jsx-filename-extension": 0
+  },
+  "env": {
+    "browser": true
   }
 }

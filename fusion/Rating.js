@@ -51,6 +51,7 @@ const Rating = ({ value, onClick, primaryStarColor, secondaryStarColor }) => {
       className="rating"
       style={sx.root}
       onClick={handleClick()}
+      onKeyPress={() => {}}
     >
       <div style={sx.primaryStar}>★★★★★</div>
       <div style={sx.secondaryStar}>☆☆☆☆☆</div>

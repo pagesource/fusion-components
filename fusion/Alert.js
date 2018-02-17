@@ -15,11 +15,11 @@ Alert.propTypes = {
   /**
    * Type of Alert
    */
-  type: PropTypes.oneOf(['warning', 'info', 'error', 'success']),
+  // type: PropTypes.oneOf(['warning', 'info', 'error', 'success']),
   children: PropTypes.element,
 };
 Alert.defaultProps = {
-  type: 'error',
-  children: <span>'Success is not this!'</span>,
+  // type: 'error',
+  children: <span>&apos;Success is not this!&apos;</span>,
 };
 export default withTheme(Alert);

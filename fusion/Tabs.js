@@ -14,7 +14,7 @@ const Tabs = ({ tabData, onClick, theme }) => {
   `;
 
   const tab = css`
-    margin-bottom:-1px;
+    margin-bottom: -1px;
   `;
 
   const tabLink = css`
@@ -30,7 +30,8 @@ const Tabs = ({ tabData, onClick, theme }) => {
   const activeTabLink = css`
     composes: ${tabLink};
     background-color: ${theme.tabBackgroundColor};
-    border-color: ${theme.tabBorderColor} ${theme.tabBorderColor} rgba(0,0,0,0);
+    border-color: ${theme.tabBorderColor} ${theme.tabBorderColor}
+      rgba(0, 0, 0, 0);
   `;
 
   const tabPanel = css`
@@ -47,14 +48,14 @@ const Tabs = ({ tabData, onClick, theme }) => {
     onClick(selectedTabIndex);
   };
 
-  const getActiveTabStyle = (selected) => {
+  const getActiveTabStyle = selected => {
     if (selected) {
       return activeTabLink;
     }
     return tabLink;
   };
 
-  const getActivePanelStyle = (selected) => {
+  const getActivePanelStyle = selected => {
     if (selected) {
       return tabPanelActive;
     }
@@ -64,31 +65,45 @@ const Tabs = ({ tabData, onClick, theme }) => {
   return (
     <div>
       <ul className={tabList}>
-        {!!tabData && tabData.map(({ title, selected }, i) => (
-          <li key={title} className={tab}>
-            <a key={title} href={`#tab-panel${i}`} className={getActiveTabStyle(selected)} onClick={handleClick(i)}>
-              {title}
-            </a>
-          </li>
-        ))}
+        {!!tabData &&
+          tabData.map(({ title, selected }, i) => (
+            <li key={title} className={tab}>
+              <a
+                key={title}
+                href={`#tab-panel${i}`}
+                className={getActiveTabStyle(selected)}
+                onClick={handleClick(i)}
+              >
+                {title}
+              </a>
+            </li>
+          ))}
       </ul>
-      {!!tabData && tabData.map(({ title, content, selected }, i) => (
-        <div key={title} id={`tab-panel${i}`} className={getActivePanelStyle(selected)}>
-          {content}
-        </div>
-      ))}
+      {!!tabData &&
+        tabData.map(({ title, content, selected }, i) => (
+          <div
+            key={title}
+            id={`tab-panel${i}`}
+            className={getActivePanelStyle(selected)}
+          >
+            {content}
+          </div>
+        ))}
     </div>
   );
 };
 
 Tabs.propTypes = {
-  tabData: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string,
-    content: PropTypes.string,
-    selected: PropTypes.bool,
-  })),
+  tabData: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string,
+      content: PropTypes.string,
+      selected: PropTypes.bool,
+    })
+  ),
   onClick: PropTypes.func.isRequired,
-  selectedTab: PropTypes.number,
+  theme: PropTypes.objectOf(PropTypes.string),
+  // selectedTab: PropTypes.number,
 };
 
 Tabs.defaultProps = {
@@ -109,7 +124,7 @@ Tabs.defaultProps = {
       selected: false,
     },
   ],
-  selectedTab: 1,
+  // selectedTab: 1,
   theme,
 };
 
