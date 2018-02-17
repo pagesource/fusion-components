@@ -1,8 +1,8 @@
-import { css } from 'emotion';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { withTheme } from 'theming';
+import { css } from "emotion";
+import styled from "react-emotion";
+import PropTypes from "prop-types";
+import React from "react";
+import { withTheme } from "theming";
 
 const headerStyle = css`
   color: black;
@@ -10,23 +10,23 @@ const headerStyle = css`
   margin: 0;
   border: none;
 `;
-const H1 = styled('h1')(
+const H1 = styled("h1")(
   {
-    fontSize: 36,
+    fontSize: 36
   },
   props => ({ color: props.color })
 );
 
-const H2 = styled('h2')(
+const H2 = styled("h2")(
   {
-    fontSize: 30,
+    fontSize: 30
   },
   props => ({ color: props.color })
 );
 
-const H3 = styled('h3')(
+const H3 = styled("h3")(
   {
-    fontSize: 24,
+    fontSize: 24
   },
   props => ({ color: props.color })
 );
@@ -45,12 +45,11 @@ Heading.propTypes = {
   /**
    * title
    */
-  title: PropTypes.string,
+  title: PropTypes.string
 };
 
 Heading.defaultProps = {
-  tag: 'h2',
-  title: 'Header content',
+  title: "Header content"
 };
 
 export default withTheme(Heading);

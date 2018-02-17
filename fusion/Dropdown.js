@@ -87,6 +87,7 @@ class Dropdown extends PureComponent {
           onClick={() => this.onClick()}
           role="listbox"
           tabIndex={0}
+          onKeyPress={() => {}}
         >
           <span className={dropIcon}>Dropdown List</span>
         </div>
@@ -128,7 +129,6 @@ Dropdown.propTypes = {
 /* Deafult Props */
 Dropdown.defaultProps = {
   width: 200,
-  header: "Header",
   ListItems: [
     {
       option: "Option 1",
