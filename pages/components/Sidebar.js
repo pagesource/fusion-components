@@ -25,6 +25,10 @@ const navStyle = css`
     color: #f60;
   }
 
+  & ul{
+    padding:20px;
+  }
+
   & ul li {
     list-style: none;
     padding: 10px 0;
