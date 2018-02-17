@@ -45,7 +45,10 @@ const BgImage = ({ children, ...props }) => (
 );
 
 BgImage.propTypes = {
-  children: PropTypes.children
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ])
 };
 BgImage.defaultProps = {
   children: null

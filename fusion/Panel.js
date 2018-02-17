@@ -19,7 +19,10 @@ const styledPanel = styled(Panel)`
 `;
 
 Panel.propTypes = {
-  children: PropTypes.children,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]),
   className: PropTypes.string
 };
 Panel.defaultProps = {
