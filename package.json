@@ -39,7 +39,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "prestart": "npm run clean && npm run build",
+    "prestart": "npm run clean && npm run build && npm run styleguide:build",
     "start": "next start",
     "heroku-next-start": "next start -p $PORT",
     "heroku-start": "npm run clean && npm run build && npm run heroku-next-start",
