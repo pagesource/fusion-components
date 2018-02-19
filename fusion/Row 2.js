@@ -1,6 +1,6 @@
-import styled from 'react-emotion';
+import styled from "react-emotion";
 
-const Row = styled('div')`
+const Row = styled("div")`
   display: flex;
   background: #000;
   color: #fff;

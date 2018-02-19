@@ -1,5 +1,5 @@
-import React from 'react';
-import { ThemeProvider } from 'theming';
+import React from "react";
+import { ThemeProvider } from "theming";
 import {
   Alert,
   Avatar,
@@ -37,9 +37,9 @@ import {
   Tooltip,
   Truncate,
   Typing,
-  YTEmbed,
-} from '../';
-import Layout from './components/Layout';
+  YTEmbed
+} from "../";
+import Layout from "./components/Layout";
 
 const KitchenSink = () => (
   <Layout>

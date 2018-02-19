@@ -1,9 +1,9 @@
-import React from 'react';
-import { css, keyframes } from 'emotion';
-import styled from 'react-emotion';
-import { withTheme } from 'theming';
+import React from "react";
+import { css, keyframes } from "emotion";
+import styled from "react-emotion";
+import { withTheme } from "theming";
 
-const RippleDiv = styled('div')`
+const RippleDiv = styled("div")`
   position: relative;
   width: 300px;
   height: 300px;

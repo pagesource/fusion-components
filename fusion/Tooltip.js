@@ -1,7 +1,7 @@
-import { css } from 'emotion';
-import styled from 'react-emotion';
-import PropTypes from 'prop-types';
-import React from 'react';
+import { css } from "emotion";
+import styled from "react-emotion";
+import PropTypes from "prop-types";
+import React from "react";
 
 const TooltipBtn = css`
     height: 40px;
@@ -16,7 +16,7 @@ const TooltipBtn = css`
     }
 
 `;
-const HiddenDiv = styled('span')`
+const HiddenDiv = styled("span")`
   background: aliceblue;
   position: relative;
   left: 60%;
@@ -31,7 +31,7 @@ class Tooltip extends React.PureComponent {
   constructor() {
     super();
     this.state = {
-      open: false,
+      open: false
     };
   }
 
@@ -67,12 +67,12 @@ Tooltip.propTypes = {
   /**
    *Tooltip list items
    */
-  text: PropTypes.string,
+  text: PropTypes.string
 };
 
 /* Deafult Props */
 Tooltip.defaultProps = {
-  text: 'Some hidden text.',
+  text: "Some hidden text."
 };
 
 export default Tooltip;

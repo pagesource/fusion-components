@@ -1,6 +1,6 @@
-import styled from 'react-emotion';
+import styled from "react-emotion";
 
-const Code = styled('code')`
+const Code = styled("code")`
   color: green;
 `;
 

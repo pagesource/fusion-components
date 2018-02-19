@@ -1,8 +1,8 @@
-import React from 'react';
-import { ThemeProvider } from 'theming';
-import theme from '../theme';
-import { EmailSubscribe } from '../';
-import Layout from './components/Layout';
+import React from "react";
+import { ThemeProvider } from "theming";
+import theme from "../theme";
+import { EmailSubscribe } from "../";
+import Layout from "./components/Layout";
 
 const ComingSoon = () => (
   <Layout>
