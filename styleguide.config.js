@@ -19,25 +19,17 @@ module.exports = {
     },
     {
       name: 'Fusion Components',
-      // content: 'docs/fusion.md',
       components: 'fusion/**/*.js'
     }
   ],
   ignore:[
         '**/Link 2.js',
-        '**/Badge.js',
-        '**/Blockquote.js ',
-        '**/Code.js',
+        '**/Column.js',
         '**/Column 2.js',
-        '**/Heading 2.js',
-        '**/Panel.js',
-        '**/PanelFooter.js',
-        '**/PanelHeader.js',
-        '**/Row 2.js',
-        '**/Slider.js',
-        '**/Truncate.js',
-      ], /*Ignored as It was giving some error */
-  // components: 'fusion/**/*.js',
+        '**/EmailSubscribe.js',
+        '**/Row.js',
+        '**/Row 2.js'
+      ],
    webpackConfig: {
     module: {
       rules: [
@@ -53,6 +45,16 @@ module.exports = {
         }
       ]
     }
+  },
+  defaultExample: true,
+  showCode: true,
+  editorConfig: {
+		lineNumbers: false,
+  },
+  getExampleFilename(componentPath){
+      return componentPath
+        .replace(path.dirname(componentPath), `${__dirname}/docs/components`)
+        .replace(path.extname(componentPath), '.md');
   },
   styleguideComponents: {
     Wrapper: path.join(__dirname, 'lib/styleguide/wrapper')
