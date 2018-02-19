@@ -1,7 +1,7 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
 
 const navWrapper = css`
   user-select: none;
@@ -52,7 +52,7 @@ const ulStyle = css`
   }
   & li:not(:first-child):before {
     color: #4a4a4a;
-    content: "\\0002f";
+    content: '\\0002f';
   }
 `;
 
@@ -87,17 +87,17 @@ Breadcrumb.propTypes = {
   /**
    * On click handler
    */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 Breadcrumb.defaultProps = {
   links: [
-    { id: 0, name: "Home" },
-    { id: 1, name: "Men" },
-    { id: 2, name: "Accessories" },
-    { id: 3, name: "Wallets & Belts" }
+    { id: 0, name: 'Home' },
+    { id: 1, name: 'Men' },
+    { id: 2, name: 'Accessories' },
+    { id: 3, name: 'Wallets & Belts' },
   ],
-  onClick: () => {}
+  onClick: () => {},
 };
 
 BreadcrumbLink.propTypes = {
@@ -112,13 +112,13 @@ BreadcrumbLink.propTypes = {
   /**
    * On Click handler
    */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 
 BreadcrumbLink.defaultProps = {
-  name: "Link",
+  name: 'Link',
   id: 0,
-  onClick: () => {}
+  onClick: () => {},
 };
 
 export default withTheme(Breadcrumb);

@@ -24,7 +24,8 @@ const NavigationComponent = () => {
           <h2>Navigation Components</h2>
           <h3>Nav bar</h3>
           <Navbar />
-          <pre>{`const = NavList: [
+          <pre>
+            {`const = NavList: [
             {
               'navName': 'Home',
               'link':'/home'
@@ -72,7 +73,8 @@ const NavigationComponent = () => {
           </pre>
           <h3>Breadcumbs </h3>
           <Breadcrumb onClick={breadCrumbClick} />
-          <pre>{`Usage: <Breadcrumb links={links} onClick={yourClickFunction} />
+          <pre>
+            {`Usage: <Breadcrumb links={links} onClick={yourClickFunction} />
             
             Props:
 

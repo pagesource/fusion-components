@@ -67,7 +67,7 @@ Slider.defaultProps = {
   max: 10,
   defaultValue: 1,
   disabled: false,
-  onChange: null
+  onChange: null,
 };
 
 export default SliderStyled;
