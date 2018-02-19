@@ -37,7 +37,12 @@ module.exports = {
             path.resolve(__dirname, "docs"),
             path.resolve(__dirname, "lib", "styleguide")
           ],
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            presets: ["es2015", "react"],
+            plugins: ["transform-object-rest-spread"],
+            babelrc: false
+        }
         }
       ]
     }
