@@ -1,14 +1,14 @@
-import { css } from 'emotion';
-import styled from 'react-emotion';
-import React from 'react';
-import Button from './Button';
+import { css } from "emotion";
+import styled from "react-emotion";
+import React from "react";
+import Button from "./Button";
 
-const Page = styled('div')`
+const Page = styled("div")`
   display: inline-block;
   margin: 2px 2px;
 `;
-const PageDiv = styled('div')``;
-const PageTab = styled('div')`
+const PageDiv = styled("div")``;
+const PageTab = styled("div")`
   width: 50px;
   border-radius: 7px;
   height: 50px;
@@ -31,19 +31,19 @@ const container = css`
 
 const styles = {
   root: {
-    width: '100%',
+    width: "100%",
     maxWidth: 700,
-    margin: '40px',
+    margin: "40px"
   },
   content: {
-    margin: '0 16px',
+    margin: "0 16px"
   },
   actions: {
-    marginTop: 12,
+    marginTop: 12
   },
   backButton: {
-    marginRight: 12,
-  },
+    marginRight: 12
+  }
 };
 
 class Pagination extends React.PureComponent {
@@ -51,7 +51,7 @@ class Pagination extends React.PureComponent {
     super(props);
     this.state = {
       stepIndex: null,
-      visited: [],
+      visited: []
     };
   }
 
@@ -75,13 +75,13 @@ class Pagination extends React.PureComponent {
   stepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return 'First page content......';
+        return "First page content......";
       case 1:
-        return 'Second page content......';
+        return "Second page content......";
       case 2:
-        return 'Third page content......';
+        return "Third page content......";
       default:
-        return 'Click a page to get started.';
+        return "Click a page to get started.";
     }
   }
 
@@ -135,7 +135,7 @@ class Pagination extends React.PureComponent {
                 Prev
               </Button>
               <Button
-                style={{ 'margin-left': '30px' }}
+                style={{ "margin-left": "30px" }}
                 onClick={this.handleNext}
               >
                 Next

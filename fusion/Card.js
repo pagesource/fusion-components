@@ -1,11 +1,11 @@
-import { css } from 'emotion';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { withTheme } from 'theming';
+import { css } from "emotion";
+import PropTypes from "prop-types";
+import React from "react";
+import { withTheme } from "theming";
 
-import Button from './Button';
-import Panel from './Panel';
-import Rating from './Rating';
+import Button from "./Button";
+import Panel from "./Panel";
+import Rating from "./Rating";
 
 const cardStyles = css`
   text-align: center;
@@ -42,10 +42,10 @@ Card.propTypes = {
   /**
    * Card Data
    */
-  cardData: PropTypes.arrayOf(PropTypes.shape({})),
+  cardData: PropTypes.arrayOf(PropTypes.shape({}))
 };
 Card.defaultProps = {
-  cardData: [],
+  cardData: []
 };
 
 export default withTheme(Card);

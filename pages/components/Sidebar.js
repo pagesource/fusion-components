@@ -25,8 +25,8 @@ const navStyle = css`
     color: #f60;
   }
 
-  & ul{
-    padding:20px;
+  & ul {
+    padding: 20px;
   }
 
   & ul li {

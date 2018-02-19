@@ -1,7 +1,7 @@
-import React from 'react';
-import { ThemeProvider } from 'theming';
-import { Loader, ProgressBar, ProgressCircle, Ripples, theme } from '../';
-import Layout from './components/Layout';
+import React from "react";
+import { ThemeProvider } from "theming";
+import { Loader, ProgressBar, ProgressCircle, Ripples, theme } from "../";
+import Layout from "./components/Layout";
 
 const ContentComponent = () => (
   <Layout>

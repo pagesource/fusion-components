@@ -1,7 +1,7 @@
-import { css } from 'emotion';
-import PropTypes from 'prop-types';
-import React from 'react';
-import { withTheme } from 'theming';
+import { css } from "emotion";
+import PropTypes from "prop-types";
+import React from "react";
+import { withTheme } from "theming";
 
 const LogoStyle = css`
   padding: 15px;
@@ -24,13 +24,13 @@ Logo.propTypes = {
   /**
    * Image width
    */
-  imgWidth: PropTypes.number,
+  imgWidth: PropTypes.number
 };
 
 Logo.defaultProps = {
-  src: 'https://facebook.github.io/react/img/logo.svg',
-  alt: 'Fusion',
-  imgWidth: 100,
+  src: "https://facebook.github.io/react/img/logo.svg",
+  alt: "Fusion",
+  imgWidth: 100
 };
 
 export default withTheme(Logo);

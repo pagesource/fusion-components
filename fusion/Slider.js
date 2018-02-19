@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "react-emotion";
 
 const Slider = ({ name, min, max, defaultValue, onChange, disabled }) => (
   <input
@@ -57,12 +57,12 @@ Slider.propTypes = {
   /**
    * Disabled
    */
-  disabled: PropTypes.bool,
+  disabled: PropTypes.bool
 };
 
 /* Default Props */
 Slider.defaultProps = {
-  name: 'slider',
+  name: "slider",
   min: 1,
   max: 10,
   defaultValue: 1,
