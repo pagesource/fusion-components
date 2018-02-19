@@ -1,11 +1,11 @@
-import { css } from "emotion";
-import styled from "react-emotion";
-import PropTypes from "prop-types";
-import React, { PureComponent } from "react";
+import { css } from 'emotion';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 
 const container = css``;
 
-const DropdownDiv = props => styled("div")`
+const DropdownDiv = props => styled('div')`
   //width: ${props.width};
   width: 200px;
   height: auto;
@@ -25,7 +25,7 @@ const dropIcon = css`
     content: &#9650;
   }
   &:after {
-    content: "▼";
+    content: '▼';
     font-size: 16px;
     padding: 12px 8px;
     right: 10px;
@@ -42,7 +42,7 @@ class Dropdown extends PureComponent {
   constructor() {
     super();
     this.state = {
-      open: false
+      open: false,
     };
   }
 
@@ -54,7 +54,7 @@ class Dropdown extends PureComponent {
     const { ListItems, width } = this.props;
     const dropdownMenu = css`
       width: 200px;
-      content: "";
+      content: '';
       width: ${width}px;
       height: 40px;
       background: grey;
@@ -123,7 +123,7 @@ Dropdown.propTypes = {
    */
   ListItems: PropTypes.arrayOf(
     PropTypes.shape({ option: PropTypes.string, link: PropTypes.string })
-  )
+  ),
 };
 
 /* Deafult Props */
@@ -131,18 +131,18 @@ Dropdown.defaultProps = {
   width: 200,
   ListItems: [
     {
-      option: "Option 1",
-      link: "//www.google.com"
+      option: 'Option 1',
+      link: '//www.google.com',
     },
     {
-      option: "Option 2",
-      link: "//www.facebook.com"
+      option: 'Option 2',
+      link: '//www.facebook.com',
     },
     {
-      option: "Option 3",
-      link: "//www.twitter.com"
-    }
-  ]
+      option: 'Option 3',
+      link: '//www.twitter.com',
+    },
+  ],
 };
 
 export default Dropdown;

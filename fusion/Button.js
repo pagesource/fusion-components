@@ -1,8 +1,8 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
-import theme from "../theme";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
+import theme from '../theme';
 
 const Button = ({ children, onClick, disabled, theme }) => {
   const buttonStyle = css`
@@ -42,13 +42,13 @@ Button.propTypes = {
   /**
    * disabled
    */
-  theme: PropTypes.objectOf(PropTypes.string)
+  theme: PropTypes.objectOf(PropTypes.string),
 };
 
 Button.defaultProps = {
   disabled: false,
-  children: "",
+  children: '',
   onClick: () => {},
-  theme
+  theme,
 };
 export default withTheme(Button);

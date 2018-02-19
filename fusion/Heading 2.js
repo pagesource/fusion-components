@@ -1,6 +1,6 @@
-import styled from "react-emotion";
-import PropTypes from "prop-types";
-import React from "react";
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const el = React.createElement;
 
@@ -14,15 +14,15 @@ Heading.propTypes = {
   /**
    * tag
    */
-  tag: PropTypes.oneOf(["h1", "h2", "h3", "h4", "h5", "h6"]),
+  tag: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   /**
    * titles
    */
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 Heading.defaultProps = {
-  tag: "h2"
+  tag: 'h2',
 };
 
 export default Heading;

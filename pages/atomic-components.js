@@ -1,9 +1,9 @@
-import React from "react";
-import { ThemeProvider } from "theming";
-import { Avatar, Button } from "../";
-import theme from "../theme";
+import React from 'react';
+import { ThemeProvider } from 'theming';
+import { Avatar, Button } from '../';
+import theme from '../theme';
 // -----Global Imports ---------
-import Layout from "./components/Layout";
+import Layout from './components/Layout';
 // -------- Page level Imports ----------
 
 const AtomicComponent = () => (

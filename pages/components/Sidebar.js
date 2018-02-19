@@ -1,9 +1,9 @@
-import { css } from "emotion";
-import Link from "next/link";
-import React from "react";
+import { css } from 'emotion';
+import Link from 'next/link';
+import React from 'react';
 
 const linkStyle = {
-  marginRight: 15
+  marginRight: 15,
 };
 
 const navStyle = css`

@@ -1,9 +1,9 @@
-import styled from "react-emotion";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
 
-const ProgressBlock = styled("div")`
+const ProgressBlock = styled('div')`
   margin: 10px auto;
   width: 100%;
   height: 10px;
@@ -11,11 +11,11 @@ const ProgressBlock = styled("div")`
   background: #ccc;
 `;
 
-const Container = styled("div")`
+const Container = styled('div')`
   width: 100%;
   text-align: center;
 `;
-const ProgressBar = styled("div")`
+const ProgressBar = styled('div')`
   width: ${prop => prop.value}%;
   height: 10px;
   background: green;
@@ -37,12 +37,12 @@ Progress.propTypes = {
   /**
    * Progress Length
    */
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 /* Deafult Props */
 Progress.defaultProps = {
-  value: 1 / 3 * 100
+  value: 1 / 3 * 100,
 };
 
 export default withTheme(Progress);

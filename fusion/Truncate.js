@@ -1,6 +1,6 @@
-import styled from "react-emotion";
+import styled from 'react-emotion';
 
-const Truncate = styled("p")`
+const Truncate = styled('p')`
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

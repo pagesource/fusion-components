@@ -1,14 +1,14 @@
-import React from "react";
-import { keyframes } from "emotion";
-import styled from "react-emotion";
-import PropTypes from "prop-types";
-import { withTheme } from "theming";
+import React from 'react';
+import { keyframes } from 'emotion';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import { withTheme } from 'theming';
 
 const type = keyframes` 
   from { width: 0; } 
 `;
-const TypingDiv = styled("p")`
-  font-family: "Courier";
+const TypingDiv = styled('p')`
+  font-family: 'Courier';
   font-size: 20px;
   font-weight: bold;
   margin: 10px 0 0 10px;
@@ -25,12 +25,12 @@ Typing.propTypes = {
   /**
    * Typing text
    */
-  text: PropTypes.string
+  text: PropTypes.string,
 };
 
 /* Deafult Props */
 Typing.defaultProps = {
-  text: "Typing text content"
+  text: 'Typing text content',
 };
 
 export default withTheme(Typing);

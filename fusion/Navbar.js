@@ -1,9 +1,9 @@
-import { css } from "emotion";
-import styled from "react-emotion";
-import PropTypes from "prop-types";
-import React from "react";
+import { css } from 'emotion';
+import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const NavbarDiv = styled("div")`
+const NavbarDiv = styled('div')`
   display: flex;
   height: 40px;
   background: skyblue;
@@ -114,48 +114,48 @@ const NavbarItem = ({ link, navName }) => (
 
 NavbarItem.propTypes = {
   link: PropTypes.string,
-  navName: PropTypes.string
+  navName: PropTypes.string,
 };
 NavbarItem.defaultProps = {
-  link: "DefaultLink",
-  navName: "DefaultNavName"
+  link: 'DefaultLink',
+  navName: 'DefaultNavName',
 };
 
 /* Deafult Props */
 Navbar.defaultProps = {
-  header: "Header",
+  header: 'Header',
   NavList: [
     {
-      navName: "Home",
-      link: "/home"
+      navName: 'Home',
+      link: '/home',
     },
     {
-      navName: "Recent",
-      link: "/recent",
+      navName: 'Recent',
+      link: '/recent',
       submenu: [
         {
-          navName: "Facebook",
-          link: "/fb.com"
+          navName: 'Facebook',
+          link: '/fb.com',
         },
         {
-          navName: "Twitter",
-          link: "/twitter.com"
+          navName: 'Twitter',
+          link: '/twitter.com',
         },
         {
-          navName: "Snapchat",
-          link: "/sc.com"
-        }
-      ]
+          navName: 'Snapchat',
+          link: '/sc.com',
+        },
+      ],
     },
     {
-      navName: "About Us",
-      link: "/about"
+      navName: 'About Us',
+      link: '/about',
     },
     {
-      navName: "Contact Us",
-      link: "/Contact"
-    }
-  ]
+      navName: 'Contact Us',
+      link: '/Contact',
+    },
+  ],
 };
 
 export default Navbar;

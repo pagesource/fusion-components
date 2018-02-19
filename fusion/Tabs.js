@@ -1,8 +1,8 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
-import theme from "../theme";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
+import theme from '../theme';
 
 const Tabs = ({ tabData, onClick, theme }) => {
   const tabList = css`
@@ -98,34 +98,34 @@ Tabs.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       content: PropTypes.string,
-      selected: PropTypes.bool
+      selected: PropTypes.bool,
     })
   ),
   onClick: PropTypes.func.isRequired,
-  theme: PropTypes.objectOf(PropTypes.string)
+  theme: PropTypes.objectOf(PropTypes.string),
   // selectedTab: PropTypes.number,
 };
 
 Tabs.defaultProps = {
   tabData: [
     {
-      title: "Tab1",
-      content: "This is content for first tab",
-      selected: false
+      title: 'Tab1',
+      content: 'This is content for first tab',
+      selected: false,
     },
     {
-      title: "Tab2",
-      content: "This is content for second tab",
-      selected: true
+      title: 'Tab2',
+      content: 'This is content for second tab',
+      selected: true,
     },
     {
-      title: "Tab3",
-      content: "This is content for third tab",
-      selected: false
-    }
+      title: 'Tab3',
+      content: 'This is content for third tab',
+      selected: false,
+    },
   ],
   // selectedTab: 1,
-  theme
+  theme,
 };
 
 export default withTheme(Tabs);

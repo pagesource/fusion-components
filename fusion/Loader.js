@@ -1,7 +1,7 @@
-import { css, keyframes } from "emotion";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
+import { css, keyframes } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
 
 const rotation = keyframes`  
     0% { transform: rotate(0deg); }
@@ -31,12 +31,12 @@ Loader.propTypes = {
   /**
    * Progress Length
    */
-  value: PropTypes.number
+  value: PropTypes.number,
 };
 
 /* Deafult Props */
 Loader.defaultProps = {
-  value: 1 / 3
+  value: 1 / 3,
 };
 
 export default withTheme(Loader);

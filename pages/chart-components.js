@@ -1,8 +1,8 @@
-import React from "react";
-import { ThemeProvider } from "theming";
-import { BarChart, Doughnut, PieChart } from "../";
-import theme from "../theme";
-import Layout from "./components/Layout";
+import React from 'react';
+import { ThemeProvider } from 'theming';
+import { BarChart, Doughnut, PieChart } from '../';
+import theme from '../theme';
+import Layout from './components/Layout';
 
 const ChartingComponent = () => (
   <Layout>

@@ -1,6 +1,6 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React, { PureComponent } from "react";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 
 const status = css`
   width: 90%;
@@ -28,14 +28,14 @@ class StatusMessage extends PureComponent {
     this.state = {
       time: this.props.time,
       message: this.props.message,
-      hide: ""
+      hide: '',
     };
   }
 
   componentDidMount() {
     setTimeout(() => {
       this.setState({
-        hide
+        hide,
       });
     }, this.state.time);
   }
@@ -49,12 +49,12 @@ class StatusMessage extends PureComponent {
 
 StatusMessage.propTypes = {
   time: PropTypes.number,
-  message: PropTypes.string
+  message: PropTypes.string,
 };
 
 StatusMessage.defaultProps = {
   time: 2000,
-  message: "Status: Task completed!"
+  message: 'Status: Task completed!',
 };
 
 export default StatusMessage;

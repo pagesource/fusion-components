@@ -1,6 +1,6 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React from "react";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const formStyle = css`
   & input {
@@ -27,12 +27,12 @@ const EmailSubscribe = ({ action, placeholder }) => (
 
 EmailSubscribe.propTypes = {
   action: PropTypes.string,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
 };
 
 EmailSubscribe.defaultProps = {
-  action: "#defaultAction",
-  placeholder: "Email address for latest updates"
+  action: '#defaultAction',
+  placeholder: 'Email address for latest updates',
 };
 
 export default EmailSubscribe;

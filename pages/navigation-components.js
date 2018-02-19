@@ -1,14 +1,14 @@
-import React from "react";
-import { ThemeProvider } from "theming";
-import { Navbar, Pagination, StepperControl, Breadcrumb } from "../";
+import React from 'react';
+import { ThemeProvider } from 'theming';
+import { Navbar, Pagination, StepperControl, Breadcrumb } from '../';
 // --------page specific imports---------
-import theme from "../theme";
+import theme from '../theme';
 // ---- global imports ----------
-import Layout from "./components/Layout";
+import Layout from './components/Layout';
 
 const NavigationComponent = () => {
   function breadCrumbClick(link) {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.alert(
         `Clicked on link ${link.name} with id ${
           link.id

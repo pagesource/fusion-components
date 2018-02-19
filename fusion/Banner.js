@@ -1,7 +1,7 @@
-import { css } from "emotion";
-import PropTypes from "prop-types";
-import React from "react";
-import { withTheme } from "theming";
+import { css } from 'emotion';
+import PropTypes from 'prop-types';
+import React from 'react';
+import { withTheme } from 'theming';
 
 const Banner = ({ src, alt, picUrl }) => {
   const bannerStyle = css`
@@ -33,15 +33,15 @@ Banner.propTypes = {
   /**
    * alt text
    */
-  alt: PropTypes.string
+  alt: PropTypes.string,
 };
 
 /* Default Props */
 Banner.defaultProps = {
   picUrl:
-    "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20",
-  src: "http://via.placeholder.com/350x150",
-  alt: "Banner"
+    'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=2048&q=20',
+  src: 'http://via.placeholder.com/350x150',
+  alt: 'Banner',
 };
 
 export default withTheme(Banner);
