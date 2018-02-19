@@ -4,16 +4,12 @@ module.exports = {
   sections: [
     {
       name: 'Introduction',
-      content: 'docs/introduction.md',
+      content: 'lib/styleguide/introduction.md',
       sections: [
         {
           name: 'Installation',
-          content: 'docs/installation.md',
+          content: 'lib/styleguide/installation.md',
           description: 'The description for the installation section'
-        },
-        {
-          name: 'Configuration',
-          content: 'docs/configuration.md'
         }
       ]
     },
@@ -51,12 +47,13 @@ module.exports = {
   editorConfig: {
 		lineNumbers: false,
   },
+  styleguideDir:  path.resolve(__dirname, 'docs'),
   getExampleFilename(componentPath){
       return componentPath
-        .replace(path.dirname(componentPath), `${__dirname}/docs/components`)
+        .replace(path.dirname(componentPath), `${__dirname}/lib/styleguide/components`)
         .replace(path.extname(componentPath), '.md');
   },
   styleguideComponents: {
-    Wrapper: path.join(__dirname, 'lib/styleguide/wrapper')
+    Wrapper: path.join(__dirname, '/lib/styleguide/wrapper')
   }
 };
