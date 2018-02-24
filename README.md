@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/pagesource/fusion-components.svg?branch=master)](https://travis-ci.org/pagesource/fusion-components)
 
 Demo at: https://sape-fusion.herokuapp.com/
+Style Guide: https://pagesource.github.io/fusion-components/
 
 ## Why are we building this?
 
