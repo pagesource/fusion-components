@@ -1,8 +1,8 @@
 # Fusion - React Components for _Your_ Design System
 
-[![Build Status](https://travis-ci.org/vinaymavi/fusion.svg?branch=master)](https://travis-ci.org/vinaymavi/fusion)
+[![Build Status](https://travis-ci.org/pagesource/fusion-components.svg?branch=master)](https://travis-ci.org/pagesource/fusion-components)
 
-Demo at: https://sape-fusion.herokuapp.com/  
+Demo at: https://sape-fusion.herokuapp.com/
 Style Guide: https://pagesource.github.io/fusion-components/
 
 ## Why are we building this?
