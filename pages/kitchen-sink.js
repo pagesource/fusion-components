@@ -38,6 +38,7 @@ import {
   Truncate,
   Typing,
   YTEmbed,
+  Carousel,
 } from '../';
 import Layout from './components/Layout';
 
@@ -269,6 +270,26 @@ const KitchenSink = () => (
 
         <h2>Tabs</h2>
         <Tabs />
+        <Row />
+        <hr />
+
+        <h2>Carousel</h2>
+        <Carousel
+          leftNavigation={() => {}}
+          rightNavigation={() => {}}
+          carouselData={[
+            {
+              url: 'http://via.placeholder.com/350x150',
+              selected: true,
+              title: '1',
+            },
+            {
+              url: 'http://via.placeholder.com/450x150',
+              selected: false,
+              title: '2',
+            },
+          ]}
+        />
         <Row />
         <hr />
       </div>
