@@ -39,6 +39,7 @@ import {
   Typing,
   YTEmbed,
   Carousel,
+  BackToTop,
 } from '../';
 import Layout from './components/Layout';
 
@@ -290,6 +291,12 @@ const KitchenSink = () => (
             },
           ]}
         />
+        <Row />
+        <hr />
+        <h2>Back to Top</h2>
+        <div>
+          <BackToTop text="Back To Top" align="right" />
+        </div>
         <Row />
         <hr />
       </div>
