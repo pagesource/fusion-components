@@ -42,4 +42,5 @@ export { default as Typing } from './fusion/Typing';
 export { default as Breadcrumb } from './fusion/Breadcrumb';
 export { default as Carousel } from './fusion/Carousel';
 export { default as BackToTop } from './fusion/BackToTop';
+export { default as AppstoreButton } from './fusion/AppstoreButton';
 export { default as theme } from './theme/';

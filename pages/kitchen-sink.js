@@ -40,6 +40,7 @@ import {
   YTEmbed,
   Carousel,
   BackToTop,
+  AppstoreButton,
 } from '../';
 import Layout from './components/Layout';
 
@@ -296,6 +297,15 @@ const KitchenSink = () => (
         <h2>Back to Top</h2>
         <div>
           <BackToTop text="Back To Top" align="right" />
+        </div>
+        <Row />
+        <hr />
+        <h2>Appstore Button</h2>
+        <div>
+          <AppstoreButton
+            iosStoreClick={() => {}}
+            androidStoreClick={() => {}}
+          />
         </div>
         <Row />
         <hr />
