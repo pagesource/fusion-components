@@ -3,60 +3,65 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { withTheme } from 'theming';
 
-const AppstoreButton = ({ text }) => {
-  const appleStoreCustom = css`
-    background-image: url(http://i68.tinypic.com/161nu2u.png);
-    background-repeat: no-repeat;
-    width: 165px;
-    height: 58px;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-  `;
-  const androidStoreCustom = css`
-    background-image: url(http://i66.tinypic.com/dylrbo.jpg);
-    background-repeat: no-repeat;
-    width: 153px;
-    height: 52px;
-    border: none;
-    background-color: transparent;
-    outline: none;
-    cursor: pointer;
-  `;
-  const responsiveImage = css`
+const AppstoreButton = ({
+  iosStoreClick,
+  androidStoreClick,
+  appleImage,
+  androidImage,
+  gap,
+}) => {
+  const AppleLogo = css`
     width: 100%;
-    max-width: 400px;
+    max-width: 160px;
     height: auto;
+    cursor: pointer;
+    margin-right: ${gap}px;
+  `;
+  const AndroidLogo = css`
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    cursor: pointer;
+  `;
+  const parent = css`
+    display: flex;
   `;
   return (
-    <div>
-      <button className={appleStoreCustom}>{text}</button>
-      <button className={androidStoreCustom}>{text}</button>
-      <div className={responsiveImage}>
-        <img
-          className={responsiveImage}
-          src="http://i66.tinypic.com/dylrbo.jpg"
-          alt="apple"
-        />
+    <div className={parent}>
+      <div
+        className={AppleLogo}
+        onKeyPress={() => {}}
+        role="button"
+        tabIndex={0}
+        onClick={iosStoreClick}
+      >
+        <img className={AppleLogo} src={appleImage} alt="apple" />
       </div>
-      <div className={responsiveImage}>
-        <img
-          className={responsiveImage}
-          src="http://i66.tinypic.com/dylrbo.jpg"
-          alt="apple"
-        />
+      <div
+        className={AndroidLogo}
+        onKeyPress={() => {}}
+        role="button"
+        tabIndex={0}
+        onClick={androidStoreClick}
+      >
+        <img className={AndroidLogo} src={androidImage} alt="android" />
       </div>
     </div>
   );
 };
 
 AppstoreButton.propTypes = {
-  text: PropTypes.string,
+  iosStoreClick: PropTypes.func.isRequired,
+  androidStoreClick: PropTypes.func.isRequired,
+  appleImage: PropTypes.string,
+  androidImage: PropTypes.string,
+  gap: PropTypes.string,
 };
 
 AppstoreButton.defaultProps = {
-  text: '',
+  appleImage: 'http://i68.tinypic.com/161nu2u.png',
+  androidImage: 'http://i66.tinypic.com/dylrbo.jpg',
+  gap: '3',
 };
 
 export default withTheme(AppstoreButton);

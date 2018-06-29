@@ -302,7 +302,10 @@ const KitchenSink = () => (
         <hr />
         <h2>Appstore Button</h2>
         <div>
-          <AppstoreButton />
+          <AppstoreButton
+            iosStoreClick={() => {}}
+            androidStoreClick={() => {}}
+          />
         </div>
         <Row />
         <hr />
