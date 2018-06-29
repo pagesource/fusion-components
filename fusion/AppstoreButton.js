@@ -15,16 +15,28 @@ const AppstoreButton = ({
     max-width: 160px;
     height: auto;
     cursor: pointer;
-    margin-right: ${gap}px;
+    outline: none;
+    margin-bottom: ${gap}px;
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      margin-right: ${gap}px;
+    }
   `;
   const AndroidLogo = css`
     width: 100%;
     max-width: 160px;
     height: auto;
     cursor: pointer;
+    outline: none;
   `;
   const parent = css`
     display: flex;
+    @media (min-width: 320px) {
+      flex-direction: column;
+    }
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
   `;
   return (
     <div className={parent}>
