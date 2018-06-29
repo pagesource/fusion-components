@@ -2,9 +2,21 @@ import { css } from 'emotion';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 
+/*
+  ** properties **
+  * gap - defines gap between icons in pixels
+  * iconWidthLarge -  max width of the icon in desktop/laptops/tablets
+  * iconWidthMobile - max width of the icon in mobile devices
+  * appleImage -  Image to be displaed in all laptops/desktops/tablets for apple store
+  * androidImage - Image to be displaed in all laptops/desktops/tablets for android store
+  * iosStoreClick - click function of apple store button
+  * androidStoreClick - click function of android store button
+*/
+
 export default class AppstoreButton extends PureComponent {
   constructor(props) {
     super(props);
+    const { gap, iconWidthLarge, iconWidthMobile } = this.props;
     this.getMobileOperatingSystemIphone = this.getMobileOperatingSystemIphone.bind(
       this
     );
@@ -13,22 +25,26 @@ export default class AppstoreButton extends PureComponent {
     );
     this.AppleLogo = css`
       width: 100%;
-      max-width: 160px;
+      max-width: ${iconWidthMobile};
       height: auto;
       cursor: pointer;
       outline: none;
-      margin-bottom: ${this.props.gap}px;
+      margin-bottom: ${gap}px;
       @media (min-width: 768px) {
+        max-width: ${iconWidthLarge};
         margin-bottom: 0;
-        margin-right: ${this.props.gap}px;
+        margin-right: ${gap}px;
       }
     `;
     this.AndroidLogo = css`
       width: 100%;
-      max-width: 160px;
+      max-width: ${iconWidthMobile};
       height: auto;
       cursor: pointer;
       outline: none;
+      @media (min-width: 768px) {
+        max-width: ${iconWidthLarge};
+      }
     `;
     this.parent = css`
       display: flex;
@@ -119,6 +135,8 @@ AppstoreButton.propTypes = {
   appleImage: PropTypes.string,
   androidImage: PropTypes.string,
   gap: PropTypes.string,
+  iconWidthLarge: PropTypes.string,
+  iconWidthMobile: PropTypes.string,
 };
 
 AppstoreButton.defaultProps = {
@@ -130,4 +148,6 @@ AppstoreButton.defaultProps = {
   appleImage: 'http://i68.tinypic.com/161nu2u.png',
   androidImage: 'http://i66.tinypic.com/dylrbo.jpg',
   gap: '3',
+  iconWidthLarge: 160,
+  iconWidthMobile: 160,
 };
